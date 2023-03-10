@@ -1,0 +1,12 @@
+D:\FindTec\FindTec\FindTec\bin\Debug\FindTec.exe.config
+D:\FindTec\FindTec\FindTec\bin\Debug\FindTec.exe
+D:\FindTec\FindTec\FindTec\bin\Debug\FindTec.pdb
+D:\FindTec\FindTec\FindTec\obj\Debug\FindTec.csproj.AssemblyReference.cache
+D:\FindTec\FindTec\FindTec\obj\Debug\FindTec.Properties.Resources.resources
+D:\FindTec\FindTec\FindTec\obj\Debug\FindTec.csproj.GenerateResource.cache
+D:\FindTec\FindTec\FindTec\obj\Debug\FindTec.csproj.CoreCompileInputs.cache
+D:\FindTec\FindTec\FindTec\obj\Debug\FindTec.exe
+D:\FindTec\FindTec\FindTec\obj\Debug\FindTec.pdb
+D:\FindTec\FindTec\FindTec\obj\Debug\FindTec.Form1.resources
+D:\FindTec\FindTec\FindTec\obj\Debug\FindTec.telaLogin.resources
+D:\FindTec\FindTec\FindTec\obj\Debug\FindTec.TelaCadastro.resources
