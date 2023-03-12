@@ -61,6 +61,7 @@ namespace FindTec
             this.botaoEntrar.TabIndex = 12;
             this.botaoEntrar.Text = "Entrar";
             this.botaoEntrar.UseVisualStyleBackColor = true;
+            this.botaoEntrar.Click += new System.EventHandler(this.botaoEntrar_Click);
             // 
             // label3
             // 
@@ -108,7 +109,7 @@ namespace FindTec
             this.campoUsuario.Size = new System.Drawing.Size(186, 20);
             this.campoUsuario.TabIndex = 7;
             // 
-            // telaLogin
+            // TelaLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -120,7 +121,7 @@ namespace FindTec
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.campoUsuario);
-            this.Name = "telaLogin";
+            this.Name = "TelaLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.ResumeLayout(false);
