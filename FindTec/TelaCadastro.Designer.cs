@@ -33,6 +33,7 @@ namespace FindTec
             this.cadastroAluno = new System.Windows.Forms.Panel();
             this.opCurso = new System.Windows.Forms.ComboBox();
             this.textSenha = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.textTelefone = new System.Windows.Forms.TextBox();
             this.textEmail = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -46,6 +47,7 @@ namespace FindTec
             this.label1 = new System.Windows.Forms.Label();
             this.cadastroEmpresa = new System.Windows.Forms.Panel();
             this.textSenhaE = new System.Windows.Forms.TextBox();
+            this.button4 = new System.Windows.Forms.Button();
             this.textTelE = new System.Windows.Forms.TextBox();
             this.textEmailE = new System.Windows.Forms.TextBox();
             this.textNomeE = new System.Windows.Forms.TextBox();
@@ -54,8 +56,6 @@ namespace FindTec
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.cadastroAluno.SuspendLayout();
             this.cadastroEmpresa.SuspendLayout();
             this.SuspendLayout();
@@ -102,6 +102,16 @@ namespace FindTec
             this.textSenha.Size = new System.Drawing.Size(150, 20);
             this.textSenha.TabIndex = 1;
             this.textSenha.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(180, 204);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 1;
+            this.button3.Text = "Criar Conta";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // textTelefone
             // 
@@ -220,6 +230,7 @@ namespace FindTec
             this.cadastroEmpresa.Size = new System.Drawing.Size(425, 240);
             this.cadastroEmpresa.TabIndex = 3;
             this.cadastroEmpresa.Visible = false;
+            this.cadastroEmpresa.Paint += new System.Windows.Forms.PaintEventHandler(this.cadastroEmpresa_Paint);
             // 
             // textSenhaE
             // 
@@ -228,6 +239,16 @@ namespace FindTec
             this.textSenhaE.PasswordChar = '•';
             this.textSenhaE.Size = new System.Drawing.Size(129, 20);
             this.textSenhaE.TabIndex = 8;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(180, 204);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 9;
+            this.button4.Text = "Criar Conta";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // textTelE
             // 
@@ -300,26 +321,6 @@ namespace FindTec
             this.button1.TabIndex = 4;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(180, 204);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "Criar Conta";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click_1);
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(180, 204);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 9;
-            this.button4.Text = "Criar Conta";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // TelaCadastro
             // 

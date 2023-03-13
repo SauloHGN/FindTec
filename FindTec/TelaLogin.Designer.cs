@@ -36,6 +36,7 @@ namespace FindTec
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.campoUsuario = new System.Windows.Forms.TextBox();
+            this.erroLogin = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // linkLabel1
@@ -67,7 +68,7 @@ namespace FindTec
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(172, 188);
+            this.label3.Location = new System.Drawing.Point(172, 173);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(43, 15);
             this.label3.TabIndex = 11;
@@ -75,7 +76,7 @@ namespace FindTec
             // 
             // campoSenha
             // 
-            this.campoSenha.Location = new System.Drawing.Point(221, 188);
+            this.campoSenha.Location = new System.Drawing.Point(221, 173);
             this.campoSenha.Name = "campoSenha";
             this.campoSenha.Size = new System.Drawing.Size(186, 20);
             this.campoSenha.TabIndex = 10;
@@ -109,11 +110,25 @@ namespace FindTec
             this.campoUsuario.Size = new System.Drawing.Size(186, 20);
             this.campoUsuario.TabIndex = 7;
             // 
+            // erroLogin
+            // 
+            this.erroLogin.AccessibleName = "erroLogin";
+            this.erroLogin.AutoSize = true;
+            this.erroLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.erroLogin.Location = new System.Drawing.Point(209, 207);
+            this.erroLogin.Name = "erroLogin";
+            this.erroLogin.Size = new System.Drawing.Size(183, 13);
+            this.erroLogin.TabIndex = 14;
+            this.erroLogin.Text = "Nome de usuário ou senha incorretos";
+            this.erroLogin.Visible = false;
+            this.erroLogin.Click += new System.EventHandler(this.label4_Click);
+            // 
             // TelaLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(584, 361);
+            this.Controls.Add(this.erroLogin);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.botaoEntrar);
             this.Controls.Add(this.label3);
@@ -138,5 +153,6 @@ namespace FindTec
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox campoUsuario;
+        private System.Windows.Forms.Label erroLogin;
     }
 }

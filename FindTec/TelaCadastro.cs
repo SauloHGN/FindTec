@@ -36,9 +36,6 @@ namespace FindTec
             buttonCadastroEmpresa.ForeColor = Color.White;
             buttonCadastroAluno.BackColor = SystemColors.Control;
             buttonCadastroAluno.ForeColor = Color.Black;
-
-            
-
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -125,6 +122,11 @@ namespace FindTec
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             
+        }
+
+        private void cadastroEmpresa_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

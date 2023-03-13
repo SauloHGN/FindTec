@@ -30,9 +30,44 @@ namespace FindTec
             DadosUsuario dadosUsuario = new DadosUsuario();
             string usuario = campoUsuario.Text;
             string senha = campoSenha.Text;
+            erroLogin.Visible = false;
+            if(VerificarLogin(usuario, senha))
+            {
+                Form1 telaPrincipla = new Form1();
+                telaPrincipla.Show();
+                this.Hide();
+            }
+            else
+            {
+                erroLogin.Visible = true;
+            }
+        }
 
-            
-            
+        public static bool VerificarLogin(string usuario, string senha)
+        {
+            // VERIFICAR USUARIO E SENHA PARA FAZER LOGIN
+            foreach (var aluno in DadosUsuario.listaAlunos)
+            {
+                if(aluno.Item2 == usuario && aluno.Item6 == senha)
+                {
+                    return true;
+                }
+            }
+
+            foreach (var empresa in DadosUsuario.listaEmpresas)
+            {
+                if(empresa.Item2 == usuario && empresa.Item5 == senha)
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
