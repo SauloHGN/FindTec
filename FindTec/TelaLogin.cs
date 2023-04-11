@@ -119,7 +119,7 @@ namespace FindTec
         {                    
             InitializeComponent();        
             this.FormClosing += new FormClosingEventHandler(TelaLogin_FormClosing);// USADO PARA FECHAR APLICAÇÃO
-            botaoEntrar.Select();      
+            botaoEntrar.Select();
             
         }
 
@@ -317,19 +317,19 @@ namespace FindTec
         private void botaoEntrar_MouseEnter(object sender, EventArgs e)
         {
             //Carrega a nova imagem do arquivo
-            Image novaImagem = Image.FromFile(@"C:\Users\lucas\OneDrive\FindTec\FindTec\Imagens\botaoEntrar.png");
+            //Image novaImagem = Image.FromFile(@"C:\Users\lucas\OneDrive\FindTec\FindTec\Imagens\botaoEntrar.png");
 
             //Define a nova imagem como o background do botão
-            botaoEntrar.BackgroundImage = novaImagem;
+            //botaoEntrar.BackgroundImage = novaImagem;
         }
 
         private void botaoEntrar_MouseLeave(object sender, EventArgs e)
         {
             //Carrega a imagem original do arquivo
-            Image imagemOriginal = Image.FromFile(@"C:\Users\lucas\OneDrive\FindTec\FindTec\Imagens\botaoEntrar2.png");
+            //Image imagemOriginal = Image.FromFile(@"C:\Users\lucas\OneDrive\FindTec\FindTec\Imagens\botaoEntrar2.png");
 
             //Define a imagem original como o background do botão
-            botaoEntrar.BackgroundImage = imagemOriginal;
+            //botaoEntrar.BackgroundImage = imagemOriginal;
         }
 
         private void botaoCriesuaconta_Click(object sender, EventArgs e)
@@ -342,19 +342,19 @@ namespace FindTec
         private void botaoCriesuaconta_MouseEnter(object sender, EventArgs e)
         {
             //Carrega a nova imagem do arquivo
-            Image novaImagem = Image.FromFile(@"C:\Users\lucas\OneDrive\FindTec\FindTec\Imagens\botaoCriarconta.png");
+           // Image novaImagem = Image.FromFile(@"C:\Users\lucas\OneDrive\FindTec\FindTec\Imagens\botaoCriarconta.png");
 
             //Define a nova imagem como o background do botão
-            botaoCriesuaconta.BackgroundImage = novaImagem;
+           // botaoCriesuaconta.BackgroundImage = novaImagem;
         }
 
         private void botaoCriesuaconta_MouseLeave(object sender, EventArgs e)
         {
             //Carrega a imagem original do arquivo
-            Image imagemOriginal = Image.FromFile(@"C:\Users\lucas\OneDrive\FindTec\FindTec\Imagens\botaoCriarconta2.png");
+           // Image imagemOriginal = Image.FromFile(@"C:\Users\lucas\OneDrive\FindTec\FindTec\Imagens\botaoCriarconta2.png");
 
             //Define a imagem original como o background do botão
-            botaoCriesuaconta.BackgroundImage = imagemOriginal;
+           // botaoCriesuaconta.BackgroundImage = imagemOriginal;
         }
     }
 }

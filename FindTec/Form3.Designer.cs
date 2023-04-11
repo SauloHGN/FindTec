@@ -29,17 +29,27 @@ namespace FindTec
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.opA1 = new FindTec.OpA();
             this.opB1 = new FindTec.OpB();
-            this.opC1 = new FindTec.OpC();
+            this.opA1 = new FindTec.OpA();
             this.opD1 = new FindTec.OpD();
-            this.label1 = new System.Windows.Forms.Label();
+            this.opC1 = new FindTec.OpC();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnAprov = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnRecusar = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -55,6 +65,17 @@ namespace FindTec
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 511);
             this.panel1.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(26, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(148, 25);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Coordenador";
             // 
             // button4
             // 
@@ -112,13 +133,6 @@ namespace FindTec
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // opA1
-            // 
-            this.opA1.Location = new System.Drawing.Point(200, 0);
-            this.opA1.Name = "opA1";
-            this.opA1.Size = new System.Drawing.Size(684, 511);
-            this.opA1.TabIndex = 1;
-            // 
             // opB1
             // 
             this.opB1.Location = new System.Drawing.Point(200, 0);
@@ -127,13 +141,12 @@ namespace FindTec
             this.opB1.TabIndex = 2;
             this.opB1.Visible = false;
             // 
-            // opC1
+            // opA1
             // 
-            this.opC1.Location = new System.Drawing.Point(200, 0);
-            this.opC1.Name = "opC1";
-            this.opC1.Size = new System.Drawing.Size(684, 511);
-            this.opC1.TabIndex = 3;
-            this.opC1.Visible = false;
+            this.opA1.Location = new System.Drawing.Point(200, 0);
+            this.opA1.Name = "opA1";
+            this.opA1.Size = new System.Drawing.Size(684, 511);
+            this.opA1.TabIndex = 1;
             // 
             // opD1
             // 
@@ -143,31 +156,104 @@ namespace FindTec
             this.opD1.TabIndex = 4;
             this.opD1.Visible = false;
             // 
-            // label1
+            // opC1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(26, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(148, 25);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Coordenador";
+            this.opC1.Location = new System.Drawing.Point(200, 0);
+            this.opC1.Name = "opC1";
+            this.opC1.Size = new System.Drawing.Size(684, 511);
+            this.opC1.TabIndex = 3;
+            this.opC1.Visible = false;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Nome,
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.ColumnAprov,
+            this.ColumnRecusar});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridView1.Location = new System.Drawing.Point(236, 138);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.Size = new System.Drawing.Size(600, 299);
+            this.dataGridView1.TabIndex = 6;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // Nome
+            // 
+            this.Nome.Frozen = true;
+            this.Nome.HeaderText = "Nome";
+            this.Nome.Name = "Nome";
+            this.Nome.ReadOnly = true;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Tipo";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Email";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Telefone";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // ColumnAprov
+            // 
+            this.ColumnAprov.HeaderText = "Aprovar";
+            this.ColumnAprov.Name = "ColumnAprov";
+            this.ColumnAprov.ReadOnly = true;
+            // 
+            // ColumnRecusar
+            // 
+            this.ColumnRecusar.HeaderText = "Recusar";
+            this.ColumnRecusar.Name = "ColumnRecusar";
+            this.ColumnRecusar.ReadOnly = true;
             // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 511);
-            this.Controls.Add(this.opD1);
-            this.Controls.Add(this.opC1);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.opB1);
             this.Controls.Add(this.opA1);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.opD1);
+            this.Controls.Add(this.opC1);
             this.Name = "Form3";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.Form3_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -184,5 +270,12 @@ namespace FindTec
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnAprov;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnRecusar;
     }
 }

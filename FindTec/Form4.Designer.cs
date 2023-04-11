@@ -40,6 +40,8 @@ namespace FindTec
             this.opC1 = new FindTec.OpC();
             this.opD1 = new FindTec.OpD();
             this.cadastroCoordenador = new System.Windows.Forms.Panel();
+            this.txtIndisponivel = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.textSenhaC = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
             this.textTelC = new System.Windows.Forms.TextBox();
@@ -49,8 +51,6 @@ namespace FindTec
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtIndisponivel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.cadastroCoordenador.SuspendLayout();
             this.SuspendLayout();
@@ -184,6 +184,27 @@ namespace FindTec
             this.cadastroCoordenador.Size = new System.Drawing.Size(425, 297);
             this.cadastroCoordenador.TabIndex = 6;
             // 
+            // txtIndisponivel
+            // 
+            this.txtIndisponivel.AutoSize = true;
+            this.txtIndisponivel.ForeColor = System.Drawing.Color.Red;
+            this.txtIndisponivel.Location = new System.Drawing.Point(110, 241);
+            this.txtIndisponivel.Name = "txtIndisponivel";
+            this.txtIndisponivel.Size = new System.Drawing.Size(210, 13);
+            this.txtIndisponivel.TabIndex = 14;
+            this.txtIndisponivel.Text = "Email ou Telefone já estão sendo utilizados";
+            this.txtIndisponivel.Visible = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(104, 25);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(227, 24);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "Cadastrar Coordenador";
+            // 
             // textSenhaC
             // 
             this.textSenhaC.Location = new System.Drawing.Point(165, 204);
@@ -258,27 +279,6 @@ namespace FindTec
             this.label11.Size = new System.Drawing.Size(35, 13);
             this.label11.TabIndex = 7;
             this.label11.Text = "Nome";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(104, 25);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(227, 24);
-            this.label2.TabIndex = 13;
-            this.label2.Text = "Cadastrar Coordenador";
-            // 
-            // txtIndisponivel
-            // 
-            this.txtIndisponivel.AutoSize = true;
-            this.txtIndisponivel.ForeColor = System.Drawing.Color.Red;
-            this.txtIndisponivel.Location = new System.Drawing.Point(110, 241);
-            this.txtIndisponivel.Name = "txtIndisponivel";
-            this.txtIndisponivel.Size = new System.Drawing.Size(210, 13);
-            this.txtIndisponivel.TabIndex = 14;
-            this.txtIndisponivel.Text = "Email ou Telefone já estão sendo utilizados";
-            this.txtIndisponivel.Visible = false;
             // 
             // Form4
             // 

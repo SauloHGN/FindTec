@@ -32,18 +32,19 @@ namespace FindTec
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RecuperarSenha));
             this.button1 = new System.Windows.Forms.Button();
             this.panelCodigo = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
             this.textCodigo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panelEmail = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.EmailRE = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.panelNewSenha = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
             this.textNewSenha = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
+            this.txtCodigoEnviado = new System.Windows.Forms.Label();
             this.panelCodigo.SuspendLayout();
             this.panelEmail.SuspendLayout();
             this.panelNewSenha.SuspendLayout();
@@ -65,6 +66,7 @@ namespace FindTec
             // 
             // panelCodigo
             // 
+            this.panelCodigo.Controls.Add(this.txtCodigoEnviado);
             this.panelCodigo.Controls.Add(this.panel3);
             this.panelCodigo.Controls.Add(this.button3);
             this.panelCodigo.Controls.Add(this.textCodigo);
@@ -74,6 +76,23 @@ namespace FindTec
             this.panelCodigo.Size = new System.Drawing.Size(336, 109);
             this.panelCodigo.TabIndex = 15;
             this.panelCodigo.Visible = false;
+            // 
+            // panel3
+            // 
+            this.panel3.Location = new System.Drawing.Point(0, 107);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(336, 100);
+            this.panel3.TabIndex = 17;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(133, 78);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 2;
+            this.button3.Text = "Enviar";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // textCodigo
             // 
@@ -127,23 +146,6 @@ namespace FindTec
             this.label1.TabIndex = 15;
             this.label1.Text = "Digite seu Email";
             // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(133, 78);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Enviar";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // panel3
-            // 
-            this.panel3.Location = new System.Drawing.Point(0, 107);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(336, 100);
-            this.panel3.TabIndex = 17;
-            // 
             // panelNewSenha
             // 
             this.panelNewSenha.Controls.Add(this.textNewSenha);
@@ -155,15 +157,12 @@ namespace FindTec
             this.panelNewSenha.TabIndex = 17;
             this.panelNewSenha.Visible = false;
             // 
-            // button4
+            // textNewSenha
             // 
-            this.button4.Location = new System.Drawing.Point(133, 55);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 0;
-            this.button4.Text = "Redefinir";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.textNewSenha.Location = new System.Drawing.Point(110, 18);
+            this.textNewSenha.Name = "textNewSenha";
+            this.textNewSenha.Size = new System.Drawing.Size(123, 20);
+            this.textNewSenha.TabIndex = 2;
             // 
             // label3
             // 
@@ -174,12 +173,25 @@ namespace FindTec
             this.label3.TabIndex = 1;
             this.label3.Text = "Nova Senha";
             // 
-            // textNewSenha
+            // button4
             // 
-            this.textNewSenha.Location = new System.Drawing.Point(110, 18);
-            this.textNewSenha.Name = "textNewSenha";
-            this.textNewSenha.Size = new System.Drawing.Size(123, 20);
-            this.textNewSenha.TabIndex = 2;
+            this.button4.Location = new System.Drawing.Point(133, 55);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 0;
+            this.button4.Text = "Redefinir";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // txtCodigoEnviado
+            // 
+            this.txtCodigoEnviado.AutoSize = true;
+            this.txtCodigoEnviado.ForeColor = System.Drawing.Color.Green;
+            this.txtCodigoEnviado.Location = new System.Drawing.Point(37, 17);
+            this.txtCodigoEnviado.Name = "txtCodigoEnviado";
+            this.txtCodigoEnviado.Size = new System.Drawing.Size(237, 13);
+            this.txtCodigoEnviado.TabIndex = 18;
+            this.txtCodigoEnviado.Text = "O codigo de Verificação foi enviado para o Email";
             // 
             // RecuperarSenha
             // 
@@ -219,5 +231,6 @@ namespace FindTec
         private System.Windows.Forms.TextBox textNewSenha;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Label txtCodigoEnviado;
     }
 }

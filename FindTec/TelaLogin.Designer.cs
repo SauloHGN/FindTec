@@ -67,6 +67,7 @@ namespace FindTec
             // campoSenha
             // 
             this.campoSenha.AccessibleName = "campoSenha";
+            this.campoSenha.BackColor = System.Drawing.Color.White;
             this.campoSenha.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoSenha.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.campoSenha.Location = new System.Drawing.Point(106, 323);
@@ -81,7 +82,7 @@ namespace FindTec
             // campoEmail
             // 
             this.campoEmail.AccessibleName = "campoEmail";
-            this.campoEmail.BackColor = System.Drawing.SystemColors.Control;
+            this.campoEmail.BackColor = System.Drawing.Color.White;
             this.campoEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoEmail.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.campoEmail.Location = new System.Drawing.Point(106, 274);
@@ -207,6 +208,9 @@ namespace FindTec
             this.Controls.Add(this.campoSenha);
             this.Controls.Add(this.campoEmail);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(400, 600);
+            this.MinimumSize = new System.Drawing.Size(400, 600);
             this.Name = "TelaLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";

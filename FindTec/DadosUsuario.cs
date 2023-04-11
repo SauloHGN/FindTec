@@ -11,7 +11,7 @@ namespace FindTec
         // ListaCoordenador: (ID, NOME, EMAIL, TELEFONE, SENHA, codigo)
         public static List<(int, string, string, string, string, string)> listaCoordenador = new List<(int, string, string, string, string, string)>();
 
-        // ListaAluno: (ID, NOME, EMAIL, TELEFONE, CURSO, SENHA, STATUS, codigo, aprovação)
+        // ListaAlunos: (ID, NOME, EMAIL, TELEFONE, CURSO, SENHA, STATUS, codigo, aprovação)
         public static List<(int, string, string, string, string, string, bool, string, bool)> listaAlunos = new List<(int, string, string, string, string, string, bool, string, bool)>();
 
         // ListaEmpresa: (ID, NOME, EMAIL, TELEFONE, SENHA, STATUS, codigo, aprovação)
