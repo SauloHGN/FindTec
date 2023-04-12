@@ -30,6 +30,8 @@ namespace FindTec
             opB1.Visible = false;
             opC1.Visible = false;
             opD1.Visible = false;
+
+            panelPerfil.Visible = true;
         }
 
         private void button2_Click_1(object sender, EventArgs e)
@@ -38,6 +40,8 @@ namespace FindTec
             opB1.Visible = true;
             opC1.Visible = false;
             opD1.Visible = false;
+
+            panelPerfil.Visible = false;
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -46,6 +50,8 @@ namespace FindTec
             opB1.Visible = false;
             opC1.Visible = true;
             opD1.Visible = false;
+
+            panelPerfil.Visible = false;
         }
 
         private void buttonD_Click(object sender, EventArgs e)
@@ -54,6 +60,8 @@ namespace FindTec
             opB1.Visible = false;
             opC1.Visible = false;
             opD1.Visible = true;
+
+            panelPerfil.Visible = false;
         }
 
        private void opA2_Load(object sender, EventArgs e)
@@ -68,5 +76,7 @@ namespace FindTec
         {
 
         }
+
+
     }
 }

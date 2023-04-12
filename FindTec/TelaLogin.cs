@@ -113,14 +113,16 @@ namespace FindTec
         private void PanelMove_MouseUp(object sender, MouseEventArgs e) { Drag = false; }
 
         //
-
         private string tipoUser;
         public TelaLogin()
         {                    
             InitializeComponent();        
             this.FormClosing += new FormClosingEventHandler(TelaLogin_FormClosing);// USADO PARA FECHAR APLICAÇÃO
             botaoEntrar.Select();
-            
+
+
+            KeyPreview = true;// BOTÃO ENTRAR COM ENTER
+            this.KeyDown += new KeyEventHandler(Enter_KeyDown);// BOTÃO ENTRAR COM ENTER
         }
 
         private GraphicsPath GetRoundedRect(RectangleF rect, float radius)
@@ -152,6 +154,15 @@ namespace FindTec
         private void TelaLogin_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void Enter_KeyDown(object sender, KeyEventArgs e)
+        {
+            //BOTÃO ENTRAR COM ENTER
+            if (e.KeyCode == Keys.Enter)
+            {
+                botaoEntrar.PerformClick();
+            }
         }
 
         private void botaoEntrar_Click(object sender, EventArgs e)

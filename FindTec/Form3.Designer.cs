@@ -37,10 +37,6 @@ namespace FindTec
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.opB1 = new FindTec.OpB();
-            this.opA1 = new FindTec.OpA();
-            this.opD1 = new FindTec.OpD();
-            this.opC1 = new FindTec.OpC();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,8 +44,15 @@ namespace FindTec
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnAprov = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnRecusar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panelCadastroAprov = new System.Windows.Forms.Panel();
+            this.labelAprovar = new System.Windows.Forms.Label();
+            this.opB1 = new FindTec.OpB();
+            this.opA1 = new FindTec.OpA();
+            this.opD1 = new FindTec.OpD();
+            this.opC1 = new FindTec.OpC();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panelCadastroAprov.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -115,7 +118,7 @@ namespace FindTec
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(203, 36);
             this.button2.TabIndex = 1;
-            this.button2.Text = "Opção B";
+            this.button2.Text = "Aprovar Cadastro";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -132,37 +135,6 @@ namespace FindTec
             this.button1.Text = "Opção A";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // opB1
-            // 
-            this.opB1.Location = new System.Drawing.Point(200, 0);
-            this.opB1.Name = "opB1";
-            this.opB1.Size = new System.Drawing.Size(684, 511);
-            this.opB1.TabIndex = 2;
-            this.opB1.Visible = false;
-            // 
-            // opA1
-            // 
-            this.opA1.Location = new System.Drawing.Point(200, 0);
-            this.opA1.Name = "opA1";
-            this.opA1.Size = new System.Drawing.Size(684, 511);
-            this.opA1.TabIndex = 1;
-            // 
-            // opD1
-            // 
-            this.opD1.Location = new System.Drawing.Point(200, 0);
-            this.opD1.Name = "opD1";
-            this.opD1.Size = new System.Drawing.Size(684, 511);
-            this.opD1.TabIndex = 4;
-            this.opD1.Visible = false;
-            // 
-            // opC1
-            // 
-            this.opC1.Location = new System.Drawing.Point(200, 0);
-            this.opC1.Name = "opC1";
-            this.opC1.Size = new System.Drawing.Size(684, 511);
-            this.opC1.TabIndex = 3;
-            this.opC1.Visible = false;
             // 
             // dataGridView1
             // 
@@ -193,7 +165,7 @@ namespace FindTec
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView1.Location = new System.Drawing.Point(236, 138);
+            this.dataGridView1.Location = new System.Drawing.Point(46, 138);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.Size = new System.Drawing.Size(600, 299);
@@ -237,12 +209,63 @@ namespace FindTec
             this.ColumnRecusar.Name = "ColumnRecusar";
             this.ColumnRecusar.ReadOnly = true;
             // 
+            // panelCadastroAprov
+            // 
+            this.panelCadastroAprov.Controls.Add(this.labelAprovar);
+            this.panelCadastroAprov.Controls.Add(this.dataGridView1);
+            this.panelCadastroAprov.Location = new System.Drawing.Point(200, 0);
+            this.panelCadastroAprov.Name = "panelCadastroAprov";
+            this.panelCadastroAprov.Size = new System.Drawing.Size(684, 511);
+            this.panelCadastroAprov.TabIndex = 7;
+            this.panelCadastroAprov.Visible = false;
+            // 
+            // labelAprovar
+            // 
+            this.labelAprovar.AutoSize = true;
+            this.labelAprovar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAprovar.Location = new System.Drawing.Point(229, 68);
+            this.labelAprovar.Name = "labelAprovar";
+            this.labelAprovar.Size = new System.Drawing.Size(238, 25);
+            this.labelAprovar.TabIndex = 7;
+            this.labelAprovar.Text = "Aprovação de Cadastro";
+            // 
+            // opB1
+            // 
+            this.opB1.Location = new System.Drawing.Point(200, 0);
+            this.opB1.Name = "opB1";
+            this.opB1.Size = new System.Drawing.Size(684, 511);
+            this.opB1.TabIndex = 2;
+            this.opB1.Visible = false;
+            // 
+            // opA1
+            // 
+            this.opA1.Location = new System.Drawing.Point(200, 0);
+            this.opA1.Name = "opA1";
+            this.opA1.Size = new System.Drawing.Size(684, 511);
+            this.opA1.TabIndex = 1;
+            // 
+            // opD1
+            // 
+            this.opD1.Location = new System.Drawing.Point(200, 0);
+            this.opD1.Name = "opD1";
+            this.opD1.Size = new System.Drawing.Size(684, 511);
+            this.opD1.TabIndex = 4;
+            this.opD1.Visible = false;
+            // 
+            // opC1
+            // 
+            this.opC1.Location = new System.Drawing.Point(200, 0);
+            this.opC1.Name = "opC1";
+            this.opC1.Size = new System.Drawing.Size(684, 511);
+            this.opC1.TabIndex = 3;
+            this.opC1.Visible = false;
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 511);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.panelCadastroAprov);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.opB1);
             this.Controls.Add(this.opA1);
@@ -254,6 +277,8 @@ namespace FindTec
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panelCadastroAprov.ResumeLayout(false);
+            this.panelCadastroAprov.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -277,5 +302,7 @@ namespace FindTec
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnAprov;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnRecusar;
+        private System.Windows.Forms.Panel panelCadastroAprov;
+        private System.Windows.Forms.Label labelAprovar;
     }
 }

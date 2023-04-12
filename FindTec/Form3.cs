@@ -16,6 +16,10 @@ namespace FindTec
             // AO FECHAR O FRAME PRINCIPLA VOLTAR PARA TELA DE LOGIN
             TelaLogin telaLogin = new TelaLogin();
             telaLogin.Show();
+            foreach (var alunos in DadosUsuario.listaAlunos)
+            {
+                Console.WriteLine("Nome: " + alunos.Item2 + ", Aprovado: " + alunos.Item9);
+            }
         }
 
         private void Form3_Load(object sender, EventArgs e)
@@ -29,7 +33,9 @@ namespace FindTec
             opA1.Visible = true;
             opB1.Visible = false;
             opC1.Visible = false;
-            opD1.Visible = false;           
+            opD1.Visible = false;
+
+            panelCadastroAprov.Visible = false;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -37,7 +43,10 @@ namespace FindTec
             opA1.Visible = false;
             opB1.Visible = true;
             opC1.Visible = false;
-            opD1.Visible = false;        
+            opD1.Visible = false;
+
+            panelCadastroAprov.Visible = true;
+            dataGridView1.ClearSelection();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -45,7 +54,9 @@ namespace FindTec
             opA1.Visible = false;
             opB1.Visible = false;
             opC1.Visible = true;
-            opD1.Visible = false;          
+            opD1.Visible = false;
+
+            panelCadastroAprov.Visible = false;         
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -53,13 +64,15 @@ namespace FindTec
             opA1.Visible = false;
             opB1.Visible = false;
             opC1.Visible = false;
-            opD1.Visible = true;       
+            opD1.Visible = true;
+
+            panelCadastroAprov.Visible = false;
         }    
 
         private void LoadDataGridView()
         {          
-            dataGridView1.AutoGenerateColumns = false;           
-
+            dataGridView1.AutoGenerateColumns = false;
+            
             foreach (var aluno in DadosUsuario.listaAlunos)
             {
                 if (aluno.Item9 == false)
@@ -98,16 +111,19 @@ namespace FindTec
                 
                     DadosUsuario.listaAlunos[e.RowIndex] = alunoModificado;// definir o objeto modificado na lista
 
-                    foreach (var alunos in DadosUsuario.listaAlunos)
+                    /*foreach (var alunos in DadosUsuario.listaAlunos)
                     {
                         Console.WriteLine("Nome: " + alunos.Item2 + ", Aprovado: " + alunos.Item9);
-                    }
+                    }*/
                     
                     dataGridView1.Rows.RemoveAt(e.RowIndex);// remover a linha do DataGridView                                   
 
                     if (DadosUsuario.listaAlunos.Count > 1)
                     {
-                        dataGridView1.Refresh();// Atualiza a lista
+                        // Atualiza a lista
+                        dataGridView1.Rows.Clear();
+                        LoadDataGridView();
+                        dataGridView1.ClearSelection();
                     }                   
                     else
                     {
@@ -119,10 +135,19 @@ namespace FindTec
                 {
                     dataGridView1.Rows.RemoveAt(e.RowIndex);
                     DadosUsuario.listaAlunos.Remove(DadosUsuario.listaAlunos[e.RowIndex]);
+                    /*Console.WriteLine("---------------------------");
+                    foreach (var alunos in DadosUsuario.listaAlunos)
+                    {
+                        Console.WriteLine("Nome: " + alunos.Item2 + ", Aprovado: " + alunos.Item9);
+                    }
+                    Console.WriteLine("---------------------------");*/
 
                     if (DadosUsuario.listaAlunos.Count > 1)
                     {
-                        dataGridView1.Refresh();// Atualiza a lista
+                        // Atualiza a lista
+                        dataGridView1.Rows.Clear();
+                        LoadDataGridView();
+                        dataGridView1.ClearSelection();
                     }                   
                     else
                     {
