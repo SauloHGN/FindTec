@@ -18,6 +18,6 @@ namespace FindTec
         public static List<(int, string, string, string, string, bool, string, bool)> listaEmpresas = new List<(int, string, string, string, string, bool, string, bool)>();
 
         //ListaAdmin: (ID, EMAIL, SENHA)
-        public static List<(int, string, string)> listaAdmin = new List<(int, string, string)>();
+        public static List<(int, string, string)> listaAdmin = new List<(int, string, string)>();      
     }
 }

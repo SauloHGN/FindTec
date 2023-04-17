@@ -31,6 +31,8 @@ namespace FindTec
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
@@ -45,14 +47,24 @@ namespace FindTec
             this.ColumnAprov = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnRecusar = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelCadastroAprov = new System.Windows.Forms.Panel();
-            this.labelAprovar = new System.Windows.Forms.Label();
             this.opB1 = new FindTec.OpB();
             this.opA1 = new FindTec.OpA();
             this.opD1 = new FindTec.OpD();
             this.opC1 = new FindTec.OpC();
+            this.dataGridViewE = new System.Windows.Forms.DataGridView();
+            this.buttonListEmpresa = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.buttonListAluno5 = new System.Windows.Forms.Button();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnAprovE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnRecusarE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panelCadastroAprov.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewE)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -211,23 +223,16 @@ namespace FindTec
             // 
             // panelCadastroAprov
             // 
-            this.panelCadastroAprov.Controls.Add(this.labelAprovar);
+            this.panelCadastroAprov.Controls.Add(this.buttonListEmpresa);
+            this.panelCadastroAprov.Controls.Add(this.buttonListAluno5);
+            this.panelCadastroAprov.Controls.Add(this.label2);
+            this.panelCadastroAprov.Controls.Add(this.dataGridViewE);
             this.panelCadastroAprov.Controls.Add(this.dataGridView1);
             this.panelCadastroAprov.Location = new System.Drawing.Point(200, 0);
             this.panelCadastroAprov.Name = "panelCadastroAprov";
             this.panelCadastroAprov.Size = new System.Drawing.Size(684, 511);
             this.panelCadastroAprov.TabIndex = 7;
             this.panelCadastroAprov.Visible = false;
-            // 
-            // labelAprovar
-            // 
-            this.labelAprovar.AutoSize = true;
-            this.labelAprovar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAprovar.Location = new System.Drawing.Point(229, 68);
-            this.labelAprovar.Name = "labelAprovar";
-            this.labelAprovar.Size = new System.Drawing.Size(238, 25);
-            this.labelAprovar.TabIndex = 7;
-            this.labelAprovar.Text = "Aprovação de Cadastro";
             // 
             // opB1
             // 
@@ -260,6 +265,111 @@ namespace FindTec
             this.opC1.TabIndex = 3;
             this.opC1.Visible = false;
             // 
+            // dataGridViewE
+            // 
+            this.dataGridViewE.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridViewE.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewE.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewE.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridViewE.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewE.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.ColumnAprovE,
+            this.ColumnRecusarE});
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewE.DefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridViewE.Location = new System.Drawing.Point(46, 138);
+            this.dataGridViewE.Name = "dataGridViewE";
+            this.dataGridViewE.RowHeadersVisible = false;
+            this.dataGridViewE.Size = new System.Drawing.Size(600, 299);
+            this.dataGridViewE.TabIndex = 6;
+            this.dataGridViewE.Visible = false;
+            this.dataGridViewE.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewE_CellContentClick);
+            // 
+            // buttonListEmpresa
+            // 
+            this.buttonListEmpresa.Location = new System.Drawing.Point(370, 109);
+            this.buttonListEmpresa.Name = "buttonListEmpresa";
+            this.buttonListEmpresa.Size = new System.Drawing.Size(75, 23);
+            this.buttonListEmpresa.TabIndex = 9;
+            this.buttonListEmpresa.Text = "Empresa";
+            this.buttonListEmpresa.UseVisualStyleBackColor = true;
+            this.buttonListEmpresa.Click += new System.EventHandler(this.buttonListEmpresa_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(207, 70);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(238, 25);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Aprovação de Cadastro";
+            // 
+            // buttonListAluno5
+            // 
+            this.buttonListAluno5.AccessibleName = "buttonAluno";
+            this.buttonListAluno5.Location = new System.Drawing.Point(212, 109);
+            this.buttonListAluno5.Name = "buttonListAluno5";
+            this.buttonListAluno5.Size = new System.Drawing.Size(75, 23);
+            this.buttonListAluno5.TabIndex = 10;
+            this.buttonListAluno5.Text = "Aluno";
+            this.buttonListAluno5.UseVisualStyleBackColor = true;
+            this.buttonListAluno5.Click += new System.EventHandler(this.buttonListAluno_Click_1);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.Frozen = true;
+            this.dataGridViewTextBoxColumn1.HeaderText = "Nome";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.HeaderText = "Tipo";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.HeaderText = "Email";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.HeaderText = "Telefone";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // ColumnAprovE
+            // 
+            this.ColumnAprovE.HeaderText = "Aprovar";
+            this.ColumnAprovE.Name = "ColumnAprovE";
+            this.ColumnAprovE.ReadOnly = true;
+            // 
+            // ColumnRecusarE
+            // 
+            this.ColumnRecusarE.HeaderText = "Recusar";
+            this.ColumnRecusarE.Name = "ColumnRecusarE";
+            this.ColumnRecusarE.ReadOnly = true;
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -279,6 +389,7 @@ namespace FindTec
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panelCadastroAprov.ResumeLayout(false);
             this.panelCadastroAprov.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewE)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -303,6 +414,15 @@ namespace FindTec
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnAprov;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnRecusar;
         private System.Windows.Forms.Panel panelCadastroAprov;
-        private System.Windows.Forms.Label labelAprovar;
+        private System.Windows.Forms.DataGridView dataGridViewE;
+        private System.Windows.Forms.Button buttonListEmpresa;
+        private System.Windows.Forms.Button buttonListAluno5;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnAprovE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnRecusarE;
     }
 }

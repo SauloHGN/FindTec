@@ -113,7 +113,7 @@ namespace FindTec
         private void PanelMove_MouseUp(object sender, MouseEventArgs e) { Drag = false; }
 
         //
-        private string tipoUser;
+        public string tipoUser;
         public TelaLogin()
         {                    
             InitializeComponent();        
@@ -166,8 +166,7 @@ namespace FindTec
         }
 
         private void botaoEntrar_Click(object sender, EventArgs e)
-        {
-            
+        {          
             DadosUsuario dadosUsuario = new DadosUsuario();
             string email = campoEmail.Text;
             string senha = campoSenha.Text;
@@ -199,6 +198,7 @@ namespace FindTec
                     this.Hide();
                 }
 
+                
             }
             else
             {
@@ -208,6 +208,7 @@ namespace FindTec
 
         public static bool VerificarLogin(string email, string senha, TelaLogin telaLogin)
         {
+            UsuarioLogado user = new UsuarioLogado();
             // VERIFICAR USUARIO E SENHA PARA FAZER LOGIN
             foreach (var aluno in DadosUsuario.listaAlunos)
             {
@@ -215,6 +216,7 @@ namespace FindTec
                 {
                     telaLogin.tipoUser = "aluno";
                     return true;
+                    
                 }
             }
 
@@ -224,6 +226,7 @@ namespace FindTec
                 {
                     telaLogin.tipoUser = "empresa";
                     return true;
+                    
                 }
             }
 
@@ -233,6 +236,7 @@ namespace FindTec
                 {
                     telaLogin.tipoUser = "coordenador";
                     return true;
+                    
                 }
             }
 

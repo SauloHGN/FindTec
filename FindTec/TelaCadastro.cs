@@ -189,6 +189,6 @@ namespace FindTec
         private void cadastroEmpresa_Paint(object sender, PaintEventArgs e)
         {
 
-        }
+        }    
     }
 }
