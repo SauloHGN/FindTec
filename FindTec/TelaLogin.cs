@@ -118,12 +118,16 @@ namespace FindTec
         public TelaLogin()
         {                    
             InitializeComponent();
+            this.FormClosing += new FormClosingEventHandler(TelaLogin_FormClosing);// USADO PARA FECHAR APLICAÇÃO
             botaoFechar.Select();// O PROGRAMA SE INICIA COM O BOTAO FECHAR SELECIONADO
             KeyPreview = true;// BOTÃO ENTRAR COM ENTER
             this.KeyDown += new KeyEventHandler(Enter_KeyDown);// BOTÃO ENTRAR COM ENTER
         }
 
-           
+        private void TelaLogin_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
 
         private void campoEmail_Enter(object sender, EventArgs e)
         {
