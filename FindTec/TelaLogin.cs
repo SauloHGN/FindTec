@@ -1,21 +1,12 @@
 ﻿using System;
 using System.Drawing;
-using System.Drawing.Drawing2D;
-using System.IO;
-using System.Linq;
-using System.Reflection.Emit;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolBar;
 
 namespace FindTec
 {
     public partial class TelaLogin : Form
     {
-        //deixar sem bora e com sombreado e poder mexer a tela
+        //MOVIMENTAR JANELA E SOMBREADO----------------------------------------------------------------------------------------------
         private bool Drag;
         private int MouseX;
         private int MouseY;
@@ -43,8 +34,8 @@ namespace FindTec
             int nTopRect,
             int nRightRect,
             int nBottomRect,
-            int nWidthEllipse = 10,
-            int nHeightEllipse = 10
+            int nWidthEllipse,
+            int nHeightEllipse
             );
 
         public struct MARGINS
@@ -111,50 +102,9 @@ namespace FindTec
             }
         }
         private void PanelMove_MouseUp(object sender, MouseEventArgs e) { Drag = false; }
+        //FIM DO MOVIMENTAR A JANELA E SOMBREADO ---------------------------------------------------------------------------------------------------
 
-        //
         public string tipoUser;
-        public TelaLogin()
-        {                    
-            InitializeComponent();        
-            this.FormClosing += new FormClosingEventHandler(TelaLogin_FormClosing);// USADO PARA FECHAR APLICAÇÃO
-            botaoEntrar.Select();
-
-
-            KeyPreview = true;// BOTÃO ENTRAR COM ENTER
-            this.KeyDown += new KeyEventHandler(Enter_KeyDown);// BOTÃO ENTRAR COM ENTER
-        }
-
-        private GraphicsPath GetRoundedRect(RectangleF rect, float radius)
-        {
-            GraphicsPath path = new GraphicsPath();
-            float diameter = radius * 4.0F;
-            SizeF sizeF = new SizeF(diameter, diameter);
-            RectangleF arc = new RectangleF(rect.Location, sizeF);
-            path.AddArc(arc, 180, 90);
-            arc.X = rect.Right - diameter;
-            path.AddArc(arc, 270, 90);
-            arc.Y = rect.Bottom - diameter;
-            path.AddArc(arc, 0, 90);
-            arc.X = rect.Left;
-            path.AddArc(arc, 90, 90);
-            path.CloseFigure();
-            return path;
-        }
-
-
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            //  ABRIR TELA DE CADASTRO E ESCONDER TELA DE LOGIN
-            TelaCadastro cadastro = new TelaCadastro();           
-            cadastro.Show();         
-            this.Hide();         
-        }
-
-        private void TelaLogin_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            Application.Exit();
-        }
 
         private void Enter_KeyDown(object sender, KeyEventArgs e)
         {
@@ -165,114 +115,15 @@ namespace FindTec
             }
         }
 
-        private void botaoEntrar_Click(object sender, EventArgs e)
-        {          
-            DadosUsuario dadosUsuario = new DadosUsuario();
-            string email = campoEmail.Text;
-            string senha = campoSenha.Text;
-            botaoErrologin.Visible = false;
-            if(VerificarLogin(email, senha, this))
-            {
-                if(tipoUser == "aluno")
-                {
-                    Form1 telaAluno = new Form1();
-                    telaAluno.Show();
-                    this.Hide();
-                }
-                if(tipoUser == "empresa")
-                {
-                    Form2 telaEmpresa = new Form2();
-                    telaEmpresa.Show();
-                    this.Hide();
-                }
-                if(tipoUser == "coordenador")
-                {
-                    Form3 telaCoordenador = new Form3();
-                    telaCoordenador.Show();
-                    this.Hide();
-                }
-                if (tipoUser == "Admin")
-                {
-                    Form4 telaAdmin = new Form4();
-                    telaAdmin.Show();
-                    this.Hide();
-                }
-
-                
-            }
-            else
-            {
-                botaoErrologin.Visible = true;
-            }
+        public TelaLogin()
+        {                    
+            InitializeComponent();
+            botaoFechar.Select();// O PROGRAMA SE INICIA COM O BOTAO FECHAR SELECIONADO
+            KeyPreview = true;// BOTÃO ENTRAR COM ENTER
+            this.KeyDown += new KeyEventHandler(Enter_KeyDown);// BOTÃO ENTRAR COM ENTER
         }
 
-        public static bool VerificarLogin(string email, string senha, TelaLogin telaLogin)
-        {
-            UsuarioLogado user = new UsuarioLogado();
-            // VERIFICAR USUARIO E SENHA PARA FAZER LOGIN
-            foreach (var aluno in DadosUsuario.listaAlunos)
-            {
-                if(aluno.Item3 == email && aluno.Item6 == senha)
-                {
-                    telaLogin.tipoUser = "aluno";
-                    return true;
-                    
-                }
-            }
-
-            foreach (var empresa in DadosUsuario.listaEmpresas)
-            {
-                if(empresa.Item3 == email && empresa.Item5 == senha)
-                {
-                    telaLogin.tipoUser = "empresa";
-                    return true;
-                    
-                }
-            }
-
-            foreach (var coordenador in DadosUsuario.listaCoordenador)
-            {
-                if(coordenador.Item3 == email && coordenador.Item5 == senha)
-                {
-                    telaLogin.tipoUser = "coordenador";
-                    return true;
-                    
-                }
-            }
-
-            foreach (var admin in DadosUsuario.listaAdmin)
-            {
-                if (admin.Item2 == email && admin.Item3 == senha)
-                {
-                    telaLogin.tipoUser = "Admin";
-                    return true;
-                }
-            }
-
-            return false;
-        }
-
-        private void botaoErrologin_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void campoUsuario_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void recuperarS_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            RecuperarSenha recuperar = new RecuperarSenha();
-            recuperar.Show();
-            this.Hide();
-        }
-
-        private void TelaLogin_Load(object sender, EventArgs e)
-        {
-
-        }
+           
 
         private void campoEmail_Enter(object sender, EventArgs e)
         {
@@ -288,21 +139,7 @@ namespace FindTec
             {
                 campoEmail.Text = "E-MAIL";
             }
-        }
-
-        private void botaoFechar_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void campoSenha_Leave(object sender, EventArgs e)
-        {
-            if (campoSenha.Text == "")
-            {
-                campoSenha.PasswordChar = '\0';
-                campoSenha.Text = "SENHA";
-            }
-        }
+        }     
 
         private void campoSenha_Enter(object sender, EventArgs e)
         {
@@ -314,37 +151,118 @@ namespace FindTec
             campoSenha.PasswordChar = '•';
         }
 
-        private void botaoFechar_MouseEnter(object sender, EventArgs e)
+        private void campoSenha_Leave(object sender, EventArgs e)
         {
-            // Define as bordas arredondadas para o botão quando o mouse entra nele
-            float borderRadius = 4.0F;
-            RectangleF borderRect = new RectangleF(0, 0, botaoFechar.Width, botaoFechar.Height);
-            GraphicsPath borderPath = GetRoundedRect(borderRect, borderRadius);
-            botaoFechar.Region = new Region(borderPath);
-        }
-
-        private void botaoFechar_MouseLeave(object sender, EventArgs e)
-        {
-            // Define o Region do botão de volta para o seu estado original quando o mouse sai dele
-            botaoFechar.Region = new Region(new Rectangle(0, 0, botaoFechar.Width, botaoFechar.Height));
-        }
+            if (campoSenha.Text == "")
+            {
+                campoSenha.PasswordChar = '\0';
+                campoSenha.Text = "SENHA";
+            }
+        }        
 
         private void botaoEntrar_MouseEnter(object sender, EventArgs e)
         {
-            //Carrega a nova imagem do arquivo
-            //Image novaImagem = Image.FromFile(@"C:\Users\lucas\OneDrive\FindTec\FindTec\Imagens\botaoEntrar.png");
+            // Carrega a nova imagem do arquivo "botaoEntrar" do resources.resx
+            Image novaImagem = Properties.Resources.botaoEntrar;
 
-            //Define a nova imagem como o background do botão
-            //botaoEntrar.BackgroundImage = novaImagem;
+            // Define a nova imagem como o background do botão
+            botaoEntrar.BackgroundImage = novaImagem;
         }
 
         private void botaoEntrar_MouseLeave(object sender, EventArgs e)
         {
-            //Carrega a imagem original do arquivo
-            //Image imagemOriginal = Image.FromFile(@"C:\Users\lucas\OneDrive\FindTec\FindTec\Imagens\botaoEntrar2.png");
+            // Carrega a nova imagem do arquivo "botaoEntrar2" do resources.resx
+            Image novaImagem = Properties.Resources.botaoEntrar2;
 
-            //Define a imagem original como o background do botão
-            //botaoEntrar.BackgroundImage = imagemOriginal;
+            // Define a nova imagem como o background do botão
+            botaoEntrar.BackgroundImage = novaImagem;
+        }
+
+        private void botaoEntrar_Click(object sender, EventArgs e)
+        {
+            DadosUsuario dadosUsuario = new DadosUsuario();
+            string email = campoEmail.Text;
+            string senha = campoSenha.Text;
+            avisoErrologin.Visible = false;
+            if (VerificarLogin(email, senha, this))
+            {
+                if (tipoUser == "aluno")
+                {
+                    Form1 telaAluno = new Form1();
+                    telaAluno.Show();
+                    this.Hide();
+                }
+                if (tipoUser == "empresa")
+                {
+                    Form2 telaEmpresa = new Form2();
+                    telaEmpresa.Show();
+                    this.Hide();
+                }
+                if (tipoUser == "coordenador")
+                {
+                    Form3 telaCoordenador = new Form3();
+                    telaCoordenador.Show();
+                    this.Hide();
+                }
+                if (tipoUser == "Admin")
+                {
+                    Form4 telaAdmin = new Form4();
+                    telaAdmin.Show();
+                    this.Hide();
+                }
+
+
+            }
+            else
+            {
+                avisoErrologin.Visible = true;
+            }
+        }
+
+        public static bool VerificarLogin(string email, string senha, TelaLogin telaLogin)
+        {
+            UsuarioLogado user = new UsuarioLogado();
+            // VERIFICAR USUARIO E SENHA PARA FAZER LOGIN
+            foreach (var aluno in DadosUsuario.listaAlunos)
+            {
+                if (aluno.Item3 == email && aluno.Item6 == senha)
+                {
+                    telaLogin.tipoUser = "aluno";
+                    return true;
+
+                }
+            }
+
+            foreach (var empresa in DadosUsuario.listaEmpresas)
+            {
+                if (empresa.Item3 == email && empresa.Item5 == senha)
+                {
+                    telaLogin.tipoUser = "empresa";
+                    return true;
+
+                }
+            }
+
+            foreach (var coordenador in DadosUsuario.listaCoordenador)
+            {
+                if (coordenador.Item3 == email && coordenador.Item5 == senha)
+                {
+                    telaLogin.tipoUser = "coordenador";
+                    return true;
+
+                }
+            }
+
+            foreach (var admin in DadosUsuario.listaAdmin)
+            {
+                if (admin.Item2 == email && admin.Item3 == senha)
+                {
+                    telaLogin.tipoUser = "Admin";
+                    return true;
+                }
+            }
+
+            return false;
         }
 
         private void botaoCriesuaconta_Click(object sender, EventArgs e)
@@ -356,20 +274,33 @@ namespace FindTec
 
         private void botaoCriesuaconta_MouseEnter(object sender, EventArgs e)
         {
-            //Carrega a nova imagem do arquivo
-           // Image novaImagem = Image.FromFile(@"C:\Users\lucas\OneDrive\FindTec\FindTec\Imagens\botaoCriarconta.png");
+            // Carrega a nova imagem do arquivo "botaoCriarconta" do resources.resx
+            Image novaImagem = Properties.Resources.botaoCriarconta;
 
-            //Define a nova imagem como o background do botão
-           // botaoCriesuaconta.BackgroundImage = novaImagem;
+            // Define a nova imagem como o background do botão
+            botaoCriesuaconta.BackgroundImage = novaImagem;
         }
 
         private void botaoCriesuaconta_MouseLeave(object sender, EventArgs e)
         {
-            //Carrega a imagem original do arquivo
-           // Image imagemOriginal = Image.FromFile(@"C:\Users\lucas\OneDrive\FindTec\FindTec\Imagens\botaoCriarconta2.png");
+            // Carrega a nova imagem do arquivo "botaoCriarconta2" do resources.resx
+            Image novaImagem = Properties.Resources.botaoCriarconta2;
 
-            //Define a imagem original como o background do botão
-           // botaoCriesuaconta.BackgroundImage = imagemOriginal;
+            // Define a nova imagem como o background do botão
+            botaoCriesuaconta.BackgroundImage = novaImagem;
         }
+
+        private void botaoEsquecisenha_Click(object sender, EventArgs e)
+        {
+            RecuperarSenha recuperar = new RecuperarSenha();
+            recuperar.Show();
+            this.Hide();
+        }
+
+        private void botaoFechar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+                
     }
 }

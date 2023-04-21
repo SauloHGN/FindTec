@@ -37,11 +37,11 @@ namespace FindTec
             this.botaoCriarconta = new System.Windows.Forms.LinkLabel();
             this.campoSenha = new System.Windows.Forms.TextBox();
             this.campoEmail = new System.Windows.Forms.TextBox();
-            this.botaoErrologin = new System.Windows.Forms.Label();
+            this.avisoErrologin = new System.Windows.Forms.Label();
             this.botaoEntrar = new System.Windows.Forms.Button();
-            this.botaoEsquecisenha = new System.Windows.Forms.LinkLabel();
             this.botaoFechar = new System.Windows.Forms.Button();
             this.botaoCriesuaconta = new System.Windows.Forms.Button();
+            this.botaoEsquecisenha = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // botaoCriarconta
@@ -62,7 +62,6 @@ namespace FindTec
             this.botaoCriarconta.TabStop = true;
             this.botaoCriarconta.Text = "CRIE SUA CONTA!";
             this.botaoCriarconta.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.botaoCriarconta.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // campoSenha
             // 
@@ -90,31 +89,29 @@ namespace FindTec
             this.campoEmail.Size = new System.Drawing.Size(211, 19);
             this.campoEmail.TabIndex = 1;
             this.campoEmail.Text = "E-MAIL";
-            this.campoEmail.TextChanged += new System.EventHandler(this.campoUsuario_TextChanged);
             this.campoEmail.Enter += new System.EventHandler(this.campoEmail_Enter);
             this.campoEmail.Leave += new System.EventHandler(this.campoEmail_Leave);
             // 
-            // botaoErrologin
+            // avisoErrologin
             // 
-            this.botaoErrologin.AccessibleDescription = "";
-            this.botaoErrologin.AccessibleName = "botaoErrologin";
-            this.botaoErrologin.AutoSize = true;
-            this.botaoErrologin.BackColor = System.Drawing.Color.IndianRed;
-            this.botaoErrologin.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botaoErrologin.ForeColor = System.Drawing.Color.White;
-            this.botaoErrologin.Location = new System.Drawing.Point(124, 357);
-            this.botaoErrologin.Name = "botaoErrologin";
-            this.botaoErrologin.Size = new System.Drawing.Size(158, 15);
-            this.botaoErrologin.TabIndex = 14;
-            this.botaoErrologin.Text = "E-MAIL OU SENHA INCORRETOS";
-            this.botaoErrologin.Visible = false;
-            this.botaoErrologin.Click += new System.EventHandler(this.botaoErrologin_Click);
+            this.avisoErrologin.AccessibleDescription = "";
+            this.avisoErrologin.AccessibleName = "avisoErrologin";
+            this.avisoErrologin.AutoSize = true;
+            this.avisoErrologin.BackColor = System.Drawing.Color.IndianRed;
+            this.avisoErrologin.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.avisoErrologin.ForeColor = System.Drawing.Color.White;
+            this.avisoErrologin.Location = new System.Drawing.Point(124, 357);
+            this.avisoErrologin.Name = "avisoErrologin";
+            this.avisoErrologin.Size = new System.Drawing.Size(158, 15);
+            this.avisoErrologin.TabIndex = 14;
+            this.avisoErrologin.Text = "E-MAIL OU SENHA INCORRETOS";
+            this.avisoErrologin.Visible = false;
             // 
             // botaoEntrar
             // 
             this.botaoEntrar.AccessibleName = "botaoEntrar";
             this.botaoEntrar.BackColor = System.Drawing.Color.Transparent;
-            this.botaoEntrar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("botaoEntrar.BackgroundImage")));
+            this.botaoEntrar.BackgroundImage = global::FindTec.Properties.Resources.botaoEntrar2;
             this.botaoEntrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.botaoEntrar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.botaoEntrar.FlatAppearance.BorderSize = 0;
@@ -132,27 +129,6 @@ namespace FindTec
             this.botaoEntrar.MouseEnter += new System.EventHandler(this.botaoEntrar_MouseEnter);
             this.botaoEntrar.MouseLeave += new System.EventHandler(this.botaoEntrar_MouseLeave);
             // 
-            // botaoEsquecisenha
-            // 
-            this.botaoEsquecisenha.AccessibleName = "botaoEsquecisenha";
-            this.botaoEsquecisenha.ActiveLinkColor = System.Drawing.Color.Transparent;
-            this.botaoEsquecisenha.AutoSize = true;
-            this.botaoEsquecisenha.BackColor = System.Drawing.Color.Transparent;
-            this.botaoEsquecisenha.DisabledLinkColor = System.Drawing.Color.Transparent;
-            this.botaoEsquecisenha.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botaoEsquecisenha.ForeColor = System.Drawing.Color.Transparent;
-            this.botaoEsquecisenha.LinkArea = new System.Windows.Forms.LinkArea(0, 19);
-            this.botaoEsquecisenha.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.botaoEsquecisenha.LinkColor = System.Drawing.Color.Black;
-            this.botaoEsquecisenha.Location = new System.Drawing.Point(146, 467);
-            this.botaoEsquecisenha.Name = "botaoEsquecisenha";
-            this.botaoEsquecisenha.Size = new System.Drawing.Size(114, 15);
-            this.botaoEsquecisenha.TabIndex = 5;
-            this.botaoEsquecisenha.TabStop = true;
-            this.botaoEsquecisenha.Text = "ESQUECI MINHA SENHA";
-            this.botaoEsquecisenha.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.botaoEsquecisenha.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.recuperarS_LinkClicked);
-            // 
             // botaoFechar
             // 
             this.botaoFechar.AccessibleName = "botaoFechar";
@@ -169,14 +145,12 @@ namespace FindTec
             this.botaoFechar.TabIndex = 6;
             this.botaoFechar.UseVisualStyleBackColor = false;
             this.botaoFechar.Click += new System.EventHandler(this.botaoFechar_Click);
-            this.botaoFechar.MouseEnter += new System.EventHandler(this.botaoFechar_MouseEnter);
-            this.botaoFechar.MouseLeave += new System.EventHandler(this.botaoFechar_MouseLeave);
             // 
             // botaoCriesuaconta
             // 
             this.botaoCriesuaconta.AccessibleName = "botaoCriarconta";
             this.botaoCriesuaconta.BackColor = System.Drawing.Color.Transparent;
-            this.botaoCriesuaconta.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("botaoCriesuaconta.BackgroundImage")));
+            this.botaoCriesuaconta.BackgroundImage = global::FindTec.Properties.Resources.botaoCriarconta2;
             this.botaoCriesuaconta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.botaoCriesuaconta.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.botaoCriesuaconta.FlatAppearance.BorderSize = 0;
@@ -193,16 +167,33 @@ namespace FindTec
             this.botaoCriesuaconta.MouseEnter += new System.EventHandler(this.botaoCriesuaconta_MouseEnter);
             this.botaoCriesuaconta.MouseLeave += new System.EventHandler(this.botaoCriesuaconta_MouseLeave);
             // 
+            // botaoEsquecisenha
+            // 
+            this.botaoEsquecisenha.AccessibleName = "botaoEsquecisenha";
+            this.botaoEsquecisenha.BackColor = System.Drawing.Color.Transparent;
+            this.botaoEsquecisenha.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.botaoEsquecisenha.FlatAppearance.BorderSize = 0;
+            this.botaoEsquecisenha.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.botaoEsquecisenha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botaoEsquecisenha.ForeColor = System.Drawing.Color.Transparent;
+            this.botaoEsquecisenha.Location = new System.Drawing.Point(122, 460);
+            this.botaoEsquecisenha.Name = "botaoEsquecisenha";
+            this.botaoEsquecisenha.Size = new System.Drawing.Size(162, 23);
+            this.botaoEsquecisenha.TabIndex = 15;
+            this.botaoEsquecisenha.Text = "ESQUECI MINHA SENHA";
+            this.botaoEsquecisenha.UseVisualStyleBackColor = false;
+            this.botaoEsquecisenha.Click += new System.EventHandler(this.botaoEsquecisenha_Click);
+            //
             // TelaLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(400, 600);
+            this.Controls.Add(this.botaoEsquecisenha);
             this.Controls.Add(this.botaoCriesuaconta);
             this.Controls.Add(this.botaoFechar);
-            this.Controls.Add(this.botaoEsquecisenha);
-            this.Controls.Add(this.botaoErrologin);
+            this.Controls.Add(this.avisoErrologin);
             this.Controls.Add(this.botaoCriarconta);
             this.Controls.Add(this.botaoEntrar);
             this.Controls.Add(this.campoSenha);
@@ -214,7 +205,6 @@ namespace FindTec
             this.Name = "TelaLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
-            this.Load += new System.EventHandler(this.TelaLogin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -224,11 +214,11 @@ namespace FindTec
 
         private System.Windows.Forms.LinkLabel botaoCriarconta;
         private System.Windows.Forms.TextBox campoSenha;
-        private System.Windows.Forms.Label botaoErrologin;
+        private System.Windows.Forms.Label avisoErrologin;
         private System.Windows.Forms.Button botaoEntrar;
         private System.Windows.Forms.TextBox campoEmail;
-        private LinkLabel botaoEsquecisenha;
         private Button botaoFechar;
         private Button botaoCriesuaconta;
+        private Button botaoEsquecisenha;
     }
 }

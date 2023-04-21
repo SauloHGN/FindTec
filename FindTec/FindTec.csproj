@@ -163,6 +163,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="RecuperarSenha.resx">
       <DependentUpon>RecuperarSenha.cs</DependentUpon>
@@ -197,6 +198,26 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagens\botaoCriarconta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagens\botaoCriarconta2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagens\botaoEntrar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagens\botaoEntrar2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Imagens\botaoAluno1.png" />
+    <Content Include="Imagens\botaoAluno2.png" />
+    <Content Include="Imagens\botaoEmpresa1.png" />
+    <Content Include="Imagens\botaoFechar.png" />
+    <Content Include="Imagens\botaoVoltar.png" />
+    <Content Include="Imagens\TelaEscolha.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
