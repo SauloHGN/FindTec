@@ -5,68 +5,18 @@ using System.Windows.Forms;
 namespace FindTec
 {
     public partial class TelaCadastro : Form
-    {      
-        public TelaCadastro()
-        {
-            InitializeComponent();            
-            button1_Click(this, new EventArgs());//INICIAR COM O BOTÃO ALUNO SELECIONADO
-            this.FormClosing += new FormClosingEventHandler(TelaCadastro_FormClosing);// USADO PARA FECHAR APLICAÇÃO
-            
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            cadastroEmpresa.Visible = false;
-            cadastroAluno.Visible = true;
-            buttonCadastroAluno.BackColor = Color.Black;
-            buttonCadastroAluno.ForeColor = Color.White;
-            buttonCadastroEmpresa.BackColor = SystemColors.Control;
-            buttonCadastroEmpresa.ForeColor = Color.Black;
-
-          
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            cadastroAluno.Visible = false;
-            cadastroEmpresa.Visible = true;
-            buttonCadastroEmpresa.BackColor = Color.Black;
-            buttonCadastroEmpresa.ForeColor = Color.White;
-            buttonCadastroAluno.BackColor = SystemColors.Control;
-            buttonCadastroAluno.ForeColor = Color.Black;
-        }
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            TelaLogin login = new TelaLogin();
-            login.Show();
-            this.Hide();
-        }
+    {
 
         private void TelaCadastro_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
         }
 
-        private void label5_Click(object sender, EventArgs e)
+        public TelaCadastro()
         {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-                      
-        }
+            InitializeComponent();
+            this.FormClosing += new FormClosingEventHandler(TelaCadastro_FormClosing);// USADO PARA FECHAR APLICAÇÃO            
+        }      
 
         public static bool DadosDisponiveis(string email, string telefone)
         {
@@ -186,9 +136,28 @@ namespace FindTec
             
         }
 
-        private void cadastroEmpresa_Paint(object sender, PaintEventArgs e)
+        private void textSenhaE_TextChanged(object sender, EventArgs e)
         {
 
-        }    
+        }
+
+        private void textSenhaE_Enter(object sender, EventArgs e)
+        {
+            if (textSenhaE.Text == "SENHA")
+            {
+                textSenhaE.Text = "";
+            }
+
+            textSenhaE.PasswordChar = '•';
+        }
+
+        private void textSenhaE_Leave(object sender, EventArgs e)
+        {
+            if (textSenhaE.Text == "")
+            {
+                textSenhaE.PasswordChar = '\0';
+                textSenhaE.Text = "SENHA";
+            }
+        }
     }
 }

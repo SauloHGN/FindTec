@@ -54,13 +54,33 @@ namespace FindTec
         }
 
         private void botaoAluno_Click(object sender, EventArgs e)
-        {
+        {                   
+            // Instanciando a segunda tela
+            TelaCadastro cadastro = new TelaCadastro();
 
+            // Configurando o painel "cadastroAluno" como visível e o "cadastroEmpresa" como oculto
+            cadastro.cadastroAluno.Visible = true;
+            cadastro.cadastroEmpresa.Visible = false;
+            cadastro.cadastroAluno.BringToFront();
+
+
+            // Exibindo a segunda tela
+            cadastro.Show();
+            this.Hide();
         }
 
         private void botaoEmpresa_Click(object sender, EventArgs e)
         {
+            // Instanciando a segunda tela
+            TelaCadastro cadastro = new TelaCadastro();
 
+            // Configurando o painel "cadastroEmpresa como visível e o "CadastroAluno" como oculto
+            cadastro.cadastroEmpresa.Visible = true;
+            cadastro.cadastroAluno.Visible = false;
+
+            // Exibindo a segunda tela
+            cadastro.Show();
+            this.Hide();
         }
 
         private void botaoVoltar_Click(object sender, EventArgs e)

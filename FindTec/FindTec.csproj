@@ -227,6 +227,8 @@
     <None Include="Imagens\botaoEmpresa2.png" />
     <Content Include="Imagens\botaoFechar.png" />
     <Content Include="Imagens\botaoVoltar.png" />
+    <None Include="Imagens\CadastroAluno.png" />
+    <None Include="Imagens\CadastroEmpresa.png" />
     <Content Include="Imagens\TelaEscolha.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
