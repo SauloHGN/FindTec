@@ -68,6 +68,7 @@ namespace FindTec
             this.cadastroAluno.Controls.Add(this.button3);
             this.cadastroAluno.Controls.Add(this.textTelefone);
             this.cadastroAluno.Controls.Add(this.textEmail);
+            this.cadastroAluno.Controls.Add(this.cadastroEmpresa);
             this.cadastroAluno.Controls.Add(this.label6);
             this.cadastroAluno.Controls.Add(this.textNome);
             this.cadastroAluno.Controls.Add(this.label5);
@@ -226,7 +227,7 @@ namespace FindTec
             this.cadastroEmpresa.Controls.Add(this.label9);
             this.cadastroEmpresa.Controls.Add(this.label10);
             this.cadastroEmpresa.Controls.Add(this.label11);
-            this.cadastroEmpresa.Location = new System.Drawing.Point(80, 109);
+            this.cadastroEmpresa.Location = new System.Drawing.Point(0, 0);
             this.cadastroEmpresa.Name = "cadastroEmpresa";
             this.cadastroEmpresa.Size = new System.Drawing.Size(425, 240);
             this.cadastroEmpresa.TabIndex = 3;
@@ -344,8 +345,8 @@ namespace FindTec
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonCadastroEmpresa);
             this.Controls.Add(this.buttonCadastroAluno);
-            this.Controls.Add(this.cadastroEmpresa);
             this.Controls.Add(this.cadastroAluno);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TelaCadastro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro";

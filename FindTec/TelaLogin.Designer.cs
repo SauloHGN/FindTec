@@ -138,10 +138,10 @@ namespace FindTec
             this.botaoFechar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.botaoFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.botaoFechar.ForeColor = System.Drawing.Color.Transparent;
-            this.botaoFechar.Image = ((System.Drawing.Image)(resources.GetObject("botaoFechar.Image")));
-            this.botaoFechar.Location = new System.Drawing.Point(358, 12);
+            this.botaoFechar.Image = global::FindTec.Properties.Resources.botaoFechar;
+            this.botaoFechar.Location = new System.Drawing.Point(348, 12);
             this.botaoFechar.Name = "botaoFechar";
-            this.botaoFechar.Size = new System.Drawing.Size(30, 30);
+            this.botaoFechar.Size = new System.Drawing.Size(40, 40);
             this.botaoFechar.TabIndex = 6;
             this.botaoFechar.UseVisualStyleBackColor = false;
             this.botaoFechar.Click += new System.EventHandler(this.botaoFechar_Click);
@@ -173,7 +173,7 @@ namespace FindTec
             this.botaoEsquecisenha.BackColor = System.Drawing.Color.Transparent;
             this.botaoEsquecisenha.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.botaoEsquecisenha.FlatAppearance.BorderSize = 0;
-            this.botaoEsquecisenha.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.botaoEsquecisenha.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.AppWorkspace;
             this.botaoEsquecisenha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.botaoEsquecisenha.ForeColor = System.Drawing.Color.Transparent;
             this.botaoEsquecisenha.Location = new System.Drawing.Point(122, 460);
@@ -183,7 +183,7 @@ namespace FindTec
             this.botaoEsquecisenha.Text = "ESQUECI MINHA SENHA";
             this.botaoEsquecisenha.UseVisualStyleBackColor = false;
             this.botaoEsquecisenha.Click += new System.EventHandler(this.botaoEsquecisenha_Click);
-            //
+            // 
             // TelaLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);

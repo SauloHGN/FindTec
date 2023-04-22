@@ -124,6 +124,12 @@
     <Compile Include="TelaCadastro.Designer.cs">
       <DependentUpon>TelaCadastro.cs</DependentUpon>
     </Compile>
+    <Compile Include="TelaEscolha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaEscolha.Designer.cs">
+      <DependentUpon>TelaEscolha.cs</DependentUpon>
+    </Compile>
     <Compile Include="TelaLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,6 +177,9 @@
     <EmbeddedResource Include="TelaCadastro.resx">
       <DependentUpon>TelaCadastro.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TelaEscolha.resx">
+      <DependentUpon>TelaEscolha.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TelaLogin.resx">
       <DependentUpon>TelaLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -215,6 +224,7 @@
     <Content Include="Imagens\botaoAluno1.png" />
     <Content Include="Imagens\botaoAluno2.png" />
     <Content Include="Imagens\botaoEmpresa1.png" />
+    <None Include="Imagens\botaoEmpresa2.png" />
     <Content Include="Imagens\botaoFechar.png" />
     <Content Include="Imagens\botaoVoltar.png" />
     <Content Include="Imagens\TelaEscolha.png" />

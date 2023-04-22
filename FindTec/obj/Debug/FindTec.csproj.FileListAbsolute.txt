@@ -135,3 +135,4 @@ C:\Users\lucas\Downloads\FindTec-main\FindTec\obj\Debug\FindTec.csproj.GenerateR
 C:\Users\lucas\Downloads\FindTec-main\FindTec\obj\Debug\FindTec.csproj.CoreCompileInputs.cache
 C:\Users\lucas\Downloads\FindTec-main\FindTec\obj\Debug\FindTec.exe
 C:\Users\lucas\Downloads\FindTec-main\FindTec\obj\Debug\FindTec.pdb
+C:\Users\lucas\Downloads\FindTec-main\FindTec\obj\Debug\FindTec.TelaEscolha.resources

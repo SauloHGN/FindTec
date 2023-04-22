@@ -118,16 +118,12 @@ namespace FindTec
         public TelaLogin()
         {                    
             InitializeComponent();
-            this.FormClosing += new FormClosingEventHandler(TelaLogin_FormClosing);// USADO PARA FECHAR APLICAÇÃO
             botaoFechar.Select();// O PROGRAMA SE INICIA COM O BOTAO FECHAR SELECIONADO
             KeyPreview = true;// BOTÃO ENTRAR COM ENTER
             this.KeyDown += new KeyEventHandler(Enter_KeyDown);// BOTÃO ENTRAR COM ENTER
         }
 
-        private void TelaLogin_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            Application.Exit();
-        }
+           
 
         private void campoEmail_Enter(object sender, EventArgs e)
         {
@@ -135,6 +131,8 @@ namespace FindTec
             {
                 campoEmail.Text = "";
             }
+
+            avisoErrologin.Visible = false;
         }
 
         private void campoEmail_Leave(object sender, EventArgs e)
@@ -143,6 +141,8 @@ namespace FindTec
             {
                 campoEmail.Text = "E-MAIL";
             }
+
+            avisoErrologin.Visible = false;
         }     
 
         private void campoSenha_Enter(object sender, EventArgs e)
@@ -271,7 +271,7 @@ namespace FindTec
 
         private void botaoCriesuaconta_Click(object sender, EventArgs e)
         {
-            TelaCadastro cadastro = new TelaCadastro();
+            TelaEscolha cadastro = new TelaEscolha();
             cadastro.Show();
             this.Hide();
         }
@@ -298,7 +298,7 @@ namespace FindTec
         {
             RecuperarSenha recuperar = new RecuperarSenha();
             recuperar.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void botaoFechar_Click(object sender, EventArgs e)

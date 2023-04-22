@@ -63,6 +63,26 @@ namespace FindTec.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap botaoAluno1 {
+            get {
+                object obj = ResourceManager.GetObject("botaoAluno1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap botaoAluno2 {
+            get {
+                object obj = ResourceManager.GetObject("botaoAluno2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap botaoCriarconta {
             get {
                 object obj = ResourceManager.GetObject("botaoCriarconta", resourceCulture);
@@ -83,6 +103,26 @@ namespace FindTec.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap botaoEmpresa1 {
+            get {
+                object obj = ResourceManager.GetObject("botaoEmpresa1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap botaoEmpresa2 {
+            get {
+                object obj = ResourceManager.GetObject("botaoEmpresa2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap botaoEntrar {
             get {
                 object obj = ResourceManager.GetObject("botaoEntrar", resourceCulture);
@@ -96,6 +136,36 @@ namespace FindTec.Properties {
         internal static System.Drawing.Bitmap botaoEntrar2 {
             get {
                 object obj = ResourceManager.GetObject("botaoEntrar2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap botaoFechar {
+            get {
+                object obj = ResourceManager.GetObject("botaoFechar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap botaoVoltar {
+            get {
+                object obj = ResourceManager.GetObject("botaoVoltar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TelaEscolha {
+            get {
+                object obj = ResourceManager.GetObject("TelaEscolha", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
