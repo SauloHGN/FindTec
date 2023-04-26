@@ -94,6 +94,7 @@ namespace FindTec
             this.botaoCriarconta.TabIndex = 14;
             this.botaoCriarconta.Text = "Criar Conta";
             this.botaoCriarconta.UseVisualStyleBackColor = true;
+            this.botaoCriarconta.Click += new System.EventHandler(this.botaoCriarconta_Click);
             // 
             // textTelE
             // 
@@ -208,8 +209,8 @@ namespace FindTec
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(660, 660);
             this.Controls.Add(this.txtIndisponivel);
-            this.Controls.Add(this.cadastroAluno);
             this.Controls.Add(this.cadastroEmpresa);
+            this.Controls.Add(this.cadastroAluno);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximumSize = new System.Drawing.Size(660, 660);
             this.MinimumSize = new System.Drawing.Size(660, 660);

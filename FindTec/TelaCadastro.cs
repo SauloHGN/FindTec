@@ -52,38 +52,6 @@ namespace FindTec
             return true;
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            txtIndisponivel.Visible = false;
-            if (DadosDisponiveis(textEmailE.Text, textTelE.Text))
-            {
-                // ADICIONAR DADOS NA LISTA (TELA DE CADASTRO)
-                // LISTA EMPRESA: (ID, NOME, EMAIL, TELEFONE, SENHA, STATUS, codigo, aprovação)
-                DadosUsuario.listaEmpresas.Add((Program.id++, textNomeE.Text, textEmailE.Text, textTelE.Text, textSenhaE.Text, true, null, false));
-                foreach (var empresa in DadosUsuario.listaEmpresas)
-                {
-                    Console.WriteLine("ID: " + empresa.Item1);
-                    Console.WriteLine("Nome: " + empresa.Item2);
-                    Console.WriteLine("Email: " + empresa.Item3);
-                    Console.WriteLine("Telefone: " + empresa.Item4);
-                    Console.WriteLine("Senha: " + empresa.Item5);
-                    Console.WriteLine("Status: " + empresa.Item6);
-                    Console.WriteLine("Codigo: " + empresa.Item7);
-                    Console.WriteLine("Aprovação: " + empresa.Item8);
-                }
-                //LIMPAR TEXTO DOS CAMPOS
-                textNomeE.Clear();
-                textEmailE.Clear();
-                textTelE.Clear();
-                textSenhaE.Clear();
-            }
-            else
-            {
-                txtIndisponivel.Visible = true;
-            }
-        }
-
-
         private void button3_Click_1(object sender, EventArgs e)
         {
             txtIndisponivel.Visible = false;
@@ -152,6 +120,37 @@ namespace FindTec
             {
                 textSenhaE.PasswordChar = '\0';
                 textSenhaE.Text = "SENHA";
+            }
+        }
+
+        private void botaoCriarconta_Click(object sender, EventArgs e)
+        {
+            txtIndisponivel.Visible = false;
+            if (DadosDisponiveis(textEmailE.Text, textTelE.Text))
+            {
+                // ADICIONAR DADOS NA LISTA (TELA DE CADASTRO)
+                // LISTA EMPRESA: (ID, NOME, EMAIL, TELEFONE, SENHA, STATUS, codigo, aprovação)
+                DadosUsuario.listaEmpresas.Add((Program.id++, textNomeE.Text, textEmailE.Text, textTelE.Text, textSenhaE.Text, true, null, false));
+                foreach (var empresa in DadosUsuario.listaEmpresas)
+                {
+                    Console.WriteLine("ID: " + empresa.Item1);
+                    Console.WriteLine("Nome: " + empresa.Item2);
+                    Console.WriteLine("Email: " + empresa.Item3);
+                    Console.WriteLine("Telefone: " + empresa.Item4);
+                    Console.WriteLine("Senha: " + empresa.Item5);
+                    Console.WriteLine("Status: " + empresa.Item6);
+                    Console.WriteLine("Codigo: " + empresa.Item7);
+                    Console.WriteLine("Aprovação: " + empresa.Item8);
+                }
+                //LIMPAR TEXTO DOS CAMPOS
+                textNomeE.Clear();
+                textEmailE.Clear();
+                textTelE.Clear();
+                textSenhaE.Clear();
+            }
+            else
+            {
+                txtIndisponivel.Visible = true;
             }
         }
     }
