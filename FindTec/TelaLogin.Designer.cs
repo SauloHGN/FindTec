@@ -34,7 +34,6 @@ namespace FindTec
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaLogin));
-            this.botaoCriarconta = new System.Windows.Forms.LinkLabel();
             this.campoSenha = new System.Windows.Forms.TextBox();
             this.campoEmail = new System.Windows.Forms.TextBox();
             this.avisoErrologin = new System.Windows.Forms.Label();
@@ -42,29 +41,10 @@ namespace FindTec
             this.botaoFechar = new System.Windows.Forms.Button();
             this.botaoCriesuaconta = new System.Windows.Forms.Button();
             this.botaoEsquecisenha = new System.Windows.Forms.Button();
-            this.SuspendLayout();
-            // 
-            // botaoCriarconta
-            // 
-            this.botaoCriarconta.AccessibleName = "botaoCriarconta";
-            this.botaoCriarconta.ActiveLinkColor = System.Drawing.Color.Transparent;
-            this.botaoCriarconta.AutoSize = true;
-            this.botaoCriarconta.BackColor = System.Drawing.Color.White;
-            this.botaoCriarconta.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.botaoCriarconta.DisabledLinkColor = System.Drawing.Color.Transparent;
-            this.botaoCriarconta.ForeColor = System.Drawing.Color.Transparent;
-            this.botaoCriarconta.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.botaoCriarconta.LinkColor = System.Drawing.Color.Black;
-            this.botaoCriarconta.Location = new System.Drawing.Point(150, 442);
-            this.botaoCriarconta.Name = "botaoCriarconta";
-            this.botaoCriarconta.Size = new System.Drawing.Size(102, 15);
-            this.botaoCriarconta.TabIndex = 4;
-            this.botaoCriarconta.TabStop = true;
-            this.botaoCriarconta.Text = "CRIE SUA CONTA!";
-            this.botaoCriarconta.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            // 
-            // campoSenha
-            // 
+            this.SuspendLayout();            
+            //// 
+            //// campoSenha
+            //// 
             this.campoSenha.AccessibleName = "campoSenha";
             this.campoSenha.BackColor = System.Drawing.Color.White;
             this.campoSenha.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -138,8 +118,8 @@ namespace FindTec
             this.botaoFechar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.botaoFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.botaoFechar.ForeColor = System.Drawing.Color.Transparent;
-            this.botaoFechar.Image = global::FindTec.Properties.Resources.botaoFechar;
-            this.botaoFechar.Location = new System.Drawing.Point(348, 12);
+            this.botaoFechar.Image = ((System.Drawing.Image)(resources.GetObject("botaoFechar.Image")));
+            this.botaoFechar.Location = new System.Drawing.Point(358, 2);
             this.botaoFechar.Name = "botaoFechar";
             this.botaoFechar.Size = new System.Drawing.Size(40, 40);
             this.botaoFechar.TabIndex = 6;
@@ -148,9 +128,9 @@ namespace FindTec
             // 
             // botaoCriesuaconta
             // 
-            this.botaoCriesuaconta.AccessibleName = "botaoCriarconta";
+            this.botaoCriesuaconta.AccessibleName = "botaoCriesuaconta";
             this.botaoCriesuaconta.BackColor = System.Drawing.Color.Transparent;
-            this.botaoCriesuaconta.BackgroundImage = global::FindTec.Properties.Resources.botaoCriarconta2;
+            this.botaoCriesuaconta.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("botaoCriesuaconta.BackgroundImage")));
             this.botaoCriesuaconta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.botaoCriesuaconta.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.botaoCriesuaconta.FlatAppearance.BorderSize = 0;
@@ -194,7 +174,6 @@ namespace FindTec
             this.Controls.Add(this.botaoCriesuaconta);
             this.Controls.Add(this.botaoFechar);
             this.Controls.Add(this.avisoErrologin);
-            this.Controls.Add(this.botaoCriarconta);
             this.Controls.Add(this.botaoEntrar);
             this.Controls.Add(this.campoSenha);
             this.Controls.Add(this.campoEmail);
@@ -212,7 +191,6 @@ namespace FindTec
 
         #endregion
 
-        private System.Windows.Forms.LinkLabel botaoCriarconta;
         private System.Windows.Forms.TextBox campoSenha;
         private System.Windows.Forms.Label avisoErrologin;
         private System.Windows.Forms.Button botaoEntrar;

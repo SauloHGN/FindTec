@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaEscolha));
             this.botaoFechar = new System.Windows.Forms.Button();
             this.botaoVoltar = new System.Windows.Forms.Button();
             this.botaoAluno = new System.Windows.Forms.Button();
@@ -43,8 +44,8 @@
             this.botaoFechar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.botaoFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.botaoFechar.ForeColor = System.Drawing.Color.Transparent;
-            this.botaoFechar.Image = global::FindTec.Properties.Resources.botaoFechar;
-            this.botaoFechar.Location = new System.Drawing.Point(608, 12);
+            this.botaoFechar.Image = ((System.Drawing.Image)(resources.GetObject("botaoFechar.Image")));
+            this.botaoFechar.Location = new System.Drawing.Point(618, 2);
             this.botaoFechar.Name = "botaoFechar";
             this.botaoFechar.Size = new System.Drawing.Size(40, 40);
             this.botaoFechar.TabIndex = 7;
@@ -59,7 +60,7 @@
             this.botaoVoltar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.botaoVoltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.botaoVoltar.Image = global::FindTec.Properties.Resources.botaoVoltar;
-            this.botaoVoltar.Location = new System.Drawing.Point(12, 12);
+            this.botaoVoltar.Location = new System.Drawing.Point(1, 2);
             this.botaoVoltar.Name = "botaoVoltar";
             this.botaoVoltar.Size = new System.Drawing.Size(40, 40);
             this.botaoVoltar.TabIndex = 8;

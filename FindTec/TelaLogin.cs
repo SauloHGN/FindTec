@@ -173,7 +173,7 @@ namespace FindTec
         private void botaoEntrar_MouseEnter(object sender, EventArgs e)
         {
             // Carrega a nova imagem do arquivo "botaoEntrar" do resources.resx
-            Image novaImagem = Properties.Resources.botaoEntrar;
+            Image novaImagem = Properties.Resources.botaoEntrar1;
 
             // Define a nova imagem como o background do botão
             botaoEntrar.BackgroundImage = novaImagem;
@@ -284,8 +284,8 @@ namespace FindTec
 
         private void botaoCriesuaconta_MouseEnter(object sender, EventArgs e)
         {
-            // Carrega a nova imagem do arquivo "botaoCriarconta" do resources.resx
-            Image novaImagem = Properties.Resources.botaoCriarconta;
+            // Carrega a nova imagem do arquivo "botaoCriesuaconta1" do resources.resx
+            Image novaImagem = Properties.Resources.botaoCriesuaconta1;
 
             // Define a nova imagem como o background do botão
             botaoCriesuaconta.BackgroundImage = novaImagem;
@@ -294,7 +294,7 @@ namespace FindTec
         private void botaoCriesuaconta_MouseLeave(object sender, EventArgs e)
         {
             // Carrega a nova imagem do arquivo "botaoCriarconta2" do resources.resx
-            Image novaImagem = Properties.Resources.botaoCriarconta2;
+            Image novaImagem = Properties.Resources.botaoCriesuaconta2;
 
             // Define a nova imagem como o background do botão
             botaoCriesuaconta.BackgroundImage = novaImagem;

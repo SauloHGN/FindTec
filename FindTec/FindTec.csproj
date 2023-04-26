@@ -209,13 +209,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Imagens\botaoCriarconta.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Imagens\botaoCriarconta2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Imagens\botaoEntrar.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Imagens\botaoEntrar2.png" />
@@ -223,8 +217,12 @@
   <ItemGroup>
     <Content Include="Imagens\botaoAluno1.png" />
     <Content Include="Imagens\botaoAluno2.png" />
+    <None Include="Imagens\botaoCriesuaconta1.png" />
+    <None Include="Imagens\botaoCriarconta1.png" />
+    <None Include="Imagens\botaoCriesuaconta2.png" />
     <Content Include="Imagens\botaoEmpresa1.png" />
     <None Include="Imagens\botaoEmpresa2.png" />
+    <None Include="Imagens\botaoEntrar1.png" />
     <Content Include="Imagens\botaoFechar.png" />
     <Content Include="Imagens\botaoVoltar.png" />
     <None Include="Imagens\CadastroAluno.png" />

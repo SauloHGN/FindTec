@@ -131,11 +131,6 @@ namespace FindTec
             DadosUsuario.listaAdmin.Add((0, "admin", "admin"));
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
-        }
-
         private void textSenhaE_TextChanged(object sender, EventArgs e)
         {
 

@@ -32,17 +32,16 @@ namespace FindTec
             this.txtIndisponivel = new System.Windows.Forms.Label();
             this.cadastroEmpresa = new System.Windows.Forms.Panel();
             this.textSenhaE = new System.Windows.Forms.TextBox();
-            this.button4 = new System.Windows.Forms.Button();
+            this.botaoCriarconta = new System.Windows.Forms.Button();
             this.textTelE = new System.Windows.Forms.TextBox();
             this.textEmailE = new System.Windows.Forms.TextBox();
             this.textNomeE = new System.Windows.Forms.TextBox();
-            this.textNome = new System.Windows.Forms.TextBox();
-            this.textEmail = new System.Windows.Forms.TextBox();
-            this.textTelefone = new System.Windows.Forms.TextBox();
-            this.botaoCriarconta = new System.Windows.Forms.Button();
-            this.textSenha = new System.Windows.Forms.TextBox();
-            this.opCurso = new System.Windows.Forms.ComboBox();
             this.cadastroAluno = new System.Windows.Forms.Panel();
+            this.opCurso = new System.Windows.Forms.ComboBox();
+            this.textSenha = new System.Windows.Forms.TextBox();
+            this.textTelefone = new System.Windows.Forms.TextBox();
+            this.textEmail = new System.Windows.Forms.TextBox();
+            this.textNome = new System.Windows.Forms.TextBox();
             this.cadastroEmpresa.SuspendLayout();
             this.cadastroAluno.SuspendLayout();
             this.SuspendLayout();
@@ -61,9 +60,8 @@ namespace FindTec
             // cadastroEmpresa
             // 
             this.cadastroEmpresa.BackgroundImage = global::FindTec.Properties.Resources.CadastroEmpresa;
-            this.cadastroEmpresa.Controls.Add(this.cadastroAluno);
             this.cadastroEmpresa.Controls.Add(this.textSenhaE);
-            this.cadastroEmpresa.Controls.Add(this.button4);
+            this.cadastroEmpresa.Controls.Add(this.botaoCriarconta);
             this.cadastroEmpresa.Controls.Add(this.textTelE);
             this.cadastroEmpresa.Controls.Add(this.textEmailE);
             this.cadastroEmpresa.Controls.Add(this.textNomeE);
@@ -87,14 +85,15 @@ namespace FindTec
             this.textSenhaE.Enter += new System.EventHandler(this.textSenhaE_Enter);
             this.textSenhaE.Leave += new System.EventHandler(this.textSenhaE_Leave);
             // 
-            // button4
+            // botaoCriarconta
             // 
-            this.button4.Location = new System.Drawing.Point(289, 524);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 14;
-            this.button4.Text = "Criar Conta";
-            this.button4.UseVisualStyleBackColor = true;
+            this.botaoCriarconta.AccessibleName = "botaoCriarconta";
+            this.botaoCriarconta.Location = new System.Drawing.Point(289, 524);
+            this.botaoCriarconta.Name = "botaoCriarconta";
+            this.botaoCriarconta.Size = new System.Drawing.Size(75, 23);
+            this.botaoCriarconta.TabIndex = 14;
+            this.botaoCriarconta.Text = "Criar Conta";
+            this.botaoCriarconta.UseVisualStyleBackColor = true;
             // 
             // textTelE
             // 
@@ -126,78 +125,82 @@ namespace FindTec
             this.textNomeE.TabIndex = 1;
             this.textNomeE.Text = "NOME COMPLETO";
             // 
-            // textNome
+            // cadastroAluno
             // 
-            this.textNome.AccessibleName = "";
-            this.textNome.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textNome.Location = new System.Drawing.Point(233, 279);
-            this.textNome.Name = "textNome";
-            this.textNome.Size = new System.Drawing.Size(150, 13);
-            this.textNome.TabIndex = 1;
-            // 
-            // textEmail
-            // 
-            this.textEmail.Location = new System.Drawing.Point(251, 329);
-            this.textEmail.Name = "textEmail";
-            this.textEmail.Size = new System.Drawing.Size(150, 20);
-            this.textEmail.TabIndex = 2;
-            // 
-            // textTelefone
-            // 
-            this.textTelefone.Location = new System.Drawing.Point(251, 380);
-            this.textTelefone.Name = "textTelefone";
-            this.textTelefone.Size = new System.Drawing.Size(150, 20);
-            this.textTelefone.TabIndex = 1;
-            // 
-            // botaoCriarconta
-            // 
-            this.botaoCriarconta.Location = new System.Drawing.Point(289, 524);
-            this.botaoCriarconta.Name = "botaoCriarconta";
-            this.botaoCriarconta.Size = new System.Drawing.Size(75, 23);
-            this.botaoCriarconta.TabIndex = 1;
-            this.botaoCriarconta.Text = "Criar Conta";
-            this.botaoCriarconta.UseVisualStyleBackColor = true;
-            this.botaoCriarconta.Click += new System.EventHandler(this.button3_Click_1);
-            // 
-            // textSenha
-            // 
-            this.textSenha.Location = new System.Drawing.Point(251, 483);
-            this.textSenha.Name = "textSenha";
-            this.textSenha.PasswordChar = '•';
-            this.textSenha.Size = new System.Drawing.Size(150, 20);
-            this.textSenha.TabIndex = 5;
+            this.cadastroAluno.BackgroundImage = global::FindTec.Properties.Resources.CadastroAluno;
+            this.cadastroAluno.Controls.Add(this.opCurso);
+            this.cadastroAluno.Controls.Add(this.textSenha);
+            this.cadastroAluno.Controls.Add(this.textTelefone);
+            this.cadastroAluno.Controls.Add(this.textEmail);
+            this.cadastroAluno.Controls.Add(this.textNome);
+            this.cadastroAluno.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cadastroAluno.Location = new System.Drawing.Point(0, 0);
+            this.cadastroAluno.MaximumSize = new System.Drawing.Size(660, 660);
+            this.cadastroAluno.MinimumSize = new System.Drawing.Size(660, 660);
+            this.cadastroAluno.Name = "cadastroAluno";
+            this.cadastroAluno.Size = new System.Drawing.Size(660, 660);
+            this.cadastroAluno.TabIndex = 6;
+            this.cadastroAluno.Visible = false;
             // 
             // opCurso
             // 
+            this.opCurso.AccessibleName = "opCurso";
             this.opCurso.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.opCurso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.opCurso.Font = new System.Drawing.Font("Arial Narrow", 10F);
+            this.opCurso.ForeColor = System.Drawing.Color.Black;
             this.opCurso.FormattingEnabled = true;
             this.opCurso.Items.AddRange(new object[] {
             "Análise e Desenvolvimento de Sistemas",
             "Gestão Empresarial",
             "Gestão de Produção",
             "Eventos"});
-            this.opCurso.Location = new System.Drawing.Point(242, 429);
+            this.opCurso.Location = new System.Drawing.Point(233, 427);
             this.opCurso.Name = "opCurso";
-            this.opCurso.Size = new System.Drawing.Size(198, 21);
+            this.opCurso.Size = new System.Drawing.Size(211, 24);
             this.opCurso.TabIndex = 2;
-            this.opCurso.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // cadastroAluno
+            // textSenha
             // 
-            this.cadastroAluno.BackgroundImage = global::FindTec.Properties.Resources.CadastroAluno;
-            this.cadastroAluno.Controls.Add(this.opCurso);
-            this.cadastroAluno.Controls.Add(this.textSenha);
-            this.cadastroAluno.Controls.Add(this.botaoCriarconta);
-            this.cadastroAluno.Controls.Add(this.textTelefone);
-            this.cadastroAluno.Controls.Add(this.textEmail);
-            this.cadastroAluno.Controls.Add(this.textNome);
-            this.cadastroAluno.Location = new System.Drawing.Point(588, 586);
-            this.cadastroAluno.MaximumSize = new System.Drawing.Size(660, 660);
-            this.cadastroAluno.MinimumSize = new System.Drawing.Size(660, 660);
-            this.cadastroAluno.Name = "cadastroAluno";
-            this.cadastroAluno.Size = new System.Drawing.Size(660, 660);
-            this.cadastroAluno.TabIndex = 0;
-            this.cadastroAluno.Visible = false;
+            this.textSenha.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textSenha.Font = new System.Drawing.Font("Arial Narrow", 12F);
+            this.textSenha.Location = new System.Drawing.Point(233, 480);
+            this.textSenha.Name = "textSenha";
+            this.textSenha.PasswordChar = '•';
+            this.textSenha.Size = new System.Drawing.Size(211, 19);
+            this.textSenha.TabIndex = 5;
+            this.textSenha.Text = "SENHA";
+            // 
+            // textTelefone
+            // 
+            this.textTelefone.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textTelefone.Font = new System.Drawing.Font("Arial Narrow", 12F);
+            this.textTelefone.Location = new System.Drawing.Point(233, 378);
+            this.textTelefone.Name = "textTelefone";
+            this.textTelefone.Size = new System.Drawing.Size(211, 19);
+            this.textTelefone.TabIndex = 1;
+            this.textTelefone.Text = "TELEFONE";
+            // 
+            // textEmail
+            // 
+            this.textEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textEmail.Font = new System.Drawing.Font("Arial Narrow", 12F);
+            this.textEmail.Location = new System.Drawing.Point(233, 327);
+            this.textEmail.Name = "textEmail";
+            this.textEmail.Size = new System.Drawing.Size(211, 19);
+            this.textEmail.TabIndex = 2;
+            this.textEmail.Text = "E-MAIL";
+            // 
+            // textNome
+            // 
+            this.textNome.AccessibleName = "";
+            this.textNome.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textNome.Font = new System.Drawing.Font("Arial Narrow", 12F);
+            this.textNome.Location = new System.Drawing.Point(233, 276);
+            this.textNome.Name = "textNome";
+            this.textNome.Size = new System.Drawing.Size(211, 19);
+            this.textNome.TabIndex = 1;
+            this.textNome.Text = "NOME COMPLETO";
             // 
             // TelaCadastro
             // 
@@ -205,6 +208,7 @@ namespace FindTec
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(660, 660);
             this.Controls.Add(this.txtIndisponivel);
+            this.Controls.Add(this.cadastroAluno);
             this.Controls.Add(this.cadastroEmpresa);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximumSize = new System.Drawing.Size(660, 660);
@@ -225,14 +229,13 @@ namespace FindTec
         private System.Windows.Forms.Label txtIndisponivel;
         public System.Windows.Forms.Panel cadastroEmpresa;
         public System.Windows.Forms.TextBox textSenhaE;
-        public System.Windows.Forms.Button button4;
+        public System.Windows.Forms.Button botaoCriarconta;
         public System.Windows.Forms.TextBox textTelE;
         public System.Windows.Forms.TextBox textEmailE;
         public System.Windows.Forms.TextBox textNomeE;
         public System.Windows.Forms.Panel cadastroAluno;
         private System.Windows.Forms.ComboBox opCurso;
         private System.Windows.Forms.TextBox textSenha;
-        private System.Windows.Forms.Button botaoCriarconta;
         private System.Windows.Forms.TextBox textTelefone;
         private System.Windows.Forms.TextBox textEmail;
         private System.Windows.Forms.TextBox textNome;
