@@ -41,10 +41,10 @@ namespace FindTec
             this.botaoFechar = new System.Windows.Forms.Button();
             this.botaoCriesuaconta = new System.Windows.Forms.Button();
             this.botaoEsquecisenha = new System.Windows.Forms.Button();
-            this.SuspendLayout();            
-            //// 
-            //// campoSenha
-            //// 
+            this.SuspendLayout();
+            // 
+            // campoSenha
+            // 
             this.campoSenha.AccessibleName = "campoSenha";
             this.campoSenha.BackColor = System.Drawing.Color.White;
             this.campoSenha.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -83,7 +83,7 @@ namespace FindTec
             this.avisoErrologin.Location = new System.Drawing.Point(124, 357);
             this.avisoErrologin.Name = "avisoErrologin";
             this.avisoErrologin.Size = new System.Drawing.Size(158, 15);
-            this.avisoErrologin.TabIndex = 14;
+            this.avisoErrologin.TabIndex = 15;
             this.avisoErrologin.Text = "E-MAIL OU SENHA INCORRETOS";
             this.avisoErrologin.Visible = false;
             // 
@@ -119,10 +119,10 @@ namespace FindTec
             this.botaoFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.botaoFechar.ForeColor = System.Drawing.Color.Transparent;
             this.botaoFechar.Image = ((System.Drawing.Image)(resources.GetObject("botaoFechar.Image")));
-            this.botaoFechar.Location = new System.Drawing.Point(358, 2);
+            this.botaoFechar.Location = new System.Drawing.Point(359, 1);
             this.botaoFechar.Name = "botaoFechar";
             this.botaoFechar.Size = new System.Drawing.Size(40, 40);
-            this.botaoFechar.TabIndex = 6;
+            this.botaoFechar.TabIndex = 0;
             this.botaoFechar.UseVisualStyleBackColor = false;
             this.botaoFechar.Click += new System.EventHandler(this.botaoFechar_Click);
             // 
@@ -159,7 +159,7 @@ namespace FindTec
             this.botaoEsquecisenha.Location = new System.Drawing.Point(122, 460);
             this.botaoEsquecisenha.Name = "botaoEsquecisenha";
             this.botaoEsquecisenha.Size = new System.Drawing.Size(162, 23);
-            this.botaoEsquecisenha.TabIndex = 15;
+            this.botaoEsquecisenha.TabIndex = 5;
             this.botaoEsquecisenha.Text = "ESQUECI MINHA SENHA";
             this.botaoEsquecisenha.UseVisualStyleBackColor = false;
             this.botaoEsquecisenha.Click += new System.EventHandler(this.botaoEsquecisenha_Click);

@@ -45,10 +45,10 @@
             this.botaoFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.botaoFechar.ForeColor = System.Drawing.Color.Transparent;
             this.botaoFechar.Image = ((System.Drawing.Image)(resources.GetObject("botaoFechar.Image")));
-            this.botaoFechar.Location = new System.Drawing.Point(618, 2);
+            this.botaoFechar.Location = new System.Drawing.Point(619, 1);
             this.botaoFechar.Name = "botaoFechar";
             this.botaoFechar.Size = new System.Drawing.Size(40, 40);
-            this.botaoFechar.TabIndex = 7;
+            this.botaoFechar.TabIndex = 0;
             this.botaoFechar.UseVisualStyleBackColor = false;
             this.botaoFechar.Click += new System.EventHandler(this.botaoFechar_Click);
             // 
@@ -60,10 +60,10 @@
             this.botaoVoltar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.botaoVoltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.botaoVoltar.Image = global::FindTec.Properties.Resources.botaoVoltar;
-            this.botaoVoltar.Location = new System.Drawing.Point(1, 2);
+            this.botaoVoltar.Location = new System.Drawing.Point(1, 1);
             this.botaoVoltar.Name = "botaoVoltar";
             this.botaoVoltar.Size = new System.Drawing.Size(40, 40);
-            this.botaoVoltar.TabIndex = 8;
+            this.botaoVoltar.TabIndex = 3;
             this.botaoVoltar.UseVisualStyleBackColor = false;
             this.botaoVoltar.Click += new System.EventHandler(this.botaoVoltar_Click);
             // 
@@ -82,7 +82,7 @@
             this.botaoAluno.Location = new System.Drawing.Point(56, 142);
             this.botaoAluno.Name = "botaoAluno";
             this.botaoAluno.Size = new System.Drawing.Size(300, 300);
-            this.botaoAluno.TabIndex = 9;
+            this.botaoAluno.TabIndex = 1;
             this.botaoAluno.UseVisualStyleBackColor = false;
             this.botaoAluno.Click += new System.EventHandler(this.botaoAluno_Click);
             this.botaoAluno.MouseEnter += new System.EventHandler(this.botaoAluno_MouseEnter);
@@ -101,7 +101,7 @@
             this.botaoEmpresa.Location = new System.Drawing.Point(317, 348);
             this.botaoEmpresa.Name = "botaoEmpresa";
             this.botaoEmpresa.Size = new System.Drawing.Size(260, 260);
-            this.botaoEmpresa.TabIndex = 10;
+            this.botaoEmpresa.TabIndex = 2;
             this.botaoEmpresa.UseVisualStyleBackColor = false;
             this.botaoEmpresa.Click += new System.EventHandler(this.botaoEmpresa_Click);
             this.botaoEmpresa.MouseEnter += new System.EventHandler(this.botaoEmpresa_MouseEnter);
@@ -118,6 +118,7 @@
             this.Controls.Add(this.botaoVoltar);
             this.Controls.Add(this.botaoFechar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(660, 660);
             this.MinimumSize = new System.Drawing.Size(660, 660);
             this.Name = "TelaEscolha";

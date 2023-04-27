@@ -86,22 +86,7 @@ namespace FindTec
             }
             base.WndProc(ref m);
             if (m.Msg == WM_NCHITTEST && (int)m.Result == HTCLIENT) m.Result = (IntPtr)HTCAPTION;
-        }
-        private void PanelMove_MouseDown(object sender, MouseEventArgs e)
-        {
-            Drag = true;
-            MouseX = Cursor.Position.X - this.Left;
-            MouseY = Cursor.Position.Y - this.Top;
-        }
-        private void PanelMove_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (Drag)
-            {
-                this.Top = Cursor.Position.Y - MouseY;
-                this.Left = Cursor.Position.X - MouseX;
-            }
-        }
-        private void PanelMove_MouseUp(object sender, MouseEventArgs e) { Drag = false; }
+        }        
         //FIM DO MOVIMENTAR A JANELA E SOMBREADO ---------------------------------------------------------------------------------------------------
 
         public string tipoUser;

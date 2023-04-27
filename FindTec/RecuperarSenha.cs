@@ -3,6 +3,8 @@ using System;
 using System.Text;
 using System.Net;
 using System.Net.Mail;
+using System.Drawing;
+
 
 namespace FindTec
 {
@@ -365,6 +367,68 @@ namespace FindTec
         private void RecuperarSenha_Load(object sender, EventArgs e)
         {
 
-        }     
+        }
+
+        
+        private void botaoEnviar1_MouseEnter(object sender, EventArgs e)
+        {
+            // Carrega a nova imagem do arquivo "botaoEnviar2" do resources.resx
+            Image novaImagem = Properties.Resources.botaoEnviar2;
+
+            // Define a nova imagem como o background do botão
+            botaoEnviar1.BackgroundImage = novaImagem;
+        }
+
+        private void botaoEnviar1_MouseLeave(object sender, EventArgs e)
+        {
+            // Carrega a nova imagem do arquivo "botaoEmpresa1" do resources.resx
+            Image novaImagem = Properties.Resources.botaoEnviar1;
+
+            // Define a nova imagem como o background do botão
+            botaoEnviar1.BackgroundImage = novaImagem;
+        }
+
+        private void botaoFechar1_Click(object sender, EventArgs e)
+        {
+            TelaLogin login = new TelaLogin();
+            login.Show();
+            this.Hide();
+        }
+
+        private void botaoFechar2_Click(object sender, EventArgs e)
+        {
+            TelaLogin login = new TelaLogin();
+            login.Show();
+            this.Hide();
+        }
+
+        private void botaoFechar3_Click(object sender, EventArgs e)
+        {
+            TelaLogin login = new TelaLogin();
+            login.Show();
+            this.Hide();
+        }
+
+        private void botaoVoltar1_Click(object sender, EventArgs e)
+        {
+            TelaLogin login = new TelaLogin();
+            login.Show();
+            this.Close();
+        }
+
+        private void botaoVoltar2_Click(object sender, EventArgs e)
+        {
+            // Instanciando a segunda tela
+            RecuperarSenha recuperar = new RecuperarSenha();
+
+            // Configurando o painel "cadastroAluno" como visível e o "cadastroEmpresa" como oculto
+            recuperar.panelEmail.Visible = true;
+            recuperar.panelCodigo.Visible = false;
+            recuperar.panelNewSenha.Visible = false;
+
+            // Exibindo a segunda tela
+            recuperar.Show();
+            this.Hide();
+        }
     }
 }

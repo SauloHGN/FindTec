@@ -118,17 +118,26 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="botaoCriesuaconta2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\botaoCriesuaconta2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="CadastroAluno" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imagens\CadastroAluno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="botaoVoltar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imagens\botaoVoltar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="botaoEntrar2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Imagens\botaoEntrar2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="botaoCriarconta2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\botaoCriarconta2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="botaoAluno2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imagens\botaoAluno2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CadastroEmpresa" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\CadastroEmpresa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="botaoCriesuaconta1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\botaoCriesuaconta1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="botaoEmpresa1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imagens\botaoEmpresa1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -136,31 +145,37 @@
   <data name="botaoAluno1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imagens\botaoAluno1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="RecuperarSenha1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\RecuperarSenha1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="botaoFechar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\botaoFechar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RecuperarSenha3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\RecuperarSenha3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="botaoEmpresa2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imagens\botaoEmpresa2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RecuperarSenha2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\RecuperarSenha2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="botaoEntrar2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\botaoEntrar2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="TelaEscolha" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imagens\TelaEscolha.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="CadastroEmpresa" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Imagens\CadastroEmpresa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="botaoCriarconta1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imagens\botaoCriarconta1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="botaoCriarconta2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Imagens\botaoCriarconta2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="botaoCriesuaconta1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Imagens\botaoCriesuaconta1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="botaoCriesuaconta2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Imagens\botaoCriesuaconta2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="botaoEntrar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imagens\botaoEntrar1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="botaoFechar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Imagens\botaoFechar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="botaoEnviar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\botaoEnviar1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="botaoEnviar2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\botaoEnviar2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

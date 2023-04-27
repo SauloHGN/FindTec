@@ -223,10 +223,15 @@
     <Content Include="Imagens\botaoEmpresa1.png" />
     <None Include="Imagens\botaoEmpresa2.png" />
     <None Include="Imagens\botaoEntrar1.png" />
+    <None Include="Imagens\botaoEnviar1.png" />
+    <None Include="Imagens\botaoEnviar2.png" />
     <Content Include="Imagens\botaoFechar.png" />
     <Content Include="Imagens\botaoVoltar.png" />
     <None Include="Imagens\CadastroAluno.png" />
     <None Include="Imagens\CadastroEmpresa.png" />
+    <None Include="Imagens\RecuperarSenha1.png" />
+    <None Include="Imagens\RecuperarSenha2.png" />
+    <None Include="Imagens\RecuperarSenha3.png" />
     <Content Include="Imagens\TelaEscolha.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

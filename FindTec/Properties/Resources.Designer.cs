@@ -163,6 +163,26 @@ namespace FindTec.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap botaoEnviar1 {
+            get {
+                object obj = ResourceManager.GetObject("botaoEnviar1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap botaoEnviar2 {
+            get {
+                object obj = ResourceManager.GetObject("botaoEnviar2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap botaoFechar {
             get {
                 object obj = ResourceManager.GetObject("botaoFechar", resourceCulture);
@@ -196,6 +216,36 @@ namespace FindTec.Properties {
         internal static System.Drawing.Bitmap CadastroEmpresa {
             get {
                 object obj = ResourceManager.GetObject("CadastroEmpresa", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap RecuperarSenha1 {
+            get {
+                object obj = ResourceManager.GetObject("RecuperarSenha1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap RecuperarSenha2 {
+            get {
+                object obj = ResourceManager.GetObject("RecuperarSenha2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap RecuperarSenha3 {
+            get {
+                object obj = ResourceManager.GetObject("RecuperarSenha3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
