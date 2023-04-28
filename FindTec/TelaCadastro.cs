@@ -1,94 +1,13 @@
 ﻿using System;
 using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace FindTec
 {
     public partial class TelaCadastro : Form
     {
-        //MOVIMENTAR JANELA E SOMBREADO----------------------------------------------------------------------------------------------
-        private bool Drag;
-        private int MouseX;
-        private int MouseY;
-
-        private const int WM_NCHITTEST = 0x84;
-        private const int HTCLIENT = 0x1;
-        private const int HTCAPTION = 0x2;
-
-        private bool m_aeroEnabled;
-
-        private const int CS_DROPSHADOW = 0x00020000;
-        private const int WM_NCPAINT = 0x0085;
-        private const int WM_ACTIVATEAPP = 0x001C;
-
-        [System.Runtime.InteropServices.DllImport("dwmapi.dll")]
-        public static extern int DwmExtendFrameIntoClientArea(IntPtr hWnd, ref MARGINS pMarInset);
-        [System.Runtime.InteropServices.DllImport("dwmapi.dll")]
-        public static extern int DwmSetWindowAttribute(IntPtr hwnd, int attr, ref int attrValue, int attrSize);
-        [System.Runtime.InteropServices.DllImport("dwmapi.dll")]
-
-        public static extern int DwmIsCompositionEnabled(ref int pfEnabled);
-        [System.Runtime.InteropServices.DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
-        private static extern IntPtr CreateRoundRectRgn(
-            int nLeftRect,
-            int nTopRect,
-            int nRightRect,
-            int nBottomRect,
-            int nWidthEllipse,
-            int nHeightEllipse
-            );
-
-        public struct MARGINS
-        {
-            public int leftWidth;
-            public int rightWidth;
-            public int topHeight;
-            public int bottomHeight;
-        }
-        protected override CreateParams CreateParams
-        {
-            get
-            {
-                m_aeroEnabled = CheckAeroEnabled();
-                CreateParams cp = base.CreateParams;
-                if (!m_aeroEnabled)
-                    cp.ClassStyle |= CS_DROPSHADOW; return cp;
-            }
-        }
-        private bool CheckAeroEnabled()
-        {
-            if (Environment.OSVersion.Version.Major >= 6)
-            {
-                int enabled = 0; DwmIsCompositionEnabled(ref enabled);
-                return (enabled == 1) ? true : false;
-            }
-            return false;
-        }
-        protected override void WndProc(ref Message m)
-        {
-            switch (m.Msg)
-            {
-                case WM_NCPAINT:
-                    if (m_aeroEnabled)
-                    {
-                        var v = 2;
-                        DwmSetWindowAttribute(this.Handle, 2, ref v, 4);
-                        MARGINS margins = new MARGINS()
-                        {
-                            bottomHeight = 1,
-                            leftWidth = 0,
-                            rightWidth = 0,
-                            topHeight = 0
-                        }; DwmExtendFrameIntoClientArea(this.Handle, ref margins);
-                    }
-                    break;
-                default: break;
-            }
-            base.WndProc(ref m);
-            if (m.Msg == WM_NCHITTEST && (int)m.Result == HTCLIENT) m.Result = (IntPtr)HTCAPTION;
-        }
-        //FIM DO MOVIMENTAR A JANELA E SOMBREADO ---------------------------------------------------------------------------------------------------
-
+        
         private void TelaCadastro_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
@@ -136,16 +55,18 @@ namespace FindTec
             return true;
         }
 
+        private void Admin()
+        {
+            // ADICIONAR CADASTRO DO COORDENADOR(A)
+            DadosUsuario.listaAdmin.Add((0, "admin", "admin"));
+        }
+
         public void AcessarAdmin()
         {
             //Admin();// ACESSAR O METODO PRIVADO
             Admin();
         }      
-        private void Admin()
-        {
-            // ADICIONAR CADASTRO DO COORDENADOR(A)
-            DadosUsuario.listaAdmin.Add((0, "admin", "admin"));
-        }    
+            
 
         //PAINEL DA EMPRESA
         private void textNomeE_Enter(object sender, EventArgs e)
@@ -196,6 +117,8 @@ namespace FindTec
             }
 
             txtIndisponivel.Visible = false;
+
+            
         }
 
         private void textTelE_Leave(object sender, EventArgs e)
@@ -224,6 +147,57 @@ namespace FindTec
             {
                 textSenhaE.PasswordChar = '\0';
                 textSenhaE.Text = "SENHA";
+            }
+        }
+
+        private bool formatandoTelefone = false;
+
+        private void textTelE_TextChanged(object sender, EventArgs e)
+        {
+            if (!formatandoTelefone)
+            {
+                formatandoTelefone = true;
+
+                // Remove todos os caracteres não numéricos do telefone
+                string telefone = new string(textTelE.Text.Where(char.IsDigit).ToArray());
+
+                if (telefone.Length >= 2)
+                {
+                    // Garante que a string tenha um comprimento mínimo antes de aplicar a formatação
+                    if (telefone.Length <= 2)
+                    {
+                        telefone = string.Format("({0}", telefone);
+                    }
+                    else if (telefone.Length <= 6)
+                    {
+                        telefone = string.Format("({0}) {1}", telefone.Substring(0, 2), telefone.Substring(2));
+                    }
+                    else if (telefone.Length <= 10)
+                    {
+                        telefone = string.Format("({0}) {1}-{2}", telefone.Substring(0, 2), telefone.Substring(2, 4), telefone.Substring(6));
+                    }
+                    else
+                    {
+                        telefone = string.Format("({0}) {1}-{2}", telefone.Substring(0, 2), telefone.Substring(2, 5), telefone.Substring(7));
+                    }
+                }
+
+                textTelE.Text = telefone;
+                textTelE.SelectionStart = telefone.Length;
+
+                formatandoTelefone = false;
+            }
+        }
+
+        private void textTelE_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            else if (textTelE.TextLength >= 15 && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
             }
         }
 
@@ -380,7 +354,56 @@ namespace FindTec
                 textSenha.PasswordChar = '\0';
                 textSenha.Text = "SENHA";
             }
-        }                
+        }
+
+        private void textTelefone_TextChanged(object sender, EventArgs e)
+        {
+            if (!formatandoTelefone)
+            {
+                formatandoTelefone = true;
+
+                // Remove todos os caracteres não numéricos do telefone
+                string telefone = new string(textTelefone.Text.Where(char.IsDigit).ToArray());
+
+                if (telefone.Length >= 2)
+                {
+                    // Garante que a string tenha um comprimento mínimo antes de aplicar a formatação
+                    if (telefone.Length <= 2)
+                    {
+                        telefone = string.Format("({0}", telefone);
+                    }
+                    else if (telefone.Length <= 6)
+                    {
+                        telefone = string.Format("({0}) {1}", telefone.Substring(0, 2), telefone.Substring(2));
+                    }
+                    else if (telefone.Length <= 10)
+                    {
+                        telefone = string.Format("({0}) {1}-{2}", telefone.Substring(0, 2), telefone.Substring(2, 4), telefone.Substring(6));
+                    }
+                    else
+                    {
+                        telefone = string.Format("({0}) {1}-{2}", telefone.Substring(0, 2), telefone.Substring(2, 5), telefone.Substring(7));
+                    }
+                }
+
+                textTelefone.Text = telefone;
+                textTelefone.SelectionStart = telefone.Length;
+
+                formatandoTelefone = false;
+            }
+        }
+
+        private void textTelefone_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            else if (textTelefone.TextLength >= 15 && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
 
         private void botaoCriarcontaA_MouseEnter(object sender, EventArgs e)
         {
@@ -451,7 +474,6 @@ namespace FindTec
                 txtIndisponivelA.Visible = true;
             }
         }
-
         // FIM DO PAINEL DO ALUNO
     }
 }

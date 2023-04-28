@@ -86,7 +86,9 @@ namespace FindTec
             this.textTelE.Size = new System.Drawing.Size(209, 19);
             this.textTelE.TabIndex = 3;
             this.textTelE.Text = "TELEFONE";
+            this.textTelE.TextChanged += new System.EventHandler(this.textTelE_TextChanged);
             this.textTelE.Enter += new System.EventHandler(this.textTelE_Enter);
+            this.textTelE.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textTelE_KeyPress);
             this.textTelE.Leave += new System.EventHandler(this.textTelE_Leave);
             // 
             // botaoCriarconta
@@ -316,7 +318,9 @@ namespace FindTec
             this.textTelefone.Size = new System.Drawing.Size(211, 19);
             this.textTelefone.TabIndex = 3;
             this.textTelefone.Text = "TELEFONE";
+            this.textTelefone.TextChanged += new System.EventHandler(this.textTelefone_TextChanged);
             this.textTelefone.Enter += new System.EventHandler(this.textTelefone_Enter);
+            this.textTelefone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textTelefone_KeyPress);
             this.textTelefone.Leave += new System.EventHandler(this.textTelefone_Leave);
             // 
             // textEmail
