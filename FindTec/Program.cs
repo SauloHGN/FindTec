@@ -6,6 +6,7 @@ namespace FindTec
     static class Program
     {
         public static int id = 1;
+        public static int userAtual;
         
         [STAThread]
         static void Main()

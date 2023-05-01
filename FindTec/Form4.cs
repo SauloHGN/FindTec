@@ -8,7 +8,7 @@ namespace FindTec
         public Form4()
         {
             InitializeComponent();
-            this.FormClosing += new FormClosingEventHandler(Form4_FormClosing);
+            this.FormClosing += new FormClosingEventHandler(Form4_FormClosing);                   
         }
 
         private void Form4_FormClosing(object sender, FormClosingEventArgs e)
@@ -25,38 +25,41 @@ namespace FindTec
 
         private void button1_Click(object sender, EventArgs e)
         {
-            cadastroCoordenador.Visible = true;
+            
             opA1.Visible = true;          
             opB1.Visible = false;
             opC1.Visible = false;
             opD1.Visible = false;
+            cadastroCoordenador.Visible = false;
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button2_Click_1(object sender, EventArgs e)
         {
-            cadastroCoordenador.Visible = false;
             opA1.Visible = false;
             opB1.Visible = true;
             opC1.Visible = false;
             opD1.Visible = false;
+            cadastroCoordenador.Visible = true;
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            cadastroCoordenador.Visible = false;
+            
             opA1.Visible = false;
             opB1.Visible = false;
             opC1.Visible = true;
             opD1.Visible = false;
+            cadastroCoordenador.Visible = false;
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            cadastroCoordenador.Visible = false;
+            
             opA1.Visible = false;
             opB1.Visible = false;
             opC1.Visible = false;
             opD1.Visible = true;
+            cadastroCoordenador.Visible = false;
         }
 
         private void opA1_Load(object sender, EventArgs e)
@@ -77,7 +80,7 @@ namespace FindTec
             {
                 // ADICIONAR DADOS NA LISTA (TELA DE CADASTRO)
                 // ListaCoordenador: (ID, NOME, EMAIL, TELEFONE, SENHA, codigo)
-                DadosUsuario.listaCoordenador.Add((Program.id++, textNomeC.Text, textEmailC.Text, textTelC.Text, textSenhaC.Text, null));
+                DadosUsuario.listaCoordenador.Add((Program.id++, textNomeC.Text, textEmailC.Text, textTelC.Text, textSenhaC.Text, null, null));
                 foreach (var empresa in DadosUsuario.listaEmpresas)
                 {
                     Console.WriteLine("ID: " + empresa.Item1);
@@ -99,5 +102,7 @@ namespace FindTec
                 txtIndisponivel.Visible = true;
             }
         }
+
+        
     }
 }

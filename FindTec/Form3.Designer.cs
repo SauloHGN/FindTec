@@ -47,24 +47,37 @@ namespace FindTec
             this.ColumnAprov = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnRecusar = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelCadastroAprov = new System.Windows.Forms.Panel();
-            this.opB1 = new FindTec.OpB();
-            this.opA1 = new FindTec.OpA();
-            this.opD1 = new FindTec.OpD();
-            this.opC1 = new FindTec.OpC();
-            this.dataGridViewE = new System.Windows.Forms.DataGridView();
             this.buttonListEmpresa = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             this.buttonListAluno5 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.dataGridViewE = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnAprovE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnRecusarE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.opB1 = new FindTec.OpB();
+            this.opA1 = new FindTec.OpA();
+            this.opD1 = new FindTec.OpD();
+            this.opC1 = new FindTec.OpC();
+            this.panelPerfilC = new System.Windows.Forms.Panel();
+            this.buttonUpload = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.button6 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.telefoneTxt = new System.Windows.Forms.TextBox();
+            this.emailTxt = new System.Windows.Forms.TextBox();
+            this.nomeTxt = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panelCadastroAprov.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewE)).BeginInit();
+            this.panelPerfilC.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -234,36 +247,36 @@ namespace FindTec
             this.panelCadastroAprov.TabIndex = 7;
             this.panelCadastroAprov.Visible = false;
             // 
-            // opB1
+            // buttonListEmpresa
             // 
-            this.opB1.Location = new System.Drawing.Point(200, 0);
-            this.opB1.Name = "opB1";
-            this.opB1.Size = new System.Drawing.Size(684, 511);
-            this.opB1.TabIndex = 2;
-            this.opB1.Visible = false;
+            this.buttonListEmpresa.Location = new System.Drawing.Point(370, 109);
+            this.buttonListEmpresa.Name = "buttonListEmpresa";
+            this.buttonListEmpresa.Size = new System.Drawing.Size(75, 23);
+            this.buttonListEmpresa.TabIndex = 9;
+            this.buttonListEmpresa.Text = "Empresa";
+            this.buttonListEmpresa.UseVisualStyleBackColor = true;
+            this.buttonListEmpresa.Click += new System.EventHandler(this.buttonListEmpresa_Click);
             // 
-            // opA1
+            // buttonListAluno5
             // 
-            this.opA1.Location = new System.Drawing.Point(200, 0);
-            this.opA1.Name = "opA1";
-            this.opA1.Size = new System.Drawing.Size(684, 511);
-            this.opA1.TabIndex = 1;
+            this.buttonListAluno5.AccessibleName = "buttonAluno";
+            this.buttonListAluno5.Location = new System.Drawing.Point(212, 109);
+            this.buttonListAluno5.Name = "buttonListAluno5";
+            this.buttonListAluno5.Size = new System.Drawing.Size(75, 23);
+            this.buttonListAluno5.TabIndex = 10;
+            this.buttonListAluno5.Text = "Aluno";
+            this.buttonListAluno5.UseVisualStyleBackColor = true;
+            this.buttonListAluno5.Click += new System.EventHandler(this.buttonListAluno_Click_1);
             // 
-            // opD1
+            // label2
             // 
-            this.opD1.Location = new System.Drawing.Point(200, 0);
-            this.opD1.Name = "opD1";
-            this.opD1.Size = new System.Drawing.Size(684, 511);
-            this.opD1.TabIndex = 4;
-            this.opD1.Visible = false;
-            // 
-            // opC1
-            // 
-            this.opC1.Location = new System.Drawing.Point(200, 0);
-            this.opC1.Name = "opC1";
-            this.opC1.Size = new System.Drawing.Size(684, 511);
-            this.opC1.TabIndex = 3;
-            this.opC1.Visible = false;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(207, 70);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(238, 25);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Aprovação de Cadastro";
             // 
             // dataGridViewE
             // 
@@ -302,37 +315,6 @@ namespace FindTec
             this.dataGridViewE.Visible = false;
             this.dataGridViewE.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewE_CellContentClick);
             // 
-            // buttonListEmpresa
-            // 
-            this.buttonListEmpresa.Location = new System.Drawing.Point(370, 109);
-            this.buttonListEmpresa.Name = "buttonListEmpresa";
-            this.buttonListEmpresa.Size = new System.Drawing.Size(75, 23);
-            this.buttonListEmpresa.TabIndex = 9;
-            this.buttonListEmpresa.Text = "Empresa";
-            this.buttonListEmpresa.UseVisualStyleBackColor = true;
-            this.buttonListEmpresa.Click += new System.EventHandler(this.buttonListEmpresa_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(207, 70);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(238, 25);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "Aprovação de Cadastro";
-            // 
-            // buttonListAluno5
-            // 
-            this.buttonListAluno5.AccessibleName = "buttonAluno";
-            this.buttonListAluno5.Location = new System.Drawing.Point(212, 109);
-            this.buttonListAluno5.Name = "buttonListAluno5";
-            this.buttonListAluno5.Size = new System.Drawing.Size(75, 23);
-            this.buttonListAluno5.TabIndex = 10;
-            this.buttonListAluno5.Text = "Aluno";
-            this.buttonListAluno5.UseVisualStyleBackColor = true;
-            this.buttonListAluno5.Click += new System.EventHandler(this.buttonListAluno_Click_1);
-            // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.Frozen = true;
@@ -370,13 +352,155 @@ namespace FindTec
             this.ColumnRecusarE.Name = "ColumnRecusarE";
             this.ColumnRecusarE.ReadOnly = true;
             // 
+            // opB1
+            // 
+            this.opB1.Location = new System.Drawing.Point(200, 0);
+            this.opB1.Name = "opB1";
+            this.opB1.Size = new System.Drawing.Size(684, 511);
+            this.opB1.TabIndex = 2;
+            this.opB1.Visible = false;
+            // 
+            // opA1
+            // 
+            this.opA1.Location = new System.Drawing.Point(200, 0);
+            this.opA1.Name = "opA1";
+            this.opA1.Size = new System.Drawing.Size(684, 511);
+            this.opA1.TabIndex = 1;
+            // 
+            // opD1
+            // 
+            this.opD1.Location = new System.Drawing.Point(200, 0);
+            this.opD1.Name = "opD1";
+            this.opD1.Size = new System.Drawing.Size(684, 511);
+            this.opD1.TabIndex = 4;
+            this.opD1.Visible = false;
+            // 
+            // opC1
+            // 
+            this.opC1.Location = new System.Drawing.Point(200, 0);
+            this.opC1.Name = "opC1";
+            this.opC1.Size = new System.Drawing.Size(684, 511);
+            this.opC1.TabIndex = 3;
+            this.opC1.Visible = false;
+            // 
+            // panelPerfilC
+            // 
+            this.panelPerfilC.Controls.Add(this.buttonUpload);
+            this.panelPerfilC.Controls.Add(this.label6);
+            this.panelPerfilC.Controls.Add(this.button6);
+            this.panelPerfilC.Controls.Add(this.label4);
+            this.panelPerfilC.Controls.Add(this.label3);
+            this.panelPerfilC.Controls.Add(this.label7);
+            this.panelPerfilC.Controls.Add(this.telefoneTxt);
+            this.panelPerfilC.Controls.Add(this.emailTxt);
+            this.panelPerfilC.Controls.Add(this.nomeTxt);
+            this.panelPerfilC.Controls.Add(this.pictureBox1);
+            this.panelPerfilC.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelPerfilC.Location = new System.Drawing.Point(0, 0);
+            this.panelPerfilC.Name = "panelPerfilC";
+            this.panelPerfilC.Size = new System.Drawing.Size(884, 511);
+            this.panelPerfilC.TabIndex = 8;
+            // 
+            // buttonUpload
+            // 
+            this.buttonUpload.Location = new System.Drawing.Point(633, 138);
+            this.buttonUpload.Name = "buttonUpload";
+            this.buttonUpload.Size = new System.Drawing.Size(75, 23);
+            this.buttonUpload.TabIndex = 14;
+            this.buttonUpload.Text = "Upload";
+            this.buttonUpload.UseVisualStyleBackColor = true;
+            this.buttonUpload.Click += new System.EventHandler(this.buttonUpload_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(496, 45);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(67, 25);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "Perfil";
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(491, 414);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(83, 23);
+            this.button6.TabIndex = 9;
+            this.button6.Text = "Editar Dados";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(409, 323);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(49, 13);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Telefone";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(409, 273);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(32, 13);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Email";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(406, 222);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(35, 13);
+            this.label7.TabIndex = 5;
+            this.label7.Text = "Nome";
+            // 
+            // telefoneTxt
+            // 
+            this.telefoneTxt.Location = new System.Drawing.Point(412, 339);
+            this.telefoneTxt.Multiline = true;
+            this.telefoneTxt.Name = "telefoneTxt";
+            this.telefoneTxt.Size = new System.Drawing.Size(234, 24);
+            this.telefoneTxt.TabIndex = 3;
+            this.telefoneTxt.TabStop = false;
+            // 
+            // emailTxt
+            // 
+            this.emailTxt.Location = new System.Drawing.Point(412, 289);
+            this.emailTxt.Multiline = true;
+            this.emailTxt.Name = "emailTxt";
+            this.emailTxt.Size = new System.Drawing.Size(234, 24);
+            this.emailTxt.TabIndex = 2;
+            this.emailTxt.TabStop = false;
+            // 
+            // nomeTxt
+            // 
+            this.nomeTxt.Location = new System.Drawing.Point(412, 238);
+            this.nomeTxt.Multiline = true;
+            this.nomeTxt.Name = "nomeTxt";
+            this.nomeTxt.Size = new System.Drawing.Size(234, 24);
+            this.nomeTxt.TabIndex = 1;
+            this.nomeTxt.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(466, 91);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(127, 114);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 511);
-            this.Controls.Add(this.panelCadastroAprov);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelCadastroAprov);
+            this.Controls.Add(this.panelPerfilC);
             this.Controls.Add(this.opB1);
             this.Controls.Add(this.opA1);
             this.Controls.Add(this.opD1);
@@ -390,6 +514,9 @@ namespace FindTec
             this.panelCadastroAprov.ResumeLayout(false);
             this.panelCadastroAprov.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewE)).EndInit();
+            this.panelPerfilC.ResumeLayout(false);
+            this.panelPerfilC.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -424,5 +551,16 @@ namespace FindTec
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnAprovE;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnRecusarE;
+        private System.Windows.Forms.Panel panelPerfilC;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox telefoneTxt;
+        private System.Windows.Forms.TextBox emailTxt;
+        private System.Windows.Forms.TextBox nomeTxt;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button buttonUpload;
     }
 }

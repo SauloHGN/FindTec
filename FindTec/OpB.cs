@@ -15,6 +15,7 @@ namespace FindTec
         public OpB()
         {
             InitializeComponent();
+            
         }
     }
 }

@@ -15,6 +15,7 @@ namespace FindTec
         public OpA()
         {
             InitializeComponent();
+                                           
         }
     }
 }

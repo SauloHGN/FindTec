@@ -223,16 +223,26 @@ namespace FindTec
             }
         }
 
+
+
         public static bool VerificarLogin(string email, string senha, TelaLogin telaLogin)
-        {
-            UsuarioLogado user = new UsuarioLogado();
+        {          
             // VERIFICAR USUARIO E SENHA PARA FAZER LOGIN
             foreach (var aluno in DadosUsuario.listaAlunos)
             {
                 if (aluno.Item3 == email && aluno.Item6 == senha)
                 {
-                    telaLogin.tipoUser = "aluno";
-                    return true;
+                    if(aluno.Item7 == true)
+                    {
+                        telaLogin.tipoUser = "aluno";
+                        Program.userAtual = aluno.Item1;// armazena o id para recuperar os dados do usuario
+                        return true;
+                    }
+                    else
+                    {
+                        //
+                        MessageBox.Show("Conta Desativada");
+                    }
 
                 }
             }
@@ -241,8 +251,17 @@ namespace FindTec
             {
                 if (empresa.Item3 == email && empresa.Item5 == senha)
                 {
-                    telaLogin.tipoUser = "empresa";
-                    return true;
+                    if(empresa.Item6 == true)
+                    {
+                        telaLogin.tipoUser = "empresa";
+                        Program.userAtual = empresa.Item1;// armazena o id para recuperar os dados do usuario
+                        return true;
+                    }
+                    else
+                    {
+                        //
+                        MessageBox.Show("Conta Desativada");
+                    }
 
                 }
             }
@@ -252,6 +271,7 @@ namespace FindTec
                 if (coordenador.Item3 == email && coordenador.Item5 == senha)
                 {
                     telaLogin.tipoUser = "coordenador";
+                    Program.userAtual = coordenador.Item1;// armazena o id para recuperar os dados do usuario
                     return true;
 
                 }
@@ -261,7 +281,7 @@ namespace FindTec
             {
                 if (admin.Item2 == email && admin.Item3 == senha)
                 {
-                    telaLogin.tipoUser = "Admin";
+                    telaLogin.tipoUser = "Admin";                  
                     return true;
                 }
             }

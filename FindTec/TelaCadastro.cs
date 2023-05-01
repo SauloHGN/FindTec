@@ -109,7 +109,7 @@ namespace FindTec
             {
                 // ADICIONAR DADOS NA LISTA (TELA DE CADASTRO)
                 // LISTA EMPRESA: (ID, NOME, EMAIL, TELEFONE, SENHA, STATUS, codigo, aprovação)
-                DadosUsuario.listaEmpresas.Add((Program.id++, textNomeE.Text, textEmailE.Text, textTelE.Text, textSenhaE.Text, true, null, false));
+                DadosUsuario.listaEmpresas.Add((Program.id++, textNomeE.Text, textEmailE.Text, textTelE.Text, textSenhaE.Text, true, null, false, null));
                 foreach (var empresa in DadosUsuario.listaEmpresas)
                 {
                     Console.WriteLine("ID: " + empresa.Item1);
@@ -143,7 +143,7 @@ namespace FindTec
 
                 // ADICIONAR DADOS NA LISTA (TELA DE CADASTRO)
                 // ListaAluno: (ID, NOME, EMAIL, TELEFONE, CURSO, SENHA, STATUS, codigo, aprovação)
-                DadosUsuario.listaAlunos.Add((Program.id++, textNome.Text, textEmail.Text, textTelefone.Text, opCurso.Text, textSenha.Text, true, null, false));
+                DadosUsuario.listaAlunos.Add((Program.id++, textNome.Text, textEmail.Text, textTelefone.Text, opCurso.Text, textSenha.Text, true, null, false, null));
                 foreach (var aluno in DadosUsuario.listaAlunos)
                 {
                     Console.WriteLine("ID: " + aluno.Item1);

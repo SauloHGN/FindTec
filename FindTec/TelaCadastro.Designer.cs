@@ -344,8 +344,8 @@ namespace FindTec
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonCadastroEmpresa);
             this.Controls.Add(this.buttonCadastroAluno);
-            this.Controls.Add(this.cadastroEmpresa);
             this.Controls.Add(this.cadastroAluno);
+            this.Controls.Add(this.cadastroEmpresa);
             this.Name = "TelaCadastro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro";

@@ -23,7 +23,7 @@ namespace FindTec
             Console.WriteLine("---------------------------------");
             foreach (var aluno in DadosUsuario.listaAlunos)
             {
-                Console.WriteLine($"{aluno.Item1} | {aluno.Item2} | {aluno.Item3} | {aluno.Item4} | {aluno.Item5} | {aluno.Item6}| {aluno.Item7}| {aluno.Item8}");
+                Console.WriteLine($"{aluno.Item1} | {aluno.Item2} | {aluno.Item3} | {aluno.Item4} | {aluno.Item5} | {aluno.Item6}| {aluno.Item7}| {aluno.Item8} |{aluno.Item9} |{aluno.Item10}");
             }
             Console.WriteLine("---------------------------------");
             foreach (var empresa in DadosUsuario.listaEmpresas)
@@ -79,7 +79,8 @@ namespace FindTec
                     DadosUsuario.listaCoordenador[i].Item3,
                     DadosUsuario.listaCoordenador[i].Item4,
                     senha,
-                    DadosUsuario.listaCoordenador[i].Item6
+                    DadosUsuario.listaCoordenador[i].Item6,
+                    DadosUsuario.listaCoordenador[i].Item7
                     );
                     Console.WriteLine("Senha Alterada");
                     login.Show();
@@ -102,7 +103,9 @@ namespace FindTec
                     senha,
                     DadosUsuario.listaAlunos[i].Item7,
                     DadosUsuario.listaAlunos[i].Item8,
-                    DadosUsuario.listaAlunos[i].Item9
+                    DadosUsuario.listaAlunos[i].Item9,
+                    DadosUsuario.listaAlunos[i].Item10
+
                     );
                     Console.WriteLine("Senha Alterada");
                     login.Show();
@@ -123,7 +126,8 @@ namespace FindTec
                     senha,
                     DadosUsuario.listaEmpresas[i].Item6,
                     DadosUsuario.listaEmpresas[i].Item7,
-                    DadosUsuario.listaEmpresas[i].Item8
+                    DadosUsuario.listaEmpresas[i].Item8,
+                    DadosUsuario.listaEmpresas[i].Item9
                     );
                     Console.WriteLine("Senha Alterada");
                     login.Show();
@@ -148,7 +152,8 @@ namespace FindTec
                     DadosUsuario.listaCoordenador[i].Item3,
                     DadosUsuario.listaCoordenador[i].Item4,
                     DadosUsuario.listaCoordenador[i].Item5,
-                    codigoF
+                    codigoF,
+                    DadosUsuario.listaCoordenador[i].Item7
                     );
                     panelEmail.Visible = false;
                     panelCodigo.Visible = true;
@@ -173,7 +178,8 @@ namespace FindTec
                     DadosUsuario.listaAlunos[i].Item6,                                      
                     DadosUsuario.listaAlunos[i].Item7,
                     codigoF,
-                    DadosUsuario.listaAlunos[i].Item9
+                    DadosUsuario.listaAlunos[i].Item9,
+                    DadosUsuario.listaAlunos[i].Item10
                     );
                     panelEmail.Visible = false;
                     panelCodigo.Visible = true;
@@ -197,7 +203,8 @@ namespace FindTec
                     DadosUsuario.listaEmpresas[i].Item5,
                     DadosUsuario.listaEmpresas[i].Item6,
                     codigoF,
-                    DadosUsuario.listaEmpresas[i].Item8
+                    DadosUsuario.listaEmpresas[i].Item8,
+                    DadosUsuario.listaEmpresas[i].Item9
                     );
                     panelEmail.Visible = false;
                     panelCodigo.Visible = true;
@@ -313,7 +320,7 @@ namespace FindTec
 
 
 
-            SmtpClient cliente = new SmtpClient("smtp.office365.com", 587);
+            SmtpClient cliente = new SmtpClient("smtp.office365.com", 25);
             cliente.UseDefaultCredentials = false;
             cliente.Credentials = new NetworkCredential(remetente, senha);
             cliente.EnableSsl = true;

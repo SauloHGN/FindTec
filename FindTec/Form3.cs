@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using System.IO;
 using System.Windows.Forms;
 
 namespace FindTec
@@ -25,7 +26,25 @@ namespace FindTec
 
         private void Form3_Load(object sender, EventArgs e)
         {
+            var user = DadosUsuario.listaCoordenador.Find(u => u.Item1 == Program.userAtual);
+            nomeTxt.Text = user.Item2;
+            emailTxt.Text = user.Item3;
+            telefoneTxt.Text = user.Item4;
             
+            
+
+            if (user.Item7 != null && user.Item7.Length > 0)
+            {
+                using (MemoryStream ms = new MemoryStream(user.Item7))
+                {
+                    pictureBox1.Image = Image.FromStream(ms);
+                }
+            }
+            else
+            {
+                pictureBox1.Image = null;
+            }
+
             LoadDataGridView();
             LoadDataViewGridE();
         }
@@ -38,6 +57,7 @@ namespace FindTec
             opD1.Visible = false;
 
             panelCadastroAprov.Visible = false;
+            panelPerfilC.Visible = true;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -48,6 +68,7 @@ namespace FindTec
             opD1.Visible = false;
 
             panelCadastroAprov.Visible = true;
+            panelPerfilC.Visible = false;
             dataGridView1.ClearSelection();
         }
 
@@ -57,8 +78,9 @@ namespace FindTec
             opB1.Visible = false;
             opC1.Visible = true;
             opD1.Visible = false;
-
-            panelCadastroAprov.Visible = false;         
+            panelPerfilC.Visible = false;
+            panelCadastroAprov.Visible = false;
+            
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -67,7 +89,7 @@ namespace FindTec
             opB1.Visible = false;
             opC1.Visible = false;
             opD1.Visible = true;
-
+            panelPerfilC.Visible = false;
             panelCadastroAprov.Visible = false;
         }    
 
@@ -137,8 +159,7 @@ namespace FindTec
 
 
                 if (e.ColumnIndex == dataGridView1.Columns["ColumnAprov"].Index && type == "Aluno" && e.RowIndex < DadosUsuario.listaAlunos.Count)
-                {
-                    Console.WriteLine("aluno verif1");
+                {                 
                     var aluno = DadosUsuario.listaAlunos[e.RowIndex];// obtem o objeto selecionado
                                                  
                     var alunoModificado = aluno; // copiar cada propriedade do objeto original
@@ -282,6 +303,143 @@ namespace FindTec
             buttonListEmpresa.ForeColor = Color.Black;
             dataGridView1.Visible = true;
             dataGridViewE.Visible = false;
+        }
+
+        private void buttonUpload_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Arquivos de Imagem (*.jpg, *.jpeg, *.png, *.bmp)|*.jpg;*.jpeg;*.png;*.bmp";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string nomeArquivo = openFileDialog.FileName;
+
+                if (File.Exists(nomeArquivo))
+                {
+                    using (FileStream stream = new FileStream(nomeArquivo, FileMode.Open, FileAccess.Read))
+                    {
+                        byte[] dadosImagem = new byte[stream.Length];
+                        stream.Read(dadosImagem, 0, (int)stream.Length);
+
+                        MemoryStream ms = new MemoryStream(dadosImagem);
+                        Image imagem = Image.FromStream(ms);
+
+                        pictureBox1.Image = imagem;
+
+                        var user = DadosUsuario.listaCoordenador.Find(u => u.Item1 == Program.userAtual);
+
+                        user.Item7 = dadosImagem;
+
+                        var index = DadosUsuario.listaCoordenador.FindIndex(u => u.Item1 == Program.userAtual);// descobro o indece do usuario
+                        if (index != -1)
+                        {
+                            DadosUsuario.listaCoordenador[index] = user;
+                        }                    
+                    }
+                }
+            }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Form prompt = new Form();
+            prompt.Width = 300;
+            prompt.Height = 150;
+            prompt.ControlBox = false;
+            prompt.StartPosition = FormStartPosition.CenterScreen;
+
+            // Cria um label com a mensagem para o usuário
+            Label textLabel = new Label() { Left = 50, Top = 20, Text = "Digite sua senha:" };
+            prompt.Controls.Add(textLabel);
+
+            // Cria um textBox para o usuário inserir o valor
+            TextBox textBox = new TextBox() { Left = 50, Top = 50, Width = 200 };
+            prompt.Controls.Add(textBox);
+
+            // Cria o botão "OK" para confirmar a entrada de dados
+            Button confirmation = new Button() { Text = "OK", Left = 160, Width = 100, Top = 80, DialogResult = DialogResult.OK };
+            prompt.Controls.Add(confirmation);
+            
+            // Cria o botão "Cancelar" para cancelar a entrada de dados
+            Button cancel = new Button() { Text = "Cancelar", Left = 50, Width = 100, Top = 80, DialogResult = DialogResult.Cancel };
+            prompt.Controls.Add(cancel);
+
+            // Mostra o formulário para o usuário e aguarda a entrada de dados
+            prompt.AcceptButton = confirmation;
+            prompt.CancelButton = cancel;
+            DialogResult result = prompt.ShowDialog();
+
+            if (result == DialogResult.Cancel)
+            {
+                Form3_Load(this, e);
+            }
+
+            // Se o usuário confirmou a entrada de dados, exibe o valor inserido
+            if (result == DialogResult.OK)
+            {
+                var user = DadosUsuario.listaCoordenador.Find(u => u.Item1 == Program.userAtual);
+
+                if(user.Item5 == textBox.Text)
+                {
+                    user.Item2 = nomeTxt.Text;
+                    user.Item3 = emailTxt.Text;
+                    user.Item4 = telefoneTxt.Text;
+
+                    var index = DadosUsuario.listaCoordenador.FindIndex(u => u.Item1 == Program.userAtual);
+                    if (index != -1 && VerificaEmailETelefone(emailTxt.Text, telefoneTxt.Text, index))
+                    {
+                        DadosUsuario.listaCoordenador[index] = user;
+                        MessageBox.Show("Dados alterados com sucesso");
+
+                        this.Close();
+                    }
+                    else
+                    {
+                        Form3_Load(this, e);
+                        MessageBox.Show("Os dados já estão em uso");
+                    }
+                }
+                else
+                {
+                    Form3_Load(this, e);
+                    MessageBox.Show("Senha incorreta...");
+                }
+            }
+        }
+        public bool VerificaEmailETelefone(string email, string telefone, int indiceAtual)
+        {
+            foreach (var aluno in DadosUsuario.listaAlunos)
+            {
+                if (aluno.Item3 == email || aluno.Item4 == telefone)
+                {
+                    return false;
+                }
+            }
+            foreach (var empresa in DadosUsuario.listaEmpresas)
+            {
+                if (empresa.Item3 == email || empresa.Item4 == telefone)
+                {
+                    return false;
+                }
+            }
+            foreach (var coordenador in DadosUsuario.listaCoordenador)
+            {
+                if ((coordenador.Item3 == email || coordenador.Item4 == telefone) && DadosUsuario.listaCoordenador.IndexOf(coordenador) != indiceAtual)
+                {
+                    return false;
+                }
+            }          
+            return true;
+        }
+
+        private void CursoVBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
