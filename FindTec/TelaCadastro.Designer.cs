@@ -280,12 +280,12 @@ namespace FindTec
             // opCurso
             // 
             this.opCurso.AccessibleName = "opCurso";
-            this.opCurso.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.opCurso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.opCurso.Font = new System.Drawing.Font("Arial Narrow", 10F);
             this.opCurso.ForeColor = System.Drawing.Color.Black;
             this.opCurso.FormattingEnabled = true;
             this.opCurso.Items.AddRange(new object[] {
+            "CURSO",
             "Análise e Desenvolvimento de Sistemas",
             "Gestão Empresarial",
             "Gestão de Produção",
@@ -294,8 +294,6 @@ namespace FindTec
             this.opCurso.Name = "opCurso";
             this.opCurso.Size = new System.Drawing.Size(211, 24);
             this.opCurso.TabIndex = 4;
-            this.opCurso.Enter += new System.EventHandler(this.opCurso_Enter);
-            this.opCurso.Leave += new System.EventHandler(this.opCurso_Leave);
             // 
             // textSenha
             // 
@@ -362,6 +360,7 @@ namespace FindTec
             this.Name = "TelaCadastro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro";
+            this.Load += new System.EventHandler(this.TelaCadastro_Load);
             this.cadastroEmpresa.ResumeLayout(false);
             this.cadastroEmpresa.PerformLayout();
             this.cadastroAluno.ResumeLayout(false);

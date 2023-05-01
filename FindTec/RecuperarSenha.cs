@@ -44,13 +44,7 @@ namespace FindTec
             Application.Exit();
         }
 
-        private void button1_Click(object sender, System.EventArgs e)
-        {         
-            login.Show();
-            this.Hide();
-        }
-
-        private void button2_Click_1(object sender, EventArgs e)
+        private void botaoEnviar_Click(object sender, EventArgs e)
         {
             email = EmailRE.Text;
             VerficarEmail(email);
@@ -376,7 +370,7 @@ namespace FindTec
             Image novaImagem = Properties.Resources.botaoEnviar2;
 
             // Define a nova imagem como o background do botão
-            botaoEnviar1.BackgroundImage = novaImagem;
+            botaoEnviar.BackgroundImage = novaImagem;
         }
 
         private void botaoEnviar1_MouseLeave(object sender, EventArgs e)
@@ -385,7 +379,7 @@ namespace FindTec
             Image novaImagem = Properties.Resources.botaoEnviar1;
 
             // Define a nova imagem como o background do botão
-            botaoEnviar1.BackgroundImage = novaImagem;
+            botaoEnviar.BackgroundImage = novaImagem;
         }
 
         private void botaoFechar1_Click(object sender, EventArgs e)
@@ -429,6 +423,11 @@ namespace FindTec
             // Exibindo a segunda tela
             recuperar.Show();
             this.Hide();
+        }
+
+        private void botaoEnviar_MouseEnter(object sender, EventArgs e)
+        {
+
         }
     }
 }

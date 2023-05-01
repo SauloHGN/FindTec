@@ -31,20 +31,19 @@ namespace FindTec
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RecuperarSenha));
             this.panelEmail = new System.Windows.Forms.Panel();
-            this.botaoEnviar1 = new System.Windows.Forms.Button();
+            this.botaoVoltar1 = new System.Windows.Forms.Button();
+            this.botaoFechar1 = new System.Windows.Forms.Button();
             this.EmailRE = new System.Windows.Forms.TextBox();
             this.panelCodigo = new System.Windows.Forms.Panel();
+            this.botaoVoltar2 = new System.Windows.Forms.Button();
+            this.botaoFechar2 = new System.Windows.Forms.Button();
             this.txtCodigoEnviado = new System.Windows.Forms.Label();
             this.botaoEnviar2 = new System.Windows.Forms.Button();
             this.textCodigo = new System.Windows.Forms.TextBox();
             this.panelNewSenha = new System.Windows.Forms.Panel();
+            this.botaoFechar3 = new System.Windows.Forms.Button();
             this.textNewSenha = new System.Windows.Forms.TextBox();
             this.botaoRedefinir = new System.Windows.Forms.Button();
-            this.botaoFechar1 = new System.Windows.Forms.Button();
-            this.botaoFechar2 = new System.Windows.Forms.Button();
-            this.botaoFechar3 = new System.Windows.Forms.Button();
-            this.botaoVoltar1 = new System.Windows.Forms.Button();
-            this.botaoVoltar2 = new System.Windows.Forms.Button();
             this.botaoVoltar3 = new System.Windows.Forms.Button();
             this.panelEmail.SuspendLayout();
             this.panelCodigo.SuspendLayout();
@@ -56,7 +55,6 @@ namespace FindTec
             this.panelEmail.BackgroundImage = global::FindTec.Properties.Resources.RecuperarSenha1;
             this.panelEmail.Controls.Add(this.botaoVoltar1);
             this.panelEmail.Controls.Add(this.botaoFechar1);
-            this.panelEmail.Controls.Add(this.botaoEnviar1);
             this.panelEmail.Controls.Add(this.EmailRE);
             this.panelEmail.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelEmail.Location = new System.Drawing.Point(0, 0);
@@ -64,23 +62,37 @@ namespace FindTec
             this.panelEmail.Size = new System.Drawing.Size(660, 660);
             this.panelEmail.TabIndex = 16;
             // 
-            // botaoEnviar1
+            // botaoVoltar1
             // 
-            this.botaoEnviar1.BackColor = System.Drawing.Color.Transparent;
-            this.botaoEnviar1.BackgroundImage = global::FindTec.Properties.Resources.botaoEnviar1;
-            this.botaoEnviar1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.botaoEnviar1.CausesValidation = false;
-            this.botaoEnviar1.FlatAppearance.BorderSize = 0;
-            this.botaoEnviar1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botaoEnviar1.ForeColor = System.Drawing.Color.Transparent;
-            this.botaoEnviar1.Location = new System.Drawing.Point(277, 467);
-            this.botaoEnviar1.Name = "botaoEnviar1";
-            this.botaoEnviar1.Size = new System.Drawing.Size(111, 49);
-            this.botaoEnviar1.TabIndex = 17;
-            this.botaoEnviar1.UseVisualStyleBackColor = false;
-            this.botaoEnviar1.Click += new System.EventHandler(this.button2_Click_1);
-            this.botaoEnviar1.MouseEnter += new System.EventHandler(this.botaoEnviar1_MouseEnter);
-            this.botaoEnviar1.MouseLeave += new System.EventHandler(this.botaoEnviar1_MouseLeave);
+            this.botaoVoltar1.AccessibleName = "botaoVoltar";
+            this.botaoVoltar1.BackColor = System.Drawing.Color.Transparent;
+            this.botaoVoltar1.FlatAppearance.BorderSize = 0;
+            this.botaoVoltar1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.botaoVoltar1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botaoVoltar1.Image = global::FindTec.Properties.Resources.botaoVoltar;
+            this.botaoVoltar1.Location = new System.Drawing.Point(-1, -1);
+            this.botaoVoltar1.Name = "botaoVoltar1";
+            this.botaoVoltar1.Size = new System.Drawing.Size(40, 40);
+            this.botaoVoltar1.TabIndex = 19;
+            this.botaoVoltar1.UseVisualStyleBackColor = false;
+            this.botaoVoltar1.Click += new System.EventHandler(this.botaoVoltar1_Click);
+            // 
+            // botaoFechar1
+            // 
+            this.botaoFechar1.AccessibleName = "botaoFechar";
+            this.botaoFechar1.BackColor = System.Drawing.Color.Transparent;
+            this.botaoFechar1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.botaoFechar1.FlatAppearance.BorderSize = 0;
+            this.botaoFechar1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.botaoFechar1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botaoFechar1.ForeColor = System.Drawing.Color.Transparent;
+            this.botaoFechar1.Image = ((System.Drawing.Image)(resources.GetObject("botaoFechar1.Image")));
+            this.botaoFechar1.Location = new System.Drawing.Point(620, 0);
+            this.botaoFechar1.Name = "botaoFechar1";
+            this.botaoFechar1.Size = new System.Drawing.Size(40, 40);
+            this.botaoFechar1.TabIndex = 18;
+            this.botaoFechar1.UseVisualStyleBackColor = false;
+            this.botaoFechar1.Click += new System.EventHandler(this.botaoFechar1_Click);
             // 
             // EmailRE
             // 
@@ -105,6 +117,38 @@ namespace FindTec
             this.panelCodigo.Size = new System.Drawing.Size(660, 660);
             this.panelCodigo.TabIndex = 15;
             this.panelCodigo.Visible = false;
+            // 
+            // botaoVoltar2
+            // 
+            this.botaoVoltar2.AccessibleName = "botaoVoltar";
+            this.botaoVoltar2.BackColor = System.Drawing.Color.Transparent;
+            this.botaoVoltar2.FlatAppearance.BorderSize = 0;
+            this.botaoVoltar2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.botaoVoltar2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botaoVoltar2.Image = global::FindTec.Properties.Resources.botaoVoltar;
+            this.botaoVoltar2.Location = new System.Drawing.Point(-1, -1);
+            this.botaoVoltar2.Name = "botaoVoltar2";
+            this.botaoVoltar2.Size = new System.Drawing.Size(40, 40);
+            this.botaoVoltar2.TabIndex = 20;
+            this.botaoVoltar2.UseVisualStyleBackColor = false;
+            this.botaoVoltar2.Click += new System.EventHandler(this.botaoVoltar2_Click);
+            // 
+            // botaoFechar2
+            // 
+            this.botaoFechar2.AccessibleName = "botaoFechar";
+            this.botaoFechar2.BackColor = System.Drawing.Color.Transparent;
+            this.botaoFechar2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.botaoFechar2.FlatAppearance.BorderSize = 0;
+            this.botaoFechar2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.botaoFechar2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botaoFechar2.ForeColor = System.Drawing.Color.Transparent;
+            this.botaoFechar2.Image = ((System.Drawing.Image)(resources.GetObject("botaoFechar2.Image")));
+            this.botaoFechar2.Location = new System.Drawing.Point(620, 0);
+            this.botaoFechar2.Name = "botaoFechar2";
+            this.botaoFechar2.Size = new System.Drawing.Size(40, 40);
+            this.botaoFechar2.TabIndex = 19;
+            this.botaoFechar2.UseVisualStyleBackColor = false;
+            this.botaoFechar2.Click += new System.EventHandler(this.botaoFechar2_Click);
             // 
             // txtCodigoEnviado
             // 
@@ -150,57 +194,6 @@ namespace FindTec
             this.panelNewSenha.TabIndex = 17;
             this.panelNewSenha.Visible = false;
             // 
-            // textNewSenha
-            // 
-            this.textNewSenha.Location = new System.Drawing.Point(268, 430);
-            this.textNewSenha.Name = "textNewSenha";
-            this.textNewSenha.Size = new System.Drawing.Size(123, 20);
-            this.textNewSenha.TabIndex = 2;
-            // 
-            // botaoRedefinir
-            // 
-            this.botaoRedefinir.Location = new System.Drawing.Point(288, 480);
-            this.botaoRedefinir.Name = "botaoRedefinir";
-            this.botaoRedefinir.Size = new System.Drawing.Size(75, 23);
-            this.botaoRedefinir.TabIndex = 0;
-            this.botaoRedefinir.Text = "Redefinir";
-            this.botaoRedefinir.UseVisualStyleBackColor = true;
-            this.botaoRedefinir.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // botaoFechar1
-            // 
-            this.botaoFechar1.AccessibleName = "botaoFechar";
-            this.botaoFechar1.BackColor = System.Drawing.Color.Transparent;
-            this.botaoFechar1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.botaoFechar1.FlatAppearance.BorderSize = 0;
-            this.botaoFechar1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.botaoFechar1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botaoFechar1.ForeColor = System.Drawing.Color.Transparent;
-            this.botaoFechar1.Image = ((System.Drawing.Image)(resources.GetObject("botaoFechar1.Image")));
-            this.botaoFechar1.Location = new System.Drawing.Point(620, 0);
-            this.botaoFechar1.Name = "botaoFechar1";
-            this.botaoFechar1.Size = new System.Drawing.Size(40, 40);
-            this.botaoFechar1.TabIndex = 18;
-            this.botaoFechar1.UseVisualStyleBackColor = false;
-            this.botaoFechar1.Click += new System.EventHandler(this.botaoFechar1_Click);
-            // 
-            // botaoFechar2
-            // 
-            this.botaoFechar2.AccessibleName = "botaoFechar";
-            this.botaoFechar2.BackColor = System.Drawing.Color.Transparent;
-            this.botaoFechar2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.botaoFechar2.FlatAppearance.BorderSize = 0;
-            this.botaoFechar2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.botaoFechar2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botaoFechar2.ForeColor = System.Drawing.Color.Transparent;
-            this.botaoFechar2.Image = ((System.Drawing.Image)(resources.GetObject("botaoFechar2.Image")));
-            this.botaoFechar2.Location = new System.Drawing.Point(620, 0);
-            this.botaoFechar2.Name = "botaoFechar2";
-            this.botaoFechar2.Size = new System.Drawing.Size(40, 40);
-            this.botaoFechar2.TabIndex = 19;
-            this.botaoFechar2.UseVisualStyleBackColor = false;
-            this.botaoFechar2.Click += new System.EventHandler(this.botaoFechar2_Click);
-            // 
             // botaoFechar3
             // 
             this.botaoFechar3.AccessibleName = "botaoFechar";
@@ -218,35 +211,22 @@ namespace FindTec
             this.botaoFechar3.UseVisualStyleBackColor = false;
             this.botaoFechar3.Click += new System.EventHandler(this.botaoFechar3_Click);
             // 
-            // botaoVoltar1
+            // textNewSenha
             // 
-            this.botaoVoltar1.AccessibleName = "botaoVoltar";
-            this.botaoVoltar1.BackColor = System.Drawing.Color.Transparent;
-            this.botaoVoltar1.FlatAppearance.BorderSize = 0;
-            this.botaoVoltar1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.botaoVoltar1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botaoVoltar1.Image = global::FindTec.Properties.Resources.botaoVoltar;
-            this.botaoVoltar1.Location = new System.Drawing.Point(-1, -1);
-            this.botaoVoltar1.Name = "botaoVoltar1";
-            this.botaoVoltar1.Size = new System.Drawing.Size(40, 40);
-            this.botaoVoltar1.TabIndex = 19;
-            this.botaoVoltar1.UseVisualStyleBackColor = false;
-            this.botaoVoltar1.Click += new System.EventHandler(this.botaoVoltar1_Click);
+            this.textNewSenha.Location = new System.Drawing.Point(268, 430);
+            this.textNewSenha.Name = "textNewSenha";
+            this.textNewSenha.Size = new System.Drawing.Size(123, 20);
+            this.textNewSenha.TabIndex = 2;
             // 
-            // botaoVoltar2
+            // botaoRedefinir
             // 
-            this.botaoVoltar2.AccessibleName = "botaoVoltar";
-            this.botaoVoltar2.BackColor = System.Drawing.Color.Transparent;
-            this.botaoVoltar2.FlatAppearance.BorderSize = 0;
-            this.botaoVoltar2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.botaoVoltar2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botaoVoltar2.Image = global::FindTec.Properties.Resources.botaoVoltar;
-            this.botaoVoltar2.Location = new System.Drawing.Point(-1, -1);
-            this.botaoVoltar2.Name = "botaoVoltar2";
-            this.botaoVoltar2.Size = new System.Drawing.Size(40, 40);
-            this.botaoVoltar2.TabIndex = 20;
-            this.botaoVoltar2.UseVisualStyleBackColor = false;
-            this.botaoVoltar2.Click += new System.EventHandler(this.botaoVoltar2_Click);
+            this.botaoRedefinir.Location = new System.Drawing.Point(288, 480);
+            this.botaoRedefinir.Name = "botaoRedefinir";
+            this.botaoRedefinir.Size = new System.Drawing.Size(75, 23);
+            this.botaoRedefinir.TabIndex = 0;
+            this.botaoRedefinir.Text = "Redefinir";
+            this.botaoRedefinir.UseVisualStyleBackColor = true;
+            this.botaoRedefinir.Click += new System.EventHandler(this.button4_Click);
             // 
             // botaoVoltar3
             // 
@@ -300,6 +280,5 @@ namespace FindTec
         private System.Windows.Forms.Button botaoVoltar1;
         private System.Windows.Forms.Button botaoVoltar2;
         private System.Windows.Forms.Button botaoVoltar3;
-        private System.Windows.Forms.Button botaoEnviar1;
     }
 }

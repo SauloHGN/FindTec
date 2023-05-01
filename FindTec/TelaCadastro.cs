@@ -131,25 +131,6 @@ namespace FindTec
             txtIndisponivel.Visible = false;
         }
 
-        private void textSenhaE_Enter(object sender, EventArgs e)
-        {
-            if (textSenhaE.Text == "SENHA")
-            {
-                textSenhaE.Text = "";
-            }
-
-            textSenhaE.PasswordChar = '•';
-        }
-
-        private void textSenhaE_Leave(object sender, EventArgs e)
-        {
-            if (textSenhaE.Text == "")
-            {
-                textSenhaE.PasswordChar = '\0';
-                textSenhaE.Text = "SENHA";
-            }
-        }
-
         private bool formatandoTelefone = false;
 
         private void textTelE_TextChanged(object sender, EventArgs e)
@@ -200,6 +181,25 @@ namespace FindTec
                 e.Handled = true;
             }
         }
+
+        private void textSenhaE_Enter(object sender, EventArgs e)
+        {
+            if (textSenhaE.Text == "SENHA")
+            {
+                textSenhaE.Text = "";
+            }
+
+            textSenhaE.PasswordChar = '•';
+        }
+
+        private void textSenhaE_Leave(object sender, EventArgs e)
+        {
+            if (textSenhaE.Text == "")
+            {
+                textSenhaE.PasswordChar = '\0';
+                textSenhaE.Text = "SENHA";
+            }
+        }        
 
         private void botaoCriarconta_MouseEnter(object sender, EventArgs e)
         {
@@ -327,35 +327,6 @@ namespace FindTec
             txtIndisponivelA.Visible = false;
         }
 
-        private void opCurso_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void opCurso_Leave(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textSenha_Enter(object sender, EventArgs e)
-        {
-            if (textSenha.Text == "SENHA")
-            {
-                textSenha.Text = "";
-            }
-
-            textSenha.PasswordChar = '•';
-        }
-
-        private void textSenha_Leave(object sender, EventArgs e)
-        {
-            if (textSenha.Text == "")
-            {
-                textSenha.PasswordChar = '\0';
-                textSenha.Text = "SENHA";
-            }
-        }
-
         private void textTelefone_TextChanged(object sender, EventArgs e)
         {
             if (!formatandoTelefone)
@@ -404,6 +375,32 @@ namespace FindTec
                 e.Handled = true;
             }
         }
+
+        private void TelaCadastro_Load(object sender, EventArgs e)
+        {
+            opCurso.SelectedItem = "CURSO";
+        }
+
+        private void textSenha_Enter(object sender, EventArgs e)
+        {
+            if (textSenha.Text == "SENHA")
+            {
+                textSenha.Text = "";
+            }
+
+            textSenha.PasswordChar = '•';
+        }
+
+        private void textSenha_Leave(object sender, EventArgs e)
+        {
+            if (textSenha.Text == "")
+            {
+                textSenha.PasswordChar = '\0';
+                textSenha.Text = "SENHA";
+            }
+        }
+
+        
 
         private void botaoCriarcontaA_MouseEnter(object sender, EventArgs e)
         {
