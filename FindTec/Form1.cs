@@ -7,12 +7,18 @@ using System.Windows.Forms;
 namespace FindTec
 {
     public partial class Form1 : Form
-    {      
+    {
         public Form1()
         {
-            InitializeComponent();         
+            InitializeComponent();
             this.FormClosing += new FormClosingEventHandler(Form1_FormClosing);// FECHAR FRAME PRINCIPAL VOLTAR PARA A TELA DE LOGIN
             Load_gridViewOportunidades(); // CARREGA O GRID 
+            Load += Form1_Load;
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            label1.Text = nomeTxt.Text; //Inicia o nome do aluno grande a paritr da caixa de texto com o nome do aluno
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
@@ -85,14 +91,9 @@ namespace FindTec
 
         private void buttonD_Click(object sender, EventArgs e)
         {
-            opA1.Visible = false;
-            opB1.Visible = false;
-            opC1.Visible = false;
-            opD1.Visible = true;
-
-            panelPerfil.Visible = false;
-            panelOportunidades.Visible = false;
-            panelConversas.Visible = false;
+            TelaLogin login = new TelaLogin();
+            login.Show();
+            this.Hide();
         }
 
        private void opA2_Load(object sender, EventArgs e)
@@ -558,6 +559,11 @@ namespace FindTec
 
             // Define a região da PictureBox para a região elíptica
             pictureBox2.Region = new System.Drawing.Region(roundPath);
+        }
+
+        private void label1_TextChanged(object sender, EventArgs e)
+        {
+            label1.Text = nomeTxt.Text;
         }
 
         /// FIM MENSAGENS
