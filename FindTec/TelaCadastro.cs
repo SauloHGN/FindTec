@@ -1,8 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
+using System.Text;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace FindTec
 {
@@ -361,7 +364,7 @@ namespace FindTec
             txtDadosInvalidos2.Visible = false;
             txtIndisponivel2.Visible = false;
             txtCursoInvalido.Visible = false;
-            
+
         }
 
         private void textNome_Leave(object sender, EventArgs e)
@@ -376,6 +379,40 @@ namespace FindTec
             txtDadosInvalidos2.Visible = false;
             txtIndisponivel2.Visible = false;
             txtCursoInvalido.Visible = false;
+        }
+
+        private void textNome_TextChanged(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(textNome.Text))
+            {
+                string[] nomes = textNome.Text.Split(' ');
+                StringBuilder resultado = new StringBuilder();
+
+                foreach (string nome in nomes)
+                {
+                    if (resultado.Length > 0)
+                        resultado.Append(" ");
+
+                    if (nome.ToLower() == "da" || nome.ToLower() == "do" || nome.ToLower() == "das" ||
+                        nome.ToLower() == "dos" || nome.ToLower() == "de" || nome.ToLower() == "e" ||
+                        nome.ToLower() == "eles")
+                    {
+                        resultado.Append(nome.ToLower());
+                    }
+                    else
+                    {
+                        if (nome.Length > 0)
+                        {
+                            string primeiroCaractere = nome.Substring(0, 1).ToUpper();
+                            string restante = nome.Substring(1).ToLower();
+                            resultado.Append(primeiroCaractere + restante);
+                        }
+                    }
+                }
+
+                textNome.Text = resultado.ToString();
+                textNome.SelectionStart = textNome.Text.Length;
+            }
         }
 
         private void textEmail_Enter(object sender, EventArgs e)
@@ -617,7 +654,6 @@ namespace FindTec
             }
             else
             {
-
             }
         }
         // FIM DO PAINEL DO ALUNO
