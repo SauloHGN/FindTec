@@ -3,12 +3,96 @@ using System.ComponentModel;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Text;
 using System.Windows.Forms;
 
 namespace FindTec
 {
     public partial class Form1 : Form
     {
+        //MOVIMENTAR JANELA E SOMBREADO----------------------------------------------------------------------------------------------
+        //private bool Drag;
+        //private int MouseX;
+        //private int MouseY;
+
+        private const int WM_NCHITTEST = 0x84;
+        private const int HTCLIENT = 0x1;
+        private const int HTCAPTION = 0x2;
+
+        private bool m_aeroEnabled;
+
+        private const int CS_DROPSHADOW = 0x00020000;
+        private const int WM_NCPAINT = 0x0085;
+        private const int WM_ACTIVATEAPP = 0x001C;
+
+        [System.Runtime.InteropServices.DllImport("dwmapi.dll")]
+        public static extern int DwmExtendFrameIntoClientArea(IntPtr hWnd, ref MARGINS pMarInset);
+        [System.Runtime.InteropServices.DllImport("dwmapi.dll")]
+        public static extern int DwmSetWindowAttribute(IntPtr hwnd, int attr, ref int attrValue, int attrSize);
+        [System.Runtime.InteropServices.DllImport("dwmapi.dll")]
+
+        public static extern int DwmIsCompositionEnabled(ref int pfEnabled);
+        [System.Runtime.InteropServices.DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        private static extern IntPtr CreateRoundRectRgn(
+            int nLeftRect,
+            int nTopRect,
+            int nRightRect,
+            int nBottomRect,
+            int nWidthEllipse,
+            int nHeightEllipse
+            );
+
+        public struct MARGINS
+        {
+            public int leftWidth;
+            public int rightWidth;
+            public int topHeight;
+            public int bottomHeight;
+        }
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                m_aeroEnabled = CheckAeroEnabled();
+                CreateParams cp = base.CreateParams;
+                if (!m_aeroEnabled)
+                    cp.ClassStyle |= CS_DROPSHADOW; return cp;
+            }
+        }
+        private bool CheckAeroEnabled()
+        {
+            if (Environment.OSVersion.Version.Major >= 6)
+            {
+                int enabled = 0; DwmIsCompositionEnabled(ref enabled);
+                return (enabled == 1) ? true : false;
+            }
+            return false;
+        }
+        protected override void WndProc(ref Message m)
+        {
+            switch (m.Msg)
+            {
+                case WM_NCPAINT:
+                    if (m_aeroEnabled)
+                    {
+                        var v = 2;
+                        DwmSetWindowAttribute(this.Handle, 2, ref v, 4);
+                        MARGINS margins = new MARGINS()
+                        {
+                            bottomHeight = 1,
+                            leftWidth = 0,
+                            rightWidth = 0,
+                            topHeight = 0
+                        }; DwmExtendFrameIntoClientArea(this.Handle, ref margins);
+                    }
+                    break;
+                default: break;
+            }
+            base.WndProc(ref m);
+            if (m.Msg == WM_NCHITTEST && (int)m.Result == HTCLIENT) m.Result = (IntPtr)HTCAPTION;
+        }
+        //FIM DO MOVIMENTAR A JANELA E SOMBREADO ---------------------------------------------------------------------------------------------------
+
         private Image imagemSelecionada;
         public Form1()
         {
@@ -56,8 +140,6 @@ namespace FindTec
         }
         private void button1_Click_2(object sender, EventArgs e)
         {
-            
-
             panelPerfil.Visible = true;
             panelOportunidades.Visible = false;
             panelConversas.Visible = false;
@@ -104,10 +186,6 @@ namespace FindTec
 
         }
         private void panelPerfil_Paint(object sender, PaintEventArgs e)
-        {
-            
-        }
-        private void textBox1_TextChanged(object sender, EventArgs e)
         {
             
         }
@@ -560,14 +638,202 @@ namespace FindTec
         private void label1_TextChanged(object sender, EventArgs e)
         {
             label1.Text = nomeTxt.Text;
+        }      
+
+        private void botaoHome_MouseEnter(object sender, EventArgs e)
+        {
+            Image novaImagem = Properties.Resources.botaoHome_2;
+            botaoHome.BackgroundImage = novaImagem;
+        }      
+
+        private void botaoHome_MouseLeave(object sender, EventArgs e)
+        {
+            Image novaImagem = Properties.Resources.botaoHome_1;
+            botaoHome.BackgroundImage = novaImagem;
         }
 
-        
+        private void buttonA_MouseEnter(object sender, EventArgs e)
+        {
+            Image novaImagem = Properties.Resources.botaoPerfil_2;
+            botaoPerfil.BackgroundImage = novaImagem;
+        }
 
+        private void buttonA_MouseLeave(object sender, EventArgs e)
+        {
+            Image novaImagem = Properties.Resources.botaoPerfil_1;
+            botaoPerfil.BackgroundImage = novaImagem;
+        }
 
-        
+        private void buttonB_MouseEnter(object sender, EventArgs e)
+        {
+            Image novaImagem = Properties.Resources.botaoOportunidades_2;
+            botaoOportunidades.BackgroundImage = novaImagem;
+        }
 
-       
+        private void buttonB_MouseLeave(object sender, EventArgs e)
+        {
+            Image novaImagem = Properties.Resources.botaoOportunidades_1;
+            botaoOportunidades.BackgroundImage = novaImagem;
+        }
+
+        private void buttonC_MouseEnter(object sender, EventArgs e)
+        {
+            Image novaImagem = Properties.Resources.botaoMensagens_2;
+            botaoMensagens.BackgroundImage = novaImagem;
+        }
+
+        private void buttonC_MouseLeave(object sender, EventArgs e)
+        {
+            Image novaImagem = Properties.Resources.botaoMensagens_1;
+            botaoMensagens.BackgroundImage = novaImagem;
+        }
+
+        private void buttonD_MouseEnter(object sender, EventArgs e)
+        {
+            Image novaImagem = Properties.Resources.botaoSair_2;
+            botaoSair.BackgroundImage = novaImagem;
+        }
+
+        private void buttonD_MouseLeave(object sender, EventArgs e)
+        {
+            Image novaImagem = Properties.Resources.botaoSair_1;
+            botaoSair.BackgroundImage = novaImagem;
+        }
+
+        private void buttonUpload_MouseEnter(object sender, EventArgs e)
+        {
+            Image novaImagem = Properties.Resources.BotaoAlterarImagem_2;
+            botaoAlterarFoto.BackgroundImage = novaImagem;
+        }
+
+        private void buttonUpload_MouseLeave(object sender, EventArgs e)
+        {
+            Image novaImagem = Properties.Resources.BotaoAlterarImagem_1;
+            botaoAlterarFoto.BackgroundImage = novaImagem;
+        }
+
+        private void button1_MouseEnter(object sender, EventArgs e)
+        {
+            Image novaImagem = Properties.Resources.botaoEditarDados_2;
+            botaoEditarDados.BackgroundImage = novaImagem;
+        }
+
+        private void button1_MouseLeave(object sender, EventArgs e)
+        {
+            Image novaImagem = Properties.Resources.botaoEditarDados_1;
+            botaoEditarDados.BackgroundImage = novaImagem;
+        }
+
+        private void button2_MouseEnter(object sender, EventArgs e)
+        {
+            Image novaImagem = Properties.Resources.botaoDesativarConta_2;
+            botaoDesativarConta.BackgroundImage = novaImagem;
+        }
+
+        private void button2_MouseLeave(object sender, EventArgs e)
+        {
+            Image novaImagem = Properties.Resources.botaoDesativarConta_1;
+            botaoDesativarConta.BackgroundImage = novaImagem;
+        }
+
+        private void botaoAlterarSenha_MouseEnter(object sender, EventArgs e)
+        {
+            Image novaImagem = Properties.Resources.botaoAlterarSenha_2;
+            botaoAlterarSenha.BackgroundImage = novaImagem;
+        }
+
+        private void botaoAlterarSenha_MouseLeave(object sender, EventArgs e)
+        {
+            Image novaImagem = Properties.Resources.botaoAlterarSenha_1;
+            botaoAlterarSenha.BackgroundImage = novaImagem;
+        }
+
+        private void nomeTxt_TextChanged(object sender, EventArgs e)
+        {
+
+            if (!string.IsNullOrEmpty(nomeTxt.Text))
+            {
+                string[] nomes = nomeTxt.Text.Split(' ');
+                StringBuilder resultado = new StringBuilder();
+
+                foreach (string nome in nomes)
+                {
+                    if (resultado.Length > 0)
+                        resultado.Append(" ");
+
+                    if (nome.ToLower() == "da" || nome.ToLower() == "do" || nome.ToLower() == "das" ||
+                        nome.ToLower() == "dos" || nome.ToLower() == "de" || nome.ToLower() == "e" ||
+                        nome.ToLower() == "eles")
+                    {
+                        resultado.Append(nome.ToLower());
+                    }
+                    else
+                    {
+                        if (nome.Length > 0)
+                        {
+                            string primeiroCaractere = nome.Substring(0, 1).ToUpper();
+                            string restante = nome.Substring(1).ToLower();
+                            resultado.Append(primeiroCaractere + restante);
+                        }
+                    }
+                }
+
+                nomeTxt.Text = resultado.ToString();
+                nomeTxt.SelectionStart = nomeTxt.Text.Length;
+            }
+
+        }
+        private bool formatandoTelefone = false;
+
+        private void telefoneTxt_TextChanged(object sender, EventArgs e)
+        {
+            if (!formatandoTelefone)
+            {
+                formatandoTelefone = true;
+
+                // Remove todos os caracteres não numéricos do telefone
+                string telefone = new string(telefoneTxt.Text.Where(char.IsDigit).ToArray());
+
+                if (telefone.Length >= 2)
+                {
+                    // Garante que a string tenha um comprimento mínimo antes de aplicar a formatação
+                    if (telefone.Length <= 2)
+                    {
+                        telefone = string.Format("({0}", telefone);
+                    }
+                    else if (telefone.Length <= 6)
+                    {
+                        telefone = string.Format("({0}) {1}", telefone.Substring(0, 2), telefone.Substring(2));
+                    }
+                    else if (telefone.Length <= 10)
+                    {
+                        telefone = string.Format("({0}) {1}-{2}", telefone.Substring(0, 2), telefone.Substring(2, 4), telefone.Substring(6));
+                    }
+                    else
+                    {
+                        telefone = string.Format("({0}) {1}-{2}", telefone.Substring(0, 2), telefone.Substring(2, 5), telefone.Substring(7));
+                    }
+                }
+
+                telefoneTxt.Text = telefone;
+                telefoneTxt.SelectionStart = telefone.Length;
+
+                formatandoTelefone = false;
+            }
+        }
+
+        private void textTelefone_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            else if (telefoneTxt.TextLength >= 15 && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
 
         /// FIM MENSAGENS
     }
