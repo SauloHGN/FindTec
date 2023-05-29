@@ -249,12 +249,21 @@
     <None Include="Imagens\botaoEntrar2.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Imagens\telaPerfil.png" />
     <None Include="Imagens\backgroundGeral.png" />
+    <None Include="Imagens\BotaoAlterarImagem 2.png" />
+    <None Include="Imagens\botaoAlterarSenha 2.png" />
+    <None Include="Imagens\BotaoAlterarImagem 1.png" />
+    <None Include="Imagens\botaoAlterarSenha 1.png" />
     <Content Include="Imagens\botaoAluno1.png" />
     <Content Include="Imagens\botaoAluno2.png" />
     <None Include="Imagens\botaoCriesuaconta1.png" />
     <None Include="Imagens\botaoCriarconta1.png" />
     <None Include="Imagens\botaoCriesuaconta2.png" />
+    <None Include="Imagens\botaoDesativarConta 2.png" />
+    <None Include="Imagens\botaoDesativarConta 1.png" />
+    <None Include="Imagens\botaoEditarDados 2.png" />
+    <None Include="Imagens\botaoEditarDados 1.png" />
     <Content Include="Imagens\botaoEmpresa1.png" />
     <None Include="Imagens\botaoEmpresa2.png" />
     <None Include="Imagens\botaoEntrar1.png" />
@@ -262,6 +271,16 @@
     <None Include="Imagens\botaoEnviar2.png" />
     <Content Include="Imagens\botaoFechar.png" />
     <None Include="Imagens\botaoRedefinir1.png" />
+    <None Include="Imagens\botaoSair 2.png" />
+    <None Include="Imagens\botaoOportunidades 2.png" />
+    <None Include="Imagens\botaoMensagens 2.png" />
+    <None Include="Imagens\botaoPerfil 2.png" />
+    <None Include="Imagens\botaoHome 2.png" />
+    <None Include="Imagens\botaoSair 1.png" />
+    <None Include="Imagens\botaoOportunidades 1.png" />
+    <None Include="Imagens\botaoMensagens 1.png" />
+    <None Include="Imagens\botaoPerfil 1.png" />
+    <None Include="Imagens\botaoHome 1.png" />
     <Content Include="Imagens\botaoVoltar.png" />
     <None Include="Imagens\CadastroAluno.png" />
     <None Include="Imagens\CadastroEmpresa.png" />
@@ -269,6 +288,7 @@
     <None Include="Imagens\RecuperarSenha2.png" />
     <None Include="Imagens\RecuperarSenha3.png" />
     <None Include="Imagens\menuLateral.png" />
+    <None Include="Imagens\imagemAluno.png" />
     <Content Include="Imagens\TelaEscolha.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
