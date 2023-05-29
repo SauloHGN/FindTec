@@ -102,8 +102,12 @@ namespace FindTec
 
         private void TelaLogin_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Application.Exit();
+            if (this == ActiveForm) // Verifica se o formulário atual é o TelaLogin
+            {
+                Environment.Exit(0);
+            }
         }
+
 
         public TelaLogin()
         {                    

@@ -32,22 +32,25 @@ namespace FindTec
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
+            this.botaoHome = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.buttonD = new System.Windows.Forms.Button();
-            this.buttonC = new System.Windows.Forms.Button();
-            this.buttonB = new System.Windows.Forms.Button();
-            this.buttonA = new System.Windows.Forms.Button();
+            this.botaoSair = new System.Windows.Forms.Button();
+            this.botaoMensagens = new System.Windows.Forms.Button();
+            this.botaoOportunidades = new System.Windows.Forms.Button();
+            this.botaoPerfil = new System.Windows.Forms.Button();
             this.panelPerfil = new System.Windows.Forms.Panel();
-            this.buttonUpload = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.botaoAlterarSenha = new System.Windows.Forms.Button();
+            this.botaoAlterarFoto = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.botaoDesativarConta = new System.Windows.Forms.Button();
+            this.botaoEditarDados = new System.Windows.Forms.Button();
             this.cursoTxt = new System.Windows.Forms.TextBox();
             this.telefoneTxt = new System.Windows.Forms.TextBox();
             this.emailTxt = new System.Windows.Forms.TextBox();
             this.nomeTxt = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelOportunidades = new System.Windows.Forms.Panel();
+            this.labelOportunidades = new System.Windows.Forms.Label();
             this.gridViewOportunidades = new System.Windows.Forms.DataGridView();
             this.colFoto = new System.Windows.Forms.DataGridViewImageColumn();
             this.colNomeEmpresa = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,7 +59,6 @@ namespace FindTec
             this.cargaHGrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.remuneracaoGrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colCandidatar = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.labelOportunidades = new System.Windows.Forms.Label();
             this.panelVagaInfo = new System.Windows.Forms.Panel();
             this.botaoVoltar = new System.Windows.Forms.Button();
             this.txtDescricao = new System.Windows.Forms.TextBox();
@@ -82,11 +84,6 @@ namespace FindTec
             this.btnVoltar = new System.Windows.Forms.Button();
             this.btnEnviar = new System.Windows.Forms.Button();
             this.txtMensagem = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.opA1 = new FindTec.OpA();
-            this.opB1 = new FindTec.OpB();
-            this.opD1 = new FindTec.OpD();
-            this.opC1 = new FindTec.OpC();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panelPerfil.SuspendLayout();
@@ -102,33 +99,36 @@ namespace FindTec
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.BackgroundImage = global::FindTec.Properties.Resources.menuLateral;
-            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.botaoHome);
             this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Controls.Add(this.buttonD);
-            this.panel1.Controls.Add(this.buttonC);
-            this.panel1.Controls.Add(this.buttonB);
-            this.panel1.Controls.Add(this.buttonA);
+            this.panel1.Controls.Add(this.botaoSair);
+            this.panel1.Controls.Add(this.botaoMensagens);
+            this.panel1.Controls.Add(this.botaoOportunidades);
+            this.panel1.Controls.Add(this.botaoPerfil);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 550);
+            this.panel1.Size = new System.Drawing.Size(215, 550);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint_1);
             // 
-            // button3
+            // botaoHome
             // 
-            this.button3.BackgroundImage = global::FindTec.Properties.Resources.botaoHome_1;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Location = new System.Drawing.Point(3, 217);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(197, 56);
-            this.button3.TabIndex = 14;
-            this.button3.UseVisualStyleBackColor = true;
+            this.botaoHome.BackgroundImage = global::FindTec.Properties.Resources.botaoHome_1;
+            this.botaoHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.botaoHome.FlatAppearance.BorderSize = 0;
+            this.botaoHome.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.botaoHome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.botaoHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botaoHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.botaoHome.ForeColor = System.Drawing.Color.Black;
+            this.botaoHome.Location = new System.Drawing.Point(3, 217);
+            this.botaoHome.Name = "botaoHome";
+            this.botaoHome.Size = new System.Drawing.Size(197, 56);
+            this.botaoHome.TabIndex = 14;
+            this.botaoHome.UseVisualStyleBackColor = true;
+            this.botaoHome.MouseEnter += new System.EventHandler(this.botaoHome_MouseEnter);
+            this.botaoHome.MouseLeave += new System.EventHandler(this.botaoHome_MouseLeave);
             // 
             // pictureBox2
             // 
@@ -140,132 +140,182 @@ namespace FindTec
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox2_Paint);
             // 
-            // buttonD
+            // botaoSair
             // 
-            this.buttonD.BackgroundImage = global::FindTec.Properties.Resources.botaoSair_1;
-            this.buttonD.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.buttonD.FlatAppearance.BorderSize = 0;
-            this.buttonD.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.buttonD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.buttonD.ForeColor = System.Drawing.Color.Black;
-            this.buttonD.Location = new System.Drawing.Point(1, 498);
-            this.buttonD.Name = "buttonD";
-            this.buttonD.Size = new System.Drawing.Size(197, 34);
-            this.buttonD.TabIndex = 3;
-            this.buttonD.UseVisualStyleBackColor = true;
-            this.buttonD.Click += new System.EventHandler(this.buttonD_Click);
+            this.botaoSair.BackgroundImage = global::FindTec.Properties.Resources.botaoSair_1;
+            this.botaoSair.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.botaoSair.FlatAppearance.BorderSize = 0;
+            this.botaoSair.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.botaoSair.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.botaoSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botaoSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.botaoSair.ForeColor = System.Drawing.Color.Black;
+            this.botaoSair.Location = new System.Drawing.Point(1, 495);
+            this.botaoSair.Name = "botaoSair";
+            this.botaoSair.Size = new System.Drawing.Size(197, 51);
+            this.botaoSair.TabIndex = 3;
+            this.botaoSair.UseVisualStyleBackColor = true;
+            this.botaoSair.Click += new System.EventHandler(this.buttonD_Click);
+            this.botaoSair.MouseEnter += new System.EventHandler(this.buttonD_MouseEnter);
+            this.botaoSair.MouseLeave += new System.EventHandler(this.buttonD_MouseLeave);
             // 
-            // buttonC
+            // botaoMensagens
             // 
-            this.buttonC.BackgroundImage = global::FindTec.Properties.Resources.botaoMensagens_1;
-            this.buttonC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.buttonC.FlatAppearance.BorderSize = 0;
-            this.buttonC.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.buttonC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonC.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.buttonC.ForeColor = System.Drawing.Color.Black;
-            this.buttonC.Location = new System.Drawing.Point(3, 392);
-            this.buttonC.Name = "buttonC";
-            this.buttonC.Size = new System.Drawing.Size(197, 56);
-            this.buttonC.TabIndex = 2;
-            this.buttonC.UseVisualStyleBackColor = true;
-            this.buttonC.Click += new System.EventHandler(this.button3_Click);
+            this.botaoMensagens.BackgroundImage = global::FindTec.Properties.Resources.botaoMensagens_1;
+            this.botaoMensagens.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.botaoMensagens.FlatAppearance.BorderSize = 0;
+            this.botaoMensagens.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.botaoMensagens.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.botaoMensagens.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botaoMensagens.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.botaoMensagens.ForeColor = System.Drawing.Color.Black;
+            this.botaoMensagens.Location = new System.Drawing.Point(3, 392);
+            this.botaoMensagens.Name = "botaoMensagens";
+            this.botaoMensagens.Size = new System.Drawing.Size(197, 56);
+            this.botaoMensagens.TabIndex = 2;
+            this.botaoMensagens.UseVisualStyleBackColor = true;
+            this.botaoMensagens.Click += new System.EventHandler(this.button3_Click);
+            this.botaoMensagens.MouseEnter += new System.EventHandler(this.buttonC_MouseEnter);
+            this.botaoMensagens.MouseLeave += new System.EventHandler(this.buttonC_MouseLeave);
             // 
-            // buttonB
+            // botaoOportunidades
             // 
-            this.buttonB.BackgroundImage = global::FindTec.Properties.Resources.botaoOportunidades_1;
-            this.buttonB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.buttonB.FlatAppearance.BorderSize = 0;
-            this.buttonB.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.buttonB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.buttonB.ForeColor = System.Drawing.Color.Black;
-            this.buttonB.Location = new System.Drawing.Point(3, 332);
-            this.buttonB.Name = "buttonB";
-            this.buttonB.Size = new System.Drawing.Size(197, 56);
-            this.buttonB.TabIndex = 1;
-            this.buttonB.UseVisualStyleBackColor = true;
-            this.buttonB.Click += new System.EventHandler(this.button2_Click_1);
+            this.botaoOportunidades.BackgroundImage = global::FindTec.Properties.Resources.botaoOportunidades_1;
+            this.botaoOportunidades.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.botaoOportunidades.FlatAppearance.BorderSize = 0;
+            this.botaoOportunidades.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.botaoOportunidades.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.botaoOportunidades.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botaoOportunidades.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.botaoOportunidades.ForeColor = System.Drawing.Color.Black;
+            this.botaoOportunidades.Location = new System.Drawing.Point(3, 332);
+            this.botaoOportunidades.Name = "botaoOportunidades";
+            this.botaoOportunidades.Size = new System.Drawing.Size(197, 56);
+            this.botaoOportunidades.TabIndex = 1;
+            this.botaoOportunidades.UseVisualStyleBackColor = true;
+            this.botaoOportunidades.Click += new System.EventHandler(this.button2_Click_1);
+            this.botaoOportunidades.MouseEnter += new System.EventHandler(this.buttonB_MouseEnter);
+            this.botaoOportunidades.MouseLeave += new System.EventHandler(this.buttonB_MouseLeave);
             // 
-            // buttonA
+            // botaoPerfil
             // 
-            this.buttonA.BackgroundImage = global::FindTec.Properties.Resources.botaoPerfil_1;
-            this.buttonA.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.buttonA.FlatAppearance.BorderSize = 0;
-            this.buttonA.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.buttonA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonA.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.buttonA.ForeColor = System.Drawing.Color.Black;
-            this.buttonA.Location = new System.Drawing.Point(3, 275);
-            this.buttonA.Name = "buttonA";
-            this.buttonA.Size = new System.Drawing.Size(197, 56);
-            this.buttonA.TabIndex = 0;
-            this.buttonA.UseVisualStyleBackColor = true;
-            this.buttonA.Click += new System.EventHandler(this.button1_Click_2);
+            this.botaoPerfil.BackgroundImage = global::FindTec.Properties.Resources.botaoPerfil_1;
+            this.botaoPerfil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.botaoPerfil.FlatAppearance.BorderSize = 0;
+            this.botaoPerfil.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.botaoPerfil.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.botaoPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botaoPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.botaoPerfil.ForeColor = System.Drawing.Color.Black;
+            this.botaoPerfil.Location = new System.Drawing.Point(3, 275);
+            this.botaoPerfil.Name = "botaoPerfil";
+            this.botaoPerfil.Size = new System.Drawing.Size(197, 56);
+            this.botaoPerfil.TabIndex = 0;
+            this.botaoPerfil.UseVisualStyleBackColor = true;
+            this.botaoPerfil.Click += new System.EventHandler(this.button1_Click_2);
+            this.botaoPerfil.MouseEnter += new System.EventHandler(this.buttonA_MouseEnter);
+            this.botaoPerfil.MouseLeave += new System.EventHandler(this.buttonA_MouseLeave);
             // 
             // panelPerfil
             // 
             this.panelPerfil.BackColor = System.Drawing.Color.Transparent;
             this.panelPerfil.BackgroundImage = global::FindTec.Properties.Resources.telaPerfil;
             this.panelPerfil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.panelPerfil.Controls.Add(this.buttonUpload);
+            this.panelPerfil.Controls.Add(this.botaoAlterarSenha);
+            this.panelPerfil.Controls.Add(this.botaoAlterarFoto);
             this.panelPerfil.Controls.Add(this.label1);
-            this.panelPerfil.Controls.Add(this.button2);
-            this.panelPerfil.Controls.Add(this.button1);
+            this.panelPerfil.Controls.Add(this.botaoDesativarConta);
+            this.panelPerfil.Controls.Add(this.botaoEditarDados);
             this.panelPerfil.Controls.Add(this.cursoTxt);
             this.panelPerfil.Controls.Add(this.telefoneTxt);
             this.panelPerfil.Controls.Add(this.emailTxt);
             this.panelPerfil.Controls.Add(this.nomeTxt);
             this.panelPerfil.Controls.Add(this.pictureBox1);
-            this.panelPerfil.Location = new System.Drawing.Point(222, 15);
+            this.panelPerfil.Location = new System.Drawing.Point(223, 15);
             this.panelPerfil.Name = "panelPerfil";
             this.panelPerfil.Size = new System.Drawing.Size(755, 525);
             this.panelPerfil.TabIndex = 5;
             this.panelPerfil.Visible = false;
             this.panelPerfil.Paint += new System.Windows.Forms.PaintEventHandler(this.panelPerfil_Paint);
             // 
-            // buttonUpload
+            // botaoAlterarSenha
             // 
-            this.buttonUpload.BackgroundImage = global::FindTec.Properties.Resources.BotaoAlterarImagem_1;
-            this.buttonUpload.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.buttonUpload.FlatAppearance.BorderSize = 0;
-            this.buttonUpload.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.buttonUpload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonUpload.Location = new System.Drawing.Point(182, 128);
-            this.buttonUpload.Name = "buttonUpload";
-            this.buttonUpload.Size = new System.Drawing.Size(121, 35);
-            this.buttonUpload.TabIndex = 12;
-            this.buttonUpload.UseVisualStyleBackColor = true;
-            this.buttonUpload.Click += new System.EventHandler(this.button3_Click_1);
+            this.botaoAlterarSenha.BackgroundImage = global::FindTec.Properties.Resources.botaoAlterarSenha_1;
+            this.botaoAlterarSenha.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.botaoAlterarSenha.FlatAppearance.BorderSize = 0;
+            this.botaoAlterarSenha.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.botaoAlterarSenha.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.botaoAlterarSenha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botaoAlterarSenha.Location = new System.Drawing.Point(554, 253);
+            this.botaoAlterarSenha.Name = "botaoAlterarSenha";
+            this.botaoAlterarSenha.Size = new System.Drawing.Size(158, 62);
+            this.botaoAlterarSenha.TabIndex = 14;
+            this.botaoAlterarSenha.UseVisualStyleBackColor = true;
+            this.botaoAlterarSenha.MouseEnter += new System.EventHandler(this.botaoAlterarSenha_MouseEnter);
+            this.botaoAlterarSenha.MouseLeave += new System.EventHandler(this.botaoAlterarSenha_MouseLeave);
             // 
-            // button2
+            // botaoAlterarFoto
             // 
-            this.button2.BackgroundImage = global::FindTec.Properties.Resources.botaoDesativarConta_1;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(554, 333);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(167, 51);
-            this.button2.TabIndex = 10;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.botaoAlterarFoto.BackgroundImage = global::FindTec.Properties.Resources.BotaoAlterarImagem_1;
+            this.botaoAlterarFoto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.botaoAlterarFoto.FlatAppearance.BorderSize = 0;
+            this.botaoAlterarFoto.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.botaoAlterarFoto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.botaoAlterarFoto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botaoAlterarFoto.Location = new System.Drawing.Point(182, 128);
+            this.botaoAlterarFoto.Name = "botaoAlterarFoto";
+            this.botaoAlterarFoto.Size = new System.Drawing.Size(121, 35);
+            this.botaoAlterarFoto.TabIndex = 12;
+            this.botaoAlterarFoto.UseVisualStyleBackColor = true;
+            this.botaoAlterarFoto.Click += new System.EventHandler(this.button3_Click_1);
+            this.botaoAlterarFoto.MouseEnter += new System.EventHandler(this.buttonUpload_MouseEnter);
+            this.botaoAlterarFoto.MouseLeave += new System.EventHandler(this.buttonUpload_MouseLeave);
             // 
-            // button1
+            // label1
             // 
-            this.button1.BackgroundImage = global::FindTec.Properties.Resources.botaoEditarDados_1;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(554, 258);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(158, 62);
-            this.button1.TabIndex = 9;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Transparent;
+            this.label1.Location = new System.Drawing.Point(188, 28);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(559, 108);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Nome do Aluno";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label1.TextChanged += new System.EventHandler(this.label1_TextChanged);
+            // 
+            // botaoDesativarConta
+            // 
+            this.botaoDesativarConta.BackgroundImage = global::FindTec.Properties.Resources.botaoDesativarConta_1;
+            this.botaoDesativarConta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.botaoDesativarConta.FlatAppearance.BorderSize = 0;
+            this.botaoDesativarConta.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.botaoDesativarConta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.botaoDesativarConta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botaoDesativarConta.Location = new System.Drawing.Point(548, 374);
+            this.botaoDesativarConta.Name = "botaoDesativarConta";
+            this.botaoDesativarConta.Size = new System.Drawing.Size(167, 51);
+            this.botaoDesativarConta.TabIndex = 10;
+            this.botaoDesativarConta.UseVisualStyleBackColor = true;
+            this.botaoDesativarConta.Click += new System.EventHandler(this.button2_Click);
+            this.botaoDesativarConta.MouseEnter += new System.EventHandler(this.button2_MouseEnter);
+            this.botaoDesativarConta.MouseLeave += new System.EventHandler(this.button2_MouseLeave);
+            // 
+            // botaoEditarDados
+            // 
+            this.botaoEditarDados.BackgroundImage = global::FindTec.Properties.Resources.botaoEditarDados_1;
+            this.botaoEditarDados.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.botaoEditarDados.FlatAppearance.BorderSize = 0;
+            this.botaoEditarDados.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.botaoEditarDados.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.botaoEditarDados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botaoEditarDados.Location = new System.Drawing.Point(554, 311);
+            this.botaoEditarDados.Name = "botaoEditarDados";
+            this.botaoEditarDados.Size = new System.Drawing.Size(158, 62);
+            this.botaoEditarDados.TabIndex = 9;
+            this.botaoEditarDados.UseVisualStyleBackColor = true;
+            this.botaoEditarDados.Click += new System.EventHandler(this.button1_Click);
+            this.botaoEditarDados.MouseEnter += new System.EventHandler(this.button1_MouseEnter);
+            this.botaoEditarDados.MouseLeave += new System.EventHandler(this.button1_MouseLeave);
             // 
             // cursoTxt
             // 
@@ -286,12 +336,10 @@ namespace FindTec
             this.telefoneTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.telefoneTxt.Font = new System.Drawing.Font("Arial Narrow", 12F);
             this.telefoneTxt.Location = new System.Drawing.Point(73, 388);
-            this.telefoneTxt.Multiline = true;
             this.telefoneTxt.Name = "telefoneTxt";
-            this.telefoneTxt.Size = new System.Drawing.Size(350, 24);
+            this.telefoneTxt.Size = new System.Drawing.Size(350, 19);
             this.telefoneTxt.TabIndex = 3;
-            this.telefoneTxt.TabStop = false;
-            this.telefoneTxt.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            this.telefoneTxt.TextChanged += new System.EventHandler(this.telefoneTxt_TextChanged);
             // 
             // emailTxt
             // 
@@ -316,7 +364,7 @@ namespace FindTec
             this.nomeTxt.Size = new System.Drawing.Size(350, 24);
             this.nomeTxt.TabIndex = 1;
             this.nomeTxt.TabStop = false;
-            this.nomeTxt.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.nomeTxt.TextChanged += new System.EventHandler(this.nomeTxt_TextChanged);
             // 
             // pictureBox1
             // 
@@ -332,13 +380,23 @@ namespace FindTec
             // panelOportunidades
             // 
             this.panelOportunidades.BackColor = System.Drawing.Color.White;
-            this.panelOportunidades.Controls.Add(this.gridViewOportunidades);
             this.panelOportunidades.Controls.Add(this.labelOportunidades);
-            this.panelOportunidades.Location = new System.Drawing.Point(201, 0);
+            this.panelOportunidades.Controls.Add(this.gridViewOportunidades);
+            this.panelOportunidades.Location = new System.Drawing.Point(223, 15);
             this.panelOportunidades.Name = "panelOportunidades";
-            this.panelOportunidades.Size = new System.Drawing.Size(783, 511);
+            this.panelOportunidades.Size = new System.Drawing.Size(755, 525);
             this.panelOportunidades.TabIndex = 6;
             this.panelOportunidades.Visible = false;
+            // 
+            // labelOportunidades
+            // 
+            this.labelOportunidades.AutoSize = true;
+            this.labelOportunidades.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelOportunidades.Location = new System.Drawing.Point(307, 63);
+            this.labelOportunidades.Name = "labelOportunidades";
+            this.labelOportunidades.Size = new System.Drawing.Size(154, 26);
+            this.labelOportunidades.TabIndex = 0;
+            this.labelOportunidades.Text = "Oportunidades";
             // 
             // gridViewOportunidades
             // 
@@ -428,16 +486,6 @@ namespace FindTec
             this.colCandidatar.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.colCandidatar.Width = 90;
             // 
-            // labelOportunidades
-            // 
-            this.labelOportunidades.AutoSize = true;
-            this.labelOportunidades.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelOportunidades.Location = new System.Drawing.Point(307, 63);
-            this.labelOportunidades.Name = "labelOportunidades";
-            this.labelOportunidades.Size = new System.Drawing.Size(154, 26);
-            this.labelOportunidades.TabIndex = 0;
-            this.labelOportunidades.Text = "Oportunidades";
-            // 
             // panelVagaInfo
             // 
             this.panelVagaInfo.BackColor = System.Drawing.Color.White;
@@ -456,9 +504,9 @@ namespace FindTec
             this.panelVagaInfo.Controls.Add(this.labelDescricaoVaga);
             this.panelVagaInfo.Controls.Add(this.labelNomeVaga);
             this.panelVagaInfo.Controls.Add(this.labelVagaInfo);
-            this.panelVagaInfo.Location = new System.Drawing.Point(200, 0);
+            this.panelVagaInfo.Location = new System.Drawing.Point(223, 15);
             this.panelVagaInfo.Name = "panelVagaInfo";
-            this.panelVagaInfo.Size = new System.Drawing.Size(784, 511);
+            this.panelVagaInfo.Size = new System.Drawing.Size(755, 525);
             this.panelVagaInfo.TabIndex = 7;
             this.panelVagaInfo.Visible = false;
             // 
@@ -618,9 +666,9 @@ namespace FindTec
             this.panelConversas.Controls.Add(this.FlowPanelConversas);
             this.panelConversas.Controls.Add(this.labelConversas);
             this.panelConversas.Controls.Add(this.listViewConversas);
-            this.panelConversas.Location = new System.Drawing.Point(200, 0);
+            this.panelConversas.Location = new System.Drawing.Point(223, 15);
             this.panelConversas.Name = "panelConversas";
-            this.panelConversas.Size = new System.Drawing.Size(784, 511);
+            this.panelConversas.Size = new System.Drawing.Size(755, 525);
             this.panelConversas.TabIndex = 8;
             this.panelConversas.Visible = false;
             // 
@@ -660,9 +708,9 @@ namespace FindTec
             this.panelMensagens.Controls.Add(this.btnVoltar);
             this.panelMensagens.Controls.Add(this.btnEnviar);
             this.panelMensagens.Controls.Add(this.txtMensagem);
-            this.panelMensagens.Location = new System.Drawing.Point(200, 0);
+            this.panelMensagens.Location = new System.Drawing.Point(223, 15);
             this.panelMensagens.Name = "panelMensagens";
-            this.panelMensagens.Size = new System.Drawing.Size(784, 511);
+            this.panelMensagens.Size = new System.Drawing.Size(755, 525);
             this.panelMensagens.TabIndex = 26;
             this.panelMensagens.Visible = false;
             // 
@@ -706,57 +754,6 @@ namespace FindTec
             this.txtMensagem.Size = new System.Drawing.Size(569, 28);
             this.txtMensagem.TabIndex = 5;
             // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(188, 28);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(559, 108);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "Nome do Aluno";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label1.TextChanged += new System.EventHandler(this.label1_TextChanged);
-            // 
-            // opA1
-            // 
-            this.opA1.AccessibleName = "";
-            this.opA1.AutoSize = true;
-            this.opA1.BackColor = System.Drawing.Color.White;
-            this.opA1.Location = new System.Drawing.Point(201, 0);
-            this.opA1.Name = "opA1";
-            this.opA1.Size = new System.Drawing.Size(783, 511);
-            this.opA1.TabIndex = 1;
-            this.opA1.Load += new System.EventHandler(this.opA2_Load);
-            // 
-            // opB1
-            // 
-            this.opB1.BackColor = System.Drawing.Color.White;
-            this.opB1.Location = new System.Drawing.Point(201, 0);
-            this.opB1.Name = "opB1";
-            this.opB1.Size = new System.Drawing.Size(783, 511);
-            this.opB1.TabIndex = 2;
-            this.opB1.Visible = false;
-            // 
-            // opD1
-            // 
-            this.opD1.BackColor = System.Drawing.Color.White;
-            this.opD1.Location = new System.Drawing.Point(201, 0);
-            this.opD1.Name = "opD1";
-            this.opD1.Size = new System.Drawing.Size(783, 511);
-            this.opD1.TabIndex = 4;
-            this.opD1.Visible = false;
-            this.opD1.Load += new System.EventHandler(this.opD1_Load);
-            // 
-            // opC1
-            // 
-            this.opC1.BackColor = System.Drawing.Color.White;
-            this.opC1.Location = new System.Drawing.Point(201, 0);
-            this.opC1.Name = "opC1";
-            this.opC1.Size = new System.Drawing.Size(783, 511);
-            this.opC1.TabIndex = 3;
-            this.opC1.Visible = false;
-            // 
             // Form1
             // 
             this.BackgroundImage = global::FindTec.Properties.Resources.backgroundGeral;
@@ -764,14 +761,10 @@ namespace FindTec
             this.ClientSize = new System.Drawing.Size(1000, 550);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelPerfil);
-            this.Controls.Add(this.opA1);
-            this.Controls.Add(this.panelOportunidades);
-            this.Controls.Add(this.panelVagaInfo);
-            this.Controls.Add(this.opB1);
-            this.Controls.Add(this.opD1);
             this.Controls.Add(this.panelConversas);
             this.Controls.Add(this.panelMensagens);
-            this.Controls.Add(this.opC1);
+            this.Controls.Add(this.panelOportunidades);
+            this.Controls.Add(this.panelVagaInfo);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
@@ -792,30 +785,25 @@ namespace FindTec
             this.panelMensagens.ResumeLayout(false);
             this.panelMensagens.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private OpA opA1;
-        private System.Windows.Forms.Button buttonA;
-        private System.Windows.Forms.Button buttonD;
-        private System.Windows.Forms.Button buttonC;
-        private System.Windows.Forms.Button buttonB;
-        private OpB opB1;
-        private OpC opC1;
-        private OpD opD1;
+        private System.Windows.Forms.Button botaoPerfil;
+        private System.Windows.Forms.Button botaoSair;
+        private System.Windows.Forms.Button botaoMensagens;
+        private System.Windows.Forms.Button botaoOportunidades;
         private System.Windows.Forms.Panel panelPerfil;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox cursoTxt;
         private System.Windows.Forms.TextBox telefoneTxt;
         private System.Windows.Forms.TextBox emailTxt;
         private System.Windows.Forms.TextBox nomeTxt;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button buttonUpload;
+        private System.Windows.Forms.Button botaoDesativarConta;
+        private System.Windows.Forms.Button botaoEditarDados;
+        private System.Windows.Forms.Button botaoAlterarFoto;
         private System.Windows.Forms.Panel panelOportunidades;
         private System.Windows.Forms.Label labelOportunidades;
         private System.Windows.Forms.DataGridView gridViewOportunidades;
@@ -852,8 +840,9 @@ namespace FindTec
         public System.Windows.Forms.FlowLayoutPanel flowLayoutPanelMensagens;
         private System.Windows.Forms.FlowLayoutPanel FlowPanelConversas;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button botaoHome;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button botaoAlterarSenha;
     }
 }
 

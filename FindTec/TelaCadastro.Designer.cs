@@ -39,7 +39,14 @@ namespace FindTec
             this.botaoFechar = new System.Windows.Forms.Button();
             this.botaoVoltar = new System.Windows.Forms.Button();
             this.cadastroEmpresa = new System.Windows.Forms.Panel();
+            this.txtDadosInvalidos = new System.Windows.Forms.Label();
+            this.txtEmailInvalido = new System.Windows.Forms.Label();
+            this.txtTelefoneInvalido = new System.Windows.Forms.Label();
             this.cadastroAluno = new System.Windows.Forms.Panel();
+            this.txtDadosInvalidos2 = new System.Windows.Forms.Label();
+            this.txtEmailInvalido2 = new System.Windows.Forms.Label();
+            this.txtTelefoneInvalido2 = new System.Windows.Forms.Label();
+            this.txtCursoInvalido = new System.Windows.Forms.Label();
             this.txtIndisponivel2 = new System.Windows.Forms.Label();
             this.botaoCriarcontaa = new System.Windows.Forms.Button();
             this.botaoVoltarA = new System.Windows.Forms.Button();
@@ -49,13 +56,6 @@ namespace FindTec
             this.textTelefone = new System.Windows.Forms.TextBox();
             this.textEmail = new System.Windows.Forms.TextBox();
             this.textNome = new System.Windows.Forms.TextBox();
-            this.txtCursoInvalido = new System.Windows.Forms.Label();
-            this.txtTelefoneInvalido2 = new System.Windows.Forms.Label();
-            this.txtEmailInvalido2 = new System.Windows.Forms.Label();
-            this.txtTelefoneInvalido = new System.Windows.Forms.Label();
-            this.txtEmailInvalido = new System.Windows.Forms.Label();
-            this.txtDadosInvalidos = new System.Windows.Forms.Label();
-            this.txtDadosInvalidos2 = new System.Windows.Forms.Label();
             this.cadastroEmpresa.SuspendLayout();
             this.cadastroAluno.SuspendLayout();
             this.SuspendLayout();
@@ -197,6 +197,45 @@ namespace FindTec
             this.cadastroEmpresa.TabIndex = 0;
             this.cadastroEmpresa.Visible = false;
             // 
+            // txtDadosInvalidos
+            // 
+            this.txtDadosInvalidos.AutoSize = true;
+            this.txtDadosInvalidos.BackColor = System.Drawing.Color.IndianRed;
+            this.txtDadosInvalidos.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Bold);
+            this.txtDadosInvalidos.ForeColor = System.Drawing.Color.White;
+            this.txtDadosInvalidos.Location = new System.Drawing.Point(279, 518);
+            this.txtDadosInvalidos.Name = "txtDadosInvalidos";
+            this.txtDadosInvalidos.Size = new System.Drawing.Size(96, 15);
+            this.txtDadosInvalidos.TabIndex = 26;
+            this.txtDadosInvalidos.Text = "DADOS INVÁLIDOS";
+            this.txtDadosInvalidos.Visible = false;
+            // 
+            // txtEmailInvalido
+            // 
+            this.txtEmailInvalido.AutoSize = true;
+            this.txtEmailInvalido.BackColor = System.Drawing.Color.IndianRed;
+            this.txtEmailInvalido.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Bold);
+            this.txtEmailInvalido.ForeColor = System.Drawing.Color.White;
+            this.txtEmailInvalido.Location = new System.Drawing.Point(230, 349);
+            this.txtEmailInvalido.Name = "txtEmailInvalido";
+            this.txtEmailInvalido.Size = new System.Drawing.Size(86, 15);
+            this.txtEmailInvalido.TabIndex = 25;
+            this.txtEmailInvalido.Text = "E-MAIL INVÁLDO";
+            this.txtEmailInvalido.Visible = false;
+            // 
+            // txtTelefoneInvalido
+            // 
+            this.txtTelefoneInvalido.AutoSize = true;
+            this.txtTelefoneInvalido.BackColor = System.Drawing.Color.IndianRed;
+            this.txtTelefoneInvalido.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Bold);
+            this.txtTelefoneInvalido.ForeColor = System.Drawing.Color.White;
+            this.txtTelefoneInvalido.Location = new System.Drawing.Point(229, 401);
+            this.txtTelefoneInvalido.Name = "txtTelefoneInvalido";
+            this.txtTelefoneInvalido.Size = new System.Drawing.Size(102, 15);
+            this.txtTelefoneInvalido.TabIndex = 24;
+            this.txtTelefoneInvalido.Text = "TELEFONE INVÁLDO";
+            this.txtTelefoneInvalido.Visible = false;
+            // 
             // cadastroAluno
             // 
             this.cadastroAluno.BackgroundImage = global::FindTec.Properties.Resources.CadastroAluno;
@@ -221,6 +260,58 @@ namespace FindTec
             this.cadastroAluno.Size = new System.Drawing.Size(660, 660);
             this.cadastroAluno.TabIndex = 7;
             this.cadastroAluno.Visible = false;
+            // 
+            // txtDadosInvalidos2
+            // 
+            this.txtDadosInvalidos2.AutoSize = true;
+            this.txtDadosInvalidos2.BackColor = System.Drawing.Color.IndianRed;
+            this.txtDadosInvalidos2.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Bold);
+            this.txtDadosInvalidos2.ForeColor = System.Drawing.Color.White;
+            this.txtDadosInvalidos2.Location = new System.Drawing.Point(279, 556);
+            this.txtDadosInvalidos2.Name = "txtDadosInvalidos2";
+            this.txtDadosInvalidos2.Size = new System.Drawing.Size(96, 15);
+            this.txtDadosInvalidos2.TabIndex = 25;
+            this.txtDadosInvalidos2.Text = "DADOS INVÁLIDOS";
+            this.txtDadosInvalidos2.Visible = false;
+            // 
+            // txtEmailInvalido2
+            // 
+            this.txtEmailInvalido2.AutoSize = true;
+            this.txtEmailInvalido2.BackColor = System.Drawing.Color.IndianRed;
+            this.txtEmailInvalido2.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Bold);
+            this.txtEmailInvalido2.ForeColor = System.Drawing.Color.White;
+            this.txtEmailInvalido2.Location = new System.Drawing.Point(230, 349);
+            this.txtEmailInvalido2.Name = "txtEmailInvalido2";
+            this.txtEmailInvalido2.Size = new System.Drawing.Size(83, 15);
+            this.txtEmailInvalido2.TabIndex = 24;
+            this.txtEmailInvalido2.Text = "EMAIL INVÁLDO";
+            this.txtEmailInvalido2.Visible = false;
+            // 
+            // txtTelefoneInvalido2
+            // 
+            this.txtTelefoneInvalido2.AutoSize = true;
+            this.txtTelefoneInvalido2.BackColor = System.Drawing.Color.IndianRed;
+            this.txtTelefoneInvalido2.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Bold);
+            this.txtTelefoneInvalido2.ForeColor = System.Drawing.Color.White;
+            this.txtTelefoneInvalido2.Location = new System.Drawing.Point(229, 401);
+            this.txtTelefoneInvalido2.Name = "txtTelefoneInvalido2";
+            this.txtTelefoneInvalido2.Size = new System.Drawing.Size(102, 15);
+            this.txtTelefoneInvalido2.TabIndex = 23;
+            this.txtTelefoneInvalido2.Text = "TELEFONE INVÁLDO";
+            this.txtTelefoneInvalido2.Visible = false;
+            // 
+            // txtCursoInvalido
+            // 
+            this.txtCursoInvalido.AutoSize = true;
+            this.txtCursoInvalido.BackColor = System.Drawing.Color.IndianRed;
+            this.txtCursoInvalido.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Bold);
+            this.txtCursoInvalido.ForeColor = System.Drawing.Color.White;
+            this.txtCursoInvalido.Location = new System.Drawing.Point(229, 454);
+            this.txtCursoInvalido.Name = "txtCursoInvalido";
+            this.txtCursoInvalido.Size = new System.Drawing.Size(87, 15);
+            this.txtCursoInvalido.TabIndex = 22;
+            this.txtCursoInvalido.Text = "CURSO INVÁLDO";
+            this.txtCursoInvalido.Visible = false;
             // 
             // txtIndisponivel2
             // 
@@ -357,99 +448,9 @@ namespace FindTec
             this.textNome.Size = new System.Drawing.Size(211, 19);
             this.textNome.TabIndex = 1;
             this.textNome.Text = "NOME COMPLETO";
+            this.textNome.TextChanged += new System.EventHandler(this.textNome_TextChanged);
             this.textNome.Enter += new System.EventHandler(this.textNome_Enter);
             this.textNome.Leave += new System.EventHandler(this.textNome_Leave);
-            // 
-            // txtCursoInvalido
-            // 
-            this.txtCursoInvalido.AutoSize = true;
-            this.txtCursoInvalido.BackColor = System.Drawing.Color.IndianRed;
-            this.txtCursoInvalido.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Bold);
-            this.txtCursoInvalido.ForeColor = System.Drawing.Color.White;
-            this.txtCursoInvalido.Location = new System.Drawing.Point(229, 454);
-            this.txtCursoInvalido.Name = "txtCursoInvalido";
-            this.txtCursoInvalido.Size = new System.Drawing.Size(87, 15);
-            this.txtCursoInvalido.TabIndex = 22;
-            this.txtCursoInvalido.Text = "CURSO INVÁLDO";
-            this.txtCursoInvalido.Visible = false;
-            // 
-            // txtTelefoneInvalido2
-            // 
-            this.txtTelefoneInvalido2.AutoSize = true;
-            this.txtTelefoneInvalido2.BackColor = System.Drawing.Color.IndianRed;
-            this.txtTelefoneInvalido2.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Bold);
-            this.txtTelefoneInvalido2.ForeColor = System.Drawing.Color.White;
-            this.txtTelefoneInvalido2.Location = new System.Drawing.Point(229, 401);
-            this.txtTelefoneInvalido2.Name = "txtTelefoneInvalido2";
-            this.txtTelefoneInvalido2.Size = new System.Drawing.Size(102, 15);
-            this.txtTelefoneInvalido2.TabIndex = 23;
-            this.txtTelefoneInvalido2.Text = "TELEFONE INVÁLDO";
-            this.txtTelefoneInvalido2.Visible = false;
-            // 
-            // txtEmailInvalido2
-            // 
-            this.txtEmailInvalido2.AutoSize = true;
-            this.txtEmailInvalido2.BackColor = System.Drawing.Color.IndianRed;
-            this.txtEmailInvalido2.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Bold);
-            this.txtEmailInvalido2.ForeColor = System.Drawing.Color.White;
-            this.txtEmailInvalido2.Location = new System.Drawing.Point(230, 349);
-            this.txtEmailInvalido2.Name = "txtEmailInvalido2";
-            this.txtEmailInvalido2.Size = new System.Drawing.Size(83, 15);
-            this.txtEmailInvalido2.TabIndex = 24;
-            this.txtEmailInvalido2.Text = "EMAIL INVÁLDO";
-            this.txtEmailInvalido2.Visible = false;
-            // 
-            // txtTelefoneInvalido
-            // 
-            this.txtTelefoneInvalido.AutoSize = true;
-            this.txtTelefoneInvalido.BackColor = System.Drawing.Color.IndianRed;
-            this.txtTelefoneInvalido.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Bold);
-            this.txtTelefoneInvalido.ForeColor = System.Drawing.Color.White;
-            this.txtTelefoneInvalido.Location = new System.Drawing.Point(229, 401);
-            this.txtTelefoneInvalido.Name = "txtTelefoneInvalido";
-            this.txtTelefoneInvalido.Size = new System.Drawing.Size(102, 15);
-            this.txtTelefoneInvalido.TabIndex = 24;
-            this.txtTelefoneInvalido.Text = "TELEFONE INVÁLDO";
-            this.txtTelefoneInvalido.Visible = false;
-            // 
-            // txtEmailInvalido
-            // 
-            this.txtEmailInvalido.AutoSize = true;
-            this.txtEmailInvalido.BackColor = System.Drawing.Color.IndianRed;
-            this.txtEmailInvalido.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Bold);
-            this.txtEmailInvalido.ForeColor = System.Drawing.Color.White;
-            this.txtEmailInvalido.Location = new System.Drawing.Point(230, 349);
-            this.txtEmailInvalido.Name = "txtEmailInvalido";
-            this.txtEmailInvalido.Size = new System.Drawing.Size(86, 15);
-            this.txtEmailInvalido.TabIndex = 25;
-            this.txtEmailInvalido.Text = "E-MAIL INVÁLDO";
-            this.txtEmailInvalido.Visible = false;
-            // 
-            // txtDadosInvalidos
-            // 
-            this.txtDadosInvalidos.AutoSize = true;
-            this.txtDadosInvalidos.BackColor = System.Drawing.Color.IndianRed;
-            this.txtDadosInvalidos.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Bold);
-            this.txtDadosInvalidos.ForeColor = System.Drawing.Color.White;
-            this.txtDadosInvalidos.Location = new System.Drawing.Point(279, 518);
-            this.txtDadosInvalidos.Name = "txtDadosInvalidos";
-            this.txtDadosInvalidos.Size = new System.Drawing.Size(96, 15);
-            this.txtDadosInvalidos.TabIndex = 26;
-            this.txtDadosInvalidos.Text = "DADOS INVÁLIDOS";
-            this.txtDadosInvalidos.Visible = false;
-            // 
-            // txtDadosInvalidos2
-            // 
-            this.txtDadosInvalidos2.AutoSize = true;
-            this.txtDadosInvalidos2.BackColor = System.Drawing.Color.IndianRed;
-            this.txtDadosInvalidos2.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Bold);
-            this.txtDadosInvalidos2.ForeColor = System.Drawing.Color.White;
-            this.txtDadosInvalidos2.Location = new System.Drawing.Point(279, 556);
-            this.txtDadosInvalidos2.Name = "txtDadosInvalidos2";
-            this.txtDadosInvalidos2.Size = new System.Drawing.Size(96, 15);
-            this.txtDadosInvalidos2.TabIndex = 25;
-            this.txtDadosInvalidos2.Text = "DADOS INVÁLIDOS";
-            this.txtDadosInvalidos2.Visible = false;
             // 
             // TelaCadastro
             // 
