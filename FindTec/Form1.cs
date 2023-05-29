@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -8,6 +9,7 @@ namespace FindTec
 {
     public partial class Form1 : Form
     {
+        private Image imagemSelecionada;
         public Form1()
         {
             InitializeComponent();
@@ -42,20 +44,19 @@ namespace FindTec
                 using (MemoryStream ms = new MemoryStream(user.Item10))
                 {
                     pictureBox1.Image = Image.FromStream(ms);
+                    pictureBox2.Image = Image.FromStream(ms);
                 }
             }
             else
             {
                 pictureBox1.Image = null;
+                pictureBox2.Image = null;
             }
 
         }
         private void button1_Click_2(object sender, EventArgs e)
         {
-            opA1.Visible = true;
-            opB1.Visible = false;
-            opC1.Visible = false;
-            opD1.Visible = false;
+            
 
             panelPerfil.Visible = true;
             panelOportunidades.Visible = false;
@@ -64,10 +65,7 @@ namespace FindTec
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            opA1.Visible = false;
-            opB1.Visible = true;
-            opC1.Visible = false;
-            opD1.Visible = false;
+           
 
             panelPerfil.Visible = false;
             panelOportunidades.Visible = true;
@@ -77,10 +75,7 @@ namespace FindTec
 
         private void button3_Click(object sender, EventArgs e)
         {
-            opA1.Visible = false;
-            opB1.Visible = false;
-            opC1.Visible = true;
-            opD1.Visible = false;
+            
 
             panelPerfil.Visible = false;
             panelOportunidades.Visible = false;
@@ -146,10 +141,11 @@ namespace FindTec
                         stream.Read(dadosImagem, 0, (int)stream.Length);
 
                         MemoryStream ms = new MemoryStream(dadosImagem);
-                        Image imagem = Image.FromStream(ms);
+                        imagemSelecionada = Image.FromStream(ms);
 
-                        pictureBox1.Image = imagem;
-                        pictureBox2.Image = imagem;
+                        pictureBox1.Image = imagemSelecionada;
+                        pictureBox2.Image = imagemSelecionada;
+
 
                         var user = DadosUsuario.listaAlunos.Find(u => u.Item1 == Program.userAtual);
 
@@ -565,6 +561,13 @@ namespace FindTec
         {
             label1.Text = nomeTxt.Text;
         }
+
+        
+
+
+        
+
+       
 
         /// FIM MENSAGENS
     }

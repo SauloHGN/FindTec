@@ -29,8 +29,8 @@ namespace FindTec
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -40,6 +40,7 @@ namespace FindTec
             this.buttonA = new System.Windows.Forms.Button();
             this.panelPerfil = new System.Windows.Forms.Panel();
             this.buttonUpload = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.cursoTxt = new System.Windows.Forms.TextBox();
@@ -48,6 +49,7 @@ namespace FindTec
             this.nomeTxt = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelOportunidades = new System.Windows.Forms.Panel();
+            this.labelOportunidades = new System.Windows.Forms.Label();
             this.gridViewOportunidades = new System.Windows.Forms.DataGridView();
             this.colFoto = new System.Windows.Forms.DataGridViewImageColumn();
             this.colNomeEmpresa = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,7 +58,6 @@ namespace FindTec
             this.cargaHGrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.remuneracaoGrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colCandidatar = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.labelOportunidades = new System.Windows.Forms.Label();
             this.panelVagaInfo = new System.Windows.Forms.Panel();
             this.botaoVoltar = new System.Windows.Forms.Button();
             this.txtDescricao = new System.Windows.Forms.TextBox();
@@ -82,11 +83,6 @@ namespace FindTec
             this.btnVoltar = new System.Windows.Forms.Button();
             this.btnEnviar = new System.Windows.Forms.Button();
             this.txtMensagem = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.opA1 = new FindTec.OpA();
-            this.opB1 = new FindTec.OpB();
-            this.opD1 = new FindTec.OpD();
-            this.opC1 = new FindTec.OpC();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panelPerfil.SuspendLayout();
@@ -218,7 +214,7 @@ namespace FindTec
             this.panelPerfil.Controls.Add(this.emailTxt);
             this.panelPerfil.Controls.Add(this.nomeTxt);
             this.panelPerfil.Controls.Add(this.pictureBox1);
-            this.panelPerfil.Location = new System.Drawing.Point(222, 15);
+            this.panelPerfil.Location = new System.Drawing.Point(223, 15);
             this.panelPerfil.Name = "panelPerfil";
             this.panelPerfil.Size = new System.Drawing.Size(755, 525);
             this.panelPerfil.TabIndex = 5;
@@ -238,6 +234,18 @@ namespace FindTec
             this.buttonUpload.TabIndex = 12;
             this.buttonUpload.UseVisualStyleBackColor = true;
             this.buttonUpload.Click += new System.EventHandler(this.button3_Click_1);
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Transparent;
+            this.label1.Location = new System.Drawing.Point(188, 28);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(559, 108);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Nome do Aluno";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label1.TextChanged += new System.EventHandler(this.label1_TextChanged);
             // 
             // button2
             // 
@@ -332,27 +340,37 @@ namespace FindTec
             // panelOportunidades
             // 
             this.panelOportunidades.BackColor = System.Drawing.Color.White;
-            this.panelOportunidades.Controls.Add(this.gridViewOportunidades);
             this.panelOportunidades.Controls.Add(this.labelOportunidades);
-            this.panelOportunidades.Location = new System.Drawing.Point(201, 0);
+            this.panelOportunidades.Controls.Add(this.gridViewOportunidades);
+            this.panelOportunidades.Location = new System.Drawing.Point(223, 15);
             this.panelOportunidades.Name = "panelOportunidades";
-            this.panelOportunidades.Size = new System.Drawing.Size(783, 511);
+            this.panelOportunidades.Size = new System.Drawing.Size(755, 525);
             this.panelOportunidades.TabIndex = 6;
             this.panelOportunidades.Visible = false;
+            // 
+            // labelOportunidades
+            // 
+            this.labelOportunidades.AutoSize = true;
+            this.labelOportunidades.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelOportunidades.Location = new System.Drawing.Point(307, 63);
+            this.labelOportunidades.Name = "labelOportunidades";
+            this.labelOportunidades.Size = new System.Drawing.Size(154, 26);
+            this.labelOportunidades.TabIndex = 0;
+            this.labelOportunidades.Text = "Oportunidades";
             // 
             // gridViewOportunidades
             // 
             this.gridViewOportunidades.BackgroundColor = System.Drawing.Color.White;
             this.gridViewOportunidades.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gridViewOportunidades.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridViewOportunidades.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridViewOportunidades.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.gridViewOportunidades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridViewOportunidades.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colFoto,
@@ -362,14 +380,14 @@ namespace FindTec
             this.cargaHGrid,
             this.remuneracaoGrid,
             this.colCandidatar});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridViewOportunidades.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridViewOportunidades.DefaultCellStyle = dataGridViewCellStyle2;
             this.gridViewOportunidades.Location = new System.Drawing.Point(42, 117);
             this.gridViewOportunidades.Name = "gridViewOportunidades";
             this.gridViewOportunidades.RowHeadersVisible = false;
@@ -428,16 +446,6 @@ namespace FindTec
             this.colCandidatar.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.colCandidatar.Width = 90;
             // 
-            // labelOportunidades
-            // 
-            this.labelOportunidades.AutoSize = true;
-            this.labelOportunidades.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelOportunidades.Location = new System.Drawing.Point(307, 63);
-            this.labelOportunidades.Name = "labelOportunidades";
-            this.labelOportunidades.Size = new System.Drawing.Size(154, 26);
-            this.labelOportunidades.TabIndex = 0;
-            this.labelOportunidades.Text = "Oportunidades";
-            // 
             // panelVagaInfo
             // 
             this.panelVagaInfo.BackColor = System.Drawing.Color.White;
@@ -456,9 +464,9 @@ namespace FindTec
             this.panelVagaInfo.Controls.Add(this.labelDescricaoVaga);
             this.panelVagaInfo.Controls.Add(this.labelNomeVaga);
             this.panelVagaInfo.Controls.Add(this.labelVagaInfo);
-            this.panelVagaInfo.Location = new System.Drawing.Point(200, 0);
+            this.panelVagaInfo.Location = new System.Drawing.Point(223, 15);
             this.panelVagaInfo.Name = "panelVagaInfo";
-            this.panelVagaInfo.Size = new System.Drawing.Size(784, 511);
+            this.panelVagaInfo.Size = new System.Drawing.Size(755, 525);
             this.panelVagaInfo.TabIndex = 7;
             this.panelVagaInfo.Visible = false;
             // 
@@ -618,9 +626,9 @@ namespace FindTec
             this.panelConversas.Controls.Add(this.FlowPanelConversas);
             this.panelConversas.Controls.Add(this.labelConversas);
             this.panelConversas.Controls.Add(this.listViewConversas);
-            this.panelConversas.Location = new System.Drawing.Point(200, 0);
+            this.panelConversas.Location = new System.Drawing.Point(223, 15);
             this.panelConversas.Name = "panelConversas";
-            this.panelConversas.Size = new System.Drawing.Size(784, 511);
+            this.panelConversas.Size = new System.Drawing.Size(755, 525);
             this.panelConversas.TabIndex = 8;
             this.panelConversas.Visible = false;
             // 
@@ -660,9 +668,9 @@ namespace FindTec
             this.panelMensagens.Controls.Add(this.btnVoltar);
             this.panelMensagens.Controls.Add(this.btnEnviar);
             this.panelMensagens.Controls.Add(this.txtMensagem);
-            this.panelMensagens.Location = new System.Drawing.Point(200, 0);
+            this.panelMensagens.Location = new System.Drawing.Point(223, 15);
             this.panelMensagens.Name = "panelMensagens";
-            this.panelMensagens.Size = new System.Drawing.Size(784, 511);
+            this.panelMensagens.Size = new System.Drawing.Size(755, 525);
             this.panelMensagens.TabIndex = 26;
             this.panelMensagens.Visible = false;
             // 
@@ -706,57 +714,6 @@ namespace FindTec
             this.txtMensagem.Size = new System.Drawing.Size(569, 28);
             this.txtMensagem.TabIndex = 5;
             // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(188, 28);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(559, 108);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "Nome do Aluno";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label1.TextChanged += new System.EventHandler(this.label1_TextChanged);
-            // 
-            // opA1
-            // 
-            this.opA1.AccessibleName = "";
-            this.opA1.AutoSize = true;
-            this.opA1.BackColor = System.Drawing.Color.White;
-            this.opA1.Location = new System.Drawing.Point(201, 0);
-            this.opA1.Name = "opA1";
-            this.opA1.Size = new System.Drawing.Size(783, 511);
-            this.opA1.TabIndex = 1;
-            this.opA1.Load += new System.EventHandler(this.opA2_Load);
-            // 
-            // opB1
-            // 
-            this.opB1.BackColor = System.Drawing.Color.White;
-            this.opB1.Location = new System.Drawing.Point(201, 0);
-            this.opB1.Name = "opB1";
-            this.opB1.Size = new System.Drawing.Size(783, 511);
-            this.opB1.TabIndex = 2;
-            this.opB1.Visible = false;
-            // 
-            // opD1
-            // 
-            this.opD1.BackColor = System.Drawing.Color.White;
-            this.opD1.Location = new System.Drawing.Point(201, 0);
-            this.opD1.Name = "opD1";
-            this.opD1.Size = new System.Drawing.Size(783, 511);
-            this.opD1.TabIndex = 4;
-            this.opD1.Visible = false;
-            this.opD1.Load += new System.EventHandler(this.opD1_Load);
-            // 
-            // opC1
-            // 
-            this.opC1.BackColor = System.Drawing.Color.White;
-            this.opC1.Location = new System.Drawing.Point(201, 0);
-            this.opC1.Name = "opC1";
-            this.opC1.Size = new System.Drawing.Size(783, 511);
-            this.opC1.TabIndex = 3;
-            this.opC1.Visible = false;
-            // 
             // Form1
             // 
             this.BackgroundImage = global::FindTec.Properties.Resources.backgroundGeral;
@@ -764,14 +721,10 @@ namespace FindTec
             this.ClientSize = new System.Drawing.Size(1000, 550);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelPerfil);
-            this.Controls.Add(this.opA1);
-            this.Controls.Add(this.panelOportunidades);
-            this.Controls.Add(this.panelVagaInfo);
-            this.Controls.Add(this.opB1);
-            this.Controls.Add(this.opD1);
             this.Controls.Add(this.panelConversas);
             this.Controls.Add(this.panelMensagens);
-            this.Controls.Add(this.opC1);
+            this.Controls.Add(this.panelOportunidades);
+            this.Controls.Add(this.panelVagaInfo);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
@@ -792,21 +745,16 @@ namespace FindTec
             this.panelMensagens.ResumeLayout(false);
             this.panelMensagens.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private OpA opA1;
         private System.Windows.Forms.Button buttonA;
         private System.Windows.Forms.Button buttonD;
         private System.Windows.Forms.Button buttonC;
         private System.Windows.Forms.Button buttonB;
-        private OpB opB1;
-        private OpC opC1;
-        private OpD opD1;
         private System.Windows.Forms.Panel panelPerfil;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox cursoTxt;
