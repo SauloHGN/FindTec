@@ -100,6 +100,16 @@ namespace FindTec
             this.FormClosing += new FormClosingEventHandler(Form1_FormClosing);// FECHAR FRAME PRINCIPAL VOLTAR PARA A TELA DE LOGIN
             Load_gridViewOportunidades(); // CARREGA O GRID 
             Load += Form1_Load;
+            this.KeyDown += new KeyEventHandler(EnviarMensagem_Enter);// Enviar mensagem com Enter
+        }
+
+        private void EnviarMensagem_Enter(object sender, KeyEventArgs e)
+        {
+            //BOTÃO ENTRAR COM ENTER
+            if (e.KeyCode == Keys.Enter && panelMensagens.Visible == true)
+            {
+                btnEnviar.PerformClick();
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)

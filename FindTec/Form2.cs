@@ -15,8 +15,19 @@ namespace FindTec
             btnVaga_Click(this, new EventArgs());//INICIAR COM O BOTÃO VAGA SELECIONADO
             button1_Click(this, new EventArgs());// INICIAR COM A "HOMEPAGE" PERFIL
             this.FormClosing += new FormClosingEventHandler(Form2_FormClosing);// FECHAR FRAME PRINCIPAL VOLTAR PARA A TELA DE LOGIN
+            this.KeyDown += new KeyEventHandler(EnviarMensagem_Enter);// Enviar mensagem com Enter
             LoadMinhasVagas();
             LoadConversas();
+        }
+
+        private void EnviarMensagem_Enter(object sender, KeyEventArgs e)
+        {
+            //BOTÃO ENTRAR COM ENTER
+            if (e.KeyCode == Keys.Enter && panelMensagens.Visible == true)
+            {
+                btnEnviar.PerformClick();
+                e.Handled = true; // Impede que o evento de tecla "Enter" 
+            }
         }
         private void Form2_FormClosing(object sender, FormClosingEventArgs e)
         {

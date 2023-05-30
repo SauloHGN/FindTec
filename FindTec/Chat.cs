@@ -84,9 +84,10 @@ namespace FindTec
                 {
                     int destinatarioId = (chat.Remetente == identificador) ? chat.Destinatario : chat.Remetente;
                     string destinatario = VerificarDestinatario(destinatarioId);
+                    byte[] foto = obterFotoPeloID(destinatarioId);
                     UserControl itemControl;
                     
-                    itemControl = new ConversaItem(destinatario, chat.Mensagens.LastOrDefault()?.Text);// UserControl personalizado para exibir as informações do chat
+                    itemControl = new ConversaItem(foto, destinatario, chat.Mensagens.LastOrDefault()?.Text);// UserControl personalizado para exibir as informações do chat
 
                     itemControl.Click += clickHandler;// manipulador de click
 
@@ -204,5 +205,32 @@ namespace FindTec
             // Se o usuário não for encontrado
             return -999;
         }
+
+        public static byte[] obterFotoPeloID(int identificador)
+        {
+            var aluno = DadosUsuario.listaAlunos.Find(u => u.Item1 == identificador);
+            if (aluno != default)
+            {
+                idUsuario = aluno.Item1;
+                return aluno.Item10;
+            }
+
+            var empresa = DadosUsuario.listaEmpresas.Find(u => u.Item1 == identificador);
+            if (empresa != default)
+            {
+                idUsuario = empresa.Item1;
+                return empresa.Item9;
+            }
+
+            var coordenador = DadosUsuario.listaCoordenador.Find(u => u.Item1 == identificador);
+            if (coordenador != default)
+            {
+                idUsuario = coordenador.Item1;
+                return coordenador.Item7;
+            }
+            // Se o usuário não for encontrado
+            return null;
+        }
+
     }
 }

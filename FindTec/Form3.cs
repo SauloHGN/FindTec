@@ -13,9 +13,22 @@ namespace FindTec
             InitializeComponent();
             this.FormClosing += new FormClosingEventHandler(Form3_FormClosing);// FECHAR FRAME PRINCIPAL VOLTAR PARA A TELA
             buttonListAluno_Click_1(this, new EventArgs());//INICIAR COM O BOTÃO ALUNO SELECIONADO
+            this.KeyDown += new KeyEventHandler(EnviarMensagem_Enter);// Enviar mensagem com Enter
             Load_gridViewOportunidades();
             LoadConversas();
+            LoadGridUsuarios();
         }
+
+        private void EnviarMensagem_Enter(object sender, KeyEventArgs e)
+        {           
+            //BOTÃO ENTRAR COM ENTER
+            if (e.KeyCode == Keys.Enter && panelMensagens.Visible == true)
+            {              
+                btnEnviar.PerformClick();
+                e.Handled = true; // Impede que o evento de tecla "Enter" 
+            }
+        }
+
         private void Form3_FormClosing(object sender, FormClosingEventArgs e)
         {
             // AO FECHAR O FRAME PRINCIPLA VOLTAR PARA TELA DE LOGIN
@@ -54,6 +67,7 @@ namespace FindTec
 
             panelCadastroAprov.Visible = false;
             panelOportunidades.Visible = false;
+            panelViewUsuarios.Visible = false;
             panelConversas.Visible = true;
             panelPerfilC.Visible = true;
             panelPerfilC.BringToFront();
@@ -61,6 +75,8 @@ namespace FindTec
 
         private void button2_Click(object sender, EventArgs e)
         {
+            dataGridView1.Rows.Clear();
+            LoadDataGridView();
             opA1.Visible = false;
             opB1.Visible = true;
             opC1.Visible = false;
@@ -70,6 +86,7 @@ namespace FindTec
             panelPerfilC.Visible = false;
             panelOportunidades.Visible = false;
             panelConversas.Visible = false;
+            panelViewUsuarios.Visible = false;
             dataGridView1.ClearSelection();
             panelCadastroAprov.BringToFront();
         }
@@ -84,6 +101,7 @@ namespace FindTec
             panelCadastroAprov.Visible = false;
             panelMensagens.Visible = false;
             panelConversas.Visible = false;
+            panelViewUsuarios.Visible = false;
             panelOportunidades.Visible = true;
             
         }
@@ -96,8 +114,19 @@ namespace FindTec
             panelPerfilC.Visible = false;
             panelCadastroAprov.Visible = false;
             panelOportunidades.Visible = false;
+            panelViewUsuarios.Visible = false;
             panelConversas.Visible = true;
-        }    
+            panelConversas.BringToFront();
+        }
+
+        private void viewUsuarios_Click(object sender, EventArgs e)
+        {
+            dataGridViewUsuarios.Rows.Clear();
+            LoadGridUsuarios();
+            panelViewUsuarios.Visible = true;        
+            panelViewUsuarios.BringToFront();
+            dataGridViewUsuarios.ClearSelection();
+        }
 
         private void LoadDataGridView()
         {          
@@ -342,6 +371,8 @@ namespace FindTec
             buttonListAluno5.ForeColor = Color.Black;
             dataGridViewE.Visible = true;
             dataGridView1.Visible = false;
+            dataGridViewE.Rows.Clear();
+            LoadDataViewGridE();
         }
 
         private void buttonListAluno_Click_1(object sender, EventArgs e)
@@ -352,6 +383,8 @@ namespace FindTec
             buttonListEmpresa.ForeColor = Color.Black;
             dataGridView1.Visible = true;
             dataGridViewE.Visible = false;
+            dataGridView1.Rows.Clear();
+            LoadDataGridView();
         }
 
         private void buttonUpload_Click(object sender, EventArgs e)
@@ -590,7 +623,97 @@ namespace FindTec
                 panelMensagens.Visible = true;
                 panelMensagens.BringToFront();
             }
-        }  
+        }
         // FIM MENSAGENS
+
+
+        public void LoadGridUsuarios()
+        {
+            dataGridViewUsuarios.AllowUserToAddRows = false;
+            foreach (var aluno in DadosUsuario.listaAlunos)
+            {
+                // Aluno aprovado e conta ativa
+                if(aluno.Item9 == true && aluno.Item7 == true)
+                {
+                    DataGridViewButtonCell botaoContato = new DataGridViewButtonCell();
+                    botaoContato.Value = "Contato";
+                    dataGridViewUsuarios.Rows.Add(aluno.Item2, "Aluno", aluno.Item3, aluno.Item4, "Contato");
+                }              
+            }
+
+            foreach(var empresa in DadosUsuario.listaEmpresas)
+            {
+                // Empresa Aprovada e conta ativa
+                if(empresa.Item8 == true && empresa.Item6 == true)
+                {
+                    DataGridViewButtonCell botaoContato = new DataGridViewButtonCell();
+                    botaoContato.Value = "Contato";
+                    dataGridViewUsuarios.Rows.Add(empresa.Item2, "Empresa", empresa.Item3, empresa.Item4, "Contato");
+                }
+            }
+
+            foreach (var coordenador in DadosUsuario.listaCoordenador)
+            {
+                // Exibe os outros coordenadores
+                if (coordenador.Item1 != Program.userAtual)
+                {
+                    DataGridViewButtonCell botaoContato = new DataGridViewButtonCell();
+                    botaoContato.Value = "Contato";
+                    dataGridViewUsuarios.Rows.Add(coordenador.Item2, "Coordenador", coordenador.Item3, coordenador.Item4, "Contato");
+                }
+            }
+        }
+
+        private void dataGridViewUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            dataGridViewUsuarios.AllowUserToAddRows = false;
+            
+
+            if (e.ColumnIndex == dataGridViewUsuarios.Columns["colContato"].Index && e.RowIndex >= 0)
+            {
+                string tipo = dataGridViewUsuarios.Rows[e.RowIndex].Cells["colTipo"].Value.ToString();
+
+                int idDestinatario = -999;
+
+                if(tipo == "Aluno")
+                {
+                    // Obtém o usuário selecionado
+                    var Destinatario = DadosUsuario.listaAlunos.Find(u => u.Item3 == (dataGridViewUsuarios.Rows[e.RowIndex].Cells["colEmail"].Value.ToString()));
+                    idDestinatario = Destinatario.Item1;
+
+                }
+                else if (tipo == "Empresa")
+                {
+                    var Destinatario = DadosUsuario.listaEmpresas.Find(u => u.Item3 == (dataGridViewUsuarios.Rows[e.RowIndex].Cells["colEmail"].Value.ToString()));
+                    idDestinatario = Destinatario.Item1;
+                }
+                else
+                {
+                    var Destinatario = DadosUsuario.listaCoordenador.Find(u => u.Item3 == (dataGridViewUsuarios.Rows[e.RowIndex].Cells["colEmail"].Value.ToString()));
+                    idDestinatario = Destinatario.Item1;
+                }
+                        
+                if(idDestinatario == -999)
+                {
+                    return;
+                }
+
+                //
+                panelMensagens.Visible = true;
+                panelMensagens.BringToFront();
+                int destinatario = idDestinatario;
+                Chat.getIdDestinatario = destinatario;
+                int remetente = Program.userAtual;
+                Chat.CriarChat(remetente, destinatario);
+                var chat = Chat.listaChats.FirstOrDefault(c =>
+                    (c.Remetente == Program.userAtual && c.Destinatario == Chat.getIdDestinatario) ||
+                    (c.Remetente == Chat.getIdDestinatario && c.Destinatario == Program.userAtual));
+                if (chat != null)
+                {
+                    Chat.LoadMensagens(panelMensagens, chat);
+                }
+                LoadConversas();
+            }
+        }
     }
 }

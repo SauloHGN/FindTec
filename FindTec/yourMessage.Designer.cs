@@ -41,10 +41,10 @@ namespace FindTec
             this.labelMensagemYour.ForeColor = System.Drawing.Color.White;
             this.labelMensagemYour.Location = new System.Drawing.Point(2, 20);
             this.labelMensagemYour.MaximumSize = new System.Drawing.Size(280, 300);
-            this.labelMensagemYour.MinimumSize = new System.Drawing.Size(80, 30);
+            this.labelMensagemYour.MinimumSize = new System.Drawing.Size(130, 30);
             this.labelMensagemYour.Name = "labelMensagemYour";
             this.labelMensagemYour.Padding = new System.Windows.Forms.Padding(0, 20, 3, 3);
-            this.labelMensagemYour.Size = new System.Drawing.Size(80, 38);
+            this.labelMensagemYour.Size = new System.Drawing.Size(130, 38);
             this.labelMensagemYour.TabIndex = 1;
             this.labelMensagemYour.Text = "a";
             // 

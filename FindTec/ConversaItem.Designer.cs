@@ -49,6 +49,7 @@ namespace FindTec
             // 
             // pictureBox1
             // 
+            this.pictureBox1.ErrorImage = global::FindTec.Properties.Resources.botaoAluno1;
             this.pictureBox1.Image = global::FindTec.Properties.Resources.botaoAluno1;
             this.pictureBox1.Location = new System.Drawing.Point(1, 0);
             this.pictureBox1.Name = "pictureBox1";

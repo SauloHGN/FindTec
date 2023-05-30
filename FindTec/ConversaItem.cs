@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,12 +14,28 @@ namespace FindTec
     public partial class ConversaItem : UserControl
     {
         public string NomeItem { get; private set; }
-        public ConversaItem(string destinatario, string ultimaMensagem)
+        public ConversaItem( byte[] foto, string destinatario, string ultimaMensagem)
         {
             InitializeComponent();
             NomeItem = destinatario;
             labelNome.Text = destinatario;
             labelUltimaMensagem.Text = ultimaMensagem;
+
+            byte[] imageBytes = foto; // bytes contendo a imagem
+            Image imagem = null;
+
+            if (imageBytes != null)
+            {
+                using (MemoryStream ms = new MemoryStream(imageBytes))
+                {
+                    imagem = Image.FromStream(ms); // conversão
+                }
+            }
+            if(imagem == null)
+            {
+                imagem = Properties.Resources.botaoAluno1;
+            }
+            pictureBox1.Image = imagem;
         }
 
         private void ConversaItem_MouseEnter(object sender, EventArgs e)
