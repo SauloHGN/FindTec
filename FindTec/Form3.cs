@@ -7,7 +7,8 @@ using System.Windows.Forms;
 namespace FindTec
 {
     public partial class Form3 : Form
-    {        
+    {
+        public static string motivo;
         public Form3()
         {
             InitializeComponent();
@@ -351,6 +352,7 @@ namespace FindTec
             if (e.ColumnIndex == gridViewOportunidades.Columns["colExcluir"].Index && e.RowIndex >= 0)
             {
                 string nomeVaga = gridViewOportunidades.Rows[e.RowIndex].Cells["NomeVagaGrid"].Value.ToString();
+                string nomeEmpresa = gridViewOportunidades.Rows[e.RowIndex].Cells["colNomeEmpresa"].Value.ToString();
                 Vaga vaga = Vaga.vagas.Find(v => v.NomeVaga == nomeVaga);
 
                 if(Motivo())
@@ -358,7 +360,13 @@ namespace FindTec
                     Vaga.vagas.Remove(vaga);
                     gridViewOportunidades.Rows.Clear();
                     Load_gridViewOportunidades();
-                    dataGridView1.Refresh();
+                    dataGridView1.Refresh();                
+                    int idDestinatario = Chat.ObterIdUsuarioPeloNome(nomeEmpresa);
+                    Chat.CriarChat(Program.userAtual, idDestinatario);
+                    Chat.EnviarMensagem(Program.userAtual, idDestinatario, "Gostaríamos de informar que a vaga de " +
+                        $"{nomeVaga} que você havia cadastrado em nosso sistema infelizmente foi removida pelo seguinte motivo:" +
+                        $"{motivo}");
+                    LoadConversas();
                 }                             
             }
         }
@@ -436,6 +444,8 @@ namespace FindTec
 
             // Cria um textBox para o usuário inserir o valor
             TextBox textBox = new TextBox() { Left = 50, Top = 50, Width = 200 };
+            textBox.UseSystemPasswordChar = true;
+            textBox.PasswordChar = '•';
             prompt.Controls.Add(textBox);
 
             // Cria o botão "OK" para confirmar a entrada de dados
@@ -523,7 +533,7 @@ namespace FindTec
             prompt.StartPosition = FormStartPosition.CenterScreen;
 
             // Cria um label com a mensagem para o usuário
-            Label textLabel = new Label() { Left = 50, Top = 20, Text = "Digite o motivo da Exlusão:" };
+            Label textLabel = new Label() { Left = 50, Top = 20, Text = "Digite o motivo da Exclusão:" };
             prompt.Controls.Add(textLabel);
 
             // Cria um textBox para o usuário inserir o valor
@@ -547,6 +557,7 @@ namespace FindTec
             {
                 if(!string.IsNullOrEmpty(textBox.Text))
                 {
+                    motivo = textBox.Text;
                     return true;
                 }
                 MessageBox.Show("É necessario preencher o campo\n para excluir a vaga.");

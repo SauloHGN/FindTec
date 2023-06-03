@@ -232,5 +232,31 @@ namespace FindTec
             return null;
         }
 
+        public static int ObterIdUsuarioPeloEmail(string email)
+        {
+            var aluno = DadosUsuario.listaAlunos.Find(u => u.Item3 == email);
+            if (aluno != default)
+            {
+                idUsuario = aluno.Item1;
+                return aluno.Item1;
+            }
+
+            var empresa = DadosUsuario.listaEmpresas.Find(u => u.Item3 == email);
+            if (empresa != default)
+            {
+                idUsuario = empresa.Item1;
+                return empresa.Item1;
+            }
+
+            var coordenador = DadosUsuario.listaCoordenador.Find(u => u.Item3 == email);
+            if (coordenador != default)
+            {
+                idUsuario = coordenador.Item1;
+                return coordenador.Item1;
+            }
+            // Se o usuário não for encontrado
+            return -999;
+        }
+
     }
 }

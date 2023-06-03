@@ -9,6 +9,7 @@ namespace FindTec
 {
     public partial class Form2 : Form
     {
+        public static string nomeVaga;
         public Form2()
         {            
             InitializeComponent();
@@ -179,6 +180,8 @@ namespace FindTec
 
             // Cria um textBox para o usuário inserir o valor
             TextBox textBox = new TextBox() { Left = 50, Top = 50, Width = 200 };
+            textBox.UseSystemPasswordChar = true;
+            textBox.PasswordChar = '•';
             prompt.Controls.Add(textBox);
 
             // Cria o botão "OK" para confirmar a entrada de dados
@@ -315,6 +318,8 @@ namespace FindTec
 
             // Cria um textBox para o usuário inserir o valor
             TextBox textBox = new TextBox() { Left = 50, Top = 50, Width = 200 };
+            textBox.UseSystemPasswordChar = true;
+            textBox.PasswordChar = '•';
             prompt.Controls.Add(textBox);
 
             // Cria o botão "OK" para confirmar a entrada de dados
@@ -447,6 +452,7 @@ namespace FindTec
             if (e.ColumnIndex == gridViewMinhasVagas.Columns["colExibir"].Index && e.RowIndex >= 0)
             {
                 Vaga vaga = Vaga.vagas[e.RowIndex];
+                nomeVaga = gridViewMinhasVagas.Rows[e.RowIndex].Cells["NomeVagaGrid"].Value.ToString();
                 dataGridViewCandidatos.Rows.Clear();
                 foreach (var vagas in vaga.Candidatos)
                 {              
@@ -605,6 +611,36 @@ namespace FindTec
                 panelMensagens.Visible = true;
                 panelMensagens.BringToFront();
             }
+        }
+
+        private void buttonEncerrarVaga_Click(object sender, EventArgs e)
+        {
+            Vaga vaga = Vaga.vagas.Find(v => v.NomeVaga == nomeVaga);
+            foreach(DataGridViewRow row in dataGridViewCandidatos.Rows)// percorrer as linhas do datagridView
+            {
+                DataGridViewCheckBoxCell cell = (DataGridViewCheckBoxCell)row.Cells[colSelecionado.Index];// obtem o valor do checkbox
+                if(Convert.ToBoolean(cell.Value) == true)
+                {
+                    string email = row.Cells[colEmail.Index].Value.ToString();                   
+                    int idDestinatario = Chat.ObterIdUsuarioPeloEmail(email);
+                    Chat.CriarChat(Program.userAtual, idDestinatario);
+                    Chat.EnviarMensagem(Program.userAtual, idDestinatario, "Você foi selecionado para a vaga de " +
+                        $"{nomeVaga} na nossa empresa através do nosso aplicativo de vagas de emprego. Parabéns!");
+                }
+                else
+                {
+                    string email = row.Cells[colEmail.Index].Value.ToString();
+                    int idDestinatario = Chat.ObterIdUsuarioPeloEmail(email);
+                    Chat.CriarChat(Program.userAtual, idDestinatario);
+                    Chat.EnviarMensagem(Program.userAtual, idDestinatario, "Infelizmente, não selecionamos sua candidatura " +
+                        $"para a vaga de {nomeVaga}. Agradecemos pelo seu interesse e tempo dedicado ao processo seletivo.");
+                }
+            }
+            panelAlunoCadastrado.Visible = false;          
+            Vaga.vagas.Remove(vaga);
+            gridViewMinhasVagas.Rows.Clear();
+            LoadMinhasVagas();
+            gridViewMinhasVagas.Refresh();
         }
     }
 }

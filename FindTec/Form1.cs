@@ -266,6 +266,8 @@ namespace FindTec
 
             // Cria um textBox para o usuário inserir o valor
             TextBox textBox = new TextBox() { Left = 50, Top = 50, Width = 200 };
+            textBox.UseSystemPasswordChar = true;
+            textBox.PasswordChar = '•';
             prompt.Controls.Add(textBox);
 
             // Cria o botão "OK" para confirmar a entrada de dados
@@ -403,6 +405,8 @@ namespace FindTec
 
             // Cria um textBox para o usuário inserir o valor
             TextBox textBox = new TextBox() { Left = 50, Top = 50, Width = 200 };
+            textBox.UseSystemPasswordChar = true;
+            textBox.PasswordChar = '•';
             prompt.Controls.Add(textBox);
 
             // Cria o botão "OK" para confirmar a entrada de dados
