@@ -452,6 +452,7 @@ namespace FindTec
             if (e.ColumnIndex == gridViewMinhasVagas.Columns["colExibir"].Index && e.RowIndex >= 0)
             {
                 Vaga vaga = Vaga.vagas[e.RowIndex];
+                vaga.alteracao = false;
                 nomeVaga = gridViewMinhasVagas.Rows[e.RowIndex].Cells["NomeVagaGrid"].Value.ToString();
                 dataGridViewCandidatos.Rows.Clear();
                 foreach (var vagas in vaga.Candidatos)
@@ -496,8 +497,13 @@ namespace FindTec
                 if (user.Item2 == vagas.NomeEmpresa)
                 {
                     DataGridViewButtonCell button1 = new DataGridViewButtonCell();
-                    button1.Value = "+";                                   
-                    gridViewMinhasVagas.Rows.Add(vagas.NomeVaga, vagas.Cargo, vagas.cargaHoraria, vagas.remuneracao, vagas.Curso, "+");
+                    button1.Value = "+";
+                    var icone = Properties.Resources.botaoAluno1;
+                    if (vagas.alteracao == true)
+                    {
+                        icone = Properties.Resources.botaoAluno2;
+                    }
+                    gridViewMinhasVagas.Rows.Add(icone, vagas.NomeVaga, vagas.Cargo, vagas.cargaHoraria, vagas.remuneracao, vagas.Curso, "+");
                 }              
             }
             gridViewMinhasVagas.ClearSelection();
@@ -537,6 +543,7 @@ namespace FindTec
         private void bataoVoltar_Click(object sender, EventArgs e)
         {
             panelAlunoCadastrado.Visible = false;
+            LoadMinhasVagas();
         }
 
         private void Load_Cadastrados()

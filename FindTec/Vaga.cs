@@ -19,8 +19,9 @@ namespace FindTec
         public byte[] Foto { get; set; }
         public List<string> Candidatos { get; set; }
   
-
         public static List<Vaga> vagas = new List<Vaga>();
+
+        public bool alteracao { get; set; }
 
         public Vaga(string nomeV, string nomeE, string cargo, int cargaH, double salario, string curso, string descricao)
         {

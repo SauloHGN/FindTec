@@ -72,12 +72,6 @@ namespace FindTec
             this.txtAnuncioVaga = new System.Windows.Forms.Label();
             this.panelMinhasVagas = new System.Windows.Forms.Panel();
             this.gridViewMinhasVagas = new System.Windows.Forms.DataGridView();
-            this.NomeVagaGrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cargoGrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cargaHGrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.remuneracaoGrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cursoGrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colExibir = new System.Windows.Forms.DataGridViewButtonColumn();
             this.btnMinhasVagas2 = new System.Windows.Forms.Button();
             this.btnVaga2 = new System.Windows.Forms.Button();
             this.labelCandidatos = new System.Windows.Forms.Label();
@@ -103,6 +97,13 @@ namespace FindTec
             this.opB1 = new FindTec.OpB();
             this.opA1 = new FindTec.OpA();
             this.opD1 = new FindTec.OpD();
+            this.colAlteracao = new System.Windows.Forms.DataGridViewImageColumn();
+            this.NomeVagaGrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cargoGrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cargaHGrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.remuneracaoGrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cursoGrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colExibir = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panel1.SuspendLayout();
             this.panelPerfilE.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -539,6 +540,7 @@ namespace FindTec
             this.gridViewMinhasVagas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.gridViewMinhasVagas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridViewMinhasVagas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colAlteracao,
             this.NomeVagaGrid,
             this.cargoGrid,
             this.cargaHGrid,
@@ -553,58 +555,12 @@ namespace FindTec
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.gridViewMinhasVagas.DefaultCellStyle = dataGridViewCellStyle2;
-            this.gridViewMinhasVagas.Location = new System.Drawing.Point(52, 107);
+            this.gridViewMinhasVagas.Location = new System.Drawing.Point(42, 107);
             this.gridViewMinhasVagas.Name = "gridViewMinhasVagas";
             this.gridViewMinhasVagas.RowHeadersVisible = false;
-            this.gridViewMinhasVagas.Size = new System.Drawing.Size(671, 330);
+            this.gridViewMinhasVagas.Size = new System.Drawing.Size(697, 330);
             this.gridViewMinhasVagas.TabIndex = 18;
             this.gridViewMinhasVagas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridViewMinhasVagas_CellContentClick);
-            // 
-            // NomeVagaGrid
-            // 
-            this.NomeVagaGrid.HeaderText = "Titulo da Vaga";
-            this.NomeVagaGrid.Name = "NomeVagaGrid";
-            this.NomeVagaGrid.ReadOnly = true;
-            this.NomeVagaGrid.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.NomeVagaGrid.Width = 125;
-            // 
-            // cargoGrid
-            // 
-            this.cargoGrid.HeaderText = "Cargo";
-            this.cargoGrid.Name = "cargoGrid";
-            this.cargoGrid.ReadOnly = true;
-            this.cargoGrid.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // cargaHGrid
-            // 
-            this.cargaHGrid.HeaderText = "Carga Horária";
-            this.cargaHGrid.Name = "cargaHGrid";
-            this.cargaHGrid.ReadOnly = true;
-            this.cargaHGrid.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.cargaHGrid.Width = 110;
-            // 
-            // remuneracaoGrid
-            // 
-            this.remuneracaoGrid.HeaderText = "Remuneração";
-            this.remuneracaoGrid.Name = "remuneracaoGrid";
-            this.remuneracaoGrid.ReadOnly = true;
-            this.remuneracaoGrid.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.remuneracaoGrid.Width = 95;
-            // 
-            // cursoGrid
-            // 
-            this.cursoGrid.HeaderText = "Curso";
-            this.cursoGrid.Name = "cursoGrid";
-            this.cursoGrid.ReadOnly = true;
-            this.cursoGrid.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.cursoGrid.Width = 200;
-            // 
-            // colExibir
-            // 
-            this.colExibir.HeaderText = "";
-            this.colExibir.Name = "colExibir";
-            this.colExibir.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.colExibir.Width = 40;
             // 
             // btnMinhasVagas2
             // 
@@ -865,15 +821,66 @@ namespace FindTec
             this.opD1.Visible = false;
             this.opD1.Load += new System.EventHandler(this.opD1_Load);
             // 
+            // colAlteracao
+            // 
+            this.colAlteracao.HeaderText = "";
+            this.colAlteracao.Name = "colAlteracao";
+            this.colAlteracao.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.colAlteracao.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.colAlteracao.Width = 25;
+            // 
+            // NomeVagaGrid
+            // 
+            this.NomeVagaGrid.HeaderText = "Titulo da Vaga";
+            this.NomeVagaGrid.Name = "NomeVagaGrid";
+            this.NomeVagaGrid.ReadOnly = true;
+            this.NomeVagaGrid.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.NomeVagaGrid.Width = 125;
+            // 
+            // cargoGrid
+            // 
+            this.cargoGrid.HeaderText = "Cargo";
+            this.cargoGrid.Name = "cargoGrid";
+            this.cargoGrid.ReadOnly = true;
+            this.cargoGrid.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // cargaHGrid
+            // 
+            this.cargaHGrid.HeaderText = "Carga Horária";
+            this.cargaHGrid.Name = "cargaHGrid";
+            this.cargaHGrid.ReadOnly = true;
+            this.cargaHGrid.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.cargaHGrid.Width = 110;
+            // 
+            // remuneracaoGrid
+            // 
+            this.remuneracaoGrid.HeaderText = "Remuneração";
+            this.remuneracaoGrid.Name = "remuneracaoGrid";
+            this.remuneracaoGrid.ReadOnly = true;
+            this.remuneracaoGrid.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.remuneracaoGrid.Width = 95;
+            // 
+            // cursoGrid
+            // 
+            this.cursoGrid.HeaderText = "Curso";
+            this.cursoGrid.Name = "cursoGrid";
+            this.cursoGrid.ReadOnly = true;
+            this.cursoGrid.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.cursoGrid.Width = 200;
+            // 
+            // colExibir
+            // 
+            this.colExibir.HeaderText = "";
+            this.colExibir.Name = "colExibir";
+            this.colExibir.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.colExibir.Width = 40;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 511);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panelConversas);
-            this.Controls.Add(this.opC1);
-            this.Controls.Add(this.panelAnunciarVaga);
             this.Controls.Add(this.panelMinhasVagas);
             this.Controls.Add(this.panelAlunoCadastrado);
             this.Controls.Add(this.opB1);
@@ -881,6 +888,9 @@ namespace FindTec
             this.Controls.Add(this.panelPerfilE);
             this.Controls.Add(this.opD1);
             this.Controls.Add(this.panelMensagens);
+            this.Controls.Add(this.panelConversas);
+            this.Controls.Add(this.opC1);
+            this.Controls.Add(this.panelAnunciarVaga);
             this.Name = "Form2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.Form2_Load);
@@ -969,12 +979,13 @@ namespace FindTec
         private System.Windows.Forms.DataGridViewButtonColumn colContato;
         private System.Windows.Forms.DataGridViewCheckBoxColumn colSelecionado;
         private System.Windows.Forms.Button buttonEncerrarVaga;
+        public System.Windows.Forms.FlowLayoutPanel FlowPanelConversas;
+        private System.Windows.Forms.DataGridViewImageColumn colAlteracao;
         private System.Windows.Forms.DataGridViewTextBoxColumn NomeVagaGrid;
         private System.Windows.Forms.DataGridViewTextBoxColumn cargoGrid;
         private System.Windows.Forms.DataGridViewTextBoxColumn cargaHGrid;
         private System.Windows.Forms.DataGridViewTextBoxColumn remuneracaoGrid;
         private System.Windows.Forms.DataGridViewTextBoxColumn cursoGrid;
         private System.Windows.Forms.DataGridViewButtonColumn colExibir;
-        public System.Windows.Forms.FlowLayoutPanel FlowPanelConversas;
     }
 }

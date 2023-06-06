@@ -491,7 +491,7 @@ namespace FindTec
             Vaga vaga = Vaga.vagas.Find(v => v.NomeVaga == txtTituloVaga.Text);
             var user = DadosUsuario.listaAlunos.Find(u => u.Item1 == Program.userAtual);
             vaga.Candidatos.Add(user.Item1.ToString());// Passa o ID PARA A LISTA DE CADASTRADOS
-
+            vaga.alteracao = true;
             MessageBox.Show("Cadastrado com sucesso!!!\n aguarde o contado da empresa contratante.");
             gridViewOportunidades.Rows.RemoveAt(gridViewOportunidades.CurrentRow.Index);
             panelVagaInfo.Visible = false;
