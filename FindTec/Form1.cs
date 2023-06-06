@@ -532,6 +532,7 @@ namespace FindTec
         private void btnVoltar_Click(object sender, EventArgs e)
         {
             panelMensagens.Visible = false;
+            LoadConversas();
         }
 
         private void btnEnviar_Click(object sender, EventArgs e)

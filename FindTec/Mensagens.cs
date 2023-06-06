@@ -11,6 +11,6 @@ namespace FindTec
         public  DateTime Timestamp { get; set; }
         public string Text { get; set; }
         public int RemetenteId { get; set; }
-
+        public bool Lido { get; set; }
     }
 }

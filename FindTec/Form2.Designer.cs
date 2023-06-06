@@ -29,10 +29,10 @@ namespace FindTec
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -72,11 +72,24 @@ namespace FindTec
             this.txtAnuncioVaga = new System.Windows.Forms.Label();
             this.panelMinhasVagas = new System.Windows.Forms.Panel();
             this.gridViewMinhasVagas = new System.Windows.Forms.DataGridView();
+            this.NomeVagaGrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cargoGrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cargaHGrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.remuneracaoGrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cursoGrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colExibir = new System.Windows.Forms.DataGridViewButtonColumn();
             this.btnMinhasVagas2 = new System.Windows.Forms.Button();
             this.btnVaga2 = new System.Windows.Forms.Button();
             this.labelCandidatos = new System.Windows.Forms.Label();
             this.dataGridViewCandidatos = new System.Windows.Forms.DataGridView();
+            this.colFoto = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colContato = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.colSelecionado = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.panelAlunoCadastrado = new System.Windows.Forms.Panel();
+            this.buttonEncerrarVaga = new System.Windows.Forms.Button();
             this.bataoVoltar = new System.Windows.Forms.Button();
             this.panelMensagens = new System.Windows.Forms.Panel();
             this.flowLayoutPanelMensagens = new System.Windows.Forms.FlowLayoutPanel();
@@ -90,19 +103,6 @@ namespace FindTec
             this.opB1 = new FindTec.OpB();
             this.opA1 = new FindTec.OpA();
             this.opD1 = new FindTec.OpD();
-            this.colFoto = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colContato = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.colSelecionado = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.buttonEncerrarVaga = new System.Windows.Forms.Button();
-            this.NomeVagaGrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cargoGrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cargaHGrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.remuneracaoGrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cursoGrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colExibir = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panel1.SuspendLayout();
             this.panelPerfilE.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -529,14 +529,14 @@ namespace FindTec
             this.gridViewMinhasVagas.BackgroundColor = System.Drawing.Color.White;
             this.gridViewMinhasVagas.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gridViewMinhasVagas.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridViewMinhasVagas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridViewMinhasVagas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.gridViewMinhasVagas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridViewMinhasVagas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.NomeVagaGrid,
@@ -545,20 +545,66 @@ namespace FindTec
             this.remuneracaoGrid,
             this.cursoGrid,
             this.colExibir});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridViewMinhasVagas.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridViewMinhasVagas.DefaultCellStyle = dataGridViewCellStyle2;
             this.gridViewMinhasVagas.Location = new System.Drawing.Point(52, 107);
             this.gridViewMinhasVagas.Name = "gridViewMinhasVagas";
             this.gridViewMinhasVagas.RowHeadersVisible = false;
             this.gridViewMinhasVagas.Size = new System.Drawing.Size(671, 330);
             this.gridViewMinhasVagas.TabIndex = 18;
             this.gridViewMinhasVagas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridViewMinhasVagas_CellContentClick);
+            // 
+            // NomeVagaGrid
+            // 
+            this.NomeVagaGrid.HeaderText = "Titulo da Vaga";
+            this.NomeVagaGrid.Name = "NomeVagaGrid";
+            this.NomeVagaGrid.ReadOnly = true;
+            this.NomeVagaGrid.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.NomeVagaGrid.Width = 125;
+            // 
+            // cargoGrid
+            // 
+            this.cargoGrid.HeaderText = "Cargo";
+            this.cargoGrid.Name = "cargoGrid";
+            this.cargoGrid.ReadOnly = true;
+            this.cargoGrid.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // cargaHGrid
+            // 
+            this.cargaHGrid.HeaderText = "Carga Horária";
+            this.cargaHGrid.Name = "cargaHGrid";
+            this.cargaHGrid.ReadOnly = true;
+            this.cargaHGrid.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.cargaHGrid.Width = 110;
+            // 
+            // remuneracaoGrid
+            // 
+            this.remuneracaoGrid.HeaderText = "Remuneração";
+            this.remuneracaoGrid.Name = "remuneracaoGrid";
+            this.remuneracaoGrid.ReadOnly = true;
+            this.remuneracaoGrid.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.remuneracaoGrid.Width = 95;
+            // 
+            // cursoGrid
+            // 
+            this.cursoGrid.HeaderText = "Curso";
+            this.cursoGrid.Name = "cursoGrid";
+            this.cursoGrid.ReadOnly = true;
+            this.cursoGrid.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.cursoGrid.Width = 200;
+            // 
+            // colExibir
+            // 
+            this.colExibir.HeaderText = "";
+            this.colExibir.Name = "colExibir";
+            this.colExibir.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.colExibir.Width = 40;
             // 
             // btnMinhasVagas2
             // 
@@ -594,14 +640,14 @@ namespace FindTec
             this.dataGridViewCandidatos.BackgroundColor = System.Drawing.Color.White;
             this.dataGridViewCandidatos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewCandidatos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewCandidatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewCandidatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewCandidatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewCandidatos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colFoto,
@@ -610,20 +656,62 @@ namespace FindTec
             this.dataGridViewTextBoxColumn4,
             this.colContato,
             this.colSelecionado});
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewCandidatos.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewCandidatos.DefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridViewCandidatos.Location = new System.Drawing.Point(45, 127);
             this.dataGridViewCandidatos.Name = "dataGridViewCandidatos";
             this.dataGridViewCandidatos.RowHeadersVisible = false;
             this.dataGridViewCandidatos.Size = new System.Drawing.Size(704, 299);
             this.dataGridViewCandidatos.TabIndex = 7;
             this.dataGridViewCandidatos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewE_CellContentClick);
+            // 
+            // colFoto
+            // 
+            this.colFoto.HeaderText = "";
+            this.colFoto.Name = "colFoto";
+            this.colFoto.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.colFoto.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "Nome";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 140;
+            // 
+            // colEmail
+            // 
+            this.colEmail.HeaderText = "Email";
+            this.colEmail.Name = "colEmail";
+            this.colEmail.ReadOnly = true;
+            this.colEmail.Width = 140;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.HeaderText = "Telefone";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.Width = 120;
+            // 
+            // colContato
+            // 
+            this.colContato.HeaderText = "Entrar em contato";
+            this.colContato.Name = "colContato";
+            this.colContato.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.colContato.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // colSelecionado
+            // 
+            this.colSelecionado.HeaderText = "Candidato Selecionado";
+            this.colSelecionado.Name = "colSelecionado";
+            this.colSelecionado.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.colSelecionado.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // panelAlunoCadastrado
             // 
@@ -638,6 +726,16 @@ namespace FindTec
             this.panelAlunoCadastrado.TabIndex = 23;
             this.panelAlunoCadastrado.Visible = false;
             this.panelAlunoCadastrado.Paint += new System.Windows.Forms.PaintEventHandler(this.panelAlunoCadastrado_Paint_1);
+            // 
+            // buttonEncerrarVaga
+            // 
+            this.buttonEncerrarVaga.Location = new System.Drawing.Point(345, 445);
+            this.buttonEncerrarVaga.Name = "buttonEncerrarVaga";
+            this.buttonEncerrarVaga.Size = new System.Drawing.Size(108, 23);
+            this.buttonEncerrarVaga.TabIndex = 9;
+            this.buttonEncerrarVaga.Text = "Encerrar Vaga";
+            this.buttonEncerrarVaga.UseVisualStyleBackColor = true;
+            this.buttonEncerrarVaga.Click += new System.EventHandler(this.buttonEncerrarVaga_Click);
             // 
             // bataoVoltar
             // 
@@ -767,120 +865,22 @@ namespace FindTec
             this.opD1.Visible = false;
             this.opD1.Load += new System.EventHandler(this.opD1_Load);
             // 
-            // colFoto
-            // 
-            this.colFoto.HeaderText = "";
-            this.colFoto.Name = "colFoto";
-            this.colFoto.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.colFoto.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "Nome";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 140;
-            // 
-            // colEmail
-            // 
-            this.colEmail.HeaderText = "Email";
-            this.colEmail.Name = "colEmail";
-            this.colEmail.ReadOnly = true;
-            this.colEmail.Width = 140;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.HeaderText = "Telefone";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            this.dataGridViewTextBoxColumn4.Width = 120;
-            // 
-            // colContato
-            // 
-            this.colContato.HeaderText = "Entrar em contato";
-            this.colContato.Name = "colContato";
-            this.colContato.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.colContato.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // colSelecionado
-            // 
-            this.colSelecionado.HeaderText = "Candidato Selecionado";
-            this.colSelecionado.Name = "colSelecionado";
-            this.colSelecionado.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.colSelecionado.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // buttonEncerrarVaga
-            // 
-            this.buttonEncerrarVaga.Location = new System.Drawing.Point(345, 445);
-            this.buttonEncerrarVaga.Name = "buttonEncerrarVaga";
-            this.buttonEncerrarVaga.Size = new System.Drawing.Size(108, 23);
-            this.buttonEncerrarVaga.TabIndex = 9;
-            this.buttonEncerrarVaga.Text = "Encerrar Vaga";
-            this.buttonEncerrarVaga.UseVisualStyleBackColor = true;
-            this.buttonEncerrarVaga.Click += new System.EventHandler(this.buttonEncerrarVaga_Click);
-            // 
-            // NomeVagaGrid
-            // 
-            this.NomeVagaGrid.HeaderText = "Titulo da Vaga";
-            this.NomeVagaGrid.Name = "NomeVagaGrid";
-            this.NomeVagaGrid.ReadOnly = true;
-            this.NomeVagaGrid.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.NomeVagaGrid.Width = 125;
-            // 
-            // cargoGrid
-            // 
-            this.cargoGrid.HeaderText = "Cargo";
-            this.cargoGrid.Name = "cargoGrid";
-            this.cargoGrid.ReadOnly = true;
-            this.cargoGrid.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // cargaHGrid
-            // 
-            this.cargaHGrid.HeaderText = "Carga Horária";
-            this.cargaHGrid.Name = "cargaHGrid";
-            this.cargaHGrid.ReadOnly = true;
-            this.cargaHGrid.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.cargaHGrid.Width = 110;
-            // 
-            // remuneracaoGrid
-            // 
-            this.remuneracaoGrid.HeaderText = "Remuneração";
-            this.remuneracaoGrid.Name = "remuneracaoGrid";
-            this.remuneracaoGrid.ReadOnly = true;
-            this.remuneracaoGrid.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.remuneracaoGrid.Width = 95;
-            // 
-            // cursoGrid
-            // 
-            this.cursoGrid.HeaderText = "Curso";
-            this.cursoGrid.Name = "cursoGrid";
-            this.cursoGrid.ReadOnly = true;
-            this.cursoGrid.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.cursoGrid.Width = 200;
-            // 
-            // colExibir
-            // 
-            this.colExibir.HeaderText = "";
-            this.colExibir.Name = "colExibir";
-            this.colExibir.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.colExibir.Width = 40;
-            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 511);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelConversas);
+            this.Controls.Add(this.opC1);
+            this.Controls.Add(this.panelAnunciarVaga);
+            this.Controls.Add(this.panelMinhasVagas);
             this.Controls.Add(this.panelAlunoCadastrado);
             this.Controls.Add(this.opB1);
             this.Controls.Add(this.opA1);
             this.Controls.Add(this.panelPerfilE);
             this.Controls.Add(this.opD1);
             this.Controls.Add(this.panelMensagens);
-            this.Controls.Add(this.panelConversas);
-            this.Controls.Add(this.opC1);
-            this.Controls.Add(this.panelAnunciarVaga);
-            this.Controls.Add(this.panelMinhasVagas);
             this.Name = "Form2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.Form2_Load);
@@ -962,7 +962,6 @@ namespace FindTec
         private System.Windows.Forms.Panel panelConversas;
         private System.Windows.Forms.Label labelConversas;
         public System.Windows.Forms.FlowLayoutPanel flowLayoutPanelMensagens;
-        private System.Windows.Forms.FlowLayoutPanel FlowPanelConversas;
         private System.Windows.Forms.DataGridViewImageColumn colFoto;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn colEmail;
@@ -976,5 +975,6 @@ namespace FindTec
         private System.Windows.Forms.DataGridViewTextBoxColumn remuneracaoGrid;
         private System.Windows.Forms.DataGridViewTextBoxColumn cursoGrid;
         private System.Windows.Forms.DataGridViewButtonColumn colExibir;
+        public System.Windows.Forms.FlowLayoutPanel FlowPanelConversas;
     }
 }

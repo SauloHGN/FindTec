@@ -13,13 +13,26 @@ namespace FindTec
 {
     public partial class ConversaItem : UserControl
     {
-        public string NomeItem { get; private set; }
-        public ConversaItem( byte[] foto, string destinatario, string ultimaMensagem)
+        public string NomeItem { get; private set; }     
+        private int mensagensNaoLidas;
+        public int MensagensNaoLidas
+        {
+            get { return mensagensNaoLidas; }
+            set
+            {
+                mensagensNaoLidas = value;
+                AtualizarMensagensNaoLidas();
+            }
+        }
+
+        public ConversaItem( byte[] foto, string destinatario, string ultimaMensagem, int mensagemNaoLida)
         {
             InitializeComponent();
             NomeItem = destinatario;
             labelNome.Text = destinatario;
             labelUltimaMensagem.Text = ultimaMensagem;
+            MensagensNaoLidas = mensagemNaoLida;
+            AtualizarMensagensNaoLidas();
 
             byte[] imageBytes = foto; // bytes contendo a imagem
             Image imagem = null;
@@ -36,6 +49,20 @@ namespace FindTec
                 imagem = Properties.Resources.botaoAluno1;
             }
             pictureBox1.Image = imagem;
+
+        }
+
+        public void AtualizarMensagensNaoLidas()
+        {
+            if (MensagensNaoLidas > 0)
+            {          
+                labelMensagemNaoLida.Text = MensagensNaoLidas.ToString();
+                labelMensagemNaoLida.Visible = true;
+            }
+            else
+            {
+                labelMensagemNaoLida.Visible = false;
+            }
         }
 
         private void ConversaItem_MouseEnter(object sender, EventArgs e)
@@ -77,6 +104,25 @@ namespace FindTec
         {
             labelUltimaMensagem.BackColor = Color.White;
             labelNome.BackColor = Color.White;
+            this.BackColor = Color.White;
+        }
+
+        private void labelMensagemNaoLida_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void labelMensagemNaoLida_MouseEnter(object sender, EventArgs e)
+        {
+            labelMensagemNaoLida.BackColor = Color.Silver;
+            labelMensagemNaoLida.BackColor = Color.Silver;
+            this.BackColor = Color.Silver;
+        }
+
+        private void labelMensagemNaoLida_MouseLeave(object sender, EventArgs e)
+        {
+            labelMensagemNaoLida.BackColor = Color.White;
+            labelMensagemNaoLida.BackColor = Color.White;
             this.BackColor = Color.White;
         }
     }

@@ -8,7 +8,7 @@ using System.Windows.Forms;
 namespace FindTec
 {
     class Chat
-    {
+    {       
         public static int getIdDestinatario;
         public static int idUsuario;
         public  int Remetente { get; set; }
@@ -17,11 +17,15 @@ namespace FindTec
 
         public static List<Chat> listaChats = new List<Chat>();
 
+        public int MensagensNaoLidasD { get; set; }
+        public int MensagensNaoLidasR { get; set; }
         public Chat(int remetente, int destinatario)
         {
             Remetente = remetente;
             Destinatario = destinatario;
             Mensagens = new List<Mensagens>();
+            MensagensNaoLidasR = 0;
+            MensagensNaoLidasD = 0;
         }
 
         // Cria um novo chat entre os usuários com IDs RemetenteId e DestinatarioId
@@ -65,17 +69,21 @@ namespace FindTec
                 {
                     Timestamp = DateTime.Now,
                     Text = mensagem,
-                    RemetenteId = remetente
+                    RemetenteId = remetente,
+                    Lido = false             
                 };
 
                 chat.Mensagens.Add(novaMensagem);
+
+                chat.MensagensNaoLidasR++;
+                chat.MensagensNaoLidasD++;
             }                   
         }
 
         public static void LoadGridConversas(FlowLayoutPanel FlowPanelConversas, EventHandler clickHandler)
         {
             int identificador = Program.userAtual;
-            FlowPanelConversas.Controls.Clear();
+            FlowPanelConversas.Controls.Clear();           
 
             foreach (var chat in listaChats)
             {
@@ -86,8 +94,22 @@ namespace FindTec
                     string destinatario = VerificarDestinatario(destinatarioId);
                     byte[] foto = obterFotoPeloID(destinatarioId);
                     UserControl itemControl;
-                    
-                    itemControl = new ConversaItem(foto, destinatario, chat.Mensagens.LastOrDefault()?.Text);// UserControl personalizado para exibir as informações do chat
+
+                    //int mensagensNaoLidas = chat.Mensagens.Count(m => m.RemetenteId == chat.Remetente && m.Lido == false && chat.Destinatario == identificador);
+                    int mensagensNaoLidas = 0;
+                    if (chat.Destinatario == Program.userAtual)
+                    {
+                        mensagensNaoLidas = chat.MensagensNaoLidasD;
+                    }
+                    else if (chat.Remetente == Program.userAtual)
+                    {
+                        mensagensNaoLidas = chat.MensagensNaoLidasR;
+                    }
+
+
+                    itemControl = new ConversaItem(foto, destinatario, chat.Mensagens.LastOrDefault()?.Text, mensagensNaoLidas);
+
+                    // UserControl personalizado para exibir as informações do chat
 
                     itemControl.Click += clickHandler;// manipulador de click
 
@@ -113,7 +135,7 @@ namespace FindTec
                 {
                     foreach (var mensagem in chat.Mensagens)
                     {
-                        int remetenteId = mensagem.RemetenteId;
+                        int remetenteId = mensagem.RemetenteId;                      
                         string remetenteNome = chat.Remetente == remetenteId ? VerificarRemetente(chat.Remetente) : VerificarDestinatario(chat.Remetente);
                         string destinatarioNome = chat.Destinatario == getIdDestinatario ? VerificarDestinatario(chat.Destinatario) : VerificarDestinatario(chat.Destinatario);
                         UserControl messageControl;
@@ -130,11 +152,20 @@ namespace FindTec
 
                         flowLayoutPanel.Controls.Add(messageControl);
                         flowLayoutPanel.ScrollControlIntoView(messageControl);// acompanha a ultima mensagem adicionada
+
+                        if (chat != null && chat.Destinatario == Program.userAtual)
+                        {
+                            
+                            chat.MensagensNaoLidasD = 0;
+                        }
+                        else if (chat != null && chat.Remetente == Program.userAtual)
+                        {
+                            chat.MensagensNaoLidasR = 0;
+                        }
                     }
                 }
             }
         }
-        
 
         public static string VerificarRemetente(int remetente)
         {
