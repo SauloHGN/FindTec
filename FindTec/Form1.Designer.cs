@@ -29,8 +29,8 @@ namespace FindTec
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.botaoHome = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -404,14 +404,14 @@ namespace FindTec
             this.gridViewOportunidades.BackgroundColor = System.Drawing.Color.White;
             this.gridViewOportunidades.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gridViewOportunidades.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridViewOportunidades.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridViewOportunidades.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.gridViewOportunidades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridViewOportunidades.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colFoto,
@@ -421,14 +421,14 @@ namespace FindTec
             this.cargaHGrid,
             this.remuneracaoGrid,
             this.colCandidatar});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridViewOportunidades.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridViewOportunidades.DefaultCellStyle = dataGridViewCellStyle4;
             this.gridViewOportunidades.Location = new System.Drawing.Point(42, 117);
             this.gridViewOportunidades.Name = "gridViewOportunidades";
             this.gridViewOportunidades.RowHeadersVisible = false;
@@ -704,7 +704,8 @@ namespace FindTec
             // 
             // panelMensagens
             // 
-            this.panelMensagens.BackColor = System.Drawing.Color.White;
+            this.panelMensagens.BackColor = System.Drawing.Color.Transparent;
+            this.panelMensagens.BackgroundImage = global::FindTec.Properties.Resources.TelaMensagem;
             this.panelMensagens.Controls.Add(this.flowLayoutPanelMensagens);
             this.panelMensagens.Controls.Add(this.btnVoltar);
             this.panelMensagens.Controls.Add(this.btnEnviar);
@@ -717,11 +718,11 @@ namespace FindTec
             // 
             // flowLayoutPanelMensagens
             // 
-            this.flowLayoutPanelMensagens.BackColor = System.Drawing.Color.White;
+            this.flowLayoutPanelMensagens.BackColor = System.Drawing.Color.Transparent;
             this.flowLayoutPanelMensagens.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanelMensagens.Location = new System.Drawing.Point(82, 85);
+            this.flowLayoutPanelMensagens.Location = new System.Drawing.Point(111, 80);
             this.flowLayoutPanelMensagens.Name = "flowLayoutPanelMensagens";
-            this.flowLayoutPanelMensagens.Size = new System.Drawing.Size(630, 342);
+            this.flowLayoutPanelMensagens.Size = new System.Drawing.Size(525, 343);
             this.flowLayoutPanelMensagens.TabIndex = 8;
             this.flowLayoutPanelMensagens.WrapContents = false;
             // 
@@ -737,22 +738,29 @@ namespace FindTec
             // 
             // btnEnviar
             // 
-            this.btnEnviar.Location = new System.Drawing.Point(659, 436);
+            this.btnEnviar.BackgroundImage = global::FindTec.Properties.Resources.botaoEnviarMensagem2;
+            this.btnEnviar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnEnviar.FlatAppearance.BorderSize = 0;
+            this.btnEnviar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnEnviar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnEnviar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEnviar.Location = new System.Drawing.Point(578, 457);
             this.btnEnviar.Name = "btnEnviar";
-            this.btnEnviar.Size = new System.Drawing.Size(55, 28);
+            this.btnEnviar.Size = new System.Drawing.Size(38, 37);
             this.btnEnviar.TabIndex = 6;
-            this.btnEnviar.Text = "Enviar";
             this.btnEnviar.UseVisualStyleBackColor = true;
             this.btnEnviar.Click += new System.EventHandler(this.btnEnviar_Click);
+            this.btnEnviar.MouseEnter += new System.EventHandler(this.btnEnviar_MouseEnter);
+            this.btnEnviar.MouseLeave += new System.EventHandler(this.btnEnviar_MouseLeave);
             // 
             // txtMensagem
             // 
             this.txtMensagem.BackColor = System.Drawing.Color.White;
-            this.txtMensagem.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMensagem.Location = new System.Drawing.Point(82, 436);
-            this.txtMensagem.MinimumSize = new System.Drawing.Size(569, 28);
+            this.txtMensagem.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtMensagem.Font = new System.Drawing.Font("Arial Narrow", 12F);
+            this.txtMensagem.Location = new System.Drawing.Point(153, 467);
             this.txtMensagem.Name = "txtMensagem";
-            this.txtMensagem.Size = new System.Drawing.Size(569, 28);
+            this.txtMensagem.Size = new System.Drawing.Size(419, 19);
             this.txtMensagem.TabIndex = 5;
             this.txtMensagem.KeyDown += new System.Windows.Forms.KeyEventHandler(this.EnviarMensagem_Enter);
             // 
@@ -771,6 +779,7 @@ namespace FindTec
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "\'";
             this.Load += new System.EventHandler(this.Form1_Load_1);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

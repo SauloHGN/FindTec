@@ -249,6 +249,7 @@
     <None Include="Imagens\botaoEntrar2.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Imagens\TelaMensagem.png" />
     <None Include="Imagens\telaPerfil.png" />
     <None Include="Imagens\backgroundGeral.png" />
     <None Include="Imagens\BotaoAlterarImagem 2.png" />
@@ -269,6 +270,8 @@
     <None Include="Imagens\botaoEntrar1.png" />
     <None Include="Imagens\botaoEnviar1.png" />
     <None Include="Imagens\botaoEnviar2.png" />
+    <None Include="Imagens\botaoEnviarMensagem2.png" />
+    <None Include="Imagens\botaoEnviarMensagem1.png" />
     <Content Include="Imagens\botaoFechar.png" />
     <None Include="Imagens\botaoRedefinir1.png" />
     <None Include="Imagens\botaoSair 2.png" />

@@ -849,6 +849,17 @@ namespace FindTec
             }
         }
 
+        private void btnEnviar_MouseEnter(object sender, EventArgs e)
+        {
+            Image novaImagem = Properties.Resources.botaoEnviarMensagem2;
+            btnEnviar.BackgroundImage = novaImagem;
+        }
+
+        private void btnEnviar_MouseLeave(object sender, EventArgs e)
+        {
+            Image novaImagem = Properties.Resources.botaoEnviarMensagem1;
+            btnEnviar.BackgroundImage = novaImagem;
+        }
 
         /// FIM MENSAGENS
     }
