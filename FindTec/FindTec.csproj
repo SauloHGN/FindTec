@@ -249,6 +249,7 @@
     <None Include="Imagens\botaoEntrar2.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Imagens\TelaMensagemRecebida.png" />
     <None Include="Imagens\TelaMensagem.png" />
     <None Include="Imagens\telaPerfil.png" />
     <None Include="Imagens\backgroundGeral.png" />
@@ -292,6 +293,8 @@
     <None Include="Imagens\RecuperarSenha3.png" />
     <None Include="Imagens\menuLateral.png" />
     <None Include="Imagens\imagemAluno.png" />
+    <None Include="Imagens\fundoMensagemRecebida2.png" />
+    <None Include="Imagens\fundoMensagemRecebida1.png" />
     <Content Include="Imagens\TelaEscolha.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

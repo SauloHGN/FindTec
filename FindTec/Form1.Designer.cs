@@ -77,7 +77,6 @@ namespace FindTec
             this.labelVagaInfo = new System.Windows.Forms.Label();
             this.panelConversas = new System.Windows.Forms.Panel();
             this.FlowPanelConversas = new System.Windows.Forms.FlowLayoutPanel();
-            this.labelConversas = new System.Windows.Forms.Label();
             this.listViewConversas = new System.Windows.Forms.ListView();
             this.panelMensagens = new System.Windows.Forms.Panel();
             this.flowLayoutPanelMensagens = new System.Windows.Forms.FlowLayoutPanel();
@@ -663,9 +662,9 @@ namespace FindTec
             // 
             // panelConversas
             // 
-            this.panelConversas.BackColor = System.Drawing.Color.White;
+            this.panelConversas.BackColor = System.Drawing.Color.Transparent;
+            this.panelConversas.BackgroundImage = global::FindTec.Properties.Resources.TelaMensagemRecebida;
             this.panelConversas.Controls.Add(this.FlowPanelConversas);
-            this.panelConversas.Controls.Add(this.labelConversas);
             this.panelConversas.Controls.Add(this.listViewConversas);
             this.panelConversas.Location = new System.Drawing.Point(223, 15);
             this.panelConversas.Name = "panelConversas";
@@ -675,29 +674,19 @@ namespace FindTec
             // 
             // FlowPanelConversas
             // 
-            this.FlowPanelConversas.BackColor = System.Drawing.Color.White;
-            this.FlowPanelConversas.Location = new System.Drawing.Point(145, 85);
+            this.FlowPanelConversas.BackColor = System.Drawing.Color.Transparent;
+            this.FlowPanelConversas.Location = new System.Drawing.Point(207, 85);
             this.FlowPanelConversas.Name = "FlowPanelConversas";
-            this.FlowPanelConversas.Size = new System.Drawing.Size(450, 350);
+            this.FlowPanelConversas.Size = new System.Drawing.Size(334, 409);
             this.FlowPanelConversas.TabIndex = 2;
             this.FlowPanelConversas.Click += new System.EventHandler(this.FlowPanelConversas_Click);
-            // 
-            // labelConversas
-            // 
-            this.labelConversas.AutoSize = true;
-            this.labelConversas.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelConversas.Location = new System.Drawing.Point(290, 35);
-            this.labelConversas.Name = "labelConversas";
-            this.labelConversas.Size = new System.Drawing.Size(116, 26);
-            this.labelConversas.TabIndex = 1;
-            this.labelConversas.Text = "Conversas";
             // 
             // listViewConversas
             // 
             this.listViewConversas.HideSelection = false;
-            this.listViewConversas.Location = new System.Drawing.Point(145, 85);
+            this.listViewConversas.Location = new System.Drawing.Point(207, 85);
             this.listViewConversas.Name = "listViewConversas";
-            this.listViewConversas.Size = new System.Drawing.Size(450, 350);
+            this.listViewConversas.Size = new System.Drawing.Size(334, 409);
             this.listViewConversas.TabIndex = 0;
             this.listViewConversas.UseCompatibleStateImageBehavior = false;
             this.listViewConversas.SelectedIndexChanged += new System.EventHandler(this.listViewConversas_SelectedIndexChanged);
@@ -738,7 +727,7 @@ namespace FindTec
             // 
             // btnEnviar
             // 
-            this.btnEnviar.BackgroundImage = global::FindTec.Properties.Resources.botaoEnviarMensagem2;
+            this.btnEnviar.BackgroundImage = global::FindTec.Properties.Resources.botaoEnviarMensagem1;
             this.btnEnviar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnEnviar.FlatAppearance.BorderSize = 0;
             this.btnEnviar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -792,7 +781,6 @@ namespace FindTec
             this.panelVagaInfo.ResumeLayout(false);
             this.panelVagaInfo.PerformLayout();
             this.panelConversas.ResumeLayout(false);
-            this.panelConversas.PerformLayout();
             this.panelMensagens.ResumeLayout(false);
             this.panelMensagens.PerformLayout();
             this.ResumeLayout(false);
@@ -842,8 +830,6 @@ namespace FindTec
         private System.Windows.Forms.TextBox txtEmpresaContratante;
         private System.Windows.Forms.Button botaoVoltar;
         private System.Windows.Forms.Panel panelConversas;
-        private System.Windows.Forms.Label labelConversas;
-        private System.Windows.Forms.ListView listViewConversas;
         private System.Windows.Forms.Panel panelMensagens;
         private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.Button btnEnviar;
@@ -854,6 +840,7 @@ namespace FindTec
         private System.Windows.Forms.Button botaoHome;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button botaoAlterarSenha;
+        private System.Windows.Forms.ListView listViewConversas;
     }
 }
 

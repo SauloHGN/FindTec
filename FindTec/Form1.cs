@@ -183,14 +183,7 @@ namespace FindTec
             this.Hide();
         }
 
-       private void opA2_Load(object sender, EventArgs e)
-       {
-
-       }
-        private void opD1_Load(object sender, EventArgs e)
-        {
-
-        }
+       
         private void panel1_Paint_1(object sender, PaintEventArgs e)
         {
 
@@ -203,10 +196,7 @@ namespace FindTec
         {
 
         }
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+        
         private void textBox4_TextChanged(object sender, EventArgs e)
         {
 

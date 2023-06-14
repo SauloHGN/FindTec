@@ -124,6 +124,9 @@
   <data name="botaoCriesuaconta1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imagens\botaoCriesuaconta1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="botaoEnviarMensagem2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\botaoEnviarMensagem2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="botaoAluno2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imagens\botaoAluno2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -181,6 +184,9 @@
   <data name="botaoAlterarSenha 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imagens\botaoAlterarSenha 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="TelaMensagemRecebida" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\TelaMensagemRecebida.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="botaoEnviar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imagens\botaoEnviar1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -189,6 +195,9 @@
   </data>
   <data name="botaoOportunidades 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imagens\botaoOportunidades 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="botaoEnviarMensagem1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\botaoEnviarMensagem1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="botaoEmpresa1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imagens\botaoEmpresa1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -253,10 +262,10 @@
   <data name="botaoAluno1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imagens\botaoAluno1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="botaoEnviarMensagem2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Imagens\botaoEnviarMensagem2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="fundoMensagemRecebida2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\fundoMensagemRecebida2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="botaoEnviarMensagem1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Imagens\botaoEnviarMensagem1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="fundoMensagemRecebida1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\fundoMensagemRecebida1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
