@@ -39,7 +39,7 @@ namespace FindTec
             this.labelMensagemYour.BackColor = System.Drawing.Color.DimGray;
             this.labelMensagemYour.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelMensagemYour.ForeColor = System.Drawing.Color.White;
-            this.labelMensagemYour.Location = new System.Drawing.Point(228, 16);
+            this.labelMensagemYour.Location = new System.Drawing.Point(3, 16);
             this.labelMensagemYour.MaximumSize = new System.Drawing.Size(280, 350);
             this.labelMensagemYour.MinimumSize = new System.Drawing.Size(130, 30);
             this.labelMensagemYour.Name = "labelMensagemYour";
@@ -54,7 +54,7 @@ namespace FindTec
             this.labelNome.BackColor = System.Drawing.Color.DimGray;
             this.labelNome.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNome.ForeColor = System.Drawing.Color.Black;
-            this.labelNome.Location = new System.Drawing.Point(228, 16);
+            this.labelNome.Location = new System.Drawing.Point(3, 16);
             this.labelNome.Name = "labelNome";
             this.labelNome.Size = new System.Drawing.Size(40, 15);
             this.labelNome.TabIndex = 2;
