@@ -273,6 +273,26 @@ namespace FindTec.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap botaoEnviarMensagem1 {
+            get {
+                object obj = ResourceManager.GetObject("botaoEnviarMensagem1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap botaoEnviarMensagem2 {
+            get {
+                object obj = ResourceManager.GetObject("botaoEnviarMensagem2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap botaoFechar {
             get {
                 object obj = ResourceManager.GetObject("botaoFechar", resourceCulture);
@@ -433,6 +453,26 @@ namespace FindTec.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap fundoMensagemRecebida1 {
+            get {
+                object obj = ResourceManager.GetObject("fundoMensagemRecebida1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fundoMensagemRecebida2 {
+            get {
+                object obj = ResourceManager.GetObject("fundoMensagemRecebida2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap imagemAluno {
             get {
                 object obj = ResourceManager.GetObject("imagemAluno", resourceCulture);
@@ -486,6 +526,26 @@ namespace FindTec.Properties {
         internal static System.Drawing.Bitmap TelaEscolha {
             get {
                 object obj = ResourceManager.GetObject("TelaEscolha", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TelaMensagem {
+            get {
+                object obj = ResourceManager.GetObject("TelaMensagem", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TelaMensagemRecebida {
+            get {
+                object obj = ResourceManager.GetObject("TelaMensagemRecebida", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -39,7 +39,7 @@ namespace FindTec
             this.labelNome.BackColor = System.Drawing.SystemColors.Highlight;
             this.labelNome.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNome.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelNome.Location = new System.Drawing.Point(5, 23);
+            this.labelNome.Location = new System.Drawing.Point(5, 18);
             this.labelNome.Name = "labelNome";
             this.labelNome.Size = new System.Drawing.Size(40, 15);
             this.labelNome.TabIndex = 3;
@@ -51,7 +51,7 @@ namespace FindTec
             this.labelMensagemMy.BackColor = System.Drawing.SystemColors.Highlight;
             this.labelMensagemMy.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelMensagemMy.ForeColor = System.Drawing.Color.White;
-            this.labelMensagemMy.Location = new System.Drawing.Point(2, 20);
+            this.labelMensagemMy.Location = new System.Drawing.Point(2, 15);
             this.labelMensagemMy.MaximumSize = new System.Drawing.Size(280, 350);
             this.labelMensagemMy.MinimumSize = new System.Drawing.Size(130, 30);
             this.labelMensagemMy.Name = "labelMensagemMy";
@@ -71,7 +71,7 @@ namespace FindTec
             this.Controls.Add(this.labelMensagemMy);
             this.MinimumSize = new System.Drawing.Size(0, 10);
             this.Name = "myMessage";
-            this.Size = new System.Drawing.Size(600, 70);
+            this.Size = new System.Drawing.Size(525, 70);
             this.ResumeLayout(false);
             this.PerformLayout();
 

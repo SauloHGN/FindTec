@@ -67,63 +67,53 @@ namespace FindTec
 
         private void ConversaItem_MouseEnter(object sender, EventArgs e)
         {
-            labelUltimaMensagem.BackColor = Color.Silver;
-            labelNome.BackColor = Color.Silver;
-            this.BackColor = Color.Silver;
+            Image novaImagem = Properties.Resources.fundoMensagemRecebida2;
+            ((Control)sender).BackgroundImage = novaImagem;
         }
+
 
         private void ConversaItem_MouseLeave(object sender, EventArgs e)
         {
-            labelUltimaMensagem.BackColor = Color.White;
-            labelNome.BackColor = Color.White;
-            this.BackColor = Color.White;
+            Image novaImagem = Properties.Resources.fundoMensagemRecebida1;
+            ((Control)sender).BackgroundImage = novaImagem;
         }
+
 
         private void labelNome_MouseEnter(object sender, EventArgs e)
         {
             labelUltimaMensagem.BackColor = Color.Silver;
             labelNome.BackColor = Color.Silver;
             this.BackColor = Color.Silver;
-        }
+        }       
 
-        private void labelNome_MouseLeave(object sender, EventArgs e)
+        private void pictureBox1_Paint(object sender, PaintEventArgs e)
         {
-            labelUltimaMensagem.BackColor = Color.White;
-            labelNome.BackColor = Color.White;
-            this.BackColor = Color.White;
-        }
+            // Obtém a imagem da PictureBox
+            Image image = pictureBox1.Image;
 
-        private void labelUltimaMensagem_MouseEnter(object sender, EventArgs e)
-        {
-            labelUltimaMensagem.BackColor = Color.Silver;
-            labelNome.BackColor = Color.Silver;
-            this.BackColor = Color.Silver;
-        }
+            if (image != null)
+            {
+                // Calcula a proporção de redimensionamento
+                float ratio = (float)pictureBox1.Height / image.Height;
 
-        private void labelUltimaMensagem_MouseLeave(object sender, EventArgs e)
-        {
-            labelUltimaMensagem.BackColor = Color.White;
-            labelNome.BackColor = Color.White;
-            this.BackColor = Color.White;
-        }
+                // Calcula as dimensões da imagem redimensionada
+                int width = (int)(image.Width * ratio);
+                int height = pictureBox1.Height;
 
-        private void labelMensagemNaoLida_Paint(object sender, PaintEventArgs e)
-        {
+                // Calcula as coordenadas X e Y para centralizar a imagem
+                int x = (pictureBox1.Width - width) / 2;
+                int y = (pictureBox1.Height - height) / 2;
 
-        }
+                // Desenha a imagem redimensionada
+                e.Graphics.DrawImage(image, x, y, width, height);
+            }
 
-        private void labelMensagemNaoLida_MouseEnter(object sender, EventArgs e)
-        {
-            labelMensagemNaoLida.BackColor = Color.Silver;
-            labelMensagemNaoLida.BackColor = Color.Silver;
-            this.BackColor = Color.Silver;
-        }
+            // Cria uma região elíptica do mesmo tamanho que a PictureBox
+            System.Drawing.Drawing2D.GraphicsPath roundPath = new System.Drawing.Drawing2D.GraphicsPath();
+            roundPath.AddEllipse(0, 0, pictureBox1.Width - 1, pictureBox1.Height - 1);
 
-        private void labelMensagemNaoLida_MouseLeave(object sender, EventArgs e)
-        {
-            labelMensagemNaoLida.BackColor = Color.White;
-            labelMensagemNaoLida.BackColor = Color.White;
-            this.BackColor = Color.White;
+            // Define a região da PictureBox para a região elíptica
+            pictureBox1.Region = new System.Drawing.Region(roundPath);
         }
     }
 }
