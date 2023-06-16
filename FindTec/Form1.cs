@@ -99,8 +99,9 @@ namespace FindTec
             InitializeComponent();
             this.FormClosing += new FormClosingEventHandler(Form1_FormClosing);// FECHAR FRAME PRINCIPAL VOLTAR PARA A TELA DE LOGIN
             Load_gridViewOportunidades(); // CARREGA O GRID 
+            LoadVagasCadastrado();
             Load += Form1_Load;
-            this.KeyDown += new KeyEventHandler(EnviarMensagem_Enter);// Enviar mensagem com Enter
+            this.KeyDown += new KeyEventHandler(EnviarMensagem_Enter);// Enviar mensagem com Enter         
         }
 
         private void EnviarMensagem_Enter(object sender, KeyEventArgs e)
@@ -150,6 +151,7 @@ namespace FindTec
         }
         private void button1_Click_2(object sender, EventArgs e)
         {
+            panelVagasCadastrado.Visible = false;
             panelPerfil.Visible = true;
             panelOportunidades.Visible = false;
             panelConversas.Visible = false;
@@ -157,8 +159,7 @@ namespace FindTec
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-           
-
+            panelVagasCadastrado.Visible = false;
             panelPerfil.Visible = false;
             panelOportunidades.Visible = true;
             panelConversas.Visible = false;
@@ -166,14 +167,23 @@ namespace FindTec
         }
 
         private void button3_Click(object sender, EventArgs e)
-        {
-            
-
+        {           
             panelPerfil.Visible = false;
+            panelVagasCadastrado.Visible = false;
             panelOportunidades.Visible = false;
             panelConversas.Visible = true;
             panelConversas.BringToFront();
             LoadConversas();
+        }
+
+        private void buttonVagasCadastrado_Click(object sender, EventArgs e)
+        {
+            LoadVagasCadastrado();
+            panelVagasCadastrado.Visible = true;
+            panelPerfil.Visible = false;
+            panelOportunidades.Visible = false;
+            panelConversas.Visible = false;
+            panelVagasCadastrado.BringToFront();
         }
 
         private void buttonD_Click(object sender, EventArgs e)
@@ -852,5 +862,25 @@ namespace FindTec
         }
 
         /// FIM MENSAGENS
+
+
+        public void LoadVagasCadastrado()
+        {
+            gridViewVagasCadastrado.AllowUserToAddRows = false;
+            gridViewVagasCadastrado.AllowUserToAddRows = false;
+            gridViewVagasCadastrado.Rows.Clear();
+
+            var user = DadosUsuario.listaAlunos.Find(u => u.Item1 == Program.userAtual);
+
+            foreach (var vagas in Vaga.vagas)
+            {
+                if (vagas.Candidatos.Contains(user.Item1.ToString()))
+                {
+                    gridViewVagasCadastrado.Rows.Add(vagas.NomeEmpresa, vagas.NomeVaga, vagas.Cargo, vagas.cargaHoraria, vagas.remuneracao, vagas.Curso);
+                }
+            }
+            gridViewVagasCadastrado.ClearSelection();
+        }
+
     }
 }

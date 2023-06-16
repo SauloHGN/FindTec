@@ -43,7 +43,7 @@ namespace FindTec
             this.labelNome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelNome.Font = new System.Drawing.Font("Microsoft Tai Le", 10.25F, System.Drawing.FontStyle.Bold);
             this.labelNome.ForeColor = System.Drawing.Color.Black;
-            this.labelNome.Location = new System.Drawing.Point(87, 5);
+            this.labelNome.Location = new System.Drawing.Point(72, 5);
             this.labelNome.Name = "labelNome";
             this.labelNome.Size = new System.Drawing.Size(49, 18);
             this.labelNome.TabIndex = 0;
@@ -65,7 +65,7 @@ namespace FindTec
             // 
             this.labelUltimaMensagem.AutoSize = true;
             this.labelUltimaMensagem.BackColor = System.Drawing.Color.Transparent;
-            this.labelUltimaMensagem.Location = new System.Drawing.Point(87, 28);
+            this.labelUltimaMensagem.Location = new System.Drawing.Point(72, 28);
             this.labelUltimaMensagem.Name = "labelUltimaMensagem";
             this.labelUltimaMensagem.Size = new System.Drawing.Size(91, 13);
             this.labelUltimaMensagem.TabIndex = 2;

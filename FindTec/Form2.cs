@@ -650,5 +650,24 @@ namespace FindTec
             LoadMinhasVagas();
             gridViewMinhasVagas.Refresh();
         }
+
+        private void botaoSair_Click(object sender, EventArgs e)
+        {
+            TelaLogin login = new TelaLogin();
+            login.Show();
+            this.Hide();
+        }
+
+        private void botaoSair_MouseEnter(object sender, EventArgs e)
+        {
+            Image novaImagem = Properties.Resources.botaoSair_2;
+            botaoSair.BackgroundImage = novaImagem;
+        }
+
+        private void botaoSair_MouseLeave(object sender, EventArgs e)
+        {
+            Image novaImagem = Properties.Resources.botaoSair_1;
+            botaoSair.BackgroundImage = novaImagem;
+        }
     }
 }
