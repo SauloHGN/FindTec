@@ -147,43 +147,9 @@ namespace FindTec
                 picAvatarAluno1.Image = null;
                 picAvatarAluno2.Image = null;
             }
-        }
-        private void botaoPerfil_Click(object sender, EventArgs e)
-        {
-            panelMeusCadastrosAluno.Visible = false;
-            panelPerfilAluno.Visible = true;
-            panelOportunidadesAluno.Visible = false;
-            panelConversasAluno.Visible = false;
-        }
+        }     
 
-        private void botaoOportunidades_Click(object sender, EventArgs e)
-        {
-            panelMeusCadastrosAluno.Visible = false;
-            panelPerfilAluno.Visible = false;
-            panelOportunidadesAluno.Visible = true;
-            panelConversasAluno.Visible = false;
-            panelOportunidadesAluno.BringToFront();
-        }
-
-        private void botaoMensagens_Click(object sender, EventArgs e)
-        {           
-            panelPerfilAluno.Visible = false;
-            panelMeusCadastrosAluno.Visible = false;
-            panelOportunidadesAluno.Visible = false;
-            panelConversasAluno.Visible = true;
-            panelConversasAluno.BringToFront();
-            LoadConversas();
-        }
-
-        private void botaoMeusCadastros_Click(object sender, EventArgs e)
-        {
-            LoadVagasCadastrado();
-            panelMeusCadastrosAluno.Visible = true;
-            panelPerfilAluno.Visible = false;
-            panelOportunidadesAluno.Visible = false;
-            panelConversasAluno.Visible = false;
-            panelMeusCadastrosAluno.BringToFront();
-        }
+        
 
         private void botaoSair_Click(object sender, EventArgs e)
         {
@@ -427,7 +393,7 @@ namespace FindTec
                 // RECUPERAR IMAGEM
                 if (user.Item5 == vagas.Curso && !vagas.Candidatos.Contains(user.Item1.ToString()))
                 {
-                    byte [] imageBytes = vagas.getFoto(vagas.NomeEmpresa); // bytes contendo a imagem
+                    byte[] imageBytes = vagas.getFoto(vagas.NomeEmpresa); // bytes contendo a imagem
                     Image imagem = null;
 
                     if (imageBytes != null)
@@ -435,15 +401,25 @@ namespace FindTec
                         using (MemoryStream ms = new MemoryStream(imageBytes))
                         {
                             imagem = Image.FromStream(ms);
+
+                            // Redimensionar a imagem para caber dentro da célula
+                            int larguraMaxima = gridViewOportunidades.Columns[0].Width - 2; // Subtraímos 2 para considerar a borda da célula
+                            int alturaMaxima = gridViewOportunidades.RowTemplate.Height - 2;
+
+                            Image imagemRedimensionada = imagem.GetThumbnailImage(larguraMaxima, alturaMaxima, null, IntPtr.Zero);
+                            imagem.Dispose(); // Liberar a imagem original
+                            imagem = imagemRedimensionada;
                         }
                     }
+
                     DataGridViewButtonCell button1 = new DataGridViewButtonCell();
                     button1.Value = "Detalhes";
-                    gridViewOportunidades.Rows.Add(imagem, vagas.NomeEmpresa, vagas.NomeVaga, vagas.Cargo, vagas.cargaHoraria, vagas.remuneracao, "Detalhes");                   
+                    gridViewOportunidades.Rows.Add(imagem, vagas.NomeEmpresa, vagas.NomeVaga, vagas.Cargo, vagas.cargaHoraria, vagas.remuneracao, "Detalhes");
                 }
             }
             gridViewOportunidades.ClearSelection();
         }
+
 
         private void gridViewOportunidades_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -743,143 +719,189 @@ namespace FindTec
             gridViewVagasCadastrado.ClearSelection();
         }
 
+        ///////////////////////// EVENTOS DE SELECIONAR PAINEL //////////////////////////////
+
         private void botaoHome_Click(object sender, EventArgs e)
         {
+            panelPerfilAluno.Visible = false;
+            panelOportunidadesAluno.Visible = false;
+            panelMensagensAluno.Visible = false;
+            panelConversasAluno.Visible = false;
+            panelVagaInfoAluno.Visible = false;
+            panelMeusCadastrosAluno.Visible = false;
+        }
 
-        } 
+        private void botaoPerfil_Click(object sender, EventArgs e)
+        {
+            panelPerfilAluno.Visible = true;
+            panelOportunidadesAluno.Visible = false;
+            panelMensagensAluno.Visible = false;
+            panelConversasAluno.Visible = false;
+            panelVagaInfoAluno.Visible = false;
+            panelMeusCadastrosAluno.Visible = false;
+        }
+
+        private void botaoOportunidades_Click(object sender, EventArgs e)
+        {
+            panelPerfilAluno.Visible = false;
+            panelOportunidadesAluno.Visible = true;
+            panelMensagensAluno.Visible = false;
+            panelConversasAluno.Visible = false;
+            panelVagaInfoAluno.Visible = false;
+            panelMeusCadastrosAluno.Visible = false;
+        }
+
+        private void botaoMensagens_Click(object sender, EventArgs e)
+        {
+            panelPerfilAluno.Visible = false;
+            panelOportunidadesAluno.Visible = false;
+            panelMensagensAluno.Visible = false;
+            panelConversasAluno.Visible = true;
+            panelVagaInfoAluno.Visible = false;
+            panelMeusCadastrosAluno.Visible = false;
+            LoadConversas();
+        }
+
+        private void botaoMeusCadastros_Click(object sender, EventArgs e)
+        {
+            panelPerfilAluno.Visible = false;
+            panelOportunidadesAluno.Visible = false;
+            panelMensagensAluno.Visible = false;
+            panelConversasAluno.Visible = false;
+            panelVagaInfoAluno.Visible = false;
+            panelMeusCadastrosAluno.Visible = true;
+            LoadVagasCadastrado();            
+        }
 
         ///////////////////////// EVENTOS DE TROCAR IMAGEM DOS BOTOES //////////////////////////////
-        
+
         private void botaoHome_MouseEnter(object sender, EventArgs e)
         {
-            Image novaImagem = Properties.Resources.botaoHome_2;
-            botaoHome.BackgroundImage = novaImagem;
+            botaoHome.BackgroundImage = Properties.Resources.botaoHome_2;
         }
 
         private void botaoHome_MouseLeave(object sender, EventArgs e)
         {
-            Image novaImagem = Properties.Resources.botaoHome_1;
-            botaoHome.BackgroundImage = novaImagem;
+            botaoHome.BackgroundImage = Properties.Resources.botaoHome_1;
         }
 
         private void botaoPerfil_MouseEnter(object sender, EventArgs e)
         {
-            Image novaImagem = Properties.Resources.botaoPerfil_2;
-            botaoPerfil.BackgroundImage = novaImagem;
+            botaoPerfil.BackgroundImage = Properties.Resources.botaoPerfil_2;
         }
 
         private void botaoPerfil_MouseLeave(object sender, EventArgs e)
         {
-            Image novaImagem = Properties.Resources.botaoPerfil_1;
-            botaoPerfil.BackgroundImage = novaImagem;
+            botaoPerfil.BackgroundImage = Properties.Resources.botaoPerfil_1;
         }
 
         private void botaoOportunidades_MouseEnter(object sender, EventArgs e)
         {
-            Image novaImagem = Properties.Resources.botaoOportunidades_2;
-            botaoOportunidades.BackgroundImage = novaImagem;
+            botaoOportunidades.BackgroundImage = Properties.Resources.botaoOportunidades_2;
         }
 
         private void botaoOportunidades_MouseLeave(object sender, EventArgs e)
         {
-            Image novaImagem = Properties.Resources.botaoOportunidades_1;
-            botaoOportunidades.BackgroundImage = novaImagem;
+            botaoOportunidades.BackgroundImage = Properties.Resources.botaoOportunidades_1;
         }
 
         private void botaoMensagens_MouseEnter(object sender, EventArgs e)
         {
-            Image novaImagem = Properties.Resources.botaoMensagens_2;
-            botaoMensagens.BackgroundImage = novaImagem;
+            botaoMensagens.BackgroundImage = Properties.Resources.botaoMensagens_2;
         }
 
         private void botaoMensagens_MouseLeave(object sender, EventArgs e)
         {
-            Image novaImagem = Properties.Resources.botaoMensagens_1;
-            botaoMensagens.BackgroundImage = novaImagem;
+            botaoMensagens.BackgroundImage = Properties.Resources.botaoMensagens_1;
         }
 
         private void botaoSair_MouseEnter(object sender, EventArgs e)
         {
-            Image novaImagem = Properties.Resources.botaoSair_2;
-            botaoSair.BackgroundImage = novaImagem;
+            botaoSair.BackgroundImage = Properties.Resources.botaoSair_2;
         }
 
         private void botaoSair_MouseLeave(object sender, EventArgs e)
         {
-            Image novaImagem = Properties.Resources.botaoSair_1;
-            botaoSair.BackgroundImage = novaImagem;
+            botaoSair.BackgroundImage = Properties.Resources.botaoSair_1;
         }
 
         private void botaoAlterarFoto_MouseEnter(object sender, EventArgs e)
         {
-            Image novaImagem = Properties.Resources.BotaoAlterarImagem_2;
-            botaoAlterarFoto.BackgroundImage = novaImagem;
+            botaoAlterarFoto.BackgroundImage = Properties.Resources.BotaoAlterarImagem_2;
         }
 
         private void botaoAlterarFoto_MouseLeave(object sender, EventArgs e)
         {
-            Image novaImagem = Properties.Resources.BotaoAlterarImagem_1;
-            botaoAlterarFoto.BackgroundImage = novaImagem;
+            botaoAlterarFoto.BackgroundImage = Properties.Resources.BotaoAlterarImagem_1;
         }
 
         private void botaoEditarDados_MouseEnter(object sender, EventArgs e)
         {
-            Image novaImagem = Properties.Resources.botaoEditarDados_2;
-            botaoEditarDados.BackgroundImage = novaImagem;
+            botaoEditarDados.BackgroundImage = Properties.Resources.botaoEditarDados_2;
         }
 
         private void botaoEditarDados_MouseLeave(object sender, EventArgs e)
         {
-           Image novaImagem = Properties.Resources.botaoEditarDados_1;
-            botaoEditarDados.BackgroundImage = novaImagem;
+            botaoEditarDados.BackgroundImage = Properties.Resources.botaoEditarDados_1;
         }
 
         private void botaoDesativarConta_MouseEnter(object sender, EventArgs e)
         {
-            Image novaImagem = Properties.Resources.botaoDesativarConta_2;
-            botaoDesativarConta.BackgroundImage = novaImagem;
+            botaoDesativarConta.BackgroundImage = Properties.Resources.botaoDesativarConta_2;
         }
 
         private void botaoDesativarConta_MouseLeave(object sender, EventArgs e)
         {
-            Image novaImagem = Properties.Resources.botaoDesativarConta_1;
-            botaoDesativarConta.BackgroundImage = novaImagem;
+            botaoDesativarConta.BackgroundImage = Properties.Resources.botaoDesativarConta_1;
         }
 
         private void botaoAlterarSenha_MouseEnter(object sender, EventArgs e)
         {
-            Image novaImagem = Properties.Resources.botaoAlterarSenha_2;
-            botaoAlterarSenha.BackgroundImage = novaImagem;
+            botaoAlterarSenha.BackgroundImage = Properties.Resources.botaoAlterarSenha_2;
         }
 
         private void botaoAlterarSenha_MouseLeave(object sender, EventArgs e)
         {
-            Image novaImagem = Properties.Resources.botaoAlterarSenha_1;
-            botaoAlterarSenha.BackgroundImage = novaImagem;
+            botaoAlterarSenha.BackgroundImage = Properties.Resources.botaoAlterarSenha_1;
         }
 
         private void botaoMeusCadastros_MouseEnter(object sender, EventArgs e)
         {
-            Image novaImagem = Properties.Resources.botaoMeusCadastros2;
-            botaoMeusCadastros.BackgroundImage = novaImagem;
+            botaoMeusCadastros.BackgroundImage = Properties.Resources.botaoMeusCadastros2;
         }
 
         private void botaoMeusCadastros_MouseLeave(object sender, EventArgs e)
         {
-            Image novaImagem = Properties.Resources.botaoMeusCadastros1;
-            botaoMeusCadastros.BackgroundImage = novaImagem;
+            botaoMeusCadastros.BackgroundImage = Properties.Resources.botaoMeusCadastros1;
         }
 
         private void btnEnviar_MouseEnter(object sender, EventArgs e)
         {
-            Image novaImagem = Properties.Resources.botaoEnviarMensagem2;
-            btnEnviar.BackgroundImage = novaImagem;
+            btnEnviar.BackgroundImage = Properties.Resources.botaoEnviarMensagem2;
         }
 
         private void btnEnviar_MouseLeave(object sender, EventArgs e)
         {
-            Image novaImagem = Properties.Resources.botaoEnviarMensagem1;
-            btnEnviar.BackgroundImage = novaImagem;
+            btnEnviar.BackgroundImage = Properties.Resources.botaoEnviarMensagem1;
         }
+
+        private void botaoCandidatar_MouseEnter(object sender, EventArgs e)
+        {
+            botaoCandidatar.BackgroundImage = Properties.Resources.botaoCandidatar_2;
+        }
+
+        private void botaoCandidatar_MouseLeave(object sender, EventArgs e)
+        {
+            botaoCandidatar.BackgroundImage = Properties.Resources.botaoCandidatar_1;
+        }
+
+
+        
+
+      
+
+
+
+
     }
 }
