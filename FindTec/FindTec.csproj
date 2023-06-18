@@ -249,6 +249,7 @@
     <None Include="Imagens\botaoEntrar2.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Imagens\telaPerfilEmpresa.png" />
     <None Include="Imagens\TelaMensagemRecebida.png" />
     <None Include="Imagens\TelaMensagem.png" />
     <None Include="Imagens\telaPerfil.png" />
@@ -285,6 +286,8 @@
     <None Include="Imagens\botaoMensagens 1.png" />
     <None Include="Imagens\botaoPerfil 1.png" />
     <None Include="Imagens\botaoHome 1.png" />
+    <None Include="Imagens\botaoMeusCadastros1.png" />
+    <None Include="Imagens\botaoMeusCadastros2.png" />
     <Content Include="Imagens\botaoVoltar.png" />
     <None Include="Imagens\CadastroAluno.png" />
     <None Include="Imagens\CadastroEmpresa.png" />
@@ -295,6 +298,8 @@
     <None Include="Imagens\imagemAluno.png" />
     <None Include="Imagens\fundoMensagemRecebida2.png" />
     <None Include="Imagens\fundoMensagemRecebida1.png" />
+    <None Include="Imagens\imagemEmpresa.png" />
+    <None Include="Imagens\menuLateralEmpresa.png" />
     <Content Include="Imagens\TelaEscolha.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

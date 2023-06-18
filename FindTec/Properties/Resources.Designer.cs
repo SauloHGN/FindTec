@@ -343,6 +343,26 @@ namespace FindTec.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap botaoMeusCadastros1 {
+            get {
+                object obj = ResourceManager.GetObject("botaoMeusCadastros1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap botaoMeusCadastros2 {
+            get {
+                object obj = ResourceManager.GetObject("botaoMeusCadastros2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap botaoOportunidades_1 {
             get {
                 object obj = ResourceManager.GetObject("botaoOportunidades 1", resourceCulture);
@@ -483,9 +503,29 @@ namespace FindTec.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap imagemEmpresa {
+            get {
+                object obj = ResourceManager.GetObject("imagemEmpresa", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap menuLateral {
             get {
                 object obj = ResourceManager.GetObject("menuLateral", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap menuLateralEmpresa {
+            get {
+                object obj = ResourceManager.GetObject("menuLateralEmpresa", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -556,6 +596,16 @@ namespace FindTec.Properties {
         internal static System.Drawing.Bitmap telaPerfil {
             get {
                 object obj = ResourceManager.GetObject("telaPerfil", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap telaPerfilEmpresa {
+            get {
+                object obj = ResourceManager.GetObject("telaPerfilEmpresa", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

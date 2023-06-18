@@ -1,8 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.ComponentModel;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Text;
 using System.Windows.Forms;
 
 namespace FindTec
@@ -11,10 +12,10 @@ namespace FindTec
     {
         public static string nomeVaga;
         public Form2()
-        {            
+        {
             InitializeComponent();
             btnVaga_Click(this, new EventArgs());//INICIAR COM O BOTÃO VAGA SELECIONADO
-            button1_Click(this, new EventArgs());// INICIAR COM A "HOMEPAGE" PERFIL
+            botaoPerfil_Click(this, new EventArgs());// INICIAR COM A "HOMEPAGE" PERFIL
             this.FormClosing += new FormClosingEventHandler(Form2_FormClosing);// FECHAR FRAME PRINCIPAL VOLTAR PARA A TELA DE LOGIN
             this.KeyDown += new KeyEventHandler(EnviarMensagem_Enter);// Enviar mensagem com Enter
             LoadMinhasVagas();
@@ -42,8 +43,8 @@ namespace FindTec
             nomeTxt.Text = user.Item2;
             emailTxt.Text = user.Item3;
             telefoneTxt.Text = user.Item4;
+            panelPerfilE.Visible = true;
 
-            //
             NomeEmpresaTextBox.Text = user.Item2;
 
             if (user.Item9 != null && user.Item9.Length > 0)
@@ -51,21 +52,23 @@ namespace FindTec
                 using (MemoryStream ms = new MemoryStream(user.Item9))
                 {
                     pictureBox1.Image = Image.FromStream(ms);
+                    pictureBox2.Image = Image.FromStream(ms);
                 }
             }
             else
             {
                 pictureBox1.Image = null;
+                pictureBox2.Image = null;
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void botaoPerfil_Click(object sender, EventArgs e)
         {
             opA1.Visible = false;
             opB1.Visible = false;
             opC1.Visible = false;
             opD1.Visible = false;
-            
+
             panelAnunciarVaga.Visible = false;
             panelAlunoCadastrado.Visible = false;
             panelMinhasVagas.Visible = false;
@@ -74,7 +77,7 @@ namespace FindTec
             panelPerfilE.Visible = true;
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void botaoOportunidades_Click(object sender, EventArgs e)
         {
             opA1.Visible = false;
             opB1.Visible = true;
@@ -102,12 +105,12 @@ namespace FindTec
             panelAlunoCadastrado.Visible = false;
             panelConversas.Visible = false;
 
-            panelConversas.Visible = true; 
+            panelConversas.Visible = true;
             panelConversas.BringToFront();
             LoadConversas();
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void botaoHome_Click(object sender, EventArgs e)
         {
             opA1.Visible = false;
             opB1.Visible = false;
@@ -123,14 +126,16 @@ namespace FindTec
 
         private void panelPerfilE_Paint(object sender, PaintEventArgs e)
         {
-            
+
         }
         private void opD1_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void button7_Click(object sender, EventArgs e)
+        private Image imagemSelecionada;
+
+        private void botaoAlterarFoto_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "Arquivos de Imagem (*.jpg, *.jpeg, *.png, *.bmp)|*.jpg;*.jpeg;*.png;*.bmp";
@@ -147,9 +152,11 @@ namespace FindTec
                         stream.Read(dadosImagem, 0, (int)stream.Length);
 
                         MemoryStream ms = new MemoryStream(dadosImagem);
-                        Image imagem = Image.FromStream(ms);
+                        imagemSelecionada = Image.FromStream(ms);
 
-                        pictureBox1.Image = imagem;
+                        pictureBox1.Image = imagemSelecionada;
+                        pictureBox2.Image = imagemSelecionada;
+
 
                         var user = DadosUsuario.listaEmpresas.Find(u => u.Item1 == Program.userAtual);
 
@@ -160,7 +167,9 @@ namespace FindTec
                         {
                             DadosUsuario.listaEmpresas[index] = user;
                         }
-                        Console.WriteLine(""+user.Item9);
+
+                        Console.WriteLine("" + user);
+
                     }
                 }
             }
@@ -359,7 +368,7 @@ namespace FindTec
                 MessageBox.Show("Todos os campos devem ser preenchidos.");
                 return;
             }
-           
+
             string nomeEmpresa = NomeEmpresaTextBox.Text;
             string nomeVaga = nomeVagaTextBox.Text;
             int cargaHoraria = int.Parse(CargaHTextBox.Text);
@@ -367,11 +376,11 @@ namespace FindTec
             string cargo = CargoTextBox.Text;
             string curso = CursoVBox.Text;
             string descricao = DescricaoTextBox.Text;
-            
+
             Vaga novaVaga = new Vaga(nomeVaga, nomeEmpresa, cargo, cargaHoraria, remuneracao, curso, descricao);
             Vaga.addVaga(novaVaga);
 
-            nomeVagaTextBox.Clear();           
+            nomeVagaTextBox.Clear();
             CargoTextBox.Clear();
             CargaHTextBox.Clear();
             RemuneracaoTextBox.Clear();
@@ -398,12 +407,12 @@ namespace FindTec
         }
         private void CargaHTextBox_TextChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void btnVaga_Click(object sender, EventArgs e)
         {
-            
+
             btnVaga2.BackColor = Color.Black;
             btnVaga2.ForeColor = Color.White;
             btnMinhasVagas2.BackColor = SystemColors.Control;
@@ -428,7 +437,7 @@ namespace FindTec
             panelAnunciarVaga.Visible = false;
             panelMinhasVagas.Visible = true;
             panelMinhasVagas.BringToFront();
-            
+
             LoadMinhasVagas();
         }
 
@@ -448,7 +457,7 @@ namespace FindTec
         {
             dataGridViewCandidatos.AllowUserToAddRows = false;
             dataGridViewCandidatos.AllowUserToAddRows = false;
-           
+
             if (e.ColumnIndex == gridViewMinhasVagas.Columns["colExibir"].Index && e.RowIndex >= 0)
             {
                 Vaga vaga = Vaga.vagas[e.RowIndex];
@@ -456,11 +465,11 @@ namespace FindTec
                 nomeVaga = gridViewMinhasVagas.Rows[e.RowIndex].Cells["NomeVagaGrid"].Value.ToString();
                 dataGridViewCandidatos.Rows.Clear();
                 foreach (var vagas in vaga.Candidatos)
-                {              
+                {
                     int idcadastrado = int.Parse(vagas);
                     var user = DadosUsuario.listaAlunos.Find(u => u.Item1 == idcadastrado);
 
-                    if(vaga.Candidatos.Contains(user.Item1.ToString()) && user.Item7 == true)
+                    if (vaga.Candidatos.Contains(user.Item1.ToString()) && user.Item7 == true)
                     {
                         DataGridViewButtonCell botaoChat = new DataGridViewButtonCell();
                         botaoChat.Value = "Chat";
@@ -476,50 +485,50 @@ namespace FindTec
                             }
                         }
                         dataGridViewCandidatos.Rows.Add(imagem, user.Item2, user.Item3, user.Item4, "Chat");
-                    }                
+                    }
                 }
                 Load_Cadastrados();
                 panelAlunoCadastrado.Visible = true;
                 panelAlunoCadastrado.BringToFront();
-            }           
+            }
         }
 
         public void LoadMinhasVagas()
         {
             gridViewMinhasVagas.AllowUserToAddRows = false;
-            gridViewMinhasVagas.AllowUserToAddRows = false;       
+            gridViewMinhasVagas.AllowUserToAddRows = false;
             gridViewMinhasVagas.Rows.Clear();
-            
-            var user = DadosUsuario.listaEmpresas.Find(u => u.Item1 == Program.userAtual);  
-            
-            foreach(var vagas in Vaga.vagas)
-            {                            
+
+            var user = DadosUsuario.listaEmpresas.Find(u => u.Item1 == Program.userAtual);
+
+            foreach (var vagas in Vaga.vagas)
+            {
                 if (user.Item2 == vagas.NomeEmpresa)
                 {
-                    DataGridViewButtonCell button1 = new DataGridViewButtonCell();
-                    button1.Value = "+";
+                    DataGridViewButtonCell botaoPerfil = new DataGridViewButtonCell();
+                    botaoPerfil.Value = "+";
                     var icone = Properties.Resources.botaoAluno1;
                     if (vagas.alteracao == true)
                     {
                         icone = Properties.Resources.botaoAluno2;
                     }
                     gridViewMinhasVagas.Rows.Add(icone, vagas.NomeVaga, vagas.Cargo, vagas.cargaHoraria, vagas.remuneracao, vagas.Curso, "+");
-                }              
+                }
             }
             gridViewMinhasVagas.ClearSelection();
         }
 
         private void dataGridViewE_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {//DATAGRIDVIEW CANDIDATOS
-            
+
             if (e.ColumnIndex == dataGridViewCandidatos.Columns["colContato"].Index && e.RowIndex >= 0)
-            {               
+            {
                 // Obtém o usuário selecionado
                 var Destinatario = DadosUsuario.listaAlunos.Find(u => u.Item3 == (dataGridViewCandidatos.Rows[e.RowIndex].Cells["colEmail"].Value.ToString()));
                 //
                 panelMensagens.Visible = true;
-                
-                panelMensagens.BringToFront();               
+
+                panelMensagens.BringToFront();
                 int destinatario = Destinatario.Item1;
                 Chat.getIdDestinatario = destinatario;
                 int remetente = Program.userAtual;
@@ -527,10 +536,10 @@ namespace FindTec
                 var chat = Chat.listaChats.FirstOrDefault(c =>
                     (c.Remetente == Program.userAtual && c.Destinatario == Chat.getIdDestinatario) ||
                     (c.Remetente == Chat.getIdDestinatario && c.Destinatario == Program.userAtual));
-                if(chat != null)
+                if (chat != null)
                 {
-                    Chat.LoadMensagens(panelMensagens , chat);
-                }              
+                    Chat.LoadMensagens(panelMensagens, chat);
+                }
                 LoadConversas();
             }
         }
@@ -624,12 +633,12 @@ namespace FindTec
         private void buttonEncerrarVaga_Click(object sender, EventArgs e)
         {
             Vaga vaga = Vaga.vagas.Find(v => v.NomeVaga == nomeVaga);
-            foreach(DataGridViewRow row in dataGridViewCandidatos.Rows)// percorrer as linhas do datagridView
+            foreach (DataGridViewRow row in dataGridViewCandidatos.Rows)// percorrer as linhas do datagridView
             {
                 DataGridViewCheckBoxCell cell = (DataGridViewCheckBoxCell)row.Cells[colSelecionado.Index];// obtem o valor do checkbox
-                if(Convert.ToBoolean(cell.Value) == true)
+                if (Convert.ToBoolean(cell.Value) == true)
                 {
-                    string email = row.Cells[colEmail.Index].Value.ToString();                   
+                    string email = row.Cells[colEmail.Index].Value.ToString();
                     int idDestinatario = Chat.ObterIdUsuarioPeloEmail(email);
                     Chat.CriarChat(Program.userAtual, idDestinatario);
                     Chat.EnviarMensagem(Program.userAtual, idDestinatario, "Você foi selecionado para a vaga de " +
@@ -644,7 +653,7 @@ namespace FindTec
                         $"para a vaga de {nomeVaga}. Agradecemos pelo seu interesse e tempo dedicado ao processo seletivo.");
                 }
             }
-            panelAlunoCadastrado.Visible = false;          
+            panelAlunoCadastrado.Visible = false;
             Vaga.vagas.Remove(vaga);
             gridViewMinhasVagas.Rows.Clear();
             LoadMinhasVagas();
@@ -656,18 +665,231 @@ namespace FindTec
             TelaLogin login = new TelaLogin();
             login.Show();
             this.Hide();
+        }       
+
+        private void pictureBox1_Paint(object sender, PaintEventArgs e)
+        {
+            // Obtém a imagem da PictureBox
+            Image image = pictureBox1.Image;
+
+            if (image != null)
+            {
+                // Calcula a proporção de redimensionamento
+                float ratio = (float)pictureBox1.Height / image.Height;
+
+                // Calcula as dimensões da imagem redimensionada
+                int width = (int)(image.Width * ratio);
+                int height = pictureBox1.Height;
+
+                // Calcula as coordenadas X e Y para centralizar a imagem
+                int x = (pictureBox1.Width - width) / 2;
+                int y = (pictureBox1.Height - height) / 2;
+
+                // Desenha a imagem redimensionada
+                e.Graphics.DrawImage(image, x, y, width, height);
+            }
+
+            // Cria uma região elíptica do mesmo tamanho que a PictureBox
+            System.Drawing.Drawing2D.GraphicsPath roundPath = new System.Drawing.Drawing2D.GraphicsPath();
+            roundPath.AddEllipse(0, 0, pictureBox1.Width - 1, pictureBox1.Height - 1);
+
+            // Define a região da PictureBox para a região elíptica
+            pictureBox1.Region = new Region(roundPath);
+        }
+
+        private void pictureBox2_Paint(object sender, PaintEventArgs e)
+        {
+            // Obtém a imagem da PictureBox
+            Image image = pictureBox2.Image;
+
+            if (image != null)
+            {
+                // Calcula a proporção de redimensionamento
+                float ratio = (float)pictureBox2.Height / image.Height;
+
+                // Calcula as dimensões da imagem redimensionada
+                int width = (int)(image.Width * ratio);
+                int height = pictureBox2.Height;
+
+                // Calcula as coordenadas X e Y para centralizar a imagem
+                int x = (pictureBox2.Width - width) / 2;
+                int y = (pictureBox2.Height - height) / 2;
+
+                // Desenha a imagem redimensionada
+                e.Graphics.DrawImage(image, x, y, width, height);
+            }
+
+            // Cria uma região elíptica do mesmo tamanho que a PictureBox
+            System.Drawing.Drawing2D.GraphicsPath roundPath = new System.Drawing.Drawing2D.GraphicsPath();
+            roundPath.AddEllipse(0, 0, pictureBox2.Width - 1, pictureBox2.Height - 1);
+
+            // Define a região da PictureBox para a região elíptica
+            pictureBox2.Region = new System.Drawing.Region(roundPath);
+        }
+
+        ///////////////////////// EVENTOS DE TROCAR IMAGEM DOS BOTOES //////////////////////////////
+
+        private void botaoHome_MouseEnter(object sender, EventArgs e)
+        {
+            botaoHome.BackgroundImage = Properties.Resources.botaoHome_2;
+        }
+
+        private void botaoHome_MouseLeave(object sender, EventArgs e)
+        {
+            botaoHome.BackgroundImage = Properties.Resources.botaoHome_1;
+        }
+
+        private void botaoPerfil_MouseEnter(object sender, EventArgs e)
+        {
+            botaoPerfil.BackgroundImage = Properties.Resources.botaoPerfil_2;
+        }
+
+        private void botaoPerfil_MouseLeave(object sender, EventArgs e)
+        {
+            botaoPerfil.BackgroundImage = Properties.Resources.botaoPerfil_1;
+        }
+
+        private void botaoOportunidades_MouseEnter(object sender, EventArgs e)
+        {
+            botaoOportunidades.BackgroundImage = Properties.Resources.botaoOportunidades_2;
+        }
+
+        private void botaoOportunidades_MouseLeave(object sender, EventArgs e)
+        {
+            botaoOportunidades.BackgroundImage = Properties.Resources.botaoOportunidades_1;
+        }
+
+        private void botaoMensagens_MouseEnter(object sender, EventArgs e)
+        {
+            botaoMensagens.BackgroundImage = Properties.Resources.botaoMensagens_2;
+        }
+
+        private void botaoMensagens_MouseLeave(object sender, EventArgs e)
+        {
+            botaoMensagens.BackgroundImage = Properties.Resources.botaoMensagens_1;
+        }
+
+        private void botaoAlterarFoto_MouseEnter(object sender, EventArgs e)
+        {
+            botaoAlterarFoto.BackgroundImage = Properties.Resources.BotaoAlterarImagem_2;
+        }
+
+        private void botaoAlterarFoto_MouseLeave(object sender, EventArgs e)
+        {
+            botaoAlterarFoto.BackgroundImage = Properties.Resources.BotaoAlterarImagem_1;
+        }
+
+        private void botaoAlterarSenha_MouseEnter(object sender, EventArgs e)
+        {
+            botaoAlterarSenha.BackgroundImage = Properties.Resources.botaoAlterarSenha_2;
+        }
+
+        private void botaoAlterarSenha_MouseLeave(object sender, EventArgs e)
+        {
+            botaoAlterarSenha.BackgroundImage = Properties.Resources.botaoAlterarSenha_1;
+        }
+
+        private void botaoEditarDados_MouseEnter(object sender, EventArgs e)
+        {
+            botaoEditarDados.BackgroundImage = Properties.Resources.botaoEditarDados_2;
+        }
+
+        private void botaoEditarDados_MouseLeave(object sender, EventArgs e)
+        {
+            botaoEditarDados.BackgroundImage = Properties.Resources.botaoEditarDados_1;
+        }
+
+        private void botaoDesativarConta_MouseEnter(object sender, EventArgs e)
+        {
+            botaoDesativarConta.BackgroundImage = Properties.Resources.botaoDesativarConta_2;
+        }
+
+        private void botaoDesativarConta_MouseLeave(object sender, EventArgs e)
+        {
+            botaoDesativarConta.BackgroundImage = Properties.Resources.botaoDesativarConta_1;
         }
 
         private void botaoSair_MouseEnter(object sender, EventArgs e)
         {
-            Image novaImagem = Properties.Resources.botaoSair_2;
-            botaoSair.BackgroundImage = novaImagem;
+            botaoSair.BackgroundImage = Properties.Resources.botaoSair_2;
         }
 
         private void botaoSair_MouseLeave(object sender, EventArgs e)
         {
-            Image novaImagem = Properties.Resources.botaoSair_1;
-            botaoSair.BackgroundImage = novaImagem;
+            botaoSair.BackgroundImage = Properties.Resources.botaoSair_1;
+        }
+
+        private void nomeTxt_TextChanged(object sender, EventArgs e)
+        {
+            {
+                if (!string.IsNullOrEmpty(nomeTxt.Text))
+                {
+                    string[] nomes = nomeTxt.Text.Split(' ');
+                    StringBuilder resultado = new StringBuilder();
+
+                    foreach (string nome in nomes)
+                    {
+                        if (resultado.Length > 0)
+                            resultado.Append(" ");
+
+                        if (nome.ToLower() == "da" || nome.ToLower() == "do" || nome.ToLower() == "das" ||
+                            nome.ToLower() == "dos" || nome.ToLower() == "de" || nome.ToLower() == "e" ||
+                            nome.ToLower() == "eles")
+                        {
+                            resultado.Append(nome.ToLower());
+                        }
+                        else
+                        {
+                            if (nome.Length > 0)
+                            {
+                                string primeiroCaractere = nome.Substring(0, 1).ToUpper();
+                                string restante = nome.Substring(1).ToLower();
+                                resultado.Append(primeiroCaractere + restante);
+                            }
+                        }
+                    }
+                    nomeTxt.Text = resultado.ToString();
+                    nomeTxt.SelectionStart = nomeTxt.Text.Length;
+                }
+            }
+        }
+
+        private bool formatandoTelefone = false;
+        private void telefoneTxt_TextChanged(object sender, EventArgs e)
+        {
+            if (!formatandoTelefone)
+            {
+                formatandoTelefone = true;
+
+                // Remove todos os caracteres não numéricos do telefone
+                string telefone = new string(telefoneTxt.Text.Where(char.IsDigit).ToArray());
+
+                if (telefone.Length >= 2)
+                {
+                    // Garante que a string tenha um comprimento mínimo antes de aplicar a formatação
+                    if (telefone.Length <= 2)
+                    {
+                        telefone = string.Format("({0}", telefone);
+                    }
+                    else if (telefone.Length <= 6)
+                    {
+                        telefone = string.Format("({0}) {1}", telefone.Substring(0, 2), telefone.Substring(2));
+                    }
+                    else if (telefone.Length <= 10)
+                    {
+                        telefone = string.Format("({0}) {1}-{2}", telefone.Substring(0, 2), telefone.Substring(2, 4), telefone.Substring(6));
+                    }
+                    else
+                    {
+                        telefone = string.Format("({0}) {1}-{2}", telefone.Substring(0, 2), telefone.Substring(2, 5), telefone.Substring(7));
+                    }
+                }
+
+                telefoneTxt.Text = telefone;
+                telefoneTxt.SelectionStart = telefone.Length;
+
+                formatandoTelefone = false;
+            }
         }
     }
 }

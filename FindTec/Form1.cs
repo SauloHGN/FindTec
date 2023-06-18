@@ -123,17 +123,17 @@ namespace FindTec
             // AO FECHAR O FRAME PRINCIPLA VOLTAR PARA TELA DE LOGIN
             TelaLogin telaLogin = new TelaLogin();
             telaLogin.Show();
-        }      
-       
+        }
+
         private void Form1_Load_1(object sender, EventArgs e)
         {
             var user = DadosUsuario.listaAlunos.Find(u => u.Item1 == Program.userAtual);
             nomeTxt.Text = user.Item2;
             emailTxt.Text = user.Item3;
-            telefoneTxt.Text = user.Item4;           
+            telefoneTxt.Text = user.Item4;
             cursoTxt.Text = user.Item5;
             panelPerfil.Visible = true;
-            ////////
+
             if (user.Item10 != null && user.Item10.Length > 0)
             {
                 using (MemoryStream ms = new MemoryStream(user.Item10))
@@ -147,7 +147,6 @@ namespace FindTec
                 pictureBox1.Image = null;
                 pictureBox2.Image = null;
             }
-
         }
         private void button1_Click_2(object sender, EventArgs e)
         {
@@ -765,7 +764,6 @@ namespace FindTec
 
         private void nomeTxt_TextChanged(object sender, EventArgs e)
         {
-
             if (!string.IsNullOrEmpty(nomeTxt.Text))
             {
                 string[] nomes = nomeTxt.Text.Split(' ');
@@ -882,5 +880,9 @@ namespace FindTec
             gridViewVagasCadastrado.ClearSelection();
         }
 
+        private void botaoHome_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
