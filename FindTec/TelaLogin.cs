@@ -187,7 +187,7 @@ namespace FindTec
             {
                 if (tipoUser == "aluno")
                 {
-                    Form1 telaAluno = new Form1();
+                    TelaAluno telaAluno = new TelaAluno();
                     telaAluno.Show();
                     this.Hide();
                 }
