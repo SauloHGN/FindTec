@@ -124,7 +124,6 @@ C:\Users\lucas\Downloads\FindTec\FindTec\obj\Debug\FindTec.csproj.AssemblyRefere
 C:\Users\lucas\Downloads\FindTec\FindTec\obj\Debug\FindTec.csproj.SuggestedBindingRedirects.cache
 C:\Users\lucas\Downloads\FindTec\FindTec\obj\Debug\FindTec.ConversaItem.resources
 C:\Users\lucas\Downloads\FindTec\FindTec\obj\Debug\FindTec.Form2.resources
-C:\Users\lucas\Downloads\FindTec\FindTec\obj\Debug\FindTec.Form3.resources
 C:\Users\lucas\Downloads\FindTec\FindTec\obj\Debug\FindTec.Form4.resources
 C:\Users\lucas\Downloads\FindTec\FindTec\obj\Debug\FindTec.myMessage.resources
 C:\Users\lucas\Downloads\FindTec\FindTec\obj\Debug\FindTec.OpA.resources
@@ -169,3 +168,4 @@ D:\FindTec\FindTec\obj\Debug\FindTec.exe
 D:\FindTec\FindTec\obj\Debug\FindTec.pdb
 D:\FindTec\FindTec\obj\Debug\FindTec.csproj.AssemblyReference.cache
 C:\Users\lucas\Downloads\FindTec\FindTec\obj\Debug\FindTec.TelaAluno.resources
+C:\Users\lucas\Downloads\FindTec\FindTec\obj\Debug\FindTec.TelaCoordenador.resources

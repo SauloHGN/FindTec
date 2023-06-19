@@ -199,7 +199,7 @@ namespace FindTec
                 }
                 if (tipoUser == "coordenador")
                 {
-                    Form3 telaCoordenador = new Form3();
+                    TelaCoordenador telaCoordenador = new TelaCoordenador();
                     telaCoordenador.Show();
                     this.Hide();
                 }

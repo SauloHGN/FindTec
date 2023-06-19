@@ -35,10 +35,6 @@ namespace FindTec
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.opA1 = new FindTec.OpA();
-            this.opB1 = new FindTec.OpB();
-            this.opC1 = new FindTec.OpC();
-            this.opD1 = new FindTec.OpD();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -137,35 +133,6 @@ namespace FindTec
             this.button1.Text = "Opção A";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // opA1
-            // 
-            this.opA1.Location = new System.Drawing.Point(223, 15);
-            this.opA1.Name = "opA1";
-            this.opA1.Size = new System.Drawing.Size(755, 525);
-            this.opA1.TabIndex = 2;
-            this.opA1.Load += new System.EventHandler(this.opA1_Load);
-            // 
-            // opB1
-            // 
-            this.opB1.Location = new System.Drawing.Point(223, 15);
-            this.opB1.Name = "opB1";
-            this.opB1.Size = new System.Drawing.Size(755, 525);
-            this.opB1.TabIndex = 3;
-            // 
-            // opC1
-            // 
-            this.opC1.Location = new System.Drawing.Point(223, 15);
-            this.opC1.Name = "opC1";
-            this.opC1.Size = new System.Drawing.Size(755, 525);
-            this.opC1.TabIndex = 4;
-            // 
-            // opD1
-            // 
-            this.opD1.Location = new System.Drawing.Point(223, 15);
-            this.opD1.Name = "opD1";
-            this.opD1.Size = new System.Drawing.Size(755, 525);
-            this.opD1.TabIndex = 5;
             // 
             // label11
             // 
@@ -289,10 +256,6 @@ namespace FindTec
             this.ClientSize = new System.Drawing.Size(1000, 550);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.cadastroCoordenador);
-            this.Controls.Add(this.opB1);
-            this.Controls.Add(this.opA1);
-            this.Controls.Add(this.opD1);
-            this.Controls.Add(this.opC1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form4";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -312,10 +275,6 @@ namespace FindTec
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button1;
-        private OpA opA1;
-        private OpB opB1;
-        private OpC opC1;
-        private OpD opD1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;

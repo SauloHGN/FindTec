@@ -26,39 +26,27 @@ namespace FindTec
         private void button1_Click(object sender, EventArgs e)
         {
             
-            opA1.Visible = true;          
-            opB1.Visible = false;
-            opC1.Visible = false;
-            opD1.Visible = false;
+            
             cadastroCoordenador.Visible = false;
         }
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            opA1.Visible = false;
-            opB1.Visible = true;
-            opC1.Visible = false;
-            opD1.Visible = false;
+            
             cadastroCoordenador.Visible = true;
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             
-            opA1.Visible = false;
-            opB1.Visible = false;
-            opC1.Visible = true;
-            opD1.Visible = false;
+           
             cadastroCoordenador.Visible = false;
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             
-            opA1.Visible = false;
-            opB1.Visible = false;
-            opC1.Visible = false;
-            opD1.Visible = true;
+            
             cadastroCoordenador.Visible = false;
         }
 
