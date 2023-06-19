@@ -906,5 +906,14 @@ namespace FindTec
         {
             botaoEncerrarVaga.BackgroundImage = Properties.Resources.botaoEncerrarVaga1;
         }
+
+        ///////////////SAULO VC PRECISA ARRUMAR ISSO AQUI////////////////////////////
+
+        private void botaoAlterarSenha_Click(object sender, EventArgs e)
+        {
+            //    RecuperarSenha recuperarSenha = new RecuperarSenha();
+            //    recuperarSenha.panelNewSenha.Visible = true;
+            //    this.Hide();
+        }
     }
 }

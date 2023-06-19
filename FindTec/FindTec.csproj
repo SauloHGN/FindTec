@@ -328,6 +328,7 @@
     <None Include="Imagens\telaCandidatos.png" />
     <None Include="Imagens\telaAprovacaoCadastro.png" />
     <None Include="Imagens\menuLateralCoordenador.png" />
+    <None Include="Imagens\imagemCoordenador.png" />
     <Content Include="Imagens\TelaEscolha.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

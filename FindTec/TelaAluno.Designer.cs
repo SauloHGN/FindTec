@@ -258,6 +258,7 @@ namespace FindTec
             this.botaoAlterarSenha.Size = new System.Drawing.Size(158, 62);
             this.botaoAlterarSenha.TabIndex = 5;
             this.botaoAlterarSenha.UseVisualStyleBackColor = true;
+            this.botaoAlterarSenha.Click += new System.EventHandler(this.botaoAlterarSenha_Click);
             this.botaoAlterarSenha.MouseEnter += new System.EventHandler(this.botaoAlterarSenha_MouseEnter);
             this.botaoAlterarSenha.MouseLeave += new System.EventHandler(this.botaoAlterarSenha_MouseLeave);
             // 

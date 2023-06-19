@@ -48,12 +48,12 @@ namespace FindTec
             {
                 using (MemoryStream ms = new MemoryStream(user.Item7))
                 {
-                    pictureBox1.Image = Image.FromStream(ms);
+                    picAvatarCoordenador1.Image = Image.FromStream(ms);
                 }
             }
             else
             {
-                pictureBox1.Image = null;
+                picAvatarCoordenador1.Image = null;
             }
             LoadDataGridView();
             LoadDataViewGridE();
@@ -383,7 +383,8 @@ namespace FindTec
             LoadDataGridView();
         }
 
-        private void buttonUpload_Click(object sender, EventArgs e)
+        private Image imagemSelecionada;
+        private void botaoAlterarFoto_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "Arquivos de Imagem (*.jpg, *.jpeg, *.png, *.bmp)|*.jpg;*.jpeg;*.png;*.bmp";
@@ -400,19 +401,24 @@ namespace FindTec
                         stream.Read(dadosImagem, 0, (int)stream.Length);
 
                         MemoryStream ms = new MemoryStream(dadosImagem);
-                        Image imagem = Image.FromStream(ms);
+                        imagemSelecionada = Image.FromStream(ms);
 
-                        pictureBox1.Image = imagem;
+                        picAvatarCoordenador1.Image = imagemSelecionada;
+                        picAvatarCoordenador2.Image = imagemSelecionada;
 
-                        var user = DadosUsuario.listaCoordenador.Find(u => u.Item1 == Program.userAtual);
 
-                        user.Item7 = dadosImagem;
+                        var user = DadosUsuario.listaAlunos.Find(u => u.Item1 == Program.userAtual);
 
-                        var index = DadosUsuario.listaCoordenador.FindIndex(u => u.Item1 == Program.userAtual);// descobro o indece do usuario
+                        user.Item10 = dadosImagem;
+
+                        var index = DadosUsuario.listaAlunos.FindIndex(u => u.Item1 == Program.userAtual);// descobro o indece do usuario
                         if (index != -1)
                         {
-                            DadosUsuario.listaCoordenador[index] = user;
-                        }                    
+                            DadosUsuario.listaAlunos[index] = user;
+                        }
+
+                        Console.WriteLine("" + user);
+
                     }
                 }
             }
@@ -733,6 +739,66 @@ namespace FindTec
         {
             Image novaImagem = Properties.Resources.botaoSair_1;
             botaoSair.BackgroundImage = novaImagem;
+        }
+
+        private void picAvatarCoordenador1_Paint(object sender, PaintEventArgs e)
+        {
+            // Obtém a imagem da PictureBox
+            Image image = picAvatarCoordenador1.Image;
+
+            if (image != null)
+            {
+                // Calcula a proporção de redimensionamento
+                float ratio = (float)picAvatarCoordenador1.Height / image.Height;
+
+                // Calcula as dimensões da imagem redimensionada
+                int width = (int)(image.Width * ratio);
+                int height = picAvatarCoordenador1.Height;
+
+                // Calcula as coordenadas X e Y para centralizar a imagem
+                int x = (picAvatarCoordenador1.Width - width) / 2;
+                int y = (picAvatarCoordenador1.Height - height) / 2;
+
+                // Desenha a imagem redimensionada
+                e.Graphics.DrawImage(image, x, y, width, height);
+            }
+
+            // Cria uma região elíptica do mesmo tamanho que a PictureBox
+            System.Drawing.Drawing2D.GraphicsPath roundPath = new System.Drawing.Drawing2D.GraphicsPath();
+            roundPath.AddEllipse(0, 0, picAvatarCoordenador1.Width - 1, picAvatarCoordenador1.Height - 1);
+
+            // Define a região da PictureBox para a região elíptica
+            picAvatarCoordenador1.Region = new System.Drawing.Region(roundPath);
+        }
+
+        private void picAvatarCoordenador2_Paint(object sender, PaintEventArgs e)
+        {
+            // Obtém a imagem da PictureBox
+            Image image = picAvatarCoordenador2.Image;
+
+            if (image != null)
+            {
+                // Calcula a proporção de redimensionamento
+                float ratio = (float)picAvatarCoordenador2.Height / image.Height;
+
+                // Calcula as dimensões da imagem redimensionada
+                int width = (int)(image.Width * ratio);
+                int height = picAvatarCoordenador2.Height;
+
+                // Calcula as coordenadas X e Y para centralizar a imagem
+                int x = (picAvatarCoordenador2.Width - width) / 2;
+                int y = (picAvatarCoordenador2.Height - height) / 2;
+
+                // Desenha a imagem redimensionada
+                e.Graphics.DrawImage(image, x, y, width, height);
+            }
+
+            // Cria uma região elíptica do mesmo tamanho que a PictureBox
+            System.Drawing.Drawing2D.GraphicsPath roundPath = new System.Drawing.Drawing2D.GraphicsPath();
+            roundPath.AddEllipse(0, 0, picAvatarCoordenador2.Width - 1, picAvatarCoordenador2.Height - 1);
+
+            // Define a região da PictureBox para a região elíptica
+            picAvatarCoordenador2.Region = new System.Drawing.Region(roundPath);
         }
     }
 }
