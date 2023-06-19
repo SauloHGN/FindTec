@@ -29,15 +29,16 @@ namespace FindTec
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.botaoSair = new System.Windows.Forms.Button();
             this.viewUsuarios = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
@@ -54,7 +55,6 @@ namespace FindTec
             this.panelCadastroAprov = new System.Windows.Forms.Panel();
             this.buttonListEmpresa = new System.Windows.Forms.Button();
             this.buttonListAluno5 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             this.dataGridViewE = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -82,11 +82,6 @@ namespace FindTec
             this.cargaHGrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.remuneracaoGrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colExcluir = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.labelOportunidades = new System.Windows.Forms.Label();
-            this.opC1 = new FindTec.OpC();
-            this.opB1 = new FindTec.OpB();
-            this.opA1 = new FindTec.OpA();
-            this.opD1 = new FindTec.OpD();
             this.panelMensagens = new System.Windows.Forms.Panel();
             this.flowLayoutPanelMensagens = new System.Windows.Forms.FlowLayoutPanel();
             this.btnVoltar = new System.Windows.Forms.Button();
@@ -94,7 +89,6 @@ namespace FindTec
             this.txtMensagem = new System.Windows.Forms.TextBox();
             this.panelConversas = new System.Windows.Forms.Panel();
             this.FlowPanelConversas = new System.Windows.Forms.FlowLayoutPanel();
-            this.labelConversas = new System.Windows.Forms.Label();
             this.panelViewUsuarios = new System.Windows.Forms.Panel();
             this.dataGridViewUsuarios = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -102,8 +96,6 @@ namespace FindTec
             this.colEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colContato = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.label5 = new System.Windows.Forms.Label();
-            this.botaoSair = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panelCadastroAprov.SuspendLayout();
@@ -134,6 +126,25 @@ namespace FindTec
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(215, 550);
             this.panel1.TabIndex = 0;
+            // 
+            // botaoSair
+            // 
+            this.botaoSair.BackgroundImage = global::FindTec.Properties.Resources.botaoSair_1;
+            this.botaoSair.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.botaoSair.FlatAppearance.BorderSize = 0;
+            this.botaoSair.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.botaoSair.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.botaoSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botaoSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.botaoSair.ForeColor = System.Drawing.Color.Black;
+            this.botaoSair.Location = new System.Drawing.Point(1, 495);
+            this.botaoSair.Name = "botaoSair";
+            this.botaoSair.Size = new System.Drawing.Size(197, 51);
+            this.botaoSair.TabIndex = 31;
+            this.botaoSair.UseVisualStyleBackColor = true;
+            this.botaoSair.Click += new System.EventHandler(this.botaoSair_Click);
+            this.botaoSair.MouseEnter += new System.EventHandler(this.botaoSair_MouseEnter);
+            this.botaoSair.MouseLeave += new System.EventHandler(this.botaoSair_MouseLeave);
             // 
             // viewUsuarios
             // 
@@ -221,14 +232,14 @@ namespace FindTec
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle25.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle25.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle25.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle25.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle25.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle25;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Nome,
@@ -237,18 +248,18 @@ namespace FindTec
             this.Column3,
             this.ColumnAprov,
             this.ColumnRecusar});
-            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle26.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle26.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle26.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle26;
-            this.dataGridView1.Location = new System.Drawing.Point(98, 140);
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle10;
+            this.dataGridView1.Location = new System.Drawing.Point(42, 133);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(600, 299);
+            this.dataGridView1.Size = new System.Drawing.Size(670, 330);
             this.dataGridView1.TabIndex = 6;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -291,12 +302,12 @@ namespace FindTec
             // 
             // panelCadastroAprov
             // 
-            this.panelCadastroAprov.BackColor = System.Drawing.Color.White;
+            this.panelCadastroAprov.BackColor = System.Drawing.Color.Transparent;
+            this.panelCadastroAprov.BackgroundImage = global::FindTec.Properties.Resources.telaAprovacaoCadastro;
             this.panelCadastroAprov.Controls.Add(this.buttonListEmpresa);
             this.panelCadastroAprov.Controls.Add(this.buttonListAluno5);
-            this.panelCadastroAprov.Controls.Add(this.label2);
-            this.panelCadastroAprov.Controls.Add(this.dataGridViewE);
             this.panelCadastroAprov.Controls.Add(this.dataGridView1);
+            this.panelCadastroAprov.Controls.Add(this.dataGridViewE);
             this.panelCadastroAprov.Location = new System.Drawing.Point(223, 15);
             this.panelCadastroAprov.Name = "panelCadastroAprov";
             this.panelCadastroAprov.Size = new System.Drawing.Size(755, 525);
@@ -305,7 +316,7 @@ namespace FindTec
             // 
             // buttonListEmpresa
             // 
-            this.buttonListEmpresa.Location = new System.Drawing.Point(422, 111);
+            this.buttonListEmpresa.Location = new System.Drawing.Point(482, 480);
             this.buttonListEmpresa.Name = "buttonListEmpresa";
             this.buttonListEmpresa.Size = new System.Drawing.Size(75, 23);
             this.buttonListEmpresa.TabIndex = 9;
@@ -316,7 +327,7 @@ namespace FindTec
             // buttonListAluno5
             // 
             this.buttonListAluno5.AccessibleName = "buttonAluno";
-            this.buttonListAluno5.Location = new System.Drawing.Point(264, 111);
+            this.buttonListAluno5.Location = new System.Drawing.Point(192, 480);
             this.buttonListAluno5.Name = "buttonListAluno5";
             this.buttonListAluno5.Size = new System.Drawing.Size(75, 23);
             this.buttonListAluno5.TabIndex = 10;
@@ -324,29 +335,19 @@ namespace FindTec
             this.buttonListAluno5.UseVisualStyleBackColor = true;
             this.buttonListAluno5.Click += new System.EventHandler(this.buttonListAluno_Click_1);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(259, 72);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(238, 25);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "Aprovação de Cadastro";
-            // 
             // dataGridViewE
             // 
             this.dataGridViewE.BackgroundColor = System.Drawing.Color.White;
             this.dataGridViewE.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewE.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle27.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle27.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle27.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewE.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle27;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewE.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.dataGridViewE.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewE.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -355,18 +356,18 @@ namespace FindTec
             this.dataGridViewTextBoxColumn4,
             this.ColumnAprovE,
             this.ColumnRecusarE});
-            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle28.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle28.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle28.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewE.DefaultCellStyle = dataGridViewCellStyle28;
-            this.dataGridViewE.Location = new System.Drawing.Point(98, 140);
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewE.DefaultCellStyle = dataGridViewCellStyle12;
+            this.dataGridViewE.Location = new System.Drawing.Point(42, 133);
             this.dataGridViewE.Name = "dataGridViewE";
             this.dataGridViewE.RowHeadersVisible = false;
-            this.dataGridViewE.Size = new System.Drawing.Size(600, 299);
+            this.dataGridViewE.Size = new System.Drawing.Size(670, 330);
             this.dataGridViewE.TabIndex = 6;
             this.dataGridViewE.Visible = false;
             this.dataGridViewE.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewE_CellContentClick);
@@ -411,6 +412,7 @@ namespace FindTec
             // panelPerfilC
             // 
             this.panelPerfilC.BackColor = System.Drawing.Color.White;
+            this.panelPerfilC.BackgroundImage = global::FindTec.Properties.Resources.telaPerfilCoordenador;
             this.panelPerfilC.Controls.Add(this.buttonUpload);
             this.panelPerfilC.Controls.Add(this.label6);
             this.panelPerfilC.Controls.Add(this.button6);
@@ -521,8 +523,8 @@ namespace FindTec
             // panelOportunidades
             // 
             this.panelOportunidades.BackColor = System.Drawing.Color.White;
+            this.panelOportunidades.BackgroundImage = global::FindTec.Properties.Resources.telaOportunidades;
             this.panelOportunidades.Controls.Add(this.gridViewOportunidades);
-            this.panelOportunidades.Controls.Add(this.labelOportunidades);
             this.panelOportunidades.Location = new System.Drawing.Point(223, 15);
             this.panelOportunidades.Name = "panelOportunidades";
             this.panelOportunidades.Size = new System.Drawing.Size(755, 525);
@@ -530,17 +532,17 @@ namespace FindTec
             // 
             // gridViewOportunidades
             // 
-            this.gridViewOportunidades.BackgroundColor = System.Drawing.Color.White;
+            this.gridViewOportunidades.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(181)))), ((int)(((byte)(220)))));
             this.gridViewOportunidades.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gridViewOportunidades.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle29.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle29.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle29.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridViewOportunidades.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle29;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridViewOportunidades.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.gridViewOportunidades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridViewOportunidades.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colFoto,
@@ -550,18 +552,18 @@ namespace FindTec
             this.cargaHGrid,
             this.remuneracaoGrid,
             this.colExcluir});
-            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle30.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle30.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle30.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle30.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle30.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridViewOportunidades.DefaultCellStyle = dataGridViewCellStyle30;
-            this.gridViewOportunidades.Location = new System.Drawing.Point(42, 109);
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridViewOportunidades.DefaultCellStyle = dataGridViewCellStyle14;
+            this.gridViewOportunidades.Location = new System.Drawing.Point(42, 133);
             this.gridViewOportunidades.Name = "gridViewOportunidades";
             this.gridViewOportunidades.RowHeadersVisible = false;
-            this.gridViewOportunidades.Size = new System.Drawing.Size(674, 330);
+            this.gridViewOportunidades.Size = new System.Drawing.Size(670, 330);
             this.gridViewOportunidades.TabIndex = 20;
             this.gridViewOportunidades.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridViewOportunidades_CellContentClick);
             // 
@@ -616,54 +618,10 @@ namespace FindTec
             this.colExcluir.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.colExcluir.Width = 90;
             // 
-            // labelOportunidades
-            // 
-            this.labelOportunidades.AutoSize = true;
-            this.labelOportunidades.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelOportunidades.Location = new System.Drawing.Point(285, 44);
-            this.labelOportunidades.Name = "labelOportunidades";
-            this.labelOportunidades.Size = new System.Drawing.Size(154, 26);
-            this.labelOportunidades.TabIndex = 0;
-            this.labelOportunidades.Text = "Oportunidades";
-            // 
-            // opC1
-            // 
-            this.opC1.BackColor = System.Drawing.Color.White;
-            this.opC1.Location = new System.Drawing.Point(223, 15);
-            this.opC1.Name = "opC1";
-            this.opC1.Size = new System.Drawing.Size(755, 525);
-            this.opC1.TabIndex = 3;
-            this.opC1.Visible = false;
-            // 
-            // opB1
-            // 
-            this.opB1.BackColor = System.Drawing.Color.White;
-            this.opB1.Location = new System.Drawing.Point(223, 15);
-            this.opB1.Name = "opB1";
-            this.opB1.Size = new System.Drawing.Size(755, 525);
-            this.opB1.TabIndex = 2;
-            this.opB1.Visible = false;
-            // 
-            // opA1
-            // 
-            this.opA1.BackColor = System.Drawing.Color.White;
-            this.opA1.Location = new System.Drawing.Point(223, 15);
-            this.opA1.Name = "opA1";
-            this.opA1.Size = new System.Drawing.Size(755, 525);
-            this.opA1.TabIndex = 1;
-            // 
-            // opD1
-            // 
-            this.opD1.BackColor = System.Drawing.Color.White;
-            this.opD1.Location = new System.Drawing.Point(223, 15);
-            this.opD1.Name = "opD1";
-            this.opD1.Size = new System.Drawing.Size(755, 525);
-            this.opD1.TabIndex = 4;
-            this.opD1.Visible = false;
-            // 
             // panelMensagens
             // 
-            this.panelMensagens.BackColor = System.Drawing.Color.White;
+            this.panelMensagens.BackColor = System.Drawing.Color.Transparent;
+            this.panelMensagens.BackgroundImage = global::FindTec.Properties.Resources.TelaMensagem;
             this.panelMensagens.Controls.Add(this.flowLayoutPanelMensagens);
             this.panelMensagens.Controls.Add(this.btnVoltar);
             this.panelMensagens.Controls.Add(this.btnEnviar);
@@ -677,48 +635,58 @@ namespace FindTec
             // flowLayoutPanelMensagens
             // 
             this.flowLayoutPanelMensagens.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanelMensagens.Location = new System.Drawing.Point(82, 85);
+            this.flowLayoutPanelMensagens.Location = new System.Drawing.Point(111, 80);
             this.flowLayoutPanelMensagens.Name = "flowLayoutPanelMensagens";
-            this.flowLayoutPanelMensagens.Size = new System.Drawing.Size(630, 342);
+            this.flowLayoutPanelMensagens.Size = new System.Drawing.Size(525, 343);
             this.flowLayoutPanelMensagens.TabIndex = 26;
             this.flowLayoutPanelMensagens.WrapContents = false;
             // 
             // btnVoltar
             // 
-            this.btnVoltar.Location = new System.Drawing.Point(14, 13);
+            this.btnVoltar.BackgroundImage = global::FindTec.Properties.Resources.botaoVoltar;
+            this.btnVoltar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnVoltar.FlatAppearance.BorderSize = 0;
+            this.btnVoltar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnVoltar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnVoltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVoltar.Location = new System.Drawing.Point(15, 13);
             this.btnVoltar.Name = "btnVoltar";
-            this.btnVoltar.Size = new System.Drawing.Size(62, 23);
+            this.btnVoltar.Size = new System.Drawing.Size(40, 40);
             this.btnVoltar.TabIndex = 7;
-            this.btnVoltar.Text = "Voltar";
             this.btnVoltar.UseVisualStyleBackColor = true;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
             // btnEnviar
             // 
-            this.btnEnviar.Location = new System.Drawing.Point(657, 442);
+            this.btnEnviar.BackgroundImage = global::FindTec.Properties.Resources.botaoEnviarMensagem1;
+            this.btnEnviar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnEnviar.FlatAppearance.BorderSize = 0;
+            this.btnEnviar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnEnviar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnEnviar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEnviar.Location = new System.Drawing.Point(578, 457);
             this.btnEnviar.Name = "btnEnviar";
-            this.btnEnviar.Size = new System.Drawing.Size(55, 28);
+            this.btnEnviar.Size = new System.Drawing.Size(38, 37);
             this.btnEnviar.TabIndex = 6;
-            this.btnEnviar.Text = "Enviar";
             this.btnEnviar.UseVisualStyleBackColor = true;
             this.btnEnviar.Click += new System.EventHandler(this.btnEnviar_Click);
             // 
             // txtMensagem
             // 
             this.txtMensagem.BackColor = System.Drawing.Color.White;
-            this.txtMensagem.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMensagem.Location = new System.Drawing.Point(82, 442);
-            this.txtMensagem.MinimumSize = new System.Drawing.Size(569, 28);
+            this.txtMensagem.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtMensagem.Font = new System.Drawing.Font("Arial Narrow", 12F);
+            this.txtMensagem.Location = new System.Drawing.Point(153, 467);
             this.txtMensagem.Name = "txtMensagem";
-            this.txtMensagem.Size = new System.Drawing.Size(569, 21);
+            this.txtMensagem.Size = new System.Drawing.Size(419, 19);
             this.txtMensagem.TabIndex = 5;
             this.txtMensagem.KeyDown += new System.Windows.Forms.KeyEventHandler(this.EnviarMensagem_Enter);
             // 
             // panelConversas
             // 
-            this.panelConversas.BackColor = System.Drawing.Color.White;
+            this.panelConversas.BackColor = System.Drawing.Color.Transparent;
+            this.panelConversas.BackgroundImage = global::FindTec.Properties.Resources.TelaMensagemRecebida;
             this.panelConversas.Controls.Add(this.FlowPanelConversas);
-            this.panelConversas.Controls.Add(this.labelConversas);
             this.panelConversas.Location = new System.Drawing.Point(223, 15);
             this.panelConversas.Name = "panelConversas";
             this.panelConversas.Size = new System.Drawing.Size(755, 525);
@@ -727,28 +695,18 @@ namespace FindTec
             // 
             // FlowPanelConversas
             // 
-            this.FlowPanelConversas.BackColor = System.Drawing.Color.White;
-            this.FlowPanelConversas.Location = new System.Drawing.Point(145, 85);
+            this.FlowPanelConversas.BackColor = System.Drawing.Color.Transparent;
+            this.FlowPanelConversas.Location = new System.Drawing.Point(207, 85);
             this.FlowPanelConversas.Name = "FlowPanelConversas";
-            this.FlowPanelConversas.Size = new System.Drawing.Size(450, 350);
+            this.FlowPanelConversas.Size = new System.Drawing.Size(334, 409);
             this.FlowPanelConversas.TabIndex = 3;
             this.FlowPanelConversas.Click += new System.EventHandler(this.FlowPanelConversas_Click);
-            // 
-            // labelConversas
-            // 
-            this.labelConversas.AutoSize = true;
-            this.labelConversas.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelConversas.Location = new System.Drawing.Point(290, 35);
-            this.labelConversas.Name = "labelConversas";
-            this.labelConversas.Size = new System.Drawing.Size(116, 26);
-            this.labelConversas.TabIndex = 1;
-            this.labelConversas.Text = "Conversas";
             // 
             // panelViewUsuarios
             // 
             this.panelViewUsuarios.BackColor = System.Drawing.Color.White;
+            this.panelViewUsuarios.BackgroundImage = global::FindTec.Properties.Resources.telaUsuariosAtivos;
             this.panelViewUsuarios.Controls.Add(this.dataGridViewUsuarios);
-            this.panelViewUsuarios.Controls.Add(this.label5);
             this.panelViewUsuarios.Location = new System.Drawing.Point(223, 15);
             this.panelViewUsuarios.Name = "panelViewUsuarios";
             this.panelViewUsuarios.Size = new System.Drawing.Size(755, 525);
@@ -757,17 +715,17 @@ namespace FindTec
             // 
             // dataGridViewUsuarios
             // 
-            this.dataGridViewUsuarios.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridViewUsuarios.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(181)))), ((int)(((byte)(220)))));
             this.dataGridViewUsuarios.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewUsuarios.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle31.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle31.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle31.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle31.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle31.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle31.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewUsuarios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle31;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewUsuarios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle15;
             this.dataGridViewUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewUsuarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn5,
@@ -775,18 +733,18 @@ namespace FindTec
             this.colEmail,
             this.dataGridViewTextBoxColumn8,
             this.colContato});
-            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle32.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle32.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle32.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle32.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle32.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewUsuarios.DefaultCellStyle = dataGridViewCellStyle32;
-            this.dataGridViewUsuarios.Location = new System.Drawing.Point(82, 106);
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewUsuarios.DefaultCellStyle = dataGridViewCellStyle16;
+            this.dataGridViewUsuarios.Location = new System.Drawing.Point(42, 133);
             this.dataGridViewUsuarios.Name = "dataGridViewUsuarios";
             this.dataGridViewUsuarios.RowHeadersVisible = false;
-            this.dataGridViewUsuarios.Size = new System.Drawing.Size(610, 299);
+            this.dataGridViewUsuarios.Size = new System.Drawing.Size(670, 330);
             this.dataGridViewUsuarios.TabIndex = 7;
             this.dataGridViewUsuarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewUsuarios_CellContentClick);
             // 
@@ -826,35 +784,6 @@ namespace FindTec
             this.colContato.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.colContato.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(285, 44);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(179, 26);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Usuários Ativos";
-            // 
-            // botaoSair
-            // 
-            this.botaoSair.BackgroundImage = global::FindTec.Properties.Resources.botaoSair_1;
-            this.botaoSair.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.botaoSair.FlatAppearance.BorderSize = 0;
-            this.botaoSair.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.botaoSair.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.botaoSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botaoSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.botaoSair.ForeColor = System.Drawing.Color.Black;
-            this.botaoSair.Location = new System.Drawing.Point(1, 495);
-            this.botaoSair.Name = "botaoSair";
-            this.botaoSair.Size = new System.Drawing.Size(197, 51);
-            this.botaoSair.TabIndex = 31;
-            this.botaoSair.UseVisualStyleBackColor = true;
-            this.botaoSair.Click += new System.EventHandler(this.botaoSair_Click);
-            this.botaoSair.MouseEnter += new System.EventHandler(this.botaoSair_MouseEnter);
-            this.botaoSair.MouseLeave += new System.EventHandler(this.botaoSair_MouseLeave);
-            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -862,16 +791,12 @@ namespace FindTec
             this.BackgroundImage = global::FindTec.Properties.Resources.backgroundGeral;
             this.ClientSize = new System.Drawing.Size(1000, 550);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panelOportunidades);
-            this.Controls.Add(this.opC1);
-            this.Controls.Add(this.panelCadastroAprov);
             this.Controls.Add(this.panelPerfilC);
-            this.Controls.Add(this.opB1);
-            this.Controls.Add(this.opA1);
             this.Controls.Add(this.panelMensagens);
             this.Controls.Add(this.panelConversas);
-            this.Controls.Add(this.opD1);
             this.Controls.Add(this.panelViewUsuarios);
+            this.Controls.Add(this.panelOportunidades);
+            this.Controls.Add(this.panelCadastroAprov);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form3";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -880,20 +805,16 @@ namespace FindTec
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panelCadastroAprov.ResumeLayout(false);
-            this.panelCadastroAprov.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewE)).EndInit();
             this.panelPerfilC.ResumeLayout(false);
             this.panelPerfilC.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelOportunidades.ResumeLayout(false);
-            this.panelOportunidades.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewOportunidades)).EndInit();
             this.panelMensagens.ResumeLayout(false);
             this.panelMensagens.PerformLayout();
             this.panelConversas.ResumeLayout(false);
-            this.panelConversas.PerformLayout();
             this.panelViewUsuarios.ResumeLayout(false);
-            this.panelViewUsuarios.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsuarios)).EndInit();
             this.ResumeLayout(false);
 
@@ -902,10 +823,6 @@ namespace FindTec
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private OpA opA1;
-        private OpB opB1;
-        private OpC opC1;
-        private OpD opD1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
@@ -921,7 +838,6 @@ namespace FindTec
         private System.Windows.Forms.DataGridView dataGridViewE;
         private System.Windows.Forms.Button buttonListEmpresa;
         private System.Windows.Forms.Button buttonListAluno5;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
@@ -940,7 +856,6 @@ namespace FindTec
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button buttonUpload;
         private System.Windows.Forms.Panel panelOportunidades;
-        private System.Windows.Forms.Label labelOportunidades;
         private System.Windows.Forms.DataGridView gridViewOportunidades;
         private System.Windows.Forms.DataGridViewImageColumn colFoto;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNomeEmpresa;
@@ -956,10 +871,8 @@ namespace FindTec
         private System.Windows.Forms.TextBox txtMensagem;
         private System.Windows.Forms.Panel panelConversas;
         private System.Windows.Forms.FlowLayoutPanel FlowPanelConversas;
-        private System.Windows.Forms.Label labelConversas;
         private System.Windows.Forms.Button viewUsuarios;
         private System.Windows.Forms.Panel panelViewUsuarios;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridView dataGridViewUsuarios;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTipo;

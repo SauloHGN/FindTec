@@ -31,16 +31,15 @@ namespace FindTec
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.botaoMeusCadastros = new System.Windows.Forms.Button();
-            this.botaoHome = new System.Windows.Forms.Button();
             this.picAvatarAluno2 = new System.Windows.Forms.PictureBox();
             this.botaoSair = new System.Windows.Forms.Button();
             this.botaoMensagens = new System.Windows.Forms.Button();
@@ -59,6 +58,13 @@ namespace FindTec
             this.label1 = new System.Windows.Forms.Label();
             this.panelOportunidadesAluno = new System.Windows.Forms.Panel();
             this.gridViewOportunidades = new System.Windows.Forms.DataGridView();
+            this.colFoto = new System.Windows.Forms.DataGridViewImageColumn();
+            this.colNomeEmpresa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NomeVagaGrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cargoGrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cargaHGrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.remuneracaoGrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCandidatar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panelVagaInfoAluno = new System.Windows.Forms.Panel();
             this.botaoVoltar = new System.Windows.Forms.Button();
             this.txtDescricao = new System.Windows.Forms.TextBox();
@@ -84,13 +90,6 @@ namespace FindTec
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cursoGrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colFoto = new System.Windows.Forms.DataGridViewImageColumn();
-            this.colNomeEmpresa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NomeVagaGrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cargoGrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cargaHGrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.remuneracaoGrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colCandidatar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picAvatarAluno2)).BeginInit();
             this.panelPerfilAluno.SuspendLayout();
@@ -109,7 +108,6 @@ namespace FindTec
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.BackgroundImage = global::FindTec.Properties.Resources.menuLateral;
             this.panel1.Controls.Add(this.botaoMeusCadastros);
-            this.panel1.Controls.Add(this.botaoHome);
             this.panel1.Controls.Add(this.picAvatarAluno2);
             this.panel1.Controls.Add(this.botaoSair);
             this.panel1.Controls.Add(this.botaoMensagens);
@@ -131,7 +129,7 @@ namespace FindTec
             this.botaoMeusCadastros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.botaoMeusCadastros.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.botaoMeusCadastros.ForeColor = System.Drawing.Color.White;
-            this.botaoMeusCadastros.Location = new System.Drawing.Point(3, 430);
+            this.botaoMeusCadastros.Location = new System.Drawing.Point(3, 364);
             this.botaoMeusCadastros.Name = "botaoMeusCadastros";
             this.botaoMeusCadastros.Size = new System.Drawing.Size(197, 56);
             this.botaoMeusCadastros.TabIndex = 13;
@@ -139,25 +137,6 @@ namespace FindTec
             this.botaoMeusCadastros.Click += new System.EventHandler(this.botaoMeusCadastros_Click);
             this.botaoMeusCadastros.MouseEnter += new System.EventHandler(this.botaoMeusCadastros_MouseEnter);
             this.botaoMeusCadastros.MouseLeave += new System.EventHandler(this.botaoMeusCadastros_MouseLeave);
-            // 
-            // botaoHome
-            // 
-            this.botaoHome.BackgroundImage = global::FindTec.Properties.Resources.botaoHome_1;
-            this.botaoHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.botaoHome.FlatAppearance.BorderSize = 0;
-            this.botaoHome.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.botaoHome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.botaoHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botaoHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.botaoHome.ForeColor = System.Drawing.Color.Black;
-            this.botaoHome.Location = new System.Drawing.Point(3, 217);
-            this.botaoHome.Name = "botaoHome";
-            this.botaoHome.Size = new System.Drawing.Size(197, 56);
-            this.botaoHome.TabIndex = 9;
-            this.botaoHome.UseVisualStyleBackColor = true;
-            this.botaoHome.Click += new System.EventHandler(this.botaoHome_Click);
-            this.botaoHome.MouseEnter += new System.EventHandler(this.botaoHome_MouseEnter);
-            this.botaoHome.MouseLeave += new System.EventHandler(this.botaoHome_MouseLeave);
             // 
             // picAvatarAluno2
             // 
@@ -198,7 +177,7 @@ namespace FindTec
             this.botaoMensagens.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.botaoMensagens.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.botaoMensagens.ForeColor = System.Drawing.Color.Black;
-            this.botaoMensagens.Location = new System.Drawing.Point(3, 376);
+            this.botaoMensagens.Location = new System.Drawing.Point(3, 310);
             this.botaoMensagens.Name = "botaoMensagens";
             this.botaoMensagens.Size = new System.Drawing.Size(197, 56);
             this.botaoMensagens.TabIndex = 12;
@@ -217,7 +196,7 @@ namespace FindTec
             this.botaoOportunidades.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.botaoOportunidades.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.botaoOportunidades.ForeColor = System.Drawing.Color.Black;
-            this.botaoOportunidades.Location = new System.Drawing.Point(3, 321);
+            this.botaoOportunidades.Location = new System.Drawing.Point(3, 255);
             this.botaoOportunidades.Name = "botaoOportunidades";
             this.botaoOportunidades.Size = new System.Drawing.Size(197, 56);
             this.botaoOportunidades.TabIndex = 11;
@@ -236,7 +215,7 @@ namespace FindTec
             this.botaoPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.botaoPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.botaoPerfil.ForeColor = System.Drawing.Color.Black;
-            this.botaoPerfil.Location = new System.Drawing.Point(3, 268);
+            this.botaoPerfil.Location = new System.Drawing.Point(3, 202);
             this.botaoPerfil.Name = "botaoPerfil";
             this.botaoPerfil.Size = new System.Drawing.Size(197, 56);
             this.botaoPerfil.TabIndex = 10;
@@ -420,7 +399,7 @@ namespace FindTec
             // 
             this.gridViewOportunidades.AllowUserToResizeColumns = false;
             this.gridViewOportunidades.AllowUserToResizeRows = false;
-            this.gridViewOportunidades.BackgroundColor = System.Drawing.Color.White;
+            this.gridViewOportunidades.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(181)))), ((int)(((byte)(220)))));
             this.gridViewOportunidades.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gridViewOportunidades.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.gridViewOportunidades.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -458,6 +437,79 @@ namespace FindTec
             this.gridViewOportunidades.TabIndex = 19;
             this.gridViewOportunidades.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridViewOportunidades_CellContentClick);
             // 
+            // colFoto
+            // 
+            this.colFoto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.colFoto.HeaderText = "";
+            this.colFoto.MinimumWidth = 100;
+            this.colFoto.Name = "colFoto";
+            this.colFoto.ReadOnly = true;
+            this.colFoto.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.colFoto.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // colNomeEmpresa
+            // 
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.colNomeEmpresa.DefaultCellStyle = dataGridViewCellStyle2;
+            this.colNomeEmpresa.HeaderText = "Empresa";
+            this.colNomeEmpresa.MaxInputLength = 100;
+            this.colNomeEmpresa.MinimumWidth = 70;
+            this.colNomeEmpresa.Name = "colNomeEmpresa";
+            this.colNomeEmpresa.ReadOnly = true;
+            this.colNomeEmpresa.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.colNomeEmpresa.Width = 80;
+            // 
+            // NomeVagaGrid
+            // 
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.NomeVagaGrid.DefaultCellStyle = dataGridViewCellStyle3;
+            this.NomeVagaGrid.HeaderText = "Titulo Vaga";
+            this.NomeVagaGrid.MaxInputLength = 100;
+            this.NomeVagaGrid.Name = "NomeVagaGrid";
+            this.NomeVagaGrid.ReadOnly = true;
+            this.NomeVagaGrid.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.NomeVagaGrid.Width = 91;
+            // 
+            // cargoGrid
+            // 
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.cargoGrid.DefaultCellStyle = dataGridViewCellStyle4;
+            this.cargoGrid.HeaderText = "Cargo";
+            this.cargoGrid.MaxInputLength = 100;
+            this.cargoGrid.Name = "cargoGrid";
+            this.cargoGrid.ReadOnly = true;
+            this.cargoGrid.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.cargoGrid.Width = 64;
+            // 
+            // cargaHGrid
+            // 
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.cargaHGrid.DefaultCellStyle = dataGridViewCellStyle5;
+            this.cargaHGrid.HeaderText = "Carga Horária";
+            this.cargaHGrid.MaxInputLength = 100;
+            this.cargaHGrid.Name = "cargaHGrid";
+            this.cargaHGrid.ReadOnly = true;
+            this.cargaHGrid.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.cargaHGrid.Width = 104;
+            // 
+            // remuneracaoGrid
+            // 
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.remuneracaoGrid.DefaultCellStyle = dataGridViewCellStyle6;
+            this.remuneracaoGrid.HeaderText = "Remuneração";
+            this.remuneracaoGrid.MaxInputLength = 100;
+            this.remuneracaoGrid.Name = "remuneracaoGrid";
+            this.remuneracaoGrid.ReadOnly = true;
+            this.remuneracaoGrid.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.remuneracaoGrid.Width = 104;
+            // 
+            // colCandidatar
+            // 
+            this.colCandidatar.HeaderText = "";
+            this.colCandidatar.Name = "colCandidatar";
+            this.colCandidatar.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.colCandidatar.Width = 90;
+            // 
             // panelVagaInfoAluno
             // 
             this.panelVagaInfoAluno.BackColor = System.Drawing.Color.White;
@@ -487,7 +539,7 @@ namespace FindTec
             this.botaoVoltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.botaoVoltar.Location = new System.Drawing.Point(15, 13);
             this.botaoVoltar.Name = "botaoVoltar";
-            this.botaoVoltar.Size = new System.Drawing.Size(41, 40);
+            this.botaoVoltar.Size = new System.Drawing.Size(40, 40);
             this.botaoVoltar.TabIndex = 14;
             this.botaoVoltar.UseVisualStyleBackColor = false;
             this.botaoVoltar.Click += new System.EventHandler(this.botaoVoltar_Click);
@@ -639,11 +691,16 @@ namespace FindTec
             // 
             // btnVoltar
             // 
+            this.btnVoltar.BackgroundImage = global::FindTec.Properties.Resources.botaoVoltar;
+            this.btnVoltar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnVoltar.FlatAppearance.BorderSize = 0;
+            this.btnVoltar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnVoltar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnVoltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVoltar.Location = new System.Drawing.Point(15, 13);
             this.btnVoltar.Name = "btnVoltar";
-            this.btnVoltar.Size = new System.Drawing.Size(61, 23);
+            this.btnVoltar.Size = new System.Drawing.Size(40, 40);
             this.btnVoltar.TabIndex = 7;
-            this.btnVoltar.Text = "Voltar";
             this.btnVoltar.UseVisualStyleBackColor = true;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
@@ -688,7 +745,7 @@ namespace FindTec
             // 
             // gridViewVagasCadastrado
             // 
-            this.gridViewVagasCadastrado.BackgroundColor = System.Drawing.Color.White;
+            this.gridViewVagasCadastrado.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(181)))), ((int)(((byte)(220)))));
             this.gridViewVagasCadastrado.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gridViewVagasCadastrado.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -766,92 +823,18 @@ namespace FindTec
             this.cursoGrid.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.cursoGrid.Width = 200;
             // 
-            // colFoto
-            // 
-            this.colFoto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.colFoto.HeaderText = "";
-            this.colFoto.MinimumWidth = 100;
-            this.colFoto.Name = "colFoto";
-            this.colFoto.ReadOnly = true;
-            this.colFoto.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.colFoto.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // colNomeEmpresa
-            // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.colNomeEmpresa.DefaultCellStyle = dataGridViewCellStyle2;
-            this.colNomeEmpresa.HeaderText = "Empresa";
-            this.colNomeEmpresa.MaxInputLength = 100;
-            this.colNomeEmpresa.MinimumWidth = 70;
-            this.colNomeEmpresa.Name = "colNomeEmpresa";
-            this.colNomeEmpresa.ReadOnly = true;
-            this.colNomeEmpresa.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.colNomeEmpresa.Width = 80;
-            // 
-            // NomeVagaGrid
-            // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.NomeVagaGrid.DefaultCellStyle = dataGridViewCellStyle3;
-            this.NomeVagaGrid.HeaderText = "Titulo Vaga";
-            this.NomeVagaGrid.MaxInputLength = 100;
-            this.NomeVagaGrid.Name = "NomeVagaGrid";
-            this.NomeVagaGrid.ReadOnly = true;
-            this.NomeVagaGrid.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.NomeVagaGrid.Width = 91;
-            // 
-            // cargoGrid
-            // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.cargoGrid.DefaultCellStyle = dataGridViewCellStyle4;
-            this.cargoGrid.HeaderText = "Cargo";
-            this.cargoGrid.MaxInputLength = 100;
-            this.cargoGrid.Name = "cargoGrid";
-            this.cargoGrid.ReadOnly = true;
-            this.cargoGrid.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.cargoGrid.Width = 64;
-            // 
-            // cargaHGrid
-            // 
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.cargaHGrid.DefaultCellStyle = dataGridViewCellStyle5;
-            this.cargaHGrid.HeaderText = "Carga Horária";
-            this.cargaHGrid.MaxInputLength = 100;
-            this.cargaHGrid.Name = "cargaHGrid";
-            this.cargaHGrid.ReadOnly = true;
-            this.cargaHGrid.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.cargaHGrid.Width = 104;
-            // 
-            // remuneracaoGrid
-            // 
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.remuneracaoGrid.DefaultCellStyle = dataGridViewCellStyle6;
-            this.remuneracaoGrid.HeaderText = "Remuneração";
-            this.remuneracaoGrid.MaxInputLength = 100;
-            this.remuneracaoGrid.Name = "remuneracaoGrid";
-            this.remuneracaoGrid.ReadOnly = true;
-            this.remuneracaoGrid.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.remuneracaoGrid.Width = 104;
-            // 
-            // colCandidatar
-            // 
-            this.colCandidatar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.colCandidatar.HeaderText = "";
-            this.colCandidatar.Name = "colCandidatar";
-            this.colCandidatar.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.colCandidatar.Width = 90;
-            // 
             // TelaAluno
             // 
             this.BackgroundImage = global::FindTec.Properties.Resources.backgroundGeral;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(1000, 550);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panelOportunidadesAluno);
-            this.Controls.Add(this.panelVagaInfoAluno);
-            this.Controls.Add(this.panelMeusCadastrosAluno);
             this.Controls.Add(this.panelPerfilAluno);
             this.Controls.Add(this.panelConversasAluno);
             this.Controls.Add(this.panelMensagensAluno);
+            this.Controls.Add(this.panelOportunidadesAluno);
+            this.Controls.Add(this.panelVagaInfoAluno);
+            this.Controls.Add(this.panelMeusCadastrosAluno);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TelaAluno";
@@ -911,7 +894,6 @@ namespace FindTec
         public System.Windows.Forms.FlowLayoutPanel flowLayoutPanelMensagens;
         private System.Windows.Forms.FlowLayoutPanel FlowPanelConversas;
         private System.Windows.Forms.PictureBox picAvatarAluno2;
-        private System.Windows.Forms.Button botaoHome;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button botaoAlterarSenha;
         private System.Windows.Forms.ListView listViewConversas;

@@ -249,6 +249,9 @@
     <None Include="Imagens\botaoEntrar2.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Imagens\telaPerfilCoordenador.png" />
+    <None Include="Imagens\telaUsuariosAtivos.png" />
+    <None Include="Imagens\telaMinhasVagas.png" />
     <None Include="Imagens\telaMeusCadastros.png" />
     <None Include="Imagens\telaOportunidades.png" />
     <None Include="Imagens\telaPerfilEmpresa.png" />
@@ -271,6 +274,11 @@
     <None Include="Imagens\botaoEditarDados 1.png" />
     <None Include="Imagens\botaoCandidatar 2.png" />
     <None Include="Imagens\botaoCandidatar 1.png" />
+    <None Include="Imagens\botaoAnunciarVaga2 %281%29.png" />
+    <None Include="Imagens\botaoAnunciarVaga2.png" />
+    <None Include="Imagens\botaoAnunciarVaga1.png" />
+    <None Include="Imagens\botaoAnunciar1.png" />
+    <None Include="Imagens\botaoAnunciar2.png" />
     <Content Include="Imagens\botaoEmpresa1.png" />
     <None Include="Imagens\botaoEmpresa2.png" />
     <None Include="Imagens\botaoEntrar1.png" />
@@ -278,6 +286,8 @@
     <None Include="Imagens\botaoEnviar2.png" />
     <None Include="Imagens\botaoEnviarMensagem2.png" />
     <None Include="Imagens\botaoEnviarMensagem1.png" />
+    <None Include="Imagens\botaoEncerrarVaga1.png" />
+    <None Include="Imagens\botaoEncerrarVaga2.png" />
     <Content Include="Imagens\botaoFechar.png" />
     <None Include="Imagens\botaoRedefinir1.png" />
     <None Include="Imagens\botaoSair 2.png" />
@@ -292,6 +302,9 @@
     <None Include="Imagens\botaoHome 1.png" />
     <None Include="Imagens\botaoMeusCadastros1.png" />
     <None Include="Imagens\botaoMeusCadastros2.png" />
+    <None Include="Imagens\botaoVerDetalhes.png" />
+    <None Include="Imagens\botaoMinhasVagas1.png" />
+    <None Include="Imagens\botaoMinhasVagas2.png" />
     <Content Include="Imagens\botaoVoltar.png" />
     <None Include="Imagens\CadastroAluno.png" />
     <None Include="Imagens\CadastroEmpresa.png" />
@@ -305,6 +318,9 @@
     <None Include="Imagens\imagemEmpresa.png" />
     <None Include="Imagens\menuLateralEmpresa.png" />
     <None Include="Imagens\telaDescricaoDaVaga.png" />
+    <None Include="Imagens\telaAnunciarVaga.png" />
+    <None Include="Imagens\telaCandidatos.png" />
+    <None Include="Imagens\telaAprovacaoCadastro.png" />
     <Content Include="Imagens\TelaEscolha.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

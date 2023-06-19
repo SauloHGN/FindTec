@@ -14,7 +14,7 @@ namespace FindTec
         public Form2()
         {
             InitializeComponent();
-            btnVaga_Click(this, new EventArgs());//INICIAR COM O BOTÃO VAGA SELECIONADO
+            botaoAnunciarVaga_Click(this, new EventArgs());//INICIAR COM O BOTÃO VAGA SELECIONADO
             botaoPerfil_Click(this, new EventArgs());// INICIAR COM A "HOMEPAGE" PERFIL
             this.FormClosing += new FormClosingEventHandler(Form2_FormClosing);// FECHAR FRAME PRINCIPAL VOLTAR PARA A TELA DE LOGIN
             this.KeyDown += new KeyEventHandler(EnviarMensagem_Enter);// Enviar mensagem com Enter
@@ -334,7 +334,7 @@ namespace FindTec
             return false;
         }
 
-        private void btnAnunciarVaga_Click_1(object sender, EventArgs e)
+        private void botaoAnunciar_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(NomeEmpresaTextBox.Text) ||
                 string.IsNullOrEmpty(nomeVagaTextBox.Text) ||
@@ -389,29 +389,21 @@ namespace FindTec
 
         }
 
-        private void btnVaga_Click(object sender, EventArgs e)
+        private void botaoAnunciarVaga_Click(object sender, EventArgs e)
         {
-
-            btnVaga2.BackColor = Color.Black;
-            btnVaga2.ForeColor = Color.White;
-            btnMinhasVagas2.BackColor = SystemColors.Control;
-            btnMinhasVagas2.ForeColor = Color.Black;
-
+            
             panelAnunciarVaga.Visible = true;
             panelMinhasVagas.Visible = false;
             panelAnunciarVaga.BringToFront();
         }
 
-        private void btnMinhasVagas_Click(object sender, EventArgs e)
+        private void botaoMinhasVagas_Click(object sender, EventArgs e)
         {
-            btnMinhasVagas.BackColor = Color.Black;
-            btnMinhasVagas.ForeColor = Color.White;
-            btnVaga.BackColor = SystemColors.Control;
-            btnVaga.ForeColor = Color.Black;
-            btnMinhasVagas2.BackColor = Color.Black;
-            btnMinhasVagas2.ForeColor = Color.White;
-            btnVaga2.BackColor = SystemColors.Control;
-            btnVaga2.ForeColor = Color.Black;
+            botaoMinhasVagas.BackColor = Color.Black;
+            botaoMinhasVagas.ForeColor = Color.White;
+            botaoAnunciarVaga.BackColor = SystemColors.Control;
+            botaoAnunciarVaga.ForeColor = Color.Black;
+            
 
             panelAnunciarVaga.Visible = false;
             panelMinhasVagas.Visible = true;
@@ -422,10 +414,10 @@ namespace FindTec
 
         private void btnCriarVaga2_Click(object sender, EventArgs e)
         {
-            btnVaga.BackColor = Color.Black;
-            btnVaga.ForeColor = Color.White;
-            btnMinhasVagas.BackColor = SystemColors.Control;
-            btnMinhasVagas.ForeColor = Color.Black;
+            botaoAnunciarVaga.BackColor = Color.Black;
+            botaoAnunciarVaga.ForeColor = Color.White;
+            botaoMinhasVagas.BackColor = SystemColors.Control;
+            botaoMinhasVagas.ForeColor = Color.Black;
 
             panelAnunciarVaga.Visible = true;
             panelMinhasVagas.Visible = false;
@@ -609,7 +601,7 @@ namespace FindTec
             }
         }
 
-        private void buttonEncerrarVaga_Click(object sender, EventArgs e)
+        private void botaoEncerrarVaga_Click(object sender, EventArgs e)
         {
             Vaga vaga = Vaga.vagas.Find(v => v.NomeVaga == nomeVaga);
             foreach (DataGridViewRow row in dataGridViewCandidatos.Rows)// percorrer as linhas do datagridView
@@ -793,15 +785,7 @@ namespace FindTec
 
         ///////////////////////// EVENTOS DE TROCAR IMAGEM DOS BOTOES //////////////////////////////
 
-        private void botaoHome_MouseEnter(object sender, EventArgs e)
-        {
-            botaoHome.BackgroundImage = Properties.Resources.botaoHome_2;
-        }
-
-        private void botaoHome_MouseLeave(object sender, EventArgs e)
-        {
-            botaoHome.BackgroundImage = Properties.Resources.botaoHome_1;
-        }
+        
 
         private void botaoPerfil_MouseEnter(object sender, EventArgs e)
         {
@@ -883,6 +867,44 @@ namespace FindTec
             botaoSair.BackgroundImage = Properties.Resources.botaoSair_1;
         }
 
-        
+        private void botaoAnunciarVaga_MouseEnter(object sender, EventArgs e)
+        {
+            botaoAnunciarVaga.BackgroundImage = Properties.Resources.botaoAnunciarVaga2;
+        }
+
+        private void botaoAnunciarVaga_MouseLeave(object sender, EventArgs e)
+        {
+            botaoAnunciarVaga.BackgroundImage = Properties.Resources.botaoAnunciarVaga2;
+        }
+
+        private void botaoMinhasVagas_MouseEnter(object sender, EventArgs e)
+        {
+            botaoMinhasVagas.BackgroundImage = Properties.Resources.botaoMinhasVagas2;
+        }
+
+        private void botaoMinhasVagas_MouseLeave(object sender, EventArgs e)
+        {
+            botaoMinhasVagas.BackgroundImage = Properties.Resources.botaoMinhasVagas1;
+        }
+
+        private void botaoAnunciar_MouseEnter(object sender, EventArgs e)
+        {
+            botaoAnunciar.BackgroundImage = Properties.Resources.botaoAnunciar2;
+        }
+
+        private void botaoAnunciar_MouseLeave(object sender, EventArgs e)
+        {
+            botaoAnunciar.BackgroundImage = Properties.Resources.botaoAnunciar2;
+        }
+
+        private void botaoEncerrarVaga_MouseEnter(object sender, EventArgs e)
+        {
+            botaoEncerrarVaga.BackgroundImage = Properties.Resources.botaoEncerrarVaga2;
+        }
+
+        private void botaoEncerrarVaga_MouseLeave(object sender, EventArgs e)
+        {
+            botaoEncerrarVaga.BackgroundImage = Properties.Resources.botaoEncerrarVaga1;
+        }
     }
 }

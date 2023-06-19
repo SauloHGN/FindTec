@@ -414,11 +414,13 @@ namespace FindTec
 
                     DataGridViewButtonCell button1 = new DataGridViewButtonCell();
                     button1.Value = "Detalhes";
+   
                     gridViewOportunidades.Rows.Add(imagem, vagas.NomeEmpresa, vagas.NomeVaga, vagas.Cargo, vagas.cargaHoraria, vagas.remuneracao, "Detalhes");
                 }
             }
             gridViewOportunidades.ClearSelection();
         }
+
 
 
         private void gridViewOportunidades_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -774,16 +776,6 @@ namespace FindTec
         }
 
         ///////////////////////// EVENTOS DE TROCAR IMAGEM DOS BOTOES //////////////////////////////
-
-        private void botaoHome_MouseEnter(object sender, EventArgs e)
-        {
-            botaoHome.BackgroundImage = Properties.Resources.botaoHome_2;
-        }
-
-        private void botaoHome_MouseLeave(object sender, EventArgs e)
-        {
-            botaoHome.BackgroundImage = Properties.Resources.botaoHome_1;
-        }
 
         private void botaoPerfil_MouseEnter(object sender, EventArgs e)
         {

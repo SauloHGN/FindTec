@@ -133,6 +133,56 @@ namespace FindTec.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap botaoAnunciar1 {
+            get {
+                object obj = ResourceManager.GetObject("botaoAnunciar1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap botaoAnunciar2 {
+            get {
+                object obj = ResourceManager.GetObject("botaoAnunciar2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap botaoAnunciarVaga1 {
+            get {
+                object obj = ResourceManager.GetObject("botaoAnunciarVaga1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap botaoAnunciarVaga2 {
+            get {
+                object obj = ResourceManager.GetObject("botaoAnunciarVaga2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap botaoAnunciarVaga2__1_ {
+            get {
+                object obj = ResourceManager.GetObject("botaoAnunciarVaga2 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap botaoCandidatar_1 {
             get {
                 object obj = ResourceManager.GetObject("botaoCandidatar 1", resourceCulture);
@@ -246,6 +296,26 @@ namespace FindTec.Properties {
         internal static System.Drawing.Bitmap botaoEmpresa2 {
             get {
                 object obj = ResourceManager.GetObject("botaoEmpresa2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap botaoEncerrarVaga1 {
+            get {
+                object obj = ResourceManager.GetObject("botaoEncerrarVaga1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap botaoEncerrarVaga2 {
+            get {
+                object obj = ResourceManager.GetObject("botaoEncerrarVaga2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -383,6 +453,26 @@ namespace FindTec.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap botaoMinhasVagas1 {
+            get {
+                object obj = ResourceManager.GetObject("botaoMinhasVagas1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap botaoMinhasVagas2 {
+            get {
+                object obj = ResourceManager.GetObject("botaoMinhasVagas2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap botaoOportunidades_1 {
             get {
                 object obj = ResourceManager.GetObject("botaoOportunidades 1", resourceCulture);
@@ -456,6 +546,16 @@ namespace FindTec.Properties {
         internal static System.Drawing.Bitmap botaoSair_2 {
             get {
                 object obj = ResourceManager.GetObject("botaoSair 2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap botaoVerDetalhes {
+            get {
+                object obj = ResourceManager.GetObject("botaoVerDetalhes", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -583,6 +683,36 @@ namespace FindTec.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap telaAnunciarVaga {
+            get {
+                object obj = ResourceManager.GetObject("telaAnunciarVaga", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap telaAprovacaoCadastro {
+            get {
+                object obj = ResourceManager.GetObject("telaAprovacaoCadastro", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap telaCandidatos {
+            get {
+                object obj = ResourceManager.GetObject("telaCandidatos", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap telaDescricaoDaVaga {
             get {
                 object obj = ResourceManager.GetObject("telaDescricaoDaVaga", resourceCulture);
@@ -613,6 +743,16 @@ namespace FindTec.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap TelaMensagem1 {
+            get {
+                object obj = ResourceManager.GetObject("TelaMensagem1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap TelaMensagemRecebida {
             get {
                 object obj = ResourceManager.GetObject("TelaMensagemRecebida", resourceCulture);
@@ -626,6 +766,16 @@ namespace FindTec.Properties {
         internal static System.Drawing.Bitmap telaMeusCadastros {
             get {
                 object obj = ResourceManager.GetObject("telaMeusCadastros", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap telaMinhasVagas {
+            get {
+                object obj = ResourceManager.GetObject("telaMinhasVagas", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -653,9 +803,29 @@ namespace FindTec.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap telaPerfilCoordenador {
+            get {
+                object obj = ResourceManager.GetObject("telaPerfilCoordenador", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap telaPerfilEmpresa {
             get {
                 object obj = ResourceManager.GetObject("telaPerfilEmpresa", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap telaUsuariosAtivos {
+            get {
+                object obj = ResourceManager.GetObject("telaUsuariosAtivos", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
