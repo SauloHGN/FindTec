@@ -61,10 +61,7 @@ namespace FindTec
 
         private void button1_Click(object sender, EventArgs e)
         {
-            opA1.Visible = true;
-            opB1.Visible = false;
-            opC1.Visible = false;
-            opD1.Visible = false;
+            
 
             panelCadastroAprov.Visible = false;
             panelOportunidades.Visible = false;
@@ -78,10 +75,7 @@ namespace FindTec
         {
             dataGridView1.Rows.Clear();
             LoadDataGridView();
-            opA1.Visible = false;
-            opB1.Visible = true;
-            opC1.Visible = false;
-            opD1.Visible = false;
+            
 
             panelCadastroAprov.Visible = true;
             panelPerfilC.Visible = false;
@@ -94,10 +88,7 @@ namespace FindTec
 
         private void button3_Click(object sender, EventArgs e)
         {
-            opA1.Visible = false;
-            opB1.Visible = false;
-            opC1.Visible = true;
-            opD1.Visible = false;
+            
             panelPerfilC.Visible = false;
             panelCadastroAprov.Visible = false;
             panelMensagens.Visible = false;
@@ -108,10 +99,7 @@ namespace FindTec
         }
         private void button4_Click(object sender, EventArgs e)
         {
-            opA1.Visible = false;
-            opB1.Visible = false;
-            opC1.Visible = false;
-            opD1.Visible = true;
+            
             panelPerfilC.Visible = false;
             panelCadastroAprov.Visible = false;
             panelOportunidades.Visible = false;
