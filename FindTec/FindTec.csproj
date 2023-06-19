@@ -279,6 +279,8 @@
     <None Include="Imagens\botaoAnunciarVaga1.png" />
     <None Include="Imagens\botaoAnunciar1.png" />
     <None Include="Imagens\botaoAnunciar2.png" />
+    <None Include="Imagens\botaoAprovarCadastro1.png" />
+    <None Include="Imagens\botaoAprovarCadastro2.png" />
     <Content Include="Imagens\botaoEmpresa1.png" />
     <None Include="Imagens\botaoEmpresa2.png" />
     <None Include="Imagens\botaoEntrar1.png" />
@@ -305,6 +307,10 @@
     <None Include="Imagens\botaoVerDetalhes.png" />
     <None Include="Imagens\botaoMinhasVagas1.png" />
     <None Include="Imagens\botaoMinhasVagas2.png" />
+    <None Include="Imagens\botaoGerenciaUsuarios1.png" />
+    <None Include="Imagens\botaoGerenciaUsuarios2.png" />
+    <None Include="Imagens\botaoVagas1.png" />
+    <None Include="Imagens\botaoVagas2.png" />
     <Content Include="Imagens\botaoVoltar.png" />
     <None Include="Imagens\CadastroAluno.png" />
     <None Include="Imagens\CadastroEmpresa.png" />
@@ -321,6 +327,7 @@
     <None Include="Imagens\telaAnunciarVaga.png" />
     <None Include="Imagens\telaCandidatos.png" />
     <None Include="Imagens\telaAprovacaoCadastro.png" />
+    <None Include="Imagens\menuLateralCoordenador.png" />
     <Content Include="Imagens\TelaEscolha.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

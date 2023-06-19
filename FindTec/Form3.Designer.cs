@@ -38,13 +38,13 @@ namespace FindTec
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.botaoSair = new System.Windows.Forms.Button();
-            this.viewUsuarios = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.botaoGerenciarusuarios = new System.Windows.Forms.Button();
+            this.boatoMensagens = new System.Windows.Forms.Button();
+            this.botaoVagas = new System.Windows.Forms.Button();
+            this.botaoAprovarCadastro = new System.Windows.Forms.Button();
+            this.botaoPerfil = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -63,12 +63,8 @@ namespace FindTec
             this.ColumnAprovE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnRecusarE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelPerfilC = new System.Windows.Forms.Panel();
-            this.buttonUpload = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.botaoAlterarFoto = new System.Windows.Forms.Button();
+            this.botaoEditarDados = new System.Windows.Forms.Button();
             this.telefoneTxt = new System.Windows.Forms.TextBox();
             this.emailTxt = new System.Windows.Forms.TextBox();
             this.nomeTxt = new System.Windows.Forms.TextBox();
@@ -97,6 +93,7 @@ namespace FindTec
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colContato = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panelCadastroAprov.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewE)).BeginInit();
@@ -113,19 +110,27 @@ namespace FindTec
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.BackgroundImage = global::FindTec.Properties.Resources.menuLateral;
+            this.panel1.BackgroundImage = global::FindTec.Properties.Resources.menuLateralCoordenador;
+            this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.botaoSair);
-            this.panel1.Controls.Add(this.viewUsuarios);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.botaoGerenciarusuarios);
+            this.panel1.Controls.Add(this.boatoMensagens);
+            this.panel1.Controls.Add(this.botaoVagas);
+            this.panel1.Controls.Add(this.botaoAprovarCadastro);
+            this.panel1.Controls.Add(this.botaoPerfil);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(215, 550);
             this.panel1.TabIndex = 0;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Location = new System.Drawing.Point(59, 54);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(115, 115);
+            this.pictureBox2.TabIndex = 32;
+            this.pictureBox2.TabStop = false;
             // 
             // botaoSair
             // 
@@ -146,86 +151,90 @@ namespace FindTec
             this.botaoSair.MouseEnter += new System.EventHandler(this.botaoSair_MouseEnter);
             this.botaoSair.MouseLeave += new System.EventHandler(this.botaoSair_MouseLeave);
             // 
-            // viewUsuarios
+            // botaoGerenciarusuarios
             // 
-            this.viewUsuarios.FlatAppearance.BorderSize = 0;
-            this.viewUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.viewUsuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.viewUsuarios.ForeColor = System.Drawing.Color.White;
-            this.viewUsuarios.Location = new System.Drawing.Point(0, 377);
-            this.viewUsuarios.Name = "viewUsuarios";
-            this.viewUsuarios.Size = new System.Drawing.Size(203, 36);
-            this.viewUsuarios.TabIndex = 5;
-            this.viewUsuarios.Text = "Gerenciar Usuários";
-            this.viewUsuarios.UseVisualStyleBackColor = true;
-            this.viewUsuarios.Click += new System.EventHandler(this.viewUsuarios_Click);
+            this.botaoGerenciarusuarios.BackgroundImage = global::FindTec.Properties.Resources.botaoGerenciaUsuarios1;
+            this.botaoGerenciarusuarios.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.botaoGerenciarusuarios.FlatAppearance.BorderSize = 0;
+            this.botaoGerenciarusuarios.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.botaoGerenciarusuarios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.botaoGerenciarusuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botaoGerenciarusuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botaoGerenciarusuarios.ForeColor = System.Drawing.Color.White;
+            this.botaoGerenciarusuarios.Location = new System.Drawing.Point(3, 418);
+            this.botaoGerenciarusuarios.Name = "botaoGerenciarusuarios";
+            this.botaoGerenciarusuarios.Size = new System.Drawing.Size(197, 56);
+            this.botaoGerenciarusuarios.TabIndex = 5;
+            this.botaoGerenciarusuarios.UseVisualStyleBackColor = true;
+            this.botaoGerenciarusuarios.Click += new System.EventHandler(this.viewUsuarios_Click);
             // 
-            // label1
+            // boatoMensagens
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(29, 126);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(148, 25);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Coordenador";
+            this.boatoMensagens.BackgroundImage = global::FindTec.Properties.Resources.botaoMensagens_1;
+            this.boatoMensagens.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.boatoMensagens.FlatAppearance.BorderSize = 0;
+            this.boatoMensagens.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.boatoMensagens.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.boatoMensagens.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.boatoMensagens.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boatoMensagens.ForeColor = System.Drawing.Color.White;
+            this.boatoMensagens.Location = new System.Drawing.Point(3, 364);
+            this.boatoMensagens.Name = "boatoMensagens";
+            this.boatoMensagens.Size = new System.Drawing.Size(197, 56);
+            this.boatoMensagens.TabIndex = 3;
+            this.boatoMensagens.UseVisualStyleBackColor = true;
+            this.boatoMensagens.Click += new System.EventHandler(this.button4_Click);
             // 
-            // button4
+            // botaoVagas
             // 
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(0, 342);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(203, 36);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Mensagens";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.botaoVagas.BackgroundImage = global::FindTec.Properties.Resources.botaoVagas1;
+            this.botaoVagas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.botaoVagas.FlatAppearance.BorderSize = 0;
+            this.botaoVagas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.botaoVagas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.botaoVagas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botaoVagas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botaoVagas.ForeColor = System.Drawing.Color.White;
+            this.botaoVagas.Location = new System.Drawing.Point(3, 310);
+            this.botaoVagas.Name = "botaoVagas";
+            this.botaoVagas.Size = new System.Drawing.Size(197, 56);
+            this.botaoVagas.TabIndex = 2;
+            this.botaoVagas.UseVisualStyleBackColor = true;
+            this.botaoVagas.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button3
+            // botaoAprovarCadastro
             // 
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(3, 300);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(200, 36);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Oportunidades";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.botaoAprovarCadastro.BackgroundImage = global::FindTec.Properties.Resources.botaoAprovarCadastro1;
+            this.botaoAprovarCadastro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.botaoAprovarCadastro.FlatAppearance.BorderSize = 0;
+            this.botaoAprovarCadastro.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.botaoAprovarCadastro.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.botaoAprovarCadastro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botaoAprovarCadastro.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botaoAprovarCadastro.ForeColor = System.Drawing.Color.White;
+            this.botaoAprovarCadastro.Location = new System.Drawing.Point(3, 255);
+            this.botaoAprovarCadastro.Name = "botaoAprovarCadastro";
+            this.botaoAprovarCadastro.Size = new System.Drawing.Size(197, 56);
+            this.botaoAprovarCadastro.TabIndex = 1;
+            this.botaoAprovarCadastro.UseVisualStyleBackColor = true;
+            this.botaoAprovarCadastro.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button2
+            // botaoPerfil
             // 
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(0, 258);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(203, 36);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Aprovar Cadastro";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button1
-            // 
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(0, 216);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(203, 36);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Perfil";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.botaoPerfil.BackgroundImage = global::FindTec.Properties.Resources.botaoPerfil_1;
+            this.botaoPerfil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.botaoPerfil.FlatAppearance.BorderSize = 0;
+            this.botaoPerfil.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.botaoPerfil.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.botaoPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botaoPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botaoPerfil.ForeColor = System.Drawing.Color.White;
+            this.botaoPerfil.Location = new System.Drawing.Point(3, 202);
+            this.botaoPerfil.Name = "botaoPerfil";
+            this.botaoPerfil.Size = new System.Drawing.Size(197, 56);
+            this.botaoPerfil.TabIndex = 0;
+            this.botaoPerfil.UseVisualStyleBackColor = true;
+            this.botaoPerfil.Click += new System.EventHandler(this.button1_Click);
             // 
             // dataGridView1
             // 
@@ -411,14 +420,10 @@ namespace FindTec
             // 
             // panelPerfilC
             // 
-            this.panelPerfilC.BackColor = System.Drawing.Color.White;
+            this.panelPerfilC.BackColor = System.Drawing.Color.Transparent;
             this.panelPerfilC.BackgroundImage = global::FindTec.Properties.Resources.telaPerfilCoordenador;
-            this.panelPerfilC.Controls.Add(this.buttonUpload);
-            this.panelPerfilC.Controls.Add(this.label6);
-            this.panelPerfilC.Controls.Add(this.button6);
-            this.panelPerfilC.Controls.Add(this.label4);
-            this.panelPerfilC.Controls.Add(this.label3);
-            this.panelPerfilC.Controls.Add(this.label7);
+            this.panelPerfilC.Controls.Add(this.botaoAlterarFoto);
+            this.panelPerfilC.Controls.Add(this.botaoEditarDados);
             this.panelPerfilC.Controls.Add(this.telefoneTxt);
             this.panelPerfilC.Controls.Add(this.emailTxt);
             this.panelPerfilC.Controls.Add(this.nomeTxt);
@@ -428,95 +433,74 @@ namespace FindTec
             this.panelPerfilC.Size = new System.Drawing.Size(755, 525);
             this.panelPerfilC.TabIndex = 8;
             // 
-            // buttonUpload
+            // botaoAlterarFoto
             // 
-            this.buttonUpload.Location = new System.Drawing.Point(493, 158);
-            this.buttonUpload.Name = "buttonUpload";
-            this.buttonUpload.Size = new System.Drawing.Size(75, 23);
-            this.buttonUpload.TabIndex = 14;
-            this.buttonUpload.Text = "Upload";
-            this.buttonUpload.UseVisualStyleBackColor = true;
-            this.buttonUpload.Click += new System.EventHandler(this.buttonUpload_Click);
+            this.botaoAlterarFoto.BackgroundImage = global::FindTec.Properties.Resources.BotaoAlterarImagem_1;
+            this.botaoAlterarFoto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.botaoAlterarFoto.FlatAppearance.BorderSize = 0;
+            this.botaoAlterarFoto.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.botaoAlterarFoto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.botaoAlterarFoto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botaoAlterarFoto.Location = new System.Drawing.Point(428, 149);
+            this.botaoAlterarFoto.Name = "botaoAlterarFoto";
+            this.botaoAlterarFoto.Size = new System.Drawing.Size(121, 35);
+            this.botaoAlterarFoto.TabIndex = 14;
+            this.botaoAlterarFoto.UseVisualStyleBackColor = true;
+            this.botaoAlterarFoto.Click += new System.EventHandler(this.buttonUpload_Click);
             // 
-            // label6
+            // botaoEditarDados
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(356, 65);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(67, 25);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "Perfil";
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(351, 434);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(83, 23);
-            this.button6.TabIndex = 9;
-            this.button6.Text = "Editar Dados";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(269, 343);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(49, 13);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Telefone";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(269, 293);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(32, 13);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Email";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(266, 242);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(35, 13);
-            this.label7.TabIndex = 5;
-            this.label7.Text = "Nome";
+            this.botaoEditarDados.BackgroundImage = global::FindTec.Properties.Resources.botaoEditarDados_1;
+            this.botaoEditarDados.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.botaoEditarDados.FlatAppearance.BorderSize = 0;
+            this.botaoEditarDados.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.botaoEditarDados.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.botaoEditarDados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botaoEditarDados.Location = new System.Drawing.Point(526, 330);
+            this.botaoEditarDados.Name = "botaoEditarDados";
+            this.botaoEditarDados.Size = new System.Drawing.Size(158, 62);
+            this.botaoEditarDados.TabIndex = 9;
+            this.botaoEditarDados.UseVisualStyleBackColor = true;
+            this.botaoEditarDados.Click += new System.EventHandler(this.button6_Click);
             // 
             // telefoneTxt
             // 
-            this.telefoneTxt.Location = new System.Drawing.Point(272, 359);
+            this.telefoneTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.telefoneTxt.Font = new System.Drawing.Font("Arial Narrow", 12F);
+            this.telefoneTxt.Location = new System.Drawing.Point(149, 450);
             this.telefoneTxt.Multiline = true;
             this.telefoneTxt.Name = "telefoneTxt";
-            this.telefoneTxt.Size = new System.Drawing.Size(234, 24);
+            this.telefoneTxt.Size = new System.Drawing.Size(230, 24);
             this.telefoneTxt.TabIndex = 3;
             this.telefoneTxt.TabStop = false;
             // 
             // emailTxt
             // 
-            this.emailTxt.Location = new System.Drawing.Point(272, 309);
+            this.emailTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.emailTxt.Font = new System.Drawing.Font("Arial Narrow", 12F);
+            this.emailTxt.Location = new System.Drawing.Point(149, 365);
             this.emailTxt.Multiline = true;
             this.emailTxt.Name = "emailTxt";
-            this.emailTxt.Size = new System.Drawing.Size(234, 24);
+            this.emailTxt.Size = new System.Drawing.Size(230, 24);
             this.emailTxt.TabIndex = 2;
             this.emailTxt.TabStop = false;
             // 
             // nomeTxt
             // 
-            this.nomeTxt.Location = new System.Drawing.Point(272, 258);
+            this.nomeTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.nomeTxt.Font = new System.Drawing.Font("Arial Narrow", 12F);
+            this.nomeTxt.Location = new System.Drawing.Point(149, 286);
             this.nomeTxt.Multiline = true;
             this.nomeTxt.Name = "nomeTxt";
-            this.nomeTxt.Size = new System.Drawing.Size(234, 24);
+            this.nomeTxt.Size = new System.Drawing.Size(230, 24);
             this.nomeTxt.TabIndex = 1;
             this.nomeTxt.TabStop = false;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(326, 111);
+            this.pictureBox1.Location = new System.Drawing.Point(322, 39);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(127, 114);
+            this.pictureBox1.Size = new System.Drawing.Size(115, 115);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -802,7 +786,7 @@ namespace FindTec
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.Form3_Load);
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panelCadastroAprov.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewE)).EndInit();
@@ -823,10 +807,10 @@ namespace FindTec
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button botaoPerfil;
+        private System.Windows.Forms.Button boatoMensagens;
+        private System.Windows.Forms.Button botaoVagas;
+        private System.Windows.Forms.Button botaoAprovarCadastro;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
@@ -845,16 +829,12 @@ namespace FindTec
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnAprovE;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnRecusarE;
         private System.Windows.Forms.Panel panelPerfilC;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button botaoEditarDados;
         private System.Windows.Forms.TextBox telefoneTxt;
         private System.Windows.Forms.TextBox emailTxt;
         private System.Windows.Forms.TextBox nomeTxt;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button buttonUpload;
+        private System.Windows.Forms.Button botaoAlterarFoto;
         private System.Windows.Forms.Panel panelOportunidades;
         private System.Windows.Forms.DataGridView gridViewOportunidades;
         private System.Windows.Forms.DataGridViewImageColumn colFoto;
@@ -871,7 +851,7 @@ namespace FindTec
         private System.Windows.Forms.TextBox txtMensagem;
         private System.Windows.Forms.Panel panelConversas;
         private System.Windows.Forms.FlowLayoutPanel FlowPanelConversas;
-        private System.Windows.Forms.Button viewUsuarios;
+        private System.Windows.Forms.Button botaoGerenciarusuarios;
         private System.Windows.Forms.Panel panelViewUsuarios;
         private System.Windows.Forms.DataGridView dataGridViewUsuarios;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
@@ -879,7 +859,7 @@ namespace FindTec
         private System.Windows.Forms.DataGridViewTextBoxColumn colEmail;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewButtonColumn colContato;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button botaoSair;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

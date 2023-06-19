@@ -183,6 +183,26 @@ namespace FindTec.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap botaoAprovarCadastro1 {
+            get {
+                object obj = ResourceManager.GetObject("botaoAprovarCadastro1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap botaoAprovarCadastro2 {
+            get {
+                object obj = ResourceManager.GetObject("botaoAprovarCadastro2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap botaoCandidatar_1 {
             get {
                 object obj = ResourceManager.GetObject("botaoCandidatar 1", resourceCulture);
@@ -393,6 +413,26 @@ namespace FindTec.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap botaoGerenciaUsuarios1 {
+            get {
+                object obj = ResourceManager.GetObject("botaoGerenciaUsuarios1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap botaoGerenciaUsuarios2 {
+            get {
+                object obj = ResourceManager.GetObject("botaoGerenciaUsuarios2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap botaoHome_1 {
             get {
                 object obj = ResourceManager.GetObject("botaoHome 1", resourceCulture);
@@ -553,6 +593,26 @@ namespace FindTec.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap botaoVagas1 {
+            get {
+                object obj = ResourceManager.GetObject("botaoVagas1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap botaoVagas2 {
+            get {
+                object obj = ResourceManager.GetObject("botaoVagas2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap botaoVerDetalhes {
             get {
                 object obj = ResourceManager.GetObject("botaoVerDetalhes", resourceCulture);
@@ -636,6 +696,16 @@ namespace FindTec.Properties {
         internal static System.Drawing.Bitmap menuLateral {
             get {
                 object obj = ResourceManager.GetObject("menuLateral", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap menuLateralCoordenador {
+            get {
+                object obj = ResourceManager.GetObject("menuLateralCoordenador", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
