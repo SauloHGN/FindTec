@@ -536,7 +536,7 @@ namespace FindTec
             this.botaoVoltar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.botaoVoltar.FlatAppearance.BorderSize = 0;
             this.botaoVoltar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.botaoVoltar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.botaoVoltar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.botaoVoltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.botaoVoltar.Location = new System.Drawing.Point(15, 13);
             this.botaoVoltar.Name = "botaoVoltar";
@@ -554,7 +554,8 @@ namespace FindTec
             this.txtDescricao.Multiline = true;
             this.txtDescricao.Name = "txtDescricao";
             this.txtDescricao.ReadOnly = true;
-            this.txtDescricao.Size = new System.Drawing.Size(260, 84);
+            this.txtDescricao.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtDescricao.Size = new System.Drawing.Size(260, 85);
             this.txtDescricao.TabIndex = 13;
             // 
             // txtCargaHoraria
@@ -562,7 +563,7 @@ namespace FindTec
             this.txtCargaHoraria.BackColor = System.Drawing.Color.White;
             this.txtCargaHoraria.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCargaHoraria.Font = new System.Drawing.Font("Arial Narrow", 12F);
-            this.txtCargaHoraria.Location = new System.Drawing.Point(36, 340);
+            this.txtCargaHoraria.Location = new System.Drawing.Point(38, 334);
             this.txtCargaHoraria.Multiline = true;
             this.txtCargaHoraria.Name = "txtCargaHoraria";
             this.txtCargaHoraria.ReadOnly = true;
@@ -574,7 +575,7 @@ namespace FindTec
             this.txtRemuneracao.BackColor = System.Drawing.Color.White;
             this.txtRemuneracao.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtRemuneracao.Font = new System.Drawing.Font("Arial Narrow", 12F);
-            this.txtRemuneracao.Location = new System.Drawing.Point(36, 485);
+            this.txtRemuneracao.Location = new System.Drawing.Point(38, 480);
             this.txtRemuneracao.Multiline = true;
             this.txtRemuneracao.Name = "txtRemuneracao";
             this.txtRemuneracao.ReadOnly = true;
@@ -586,7 +587,7 @@ namespace FindTec
             this.txtCargo.BackColor = System.Drawing.Color.White;
             this.txtCargo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCargo.Font = new System.Drawing.Font("Arial Narrow", 12F);
-            this.txtCargo.Location = new System.Drawing.Point(36, 412);
+            this.txtCargo.Location = new System.Drawing.Point(38, 407);
             this.txtCargo.Multiline = true;
             this.txtCargo.Name = "txtCargo";
             this.txtCargo.ReadOnly = true;
@@ -598,7 +599,7 @@ namespace FindTec
             this.txtEmpresaContratante.BackColor = System.Drawing.Color.White;
             this.txtEmpresaContratante.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtEmpresaContratante.Font = new System.Drawing.Font("Arial Narrow", 12F);
-            this.txtEmpresaContratante.Location = new System.Drawing.Point(36, 272);
+            this.txtEmpresaContratante.Location = new System.Drawing.Point(38, 266);
             this.txtEmpresaContratante.Multiline = true;
             this.txtEmpresaContratante.Name = "txtEmpresaContratante";
             this.txtEmpresaContratante.ReadOnly = true;
@@ -610,7 +611,7 @@ namespace FindTec
             this.txtTituloVaga.BackColor = System.Drawing.Color.White;
             this.txtTituloVaga.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTituloVaga.Font = new System.Drawing.Font("Arial Narrow", 12F);
-            this.txtTituloVaga.Location = new System.Drawing.Point(36, 201);
+            this.txtTituloVaga.Location = new System.Drawing.Point(38, 196);
             this.txtTituloVaga.Multiline = true;
             this.txtTituloVaga.Name = "txtTituloVaga";
             this.txtTituloVaga.ReadOnly = true;
@@ -696,7 +697,7 @@ namespace FindTec
             this.btnVoltar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnVoltar.FlatAppearance.BorderSize = 0;
             this.btnVoltar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnVoltar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnVoltar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnVoltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVoltar.Location = new System.Drawing.Point(15, 13);
             this.btnVoltar.Name = "btnVoltar";
@@ -830,12 +831,12 @@ namespace FindTec
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(1000, 550);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelVagaInfoAluno);
+            this.Controls.Add(this.panelMeusCadastrosAluno);
             this.Controls.Add(this.panelPerfilAluno);
             this.Controls.Add(this.panelConversasAluno);
             this.Controls.Add(this.panelMensagensAluno);
             this.Controls.Add(this.panelOportunidadesAluno);
-            this.Controls.Add(this.panelVagaInfoAluno);
-            this.Controls.Add(this.panelMeusCadastrosAluno);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TelaAluno";

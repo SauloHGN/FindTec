@@ -59,7 +59,7 @@ namespace FindTec
             LoadDataViewGridE();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void botaoPerfil_Click(object sender, EventArgs e)
         {
             
 
@@ -71,7 +71,7 @@ namespace FindTec
             panelPerfilC.BringToFront();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void botaoAprovarCadastro_Click(object sender, EventArgs e)
         {
             dataGridView1.Rows.Clear();
             LoadDataGridView();
@@ -86,7 +86,7 @@ namespace FindTec
             panelCadastroAprov.BringToFront();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void botaoVagas_Click(object sender, EventArgs e)
         {
             
             panelPerfilC.Visible = false;
@@ -97,7 +97,7 @@ namespace FindTec
             panelOportunidades.Visible = true;
             
         }
-        private void button4_Click(object sender, EventArgs e)
+        private void botaoMensagens_Click(object sender, EventArgs e)
         {
             
             panelPerfilC.Visible = false;
@@ -108,7 +108,7 @@ namespace FindTec
             panelConversas.BringToFront();
         }
 
-        private void viewUsuarios_Click(object sender, EventArgs e)
+        private void botaoGenrenciarUsuarios_Click(object sender, EventArgs e)
         {
             dataGridViewUsuarios.Rows.Clear();
             LoadGridUsuarios();
@@ -424,7 +424,7 @@ namespace FindTec
             }
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void botaoEditarDados_Click(object sender, EventArgs e)
         {
             Form prompt = new Form();
             prompt.Width = 300;
@@ -800,5 +800,96 @@ namespace FindTec
             // Define a região da PictureBox para a região elíptica
             picAvatarCoordenador2.Region = new System.Drawing.Region(roundPath);
         }
+
+        private void botaoPerfil_MouseEnter(object sender, EventArgs e)
+        {
+            botaoPerfil.BackgroundImage = Properties.Resources.botaoPerfil_2;
+        }
+
+        private void botaoPerfil_MouseLeave(object sender, EventArgs e)
+        {
+            botaoPerfil.BackgroundImage = Properties.Resources.botaoPerfil_1;
+        }
+
+        private void botaoAprovarCadastro_MouseEnter(object sender, EventArgs e)
+        {
+            botaoAprovarCadastro.BackgroundImage = Properties.Resources.botaoAprovarCadastro2;
+        }
+
+        private void botaoAprovarCadastro_MouseLeave(object sender, EventArgs e)
+        {
+            botaoAprovarCadastro.BackgroundImage = Properties.Resources.botaoAprovarCadastro1;
+        }
+
+        private void botaoVagas_MouseEnter(object sender, EventArgs e)
+        {
+            botaoVagas.BackgroundImage = Properties.Resources.botaoVagas2;
+        }
+
+        private void botaoVagas_MouseLeave(object sender, EventArgs e)
+        {
+            botaoVagas.BackgroundImage = Properties.Resources.botaoVagas1;
+        }
+
+        private void botaoMensagens_MouseEnter(object sender, EventArgs e)
+        {
+            botaoMensagens.BackgroundImage = Properties.Resources.botaoMensagens_2;
+        }
+
+        private void botaoMensagens_MouseLeave(object sender, EventArgs e)
+        {
+            botaoMensagens.BackgroundImage = Properties.Resources.botaoMensagens_1;
+        }
+
+        private void botaoGerenciarusuarios_MouseEnter(object sender, EventArgs e)
+        {
+            botaoGerenciarUsuarios.BackgroundImage = Properties.Resources.botaoGerenciaUsuarios2;
+        }
+
+        private void botaoGerenciarusuarios_MouseLeave(object sender, EventArgs e)
+        {
+            botaoGerenciarUsuarios.BackgroundImage = Properties.Resources.botaoGerenciaUsuarios1;
+        }
+
+        private void botaoAlterarFoto_MouseEnter(object sender, EventArgs e)
+        {
+            botaoAlterarFoto.BackgroundImage = Properties.Resources.BotaoAlterarImagem_2;
+        }
+
+        private void botaoAlterarFoto_MouseLeave(object sender, EventArgs e)
+        {
+            botaoAlterarFoto.BackgroundImage = Properties.Resources.BotaoAlterarImagem_2;
+        }
+
+        private void botaoAlterarSenha_MouseEnter(object sender, EventArgs e)
+        {
+            botaoAlterarSenha.BackgroundImage = Properties.Resources.botaoAlterarSenha_2;
+        }
+
+        private void botaoAlterarSenha_MouseLeave(object sender, EventArgs e)
+        {
+            botaoAlterarSenha.BackgroundImage = Properties.Resources.botaoAlterarSenha_1;
+        }
+
+        private void botaoEditarDados_MouseEnter(object sender, EventArgs e)
+        {
+            botaoEditarDados.BackgroundImage = Properties.Resources.botaoEditarDados_2;
+        }
+
+        private void botaoEditarDados_MouseLeave(object sender, EventArgs e)
+        {
+            botaoEditarDados.BackgroundImage = Properties.Resources.botaoEditarDados_1;
+        }
+
+        private void botaoDesativarConta_MouseEnter(object sender, EventArgs e)
+        {
+            botaoDesativarConta.BackgroundImage = Properties.Resources.botaoDesativarConta_2;
+        }
+
+        private void botaoDesativarConta_MouseLeave(object sender, EventArgs e)
+        {
+            botaoDesativarConta.BackgroundImage = Properties.Resources.botaoDesativarConta_1;
+        }
+
     }
 }

@@ -65,9 +65,11 @@ namespace FindTec
             // 
             this.labelUltimaMensagem.AutoSize = true;
             this.labelUltimaMensagem.BackColor = System.Drawing.Color.Transparent;
-            this.labelUltimaMensagem.Location = new System.Drawing.Point(72, 28);
+            this.labelUltimaMensagem.Font = new System.Drawing.Font("Arial Narrow", 12F);
+            this.labelUltimaMensagem.Location = new System.Drawing.Point(71, 21);
+            this.labelUltimaMensagem.MaximumSize = new System.Drawing.Size(218, 52);
             this.labelUltimaMensagem.Name = "labelUltimaMensagem";
-            this.labelUltimaMensagem.Size = new System.Drawing.Size(91, 13);
+            this.labelUltimaMensagem.Size = new System.Drawing.Size(116, 20);
             this.labelUltimaMensagem.TabIndex = 2;
             this.labelUltimaMensagem.Text = "Ultima Mensagem";
             // 
@@ -92,10 +94,10 @@ namespace FindTec
             this.BackColor = System.Drawing.Color.Transparent;
             this.BackgroundImage = global::FindTec.Properties.Resources.fundoMensagemRecebida1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.Controls.Add(this.labelMensagemNaoLida);
             this.Controls.Add(this.labelUltimaMensagem);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.labelNome);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.labelMensagemNaoLida);
             this.Name = "ConversaItem";
             this.Size = new System.Drawing.Size(334, 66);
             this.MouseEnter += new System.EventHandler(this.ConversaItem_MouseEnter);

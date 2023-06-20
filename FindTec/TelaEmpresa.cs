@@ -60,48 +60,7 @@ namespace FindTec
                 pictureBox1.Image = null;
                 pictureBox2.Image = null;
             }
-        }
-
-        private void botaoPerfil_Click(object sender, EventArgs e)
-        {
-            panelAnunciarVaga.Visible = false;
-            panelAlunoCadastrado.Visible = false;
-            panelMinhasVagas.Visible = false;
-            panelConversas.Visible = false;
-            panelPerfilE.Visible = true;
-        }
-
-        private void botaoOportunidades_Click(object sender, EventArgs e)
-        {
-            panelPerfilE.Visible = false;
-            panelAlunoCadastrado.Visible = false;
-            panelConversas.Visible = false;
-
-            panelAnunciarVaga.Visible = true;
-            panelAnunciarVaga.BringToFront();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            panelPerfilE.Visible = false;
-            panelAnunciarVaga.Visible = false;
-            panelMinhasVagas.Visible = false;
-            panelAlunoCadastrado.Visible = false;
-            panelConversas.Visible = false;
-
-            panelConversas.Visible = true;
-            panelConversas.BringToFront();
-            LoadConversas();
-        }
-
-        private void botaoHome_Click(object sender, EventArgs e)
-        {
-            panelPerfilE.Visible = false;
-            panelAnunciarVaga.Visible = false;
-            panelMinhasVagas.Visible = false;
-            panelAlunoCadastrado.Visible = false;
-            panelConversas.Visible = false;
-        }
+        }                             
 
         private void panelPerfilE_Paint(object sender, PaintEventArgs e)
         {
@@ -389,27 +348,45 @@ namespace FindTec
 
         }
 
+        private void botaoPerfil_Click(object sender, EventArgs e)
+        {
+            panelAnunciarVaga.Visible = false;
+            panelMinhasVagas.Visible = false;
+            panelAlunoCadastrado.Visible = false;
+            panelPerfilE.Visible = true;
+            panelMensagens.Visible = false;
+            panelConversas.Visible = false;
+        }
+
+        private void botaoMensagens_Click(object sender, EventArgs e)
+        {
+            panelAnunciarVaga.Visible = false;
+            panelMinhasVagas.Visible = false;
+            panelAlunoCadastrado.Visible = false;
+            panelPerfilE.Visible = false;
+            panelMensagens.Visible = false;
+            panelConversas.Visible = true;
+        }
+
         private void botaoAnunciarVaga_Click(object sender, EventArgs e)
         {
-            
+
             panelAnunciarVaga.Visible = true;
             panelMinhasVagas.Visible = false;
-            panelAnunciarVaga.BringToFront();
+            panelAlunoCadastrado.Visible = false;
+            panelPerfilE.Visible = false;
+            panelMensagens.Visible = false;
+            panelConversas.Visible = false;
         }
 
         private void botaoMinhasVagas_Click(object sender, EventArgs e)
         {
-            botaoMinhasVagas.BackColor = Color.Black;
-            botaoMinhasVagas.ForeColor = Color.White;
-            botaoAnunciarVaga.BackColor = SystemColors.Control;
-            botaoAnunciarVaga.ForeColor = Color.Black;
-            
-
             panelAnunciarVaga.Visible = false;
             panelMinhasVagas.Visible = true;
-            panelMinhasVagas.BringToFront();
-
-            LoadMinhasVagas();
+            panelAlunoCadastrado.Visible = false;
+            panelPerfilE.Visible = false;
+            panelMensagens.Visible = false;
+            panelConversas.Visible = false;
         }
 
         private void btnCriarVaga2_Click(object sender, EventArgs e)
@@ -520,7 +497,7 @@ namespace FindTec
 
         }
 
-        private void bataoVoltar_Click(object sender, EventArgs e)
+        private void botaoVoltar_Click(object sender, EventArgs e)
         {
             panelAlunoCadastrado.Visible = false;
             LoadMinhasVagas();
@@ -795,17 +772,7 @@ namespace FindTec
         private void botaoPerfil_MouseLeave(object sender, EventArgs e)
         {
             botaoPerfil.BackgroundImage = Properties.Resources.botaoPerfil_1;
-        }
-
-        private void botaoOportunidades_MouseEnter(object sender, EventArgs e)
-        {
-            botaoOportunidades.BackgroundImage = Properties.Resources.botaoOportunidades_2;
-        }
-
-        private void botaoOportunidades_MouseLeave(object sender, EventArgs e)
-        {
-            botaoOportunidades.BackgroundImage = Properties.Resources.botaoOportunidades_1;
-        }
+        }        
 
         private void botaoMensagens_MouseEnter(object sender, EventArgs e)
         {
@@ -874,7 +841,7 @@ namespace FindTec
 
         private void botaoAnunciarVaga_MouseLeave(object sender, EventArgs e)
         {
-            botaoAnunciarVaga.BackgroundImage = Properties.Resources.botaoAnunciarVaga2;
+            botaoAnunciarVaga.BackgroundImage = Properties.Resources.botaoAnunciarVaga1;
         }
 
         private void botaoMinhasVagas_MouseEnter(object sender, EventArgs e)
@@ -894,7 +861,7 @@ namespace FindTec
 
         private void botaoAnunciar_MouseLeave(object sender, EventArgs e)
         {
-            botaoAnunciar.BackgroundImage = Properties.Resources.botaoAnunciar2;
+            botaoAnunciar.BackgroundImage = Properties.Resources.botaoAnunciar1;
         }
 
         private void botaoEncerrarVaga_MouseEnter(object sender, EventArgs e)
@@ -907,6 +874,8 @@ namespace FindTec
             botaoEncerrarVaga.BackgroundImage = Properties.Resources.botaoEncerrarVaga1;
         }
 
+        
+
         ///////////////SAULO VC PRECISA ARRUMAR ISSO AQUI////////////////////////////
 
         private void botaoAlterarSenha_Click(object sender, EventArgs e)
@@ -915,5 +884,57 @@ namespace FindTec
             //    recuperarSenha.panelNewSenha.Visible = true;
             //    this.Hide();
         }
+
+        private void botaoVoltar_MouseEnter(object sender, EventArgs e)
+        {
+            botaoVoltar.BackgroundImage = Properties.Resources.botaoVoltar;
+        }
+
+        private void botaoVoltar_MouseLeave(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RemuneracaoTextBox_TextChanged(object sender, EventArgs e)
+        {
+            string texto = RemuneracaoTextBox.Text.Trim();
+
+            // Verificar exceção para a palavra "VALOR" com letras maiúsculas
+            if (texto.ToUpper() == "VALOR")
+            {
+                RemuneracaoTextBox.Text = "VALOR";
+                RemuneracaoTextBox.SelectionStart = RemuneracaoTextBox.Text.Length;
+                return;
+            }
+
+            // Remover caracteres não numéricos, exceto a vírgula
+            string valorNumerico = new string(texto.Where(c => char.IsDigit(c) || c == ',').ToArray());
+
+            // Remover vírgulas extras
+            int primeiraVirgula = valorNumerico.IndexOf(',');
+            if (primeiraVirgula >= 0)
+            {
+                valorNumerico = valorNumerico.Substring(0, primeiraVirgula + 1) + new string(valorNumerico.Substring(primeiraVirgula + 1).Where(c => c != ',').ToArray());
+            }
+
+            // Adicionar "R$ " somente quando começar a digitar
+            if (!string.IsNullOrEmpty(valorNumerico))
+            {
+                valorNumerico = "R$ " + valorNumerico;
+            }
+
+            // Verificar se o texto foi modificado antes de atualizar a caixa de texto
+            if (RemuneracaoTextBox.Text != valorNumerico)
+            {
+                RemuneracaoTextBox.TextChanged -= RemuneracaoTextBox_TextChanged; // Remover manipulador temporariamente
+                RemuneracaoTextBox.Text = valorNumerico;
+                RemuneracaoTextBox.SelectionStart = RemuneracaoTextBox.Text.Length;
+                RemuneracaoTextBox.TextChanged += RemuneracaoTextBox_TextChanged; // Adicionar manipulador novamente
+            }
+        }
+
+
+
+
     }
 }

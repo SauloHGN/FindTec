@@ -40,8 +40,8 @@ namespace FindTec
             this.panel1 = new System.Windows.Forms.Panel();
             this.picAvatarCoordenador2 = new System.Windows.Forms.PictureBox();
             this.botaoSair = new System.Windows.Forms.Button();
-            this.botaoGerenciarusuarios = new System.Windows.Forms.Button();
-            this.boatoMensagens = new System.Windows.Forms.Button();
+            this.botaoGerenciarUsuarios = new System.Windows.Forms.Button();
+            this.botaoMensagens = new System.Windows.Forms.Button();
             this.botaoVagas = new System.Windows.Forms.Button();
             this.botaoAprovarCadastro = new System.Windows.Forms.Button();
             this.botaoPerfil = new System.Windows.Forms.Button();
@@ -115,8 +115,8 @@ namespace FindTec
             this.panel1.BackgroundImage = global::FindTec.Properties.Resources.menuLateralCoordenador;
             this.panel1.Controls.Add(this.picAvatarCoordenador2);
             this.panel1.Controls.Add(this.botaoSair);
-            this.panel1.Controls.Add(this.botaoGerenciarusuarios);
-            this.panel1.Controls.Add(this.boatoMensagens);
+            this.panel1.Controls.Add(this.botaoGerenciarUsuarios);
+            this.panel1.Controls.Add(this.botaoMensagens);
             this.panel1.Controls.Add(this.botaoVagas);
             this.panel1.Controls.Add(this.botaoAprovarCadastro);
             this.panel1.Controls.Add(this.botaoPerfil);
@@ -141,6 +141,7 @@ namespace FindTec
             this.botaoSair.BackgroundImage = global::FindTec.Properties.Resources.botaoSair_1;
             this.botaoSair.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.botaoSair.FlatAppearance.BorderSize = 0;
+            this.botaoSair.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
             this.botaoSair.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.botaoSair.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.botaoSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -155,45 +156,52 @@ namespace FindTec
             this.botaoSair.MouseEnter += new System.EventHandler(this.botaoSair_MouseEnter);
             this.botaoSair.MouseLeave += new System.EventHandler(this.botaoSair_MouseLeave);
             // 
-            // botaoGerenciarusuarios
+            // botaoGerenciarUsuarios
             // 
-            this.botaoGerenciarusuarios.BackgroundImage = global::FindTec.Properties.Resources.botaoGerenciaUsuarios1;
-            this.botaoGerenciarusuarios.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.botaoGerenciarusuarios.FlatAppearance.BorderSize = 0;
-            this.botaoGerenciarusuarios.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.botaoGerenciarusuarios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.botaoGerenciarusuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botaoGerenciarusuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botaoGerenciarusuarios.ForeColor = System.Drawing.Color.White;
-            this.botaoGerenciarusuarios.Location = new System.Drawing.Point(3, 418);
-            this.botaoGerenciarusuarios.Name = "botaoGerenciarusuarios";
-            this.botaoGerenciarusuarios.Size = new System.Drawing.Size(197, 56);
-            this.botaoGerenciarusuarios.TabIndex = 5;
-            this.botaoGerenciarusuarios.UseVisualStyleBackColor = true;
-            this.botaoGerenciarusuarios.Click += new System.EventHandler(this.viewUsuarios_Click);
+            this.botaoGerenciarUsuarios.BackgroundImage = global::FindTec.Properties.Resources.botaoGerenciaUsuarios1;
+            this.botaoGerenciarUsuarios.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.botaoGerenciarUsuarios.FlatAppearance.BorderSize = 0;
+            this.botaoGerenciarUsuarios.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.botaoGerenciarUsuarios.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.botaoGerenciarUsuarios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.botaoGerenciarUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botaoGerenciarUsuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botaoGerenciarUsuarios.ForeColor = System.Drawing.Color.White;
+            this.botaoGerenciarUsuarios.Location = new System.Drawing.Point(3, 418);
+            this.botaoGerenciarUsuarios.Name = "botaoGerenciarUsuarios";
+            this.botaoGerenciarUsuarios.Size = new System.Drawing.Size(197, 56);
+            this.botaoGerenciarUsuarios.TabIndex = 5;
+            this.botaoGerenciarUsuarios.UseVisualStyleBackColor = true;
+            this.botaoGerenciarUsuarios.Click += new System.EventHandler(this.botaoGenrenciarUsuarios_Click);
+            this.botaoGerenciarUsuarios.MouseEnter += new System.EventHandler(this.botaoGerenciarusuarios_MouseEnter);
+            this.botaoGerenciarUsuarios.MouseLeave += new System.EventHandler(this.botaoGerenciarusuarios_MouseLeave);
             // 
-            // boatoMensagens
+            // botaoMensagens
             // 
-            this.boatoMensagens.BackgroundImage = global::FindTec.Properties.Resources.botaoMensagens_1;
-            this.boatoMensagens.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.boatoMensagens.FlatAppearance.BorderSize = 0;
-            this.boatoMensagens.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.boatoMensagens.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.boatoMensagens.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.boatoMensagens.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.boatoMensagens.ForeColor = System.Drawing.Color.White;
-            this.boatoMensagens.Location = new System.Drawing.Point(3, 364);
-            this.boatoMensagens.Name = "boatoMensagens";
-            this.boatoMensagens.Size = new System.Drawing.Size(197, 56);
-            this.boatoMensagens.TabIndex = 3;
-            this.boatoMensagens.UseVisualStyleBackColor = true;
-            this.boatoMensagens.Click += new System.EventHandler(this.button4_Click);
+            this.botaoMensagens.BackgroundImage = global::FindTec.Properties.Resources.botaoMensagens_1;
+            this.botaoMensagens.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.botaoMensagens.FlatAppearance.BorderSize = 0;
+            this.botaoMensagens.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.botaoMensagens.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.botaoMensagens.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.botaoMensagens.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botaoMensagens.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botaoMensagens.ForeColor = System.Drawing.Color.White;
+            this.botaoMensagens.Location = new System.Drawing.Point(3, 364);
+            this.botaoMensagens.Name = "botaoMensagens";
+            this.botaoMensagens.Size = new System.Drawing.Size(197, 56);
+            this.botaoMensagens.TabIndex = 3;
+            this.botaoMensagens.UseVisualStyleBackColor = true;
+            this.botaoMensagens.Click += new System.EventHandler(this.botaoMensagens_Click);
+            this.botaoMensagens.MouseEnter += new System.EventHandler(this.botaoMensagens_MouseEnter);
+            this.botaoMensagens.MouseLeave += new System.EventHandler(this.botaoMensagens_MouseLeave);
             // 
             // botaoVagas
             // 
             this.botaoVagas.BackgroundImage = global::FindTec.Properties.Resources.botaoVagas1;
             this.botaoVagas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.botaoVagas.FlatAppearance.BorderSize = 0;
+            this.botaoVagas.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
             this.botaoVagas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.botaoVagas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.botaoVagas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -204,13 +212,16 @@ namespace FindTec
             this.botaoVagas.Size = new System.Drawing.Size(197, 56);
             this.botaoVagas.TabIndex = 2;
             this.botaoVagas.UseVisualStyleBackColor = true;
-            this.botaoVagas.Click += new System.EventHandler(this.button3_Click);
+            this.botaoVagas.Click += new System.EventHandler(this.botaoVagas_Click);
+            this.botaoVagas.MouseEnter += new System.EventHandler(this.botaoVagas_MouseEnter);
+            this.botaoVagas.MouseLeave += new System.EventHandler(this.botaoVagas_MouseLeave);
             // 
             // botaoAprovarCadastro
             // 
             this.botaoAprovarCadastro.BackgroundImage = global::FindTec.Properties.Resources.botaoAprovarCadastro1;
             this.botaoAprovarCadastro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.botaoAprovarCadastro.FlatAppearance.BorderSize = 0;
+            this.botaoAprovarCadastro.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
             this.botaoAprovarCadastro.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.botaoAprovarCadastro.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.botaoAprovarCadastro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -221,13 +232,16 @@ namespace FindTec
             this.botaoAprovarCadastro.Size = new System.Drawing.Size(197, 56);
             this.botaoAprovarCadastro.TabIndex = 1;
             this.botaoAprovarCadastro.UseVisualStyleBackColor = true;
-            this.botaoAprovarCadastro.Click += new System.EventHandler(this.button2_Click);
+            this.botaoAprovarCadastro.Click += new System.EventHandler(this.botaoAprovarCadastro_Click);
+            this.botaoAprovarCadastro.MouseEnter += new System.EventHandler(this.botaoAprovarCadastro_MouseEnter);
+            this.botaoAprovarCadastro.MouseLeave += new System.EventHandler(this.botaoAprovarCadastro_MouseLeave);
             // 
             // botaoPerfil
             // 
             this.botaoPerfil.BackgroundImage = global::FindTec.Properties.Resources.botaoPerfil_1;
             this.botaoPerfil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.botaoPerfil.FlatAppearance.BorderSize = 0;
+            this.botaoPerfil.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
             this.botaoPerfil.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.botaoPerfil.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.botaoPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -238,7 +252,9 @@ namespace FindTec
             this.botaoPerfil.Size = new System.Drawing.Size(197, 56);
             this.botaoPerfil.TabIndex = 0;
             this.botaoPerfil.UseVisualStyleBackColor = true;
-            this.botaoPerfil.Click += new System.EventHandler(this.button1_Click);
+            this.botaoPerfil.Click += new System.EventHandler(this.botaoPerfil_Click);
+            this.botaoPerfil.MouseEnter += new System.EventHandler(this.botaoPerfil_MouseEnter);
+            this.botaoPerfil.MouseLeave += new System.EventHandler(this.botaoPerfil_MouseLeave);
             // 
             // dataGridView1
             // 
@@ -453,6 +469,8 @@ namespace FindTec
             this.botaoDesativarConta.Size = new System.Drawing.Size(158, 62);
             this.botaoDesativarConta.TabIndex = 16;
             this.botaoDesativarConta.UseVisualStyleBackColor = true;
+            this.botaoDesativarConta.MouseEnter += new System.EventHandler(this.botaoDesativarConta_MouseEnter);
+            this.botaoDesativarConta.MouseLeave += new System.EventHandler(this.botaoDesativarConta_MouseLeave);
             // 
             // botaoAlterarSenha
             // 
@@ -468,12 +486,15 @@ namespace FindTec
             this.botaoAlterarSenha.Size = new System.Drawing.Size(158, 62);
             this.botaoAlterarSenha.TabIndex = 15;
             this.botaoAlterarSenha.UseVisualStyleBackColor = true;
+            this.botaoAlterarSenha.MouseEnter += new System.EventHandler(this.botaoAlterarSenha_MouseEnter);
+            this.botaoAlterarSenha.MouseLeave += new System.EventHandler(this.botaoAlterarSenha_MouseLeave);
             // 
             // botaoAlterarFoto
             // 
             this.botaoAlterarFoto.BackgroundImage = global::FindTec.Properties.Resources.BotaoAlterarImagem_1;
             this.botaoAlterarFoto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.botaoAlterarFoto.FlatAppearance.BorderSize = 0;
+            this.botaoAlterarFoto.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
             this.botaoAlterarFoto.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.botaoAlterarFoto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.botaoAlterarFoto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -483,12 +504,15 @@ namespace FindTec
             this.botaoAlterarFoto.TabIndex = 14;
             this.botaoAlterarFoto.UseVisualStyleBackColor = true;
             this.botaoAlterarFoto.Click += new System.EventHandler(this.botaoAlterarFoto_Click);
+            this.botaoAlterarFoto.MouseEnter += new System.EventHandler(this.botaoAlterarFoto_MouseEnter);
+            this.botaoAlterarFoto.MouseLeave += new System.EventHandler(this.botaoAlterarFoto_MouseLeave);
             // 
             // botaoEditarDados
             // 
             this.botaoEditarDados.BackgroundImage = global::FindTec.Properties.Resources.botaoEditarDados_1;
             this.botaoEditarDados.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.botaoEditarDados.FlatAppearance.BorderSize = 0;
+            this.botaoEditarDados.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
             this.botaoEditarDados.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.botaoEditarDados.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.botaoEditarDados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -497,7 +521,9 @@ namespace FindTec
             this.botaoEditarDados.Size = new System.Drawing.Size(158, 62);
             this.botaoEditarDados.TabIndex = 9;
             this.botaoEditarDados.UseVisualStyleBackColor = true;
-            this.botaoEditarDados.Click += new System.EventHandler(this.button6_Click);
+            this.botaoEditarDados.Click += new System.EventHandler(this.botaoEditarDados_Click);
+            this.botaoEditarDados.MouseEnter += new System.EventHandler(this.botaoEditarDados_MouseEnter);
+            this.botaoEditarDados.MouseLeave += new System.EventHandler(this.botaoEditarDados_MouseLeave);
             // 
             // telefoneTxt
             // 
@@ -846,7 +872,7 @@ namespace FindTec
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button botaoPerfil;
-        private System.Windows.Forms.Button boatoMensagens;
+        private System.Windows.Forms.Button botaoMensagens;
         private System.Windows.Forms.Button botaoVagas;
         private System.Windows.Forms.Button botaoAprovarCadastro;
         private System.Windows.Forms.DataGridView dataGridView1;
@@ -889,7 +915,7 @@ namespace FindTec
         private System.Windows.Forms.TextBox txtMensagem;
         private System.Windows.Forms.Panel panelConversas;
         private System.Windows.Forms.FlowLayoutPanel FlowPanelConversas;
-        private System.Windows.Forms.Button botaoGerenciarusuarios;
+        private System.Windows.Forms.Button botaoGerenciarUsuarios;
         private System.Windows.Forms.Panel panelViewUsuarios;
         private System.Windows.Forms.DataGridView dataGridViewUsuarios;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;

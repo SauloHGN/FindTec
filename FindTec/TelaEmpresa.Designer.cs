@@ -29,18 +29,17 @@ namespace FindTec
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.botaoMinhasVagas = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.botaoAnunciarVaga = new System.Windows.Forms.Button();
             this.botaoSair = new System.Windows.Forms.Button();
-            this.botaoMensagens = new System.Windows.Forms.Button();
-            this.botaoOportunidades = new System.Windows.Forms.Button();
             this.botaoPerfil = new System.Windows.Forms.Button();
+            this.botaoMensagens = new System.Windows.Forms.Button();
             this.panelPerfilE = new System.Windows.Forms.Panel();
             this.botaoAlterarSenha = new System.Windows.Forms.Button();
             this.botaoAlterarFoto = new System.Windows.Forms.Button();
@@ -78,7 +77,7 @@ namespace FindTec
             this.colSelecionado = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.panelAlunoCadastrado = new System.Windows.Forms.Panel();
             this.botaoEncerrarVaga = new System.Windows.Forms.Button();
-            this.bataoVoltar = new System.Windows.Forms.Button();
+            this.botaoVoltar = new System.Windows.Forms.Button();
             this.panelMensagens = new System.Windows.Forms.Panel();
             this.flowLayoutPanelMensagens = new System.Windows.Forms.FlowLayoutPanel();
             this.btnVoltar = new System.Windows.Forms.Button();
@@ -107,9 +106,8 @@ namespace FindTec
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.botaoAnunciarVaga);
             this.panel1.Controls.Add(this.botaoSair);
-            this.panel1.Controls.Add(this.botaoMensagens);
-            this.panel1.Controls.Add(this.botaoOportunidades);
             this.panel1.Controls.Add(this.botaoPerfil);
+            this.panel1.Controls.Add(this.botaoMensagens);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -121,10 +119,11 @@ namespace FindTec
             this.botaoMinhasVagas.BackgroundImage = global::FindTec.Properties.Resources.botaoMinhasVagas1;
             this.botaoMinhasVagas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.botaoMinhasVagas.FlatAppearance.BorderSize = 0;
+            this.botaoMinhasVagas.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
             this.botaoMinhasVagas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.botaoMinhasVagas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.botaoMinhasVagas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botaoMinhasVagas.Location = new System.Drawing.Point(3, 418);
+            this.botaoMinhasVagas.Location = new System.Drawing.Point(3, 364);
             this.botaoMinhasVagas.Name = "botaoMinhasVagas";
             this.botaoMinhasVagas.Size = new System.Drawing.Size(197, 56);
             this.botaoMinhasVagas.TabIndex = 17;
@@ -148,10 +147,11 @@ namespace FindTec
             this.botaoAnunciarVaga.BackgroundImage = global::FindTec.Properties.Resources.botaoAnunciarVaga1;
             this.botaoAnunciarVaga.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.botaoAnunciarVaga.FlatAppearance.BorderSize = 0;
+            this.botaoAnunciarVaga.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
             this.botaoAnunciarVaga.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.botaoAnunciarVaga.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.botaoAnunciarVaga.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botaoAnunciarVaga.Location = new System.Drawing.Point(3, 364);
+            this.botaoAnunciarVaga.Location = new System.Drawing.Point(3, 310);
             this.botaoAnunciarVaga.Name = "botaoAnunciarVaga";
             this.botaoAnunciarVaga.Size = new System.Drawing.Size(197, 56);
             this.botaoAnunciarVaga.TabIndex = 13;
@@ -165,6 +165,7 @@ namespace FindTec
             this.botaoSair.BackgroundImage = global::FindTec.Properties.Resources.botaoSair_1;
             this.botaoSair.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.botaoSair.FlatAppearance.BorderSize = 0;
+            this.botaoSair.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
             this.botaoSair.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.botaoSair.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.botaoSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -178,45 +179,6 @@ namespace FindTec
             this.botaoSair.Click += new System.EventHandler(this.botaoSair_Click);
             this.botaoSair.MouseEnter += new System.EventHandler(this.botaoSair_MouseEnter);
             this.botaoSair.MouseLeave += new System.EventHandler(this.botaoSair_MouseLeave);
-            // 
-            // botaoMensagens
-            // 
-            this.botaoMensagens.BackgroundImage = global::FindTec.Properties.Resources.botaoMensagens_1;
-            this.botaoMensagens.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.botaoMensagens.FlatAppearance.BorderSize = 0;
-            this.botaoMensagens.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.botaoMensagens.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.botaoMensagens.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.botaoMensagens.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botaoMensagens.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.botaoMensagens.ForeColor = System.Drawing.Color.White;
-            this.botaoMensagens.Location = new System.Drawing.Point(3, 310);
-            this.botaoMensagens.Name = "botaoMensagens";
-            this.botaoMensagens.Size = new System.Drawing.Size(197, 56);
-            this.botaoMensagens.TabIndex = 3;
-            this.botaoMensagens.UseVisualStyleBackColor = true;
-            this.botaoMensagens.MouseEnter += new System.EventHandler(this.botaoMensagens_MouseEnter);
-            this.botaoMensagens.MouseLeave += new System.EventHandler(this.botaoMensagens_MouseLeave);
-            // 
-            // botaoOportunidades
-            // 
-            this.botaoOportunidades.BackgroundImage = global::FindTec.Properties.Resources.botaoOportunidades_1;
-            this.botaoOportunidades.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.botaoOportunidades.FlatAppearance.BorderSize = 0;
-            this.botaoOportunidades.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.botaoOportunidades.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.botaoOportunidades.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.botaoOportunidades.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botaoOportunidades.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.botaoOportunidades.ForeColor = System.Drawing.Color.White;
-            this.botaoOportunidades.Location = new System.Drawing.Point(3, 255);
-            this.botaoOportunidades.Name = "botaoOportunidades";
-            this.botaoOportunidades.Size = new System.Drawing.Size(197, 56);
-            this.botaoOportunidades.TabIndex = 2;
-            this.botaoOportunidades.UseVisualStyleBackColor = true;
-            this.botaoOportunidades.Click += new System.EventHandler(this.botaoOportunidades_Click);
-            this.botaoOportunidades.MouseEnter += new System.EventHandler(this.botaoOportunidades_MouseEnter);
-            this.botaoOportunidades.MouseLeave += new System.EventHandler(this.botaoOportunidades_MouseLeave);
             // 
             // botaoPerfil
             // 
@@ -237,6 +199,26 @@ namespace FindTec
             this.botaoPerfil.Click += new System.EventHandler(this.botaoPerfil_Click);
             this.botaoPerfil.MouseEnter += new System.EventHandler(this.botaoPerfil_MouseEnter);
             this.botaoPerfil.MouseLeave += new System.EventHandler(this.botaoPerfil_MouseLeave);
+            // 
+            // botaoMensagens
+            // 
+            this.botaoMensagens.BackgroundImage = global::FindTec.Properties.Resources.botaoMensagens_1;
+            this.botaoMensagens.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.botaoMensagens.FlatAppearance.BorderSize = 0;
+            this.botaoMensagens.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.botaoMensagens.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.botaoMensagens.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.botaoMensagens.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botaoMensagens.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.botaoMensagens.ForeColor = System.Drawing.Color.White;
+            this.botaoMensagens.Location = new System.Drawing.Point(3, 255);
+            this.botaoMensagens.Name = "botaoMensagens";
+            this.botaoMensagens.Size = new System.Drawing.Size(197, 56);
+            this.botaoMensagens.TabIndex = 3;
+            this.botaoMensagens.UseVisualStyleBackColor = true;
+            this.botaoMensagens.Click += new System.EventHandler(this.botaoMensagens_Click);
+            this.botaoMensagens.MouseEnter += new System.EventHandler(this.botaoMensagens_MouseEnter);
+            this.botaoMensagens.MouseLeave += new System.EventHandler(this.botaoMensagens_MouseLeave);
             // 
             // panelPerfilE
             // 
@@ -280,6 +262,7 @@ namespace FindTec
             this.botaoAlterarFoto.BackgroundImage = global::FindTec.Properties.Resources.BotaoAlterarImagem_1;
             this.botaoAlterarFoto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.botaoAlterarFoto.FlatAppearance.BorderSize = 0;
+            this.botaoAlterarFoto.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
             this.botaoAlterarFoto.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.botaoAlterarFoto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.botaoAlterarFoto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -427,10 +410,12 @@ namespace FindTec
             // DescricaoTextBox
             // 
             this.DescricaoTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.DescricaoTextBox.Font = new System.Drawing.Font("Arial Narrow", 12F);
             this.DescricaoTextBox.Location = new System.Drawing.Point(471, 270);
             this.DescricaoTextBox.Multiline = true;
             this.DescricaoTextBox.Name = "DescricaoTextBox";
-            this.DescricaoTextBox.Size = new System.Drawing.Size(260, 84);
+            this.DescricaoTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.DescricaoTextBox.Size = new System.Drawing.Size(260, 85);
             this.DescricaoTextBox.TabIndex = 14;
             // 
             // CursoVBox
@@ -444,26 +429,27 @@ namespace FindTec
             "Gestão Empresarial",
             "Gestão de Produção",
             "Eventos"});
-            this.CursoVBox.Location = new System.Drawing.Point(493, 195);
+            this.CursoVBox.Location = new System.Drawing.Point(477, 195);
             this.CursoVBox.Name = "CursoVBox";
-            this.CursoVBox.Size = new System.Drawing.Size(213, 24);
+            this.CursoVBox.Size = new System.Drawing.Size(248, 24);
             this.CursoVBox.TabIndex = 13;
             // 
             // RemuneracaoTextBox
             // 
             this.RemuneracaoTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.RemuneracaoTextBox.Font = new System.Drawing.Font("Arial Narrow", 12F);
-            this.RemuneracaoTextBox.Location = new System.Drawing.Point(35, 485);
+            this.RemuneracaoTextBox.Location = new System.Drawing.Point(39, 482);
             this.RemuneracaoTextBox.Name = "RemuneracaoTextBox";
             this.RemuneracaoTextBox.Size = new System.Drawing.Size(240, 19);
             this.RemuneracaoTextBox.TabIndex = 12;
+            this.RemuneracaoTextBox.TextChanged += new System.EventHandler(this.RemuneracaoTextBox_TextChanged);
             this.RemuneracaoTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.RemuneracaoTextBox_KeyPress);
             // 
             // CargaHTextBox
             // 
             this.CargaHTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.CargaHTextBox.Font = new System.Drawing.Font("Arial Narrow", 12F);
-            this.CargaHTextBox.Location = new System.Drawing.Point(35, 339);
+            this.CargaHTextBox.Location = new System.Drawing.Point(39, 335);
             this.CargaHTextBox.Name = "CargaHTextBox";
             this.CargaHTextBox.Size = new System.Drawing.Size(240, 19);
             this.CargaHTextBox.TabIndex = 11;
@@ -474,7 +460,7 @@ namespace FindTec
             // 
             this.CargoTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.CargoTextBox.Font = new System.Drawing.Font("Arial Narrow", 12F);
-            this.CargoTextBox.Location = new System.Drawing.Point(35, 412);
+            this.CargoTextBox.Location = new System.Drawing.Point(39, 409);
             this.CargoTextBox.Name = "CargoTextBox";
             this.CargoTextBox.Size = new System.Drawing.Size(240, 19);
             this.CargoTextBox.TabIndex = 10;
@@ -484,7 +470,7 @@ namespace FindTec
             this.NomeEmpresaTextBox.BackColor = System.Drawing.Color.White;
             this.NomeEmpresaTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.NomeEmpresaTextBox.Font = new System.Drawing.Font("Arial Narrow", 12F);
-            this.NomeEmpresaTextBox.Location = new System.Drawing.Point(35, 272);
+            this.NomeEmpresaTextBox.Location = new System.Drawing.Point(39, 267);
             this.NomeEmpresaTextBox.Name = "NomeEmpresaTextBox";
             this.NomeEmpresaTextBox.ReadOnly = true;
             this.NomeEmpresaTextBox.Size = new System.Drawing.Size(240, 19);
@@ -494,7 +480,7 @@ namespace FindTec
             // 
             this.nomeVagaTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.nomeVagaTextBox.Font = new System.Drawing.Font("Arial Narrow", 12F);
-            this.nomeVagaTextBox.Location = new System.Drawing.Point(35, 201);
+            this.nomeVagaTextBox.Location = new System.Drawing.Point(38, 196);
             this.nomeVagaTextBox.Name = "nomeVagaTextBox";
             this.nomeVagaTextBox.Size = new System.Drawing.Size(240, 19);
             this.nomeVagaTextBox.TabIndex = 8;
@@ -515,14 +501,14 @@ namespace FindTec
             this.gridViewMinhasVagas.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(181)))), ((int)(((byte)(220)))));
             this.gridViewMinhasVagas.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gridViewMinhasVagas.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridViewMinhasVagas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridViewMinhasVagas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.gridViewMinhasVagas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridViewMinhasVagas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colAlteracao,
@@ -532,14 +518,14 @@ namespace FindTec
             this.remuneracaoGrid,
             this.cursoGrid,
             this.colExibir});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridViewMinhasVagas.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridViewMinhasVagas.DefaultCellStyle = dataGridViewCellStyle6;
             this.gridViewMinhasVagas.Location = new System.Drawing.Point(42, 133);
             this.gridViewMinhasVagas.Name = "gridViewMinhasVagas";
             this.gridViewMinhasVagas.RowHeadersVisible = false;
@@ -606,14 +592,14 @@ namespace FindTec
             this.dataGridViewCandidatos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(181)))), ((int)(((byte)(220)))));
             this.dataGridViewCandidatos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewCandidatos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewCandidatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewCandidatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridViewCandidatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewCandidatos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colFoto,
@@ -622,14 +608,14 @@ namespace FindTec
             this.dataGridViewTextBoxColumn4,
             this.colContato,
             this.colSelecionado});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewCandidatos.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewCandidatos.DefaultCellStyle = dataGridViewCellStyle8;
             this.dataGridViewCandidatos.Location = new System.Drawing.Point(42, 133);
             this.dataGridViewCandidatos.Name = "dataGridViewCandidatos";
             this.dataGridViewCandidatos.RowHeadersVisible = false;
@@ -684,7 +670,7 @@ namespace FindTec
             this.panelAlunoCadastrado.BackColor = System.Drawing.Color.Transparent;
             this.panelAlunoCadastrado.BackgroundImage = global::FindTec.Properties.Resources.telaCandidatos;
             this.panelAlunoCadastrado.Controls.Add(this.botaoEncerrarVaga);
-            this.panelAlunoCadastrado.Controls.Add(this.bataoVoltar);
+            this.panelAlunoCadastrado.Controls.Add(this.botaoVoltar);
             this.panelAlunoCadastrado.Controls.Add(this.dataGridViewCandidatos);
             this.panelAlunoCadastrado.Location = new System.Drawing.Point(223, 15);
             this.panelAlunoCadastrado.Name = "panelAlunoCadastrado";
@@ -710,20 +696,20 @@ namespace FindTec
             this.botaoEncerrarVaga.MouseEnter += new System.EventHandler(this.botaoEncerrarVaga_MouseEnter);
             this.botaoEncerrarVaga.MouseLeave += new System.EventHandler(this.botaoEncerrarVaga_MouseLeave);
             // 
-            // bataoVoltar
+            // botaoVoltar
             // 
-            this.bataoVoltar.BackgroundImage = global::FindTec.Properties.Resources.botaoVoltar;
-            this.bataoVoltar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.bataoVoltar.FlatAppearance.BorderSize = 0;
-            this.bataoVoltar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.bataoVoltar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.bataoVoltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bataoVoltar.Location = new System.Drawing.Point(15, 13);
-            this.bataoVoltar.Name = "bataoVoltar";
-            this.bataoVoltar.Size = new System.Drawing.Size(40, 40);
-            this.bataoVoltar.TabIndex = 8;
-            this.bataoVoltar.UseVisualStyleBackColor = true;
-            this.bataoVoltar.Click += new System.EventHandler(this.bataoVoltar_Click);
+            this.botaoVoltar.BackgroundImage = global::FindTec.Properties.Resources.botaoVoltar;
+            this.botaoVoltar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.botaoVoltar.FlatAppearance.BorderSize = 0;
+            this.botaoVoltar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.botaoVoltar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.botaoVoltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botaoVoltar.Location = new System.Drawing.Point(15, 13);
+            this.botaoVoltar.Name = "botaoVoltar";
+            this.botaoVoltar.Size = new System.Drawing.Size(40, 40);
+            this.botaoVoltar.TabIndex = 8;
+            this.botaoVoltar.UseVisualStyleBackColor = true;
+            this.botaoVoltar.Click += new System.EventHandler(this.botaoVoltar_Click);
             // 
             // panelMensagens
             // 
@@ -754,7 +740,7 @@ namespace FindTec
             this.btnVoltar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnVoltar.FlatAppearance.BorderSize = 0;
             this.btnVoltar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnVoltar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnVoltar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnVoltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVoltar.Location = new System.Drawing.Point(15, 13);
             this.btnVoltar.Name = "btnVoltar";
@@ -817,12 +803,12 @@ namespace FindTec
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(1000, 550);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panelPerfilE);
-            this.Controls.Add(this.panelMensagens);
-            this.Controls.Add(this.panelConversas);
             this.Controls.Add(this.panelAnunciarVaga);
             this.Controls.Add(this.panelMinhasVagas);
             this.Controls.Add(this.panelAlunoCadastrado);
+            this.Controls.Add(this.panelPerfilE);
+            this.Controls.Add(this.panelMensagens);
+            this.Controls.Add(this.panelConversas);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form2";
@@ -851,7 +837,6 @@ namespace FindTec
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button botaoPerfil;
         private System.Windows.Forms.Button botaoMensagens;
-        private System.Windows.Forms.Button botaoOportunidades;
         private System.Windows.Forms.Panel panelPerfilE;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button botaoDesativarConta;
@@ -876,7 +861,7 @@ namespace FindTec
         private System.Windows.Forms.DataGridView gridViewMinhasVagas;
         private System.Windows.Forms.DataGridView dataGridViewCandidatos;
         private System.Windows.Forms.Panel panelAlunoCadastrado;
-        private System.Windows.Forms.Button bataoVoltar;
+        private System.Windows.Forms.Button botaoVoltar;
         private System.Windows.Forms.Panel panelMensagens;
         private System.Windows.Forms.TextBox txtMensagem;
         private System.Windows.Forms.Button btnEnviar;

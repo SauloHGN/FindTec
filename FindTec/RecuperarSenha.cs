@@ -149,6 +149,7 @@ namespace FindTec
         {
             senha = textNewSenha.Text;
             TrocarSenha(codigo, senha);
+
         }
         private void botaoNewSenha_MouseEnter(object sender, EventArgs e)
         {
@@ -185,6 +186,7 @@ namespace FindTec
                     DadosUsuario.listaCoordenador[i].Item7
                     );
                     Console.WriteLine("Senha Alterada");
+                    MessageBox.Show("Senha cadastrada com sucesso", "Tudo certo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     login.Show();
                     this.Hide();
                     break;
@@ -210,6 +212,7 @@ namespace FindTec
 
                     );
                     Console.WriteLine("Senha Alterada");
+                    MessageBox.Show("Senha cadastrada com sucesso", "Tudo certo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     login.Show();
                     this.Hide();
                     break;
@@ -232,6 +235,7 @@ namespace FindTec
                     DadosUsuario.listaEmpresas[i].Item9
                     );
                     Console.WriteLine("Senha Alterada");
+                    MessageBox.Show("Senha cadastrada com sucesso", "Tudo certo!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     login.Show();
                     this.Hide();
                     break;
