@@ -91,6 +91,12 @@ namespace FindTec
             }
         }
 
-        
+        private void botaoSair_Click(object sender, EventArgs e)
+        {
+            TelaLogin login = new TelaLogin();
+            login.Show();
+            this.Hide();
+        }
+
     }
 }

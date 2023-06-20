@@ -32,9 +32,6 @@ namespace FindTec
             this.panel1 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -47,6 +44,7 @@ namespace FindTec
             this.label2 = new System.Windows.Forms.Label();
             this.txtIndisponivel = new System.Windows.Forms.Label();
             this.cadastroCoordenador = new System.Windows.Forms.Panel();
+            this.botaoSair = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.cadastroCoordenador.SuspendLayout();
             this.SuspendLayout();
@@ -55,11 +53,9 @@ namespace FindTec
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.BackgroundImage = global::FindTec.Properties.Resources.menuLateral;
+            this.panel1.Controls.Add(this.botaoSair);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -91,48 +87,6 @@ namespace FindTec
             this.label1.TabIndex = 4;
             this.label1.Text = "Administrador";
             this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // button4
-            // 
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(-3, 449);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(203, 36);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Opção D";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // button3
-            // 
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(0, 407);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(200, 36);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Opção C";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button1
-            // 
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(-3, 325);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(203, 36);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Opção A";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label11
             // 
@@ -243,10 +197,27 @@ namespace FindTec
             this.cadastroCoordenador.Controls.Add(this.label9);
             this.cadastroCoordenador.Controls.Add(this.label10);
             this.cadastroCoordenador.Controls.Add(this.label11);
-            this.cadastroCoordenador.Location = new System.Drawing.Point(223, 15);
+            this.cadastroCoordenador.Location = new System.Drawing.Point(221, 13);
             this.cadastroCoordenador.Name = "cadastroCoordenador";
             this.cadastroCoordenador.Size = new System.Drawing.Size(755, 525);
             this.cadastroCoordenador.TabIndex = 6;
+            // 
+            // botaoSair
+            // 
+            this.botaoSair.BackgroundImage = global::FindTec.Properties.Resources.botaoSair_1;
+            this.botaoSair.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.botaoSair.FlatAppearance.BorderSize = 0;
+            this.botaoSair.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.botaoSair.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.botaoSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botaoSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.botaoSair.ForeColor = System.Drawing.Color.Black;
+            this.botaoSair.Location = new System.Drawing.Point(1, 495);
+            this.botaoSair.Name = "botaoSair";
+            this.botaoSair.Size = new System.Drawing.Size(197, 51);
+            this.botaoSair.TabIndex = 15;
+            this.botaoSair.UseVisualStyleBackColor = true;
+            this.botaoSair.Click += new System.EventHandler(this.botaoSair_Click);
             // 
             // Form4
             // 
@@ -272,9 +243,6 @@ namespace FindTec
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
@@ -288,5 +256,6 @@ namespace FindTec
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label txtIndisponivel;
         private System.Windows.Forms.Panel cadastroCoordenador;
+        private System.Windows.Forms.Button botaoSair;
     }
 }

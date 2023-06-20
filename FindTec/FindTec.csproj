@@ -104,30 +104,6 @@
     <Compile Include="myMessage.Designer.cs">
       <DependentUpon>myMessage.cs</DependentUpon>
     </Compile>
-    <Compile Include="OpA.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="OpA.Designer.cs">
-      <DependentUpon>OpA.cs</DependentUpon>
-    </Compile>
-    <Compile Include="OpB.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="OpB.Designer.cs">
-      <DependentUpon>OpB.cs</DependentUpon>
-    </Compile>
-    <Compile Include="OpC.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="OpC.Designer.cs">
-      <DependentUpon>OpC.cs</DependentUpon>
-    </Compile>
-    <Compile Include="OpD.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="OpD.Designer.cs">
-      <DependentUpon>OpD.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RecuperarSenha.cs">
@@ -178,18 +154,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="myMessage.resx">
       <DependentUpon>myMessage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="OpA.resx">
-      <DependentUpon>OpA.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="OpB.resx">
-      <DependentUpon>OpB.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="OpC.resx">
-      <DependentUpon>OpC.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="OpD.resx">
-      <DependentUpon>OpD.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -12,7 +12,7 @@ namespace FindTec
         public string NomeEmpresa { get; set; }
         public string Cargo { get; set; }
         public int cargaHoraria { get; set; }
-        public double remuneracao { get; set; }
+        public string remuneracao { get; set; }
         public string Curso { get; set; }
         public string Descricao { get; set; }
         public bool Disponivel { get; set; }
@@ -23,7 +23,7 @@ namespace FindTec
 
         public bool alteracao { get; set; }
 
-        public Vaga(string nomeV, string nomeE, string cargo, int cargaH, double salario, string curso, string descricao)
+        public Vaga(string nomeV, string nomeE, string cargo, int cargaH, string salario, string curso, string descricao)
         {
 
             NomeVaga = nomeV;

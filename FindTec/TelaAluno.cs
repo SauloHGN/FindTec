@@ -896,5 +896,71 @@ namespace FindTec
         //    recuperarSenha.panelNewSenha.Visible = true;
         //    this.Hide();
         }
+
+        private void panelOportunidadesAluno_ParentChanged(object sender, EventArgs e)
+        {
+            Panel panel = (Panel)sender;
+
+            if (panel.Parent != null && panel.Parent.GetType() == typeof(Form))
+            {
+                // Definir tamanho fixo para a célula de imagem e botão
+                gridViewOportunidades.RowTemplate.Height = 100;
+                gridViewOportunidades.Columns["Candidatar-se"].Width = 100;
+
+                // Definir comprimento máximo da tabela
+                int comprimentoTotal = 670; // Comprimento máximo desejado
+                int comprimentoRestante = comprimentoTotal - 100 - 100; // Deduzir o tamanho da célula da imagem e do botão
+                int colunasRestantes = gridViewOportunidades.Columns.Count - 2; // Deduzir a coluna de imagem e do botão
+                int comprimentoColuna = comprimentoRestante / colunasRestantes;
+
+                // Alinhar centralizado os títulos das colunas
+                foreach (DataGridViewColumn column in gridViewOportunidades.Columns)
+                {
+                    column.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                }
+
+                // Definir comprimento das colunas
+                foreach (DataGridViewColumn column in gridViewOportunidades.Columns)
+                {
+                    if (column.Name != "Candidatar-se")
+                    {
+                        column.Width = comprimentoColuna;
+                    }
+                }
+            }
+        }
+
+        private void gridViewVagasCadastrado_ParentChanged(object sender, EventArgs e)
+        {
+            DataGridView gridView = (DataGridView)sender;
+
+            if (gridView.Parent != null && gridView.Parent.GetType() == typeof(Panel))
+            {
+                // Definir tamanho fixo para a célula de imagem e botão
+                gridView.RowTemplate.Height = 100;
+                gridView.Columns["Candidatar-se"].Width = 100;
+
+                // Definir comprimento máximo da tabela
+                int comprimentoTotal = 670; // Comprimento máximo desejado
+                int comprimentoRestante = comprimentoTotal - 100 - 100; // Deduzir o tamanho da célula da imagem e do botão
+                int colunasRestantes = gridView.Columns.Count - 2; // Deduzir a coluna de imagem e do botão
+                int comprimentoColuna = comprimentoRestante / colunasRestantes;
+
+                // Alinhar centralizado os títulos das colunas
+                foreach (DataGridViewColumn column in gridView.Columns)
+                {
+                    column.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                }
+
+                // Definir comprimento das colunas
+                gridView.Columns["Empresa"].Width = comprimentoColuna;
+                gridView.Columns["Título da vaga"].Width = comprimentoColuna;
+                gridView.Columns["Cargo"].Width = comprimentoColuna;
+                gridView.Columns["Carga Horária"].Width = comprimentoColuna;
+                gridView.Columns["Remuneração"].Width = comprimentoColuna;
+                gridView.Columns["Curso"].Width = comprimentoColuna;
+            }
+        }
+
     }
 }

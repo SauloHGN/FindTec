@@ -310,7 +310,7 @@ namespace FindTec
             string nomeEmpresa = NomeEmpresaTextBox.Text;
             string nomeVaga = nomeVagaTextBox.Text;
             int cargaHoraria = int.Parse(CargaHTextBox.Text);
-            double remuneracao = double.Parse(RemuneracaoTextBox.Text);
+            string remuneracao = RemuneracaoTextBox.Text;
             string cargo = CargoTextBox.Text;
             string curso = CursoVBox.Text;
             string descricao = DescricaoTextBox.Text;
@@ -430,8 +430,17 @@ namespace FindTec
                             using (MemoryStream ms = new MemoryStream(imageBytes))
                             {
                                 imagem = Image.FromStream(ms);
+
+                                // Redimensionar a imagem para caber dentro da célula
+                                int larguraMaxima = gridViewMinhasVagas.Columns[0].Width - 2; // Subtraímos 2 para considerar a borda da célula
+                                int alturaMaxima = gridViewMinhasVagas.RowTemplate.Height - 2;
+
+                                Image imagemRedimensionada = imagem.GetThumbnailImage(larguraMaxima, alturaMaxima, null, IntPtr.Zero);
+                                imagem.Dispose(); // Liberar a imagem original
+                                imagem = imagemRedimensionada;
                             }
                         }
+
                         dataGridViewCandidatos.Rows.Add(imagem, user.Item2, user.Item3, user.Item4, "Chat");
                     }
                 }

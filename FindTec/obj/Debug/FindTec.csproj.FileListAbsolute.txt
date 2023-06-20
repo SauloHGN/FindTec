@@ -126,10 +126,6 @@ C:\Users\lucas\Downloads\FindTec\FindTec\obj\Debug\FindTec.ConversaItem.resource
 C:\Users\lucas\Downloads\FindTec\FindTec\obj\Debug\FindTec.Form2.resources
 C:\Users\lucas\Downloads\FindTec\FindTec\obj\Debug\FindTec.Form4.resources
 C:\Users\lucas\Downloads\FindTec\FindTec\obj\Debug\FindTec.myMessage.resources
-C:\Users\lucas\Downloads\FindTec\FindTec\obj\Debug\FindTec.OpA.resources
-C:\Users\lucas\Downloads\FindTec\FindTec\obj\Debug\FindTec.OpB.resources
-C:\Users\lucas\Downloads\FindTec\FindTec\obj\Debug\FindTec.OpC.resources
-C:\Users\lucas\Downloads\FindTec\FindTec\obj\Debug\FindTec.OpD.resources
 C:\Users\lucas\Downloads\FindTec\FindTec\obj\Debug\FindTec.Properties.Resources.resources
 C:\Users\lucas\Downloads\FindTec\FindTec\obj\Debug\FindTec.RecuperarSenha.resources
 C:\Users\lucas\Downloads\FindTec\FindTec\obj\Debug\FindTec.TelaCadastro.resources
