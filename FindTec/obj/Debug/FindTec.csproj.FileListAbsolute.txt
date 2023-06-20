@@ -123,15 +123,9 @@ C:\Users\lucas\Downloads\FindTec\FindTec\bin\Debug\System.ComponentModel.Annotat
 C:\Users\lucas\Downloads\FindTec\FindTec\obj\Debug\FindTec.csproj.AssemblyReference.cache
 C:\Users\lucas\Downloads\FindTec\FindTec\obj\Debug\FindTec.csproj.SuggestedBindingRedirects.cache
 C:\Users\lucas\Downloads\FindTec\FindTec\obj\Debug\FindTec.ConversaItem.resources
-C:\Users\lucas\Downloads\FindTec\FindTec\obj\Debug\FindTec.Form1.resources
 C:\Users\lucas\Downloads\FindTec\FindTec\obj\Debug\FindTec.Form2.resources
-C:\Users\lucas\Downloads\FindTec\FindTec\obj\Debug\FindTec.Form3.resources
 C:\Users\lucas\Downloads\FindTec\FindTec\obj\Debug\FindTec.Form4.resources
 C:\Users\lucas\Downloads\FindTec\FindTec\obj\Debug\FindTec.myMessage.resources
-C:\Users\lucas\Downloads\FindTec\FindTec\obj\Debug\FindTec.OpA.resources
-C:\Users\lucas\Downloads\FindTec\FindTec\obj\Debug\FindTec.OpB.resources
-C:\Users\lucas\Downloads\FindTec\FindTec\obj\Debug\FindTec.OpC.resources
-C:\Users\lucas\Downloads\FindTec\FindTec\obj\Debug\FindTec.OpD.resources
 C:\Users\lucas\Downloads\FindTec\FindTec\obj\Debug\FindTec.Properties.Resources.resources
 C:\Users\lucas\Downloads\FindTec\FindTec\obj\Debug\FindTec.RecuperarSenha.resources
 C:\Users\lucas\Downloads\FindTec\FindTec\obj\Debug\FindTec.TelaCadastro.resources
@@ -169,3 +163,5 @@ D:\FindTec\FindTec\obj\Debug\FindTec.csproj.CopyComplete
 D:\FindTec\FindTec\obj\Debug\FindTec.exe
 D:\FindTec\FindTec\obj\Debug\FindTec.pdb
 D:\FindTec\FindTec\obj\Debug\FindTec.csproj.AssemblyReference.cache
+C:\Users\lucas\Downloads\FindTec\FindTec\obj\Debug\FindTec.TelaAluno.resources
+C:\Users\lucas\Downloads\FindTec\FindTec\obj\Debug\FindTec.TelaCoordenador.resources

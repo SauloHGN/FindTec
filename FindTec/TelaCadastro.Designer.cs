@@ -64,7 +64,7 @@ namespace FindTec
             // 
             this.textNomeE.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textNomeE.Font = new System.Drawing.Font("Arial Narrow", 12F);
-            this.textNomeE.Location = new System.Drawing.Point(232, 276);
+            this.textNomeE.Location = new System.Drawing.Point(233, 276);
             this.textNomeE.Name = "textNomeE";
             this.textNomeE.Size = new System.Drawing.Size(208, 19);
             this.textNomeE.TabIndex = 1;
@@ -76,7 +76,7 @@ namespace FindTec
             // 
             this.textEmailE.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textEmailE.Font = new System.Drawing.Font("Arial Narrow", 12F);
-            this.textEmailE.Location = new System.Drawing.Point(232, 327);
+            this.textEmailE.Location = new System.Drawing.Point(233, 327);
             this.textEmailE.Name = "textEmailE";
             this.textEmailE.Size = new System.Drawing.Size(208, 19);
             this.textEmailE.TabIndex = 2;
@@ -88,7 +88,7 @@ namespace FindTec
             // 
             this.textTelE.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textTelE.Font = new System.Drawing.Font("Arial Narrow", 12F);
-            this.textTelE.Location = new System.Drawing.Point(232, 379);
+            this.textTelE.Location = new System.Drawing.Point(233, 378);
             this.textTelE.Name = "textTelE";
             this.textTelE.Size = new System.Drawing.Size(209, 19);
             this.textTelE.TabIndex = 3;
@@ -123,7 +123,7 @@ namespace FindTec
             // 
             this.textSenhaE.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textSenhaE.Font = new System.Drawing.Font("Arial Narrow", 12F);
-            this.textSenhaE.Location = new System.Drawing.Point(232, 430);
+            this.textSenhaE.Location = new System.Drawing.Point(233, 430);
             this.textSenhaE.Name = "textSenhaE";
             this.textSenhaE.Size = new System.Drawing.Size(209, 19);
             this.textSenhaE.TabIndex = 4;
@@ -216,7 +216,7 @@ namespace FindTec
             this.txtEmailInvalido.BackColor = System.Drawing.Color.IndianRed;
             this.txtEmailInvalido.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Bold);
             this.txtEmailInvalido.ForeColor = System.Drawing.Color.White;
-            this.txtEmailInvalido.Location = new System.Drawing.Point(230, 349);
+            this.txtEmailInvalido.Location = new System.Drawing.Point(230, 351);
             this.txtEmailInvalido.Name = "txtEmailInvalido";
             this.txtEmailInvalido.Size = new System.Drawing.Size(86, 15);
             this.txtEmailInvalido.TabIndex = 25;
@@ -229,7 +229,7 @@ namespace FindTec
             this.txtTelefoneInvalido.BackColor = System.Drawing.Color.IndianRed;
             this.txtTelefoneInvalido.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Bold);
             this.txtTelefoneInvalido.ForeColor = System.Drawing.Color.White;
-            this.txtTelefoneInvalido.Location = new System.Drawing.Point(229, 401);
+            this.txtTelefoneInvalido.Location = new System.Drawing.Point(230, 402);
             this.txtTelefoneInvalido.Name = "txtTelefoneInvalido";
             this.txtTelefoneInvalido.Size = new System.Drawing.Size(102, 15);
             this.txtTelefoneInvalido.TabIndex = 24;
@@ -280,7 +280,7 @@ namespace FindTec
             this.txtEmailInvalido2.BackColor = System.Drawing.Color.IndianRed;
             this.txtEmailInvalido2.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Bold);
             this.txtEmailInvalido2.ForeColor = System.Drawing.Color.White;
-            this.txtEmailInvalido2.Location = new System.Drawing.Point(230, 349);
+            this.txtEmailInvalido2.Location = new System.Drawing.Point(230, 351);
             this.txtEmailInvalido2.Name = "txtEmailInvalido2";
             this.txtEmailInvalido2.Size = new System.Drawing.Size(83, 15);
             this.txtEmailInvalido2.TabIndex = 24;
@@ -293,7 +293,7 @@ namespace FindTec
             this.txtTelefoneInvalido2.BackColor = System.Drawing.Color.IndianRed;
             this.txtTelefoneInvalido2.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Bold);
             this.txtTelefoneInvalido2.ForeColor = System.Drawing.Color.White;
-            this.txtTelefoneInvalido2.Location = new System.Drawing.Point(229, 401);
+            this.txtTelefoneInvalido2.Location = new System.Drawing.Point(230, 402);
             this.txtTelefoneInvalido2.Name = "txtTelefoneInvalido2";
             this.txtTelefoneInvalido2.Size = new System.Drawing.Size(102, 15);
             this.txtTelefoneInvalido2.TabIndex = 23;
@@ -306,7 +306,7 @@ namespace FindTec
             this.txtCursoInvalido.BackColor = System.Drawing.Color.IndianRed;
             this.txtCursoInvalido.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Bold);
             this.txtCursoInvalido.ForeColor = System.Drawing.Color.White;
-            this.txtCursoInvalido.Location = new System.Drawing.Point(229, 454);
+            this.txtCursoInvalido.Location = new System.Drawing.Point(230, 453);
             this.txtCursoInvalido.Name = "txtCursoInvalido";
             this.txtCursoInvalido.Size = new System.Drawing.Size(87, 15);
             this.txtCursoInvalido.TabIndex = 22;
@@ -457,8 +457,8 @@ namespace FindTec
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(660, 660);
-            this.Controls.Add(this.cadastroAluno);
             this.Controls.Add(this.cadastroEmpresa);
+            this.Controls.Add(this.cadastroAluno);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(660, 660);

@@ -187,7 +187,7 @@ namespace FindTec
             {
                 if (tipoUser == "aluno")
                 {
-                    Form1 telaAluno = new Form1();
+                    TelaAluno telaAluno = new TelaAluno();
                     telaAluno.Show();
                     this.Hide();
                 }
@@ -199,7 +199,7 @@ namespace FindTec
                 }
                 if (tipoUser == "coordenador")
                 {
-                    Form3 telaCoordenador = new Form3();
+                    TelaCoordenador telaCoordenador = new TelaCoordenador();
                     telaCoordenador.Show();
                     this.Hide();
                 }
@@ -293,20 +293,13 @@ namespace FindTec
 
         private void botaoCriesuaconta_MouseEnter(object sender, EventArgs e)
         {
-            // Carrega a nova imagem do arquivo "botaoCriesuaconta1" do resources.resx
-            Image novaImagem = Properties.Resources.botaoCriesuaconta1;
-
-            // Define a nova imagem como o background do botão
-            botaoCriesuaconta.BackgroundImage = novaImagem;
+            botaoCriesuaconta.BackgroundImage = Properties.Resources.botaoCriesuaconta1;
         }
+
 
         private void botaoCriesuaconta_MouseLeave(object sender, EventArgs e)
         {
-            // Carrega a nova imagem do arquivo "botaoCriarconta2" do resources.resx
-            Image novaImagem = Properties.Resources.botaoCriesuaconta2;
-
-            // Define a nova imagem como o background do botão
-            botaoCriesuaconta.BackgroundImage = novaImagem;
+            botaoCriesuaconta.BackgroundImage = Properties.Resources.botaoCriesuaconta2;
         }
 
         private void botaoEsquecisenha_Click(object sender, EventArgs e)

@@ -36,6 +36,7 @@ namespace FindTec
             this.botaoFechar3 = new System.Windows.Forms.Button();
             this.botaoVoltar3 = new System.Windows.Forms.Button();
             this.panelEmail = new System.Windows.Forms.Panel();
+            this.botaoEnviar1 = new System.Windows.Forms.Button();
             this.txtEmailErrado = new System.Windows.Forms.Label();
             this.botaoVoltar1 = new System.Windows.Forms.Button();
             this.botaoFechar1 = new System.Windows.Forms.Button();
@@ -47,7 +48,6 @@ namespace FindTec
             this.botaoFechar2 = new System.Windows.Forms.Button();
             this.txtCodigoEnviado = new System.Windows.Forms.Label();
             this.textCodigo = new System.Windows.Forms.TextBox();
-            this.botaoEnviar1 = new System.Windows.Forms.Button();
             this.panelNewSenha.SuspendLayout();
             this.panelEmail.SuspendLayout();
             this.panelCodigo.SuspendLayout();
@@ -145,6 +145,28 @@ namespace FindTec
             this.panelEmail.Name = "panelEmail";
             this.panelEmail.Size = new System.Drawing.Size(660, 660);
             this.panelEmail.TabIndex = 16;
+            // 
+            // botaoEnviar1
+            // 
+            this.botaoEnviar1.AccessibleName = "botaoEnviar1";
+            this.botaoEnviar1.BackColor = System.Drawing.Color.Transparent;
+            this.botaoEnviar1.BackgroundImage = global::FindTec.Properties.Resources.botaoEnviar1;
+            this.botaoEnviar1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.botaoEnviar1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.botaoEnviar1.FlatAppearance.BorderSize = 0;
+            this.botaoEnviar1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.botaoEnviar1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.botaoEnviar1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botaoEnviar1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botaoEnviar1.ForeColor = System.Drawing.Color.Transparent;
+            this.botaoEnviar1.Location = new System.Drawing.Point(270, 482);
+            this.botaoEnviar1.Name = "botaoEnviar1";
+            this.botaoEnviar1.Size = new System.Drawing.Size(113, 49);
+            this.botaoEnviar1.TabIndex = 23;
+            this.botaoEnviar1.UseVisualStyleBackColor = false;
+            this.botaoEnviar1.Click += new System.EventHandler(this.botaoEnviar1_Click_1);
+            this.botaoEnviar1.MouseEnter += new System.EventHandler(this.BotaoEnviar1_MouseEnter);
+            this.botaoEnviar1.MouseLeave += new System.EventHandler(this.BotaoEnviar1_MouseLeave);
             // 
             // txtEmailErrado
             // 
@@ -310,36 +332,14 @@ namespace FindTec
             this.textCodigo.TabIndex = 1;
             this.textCodigo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // botaoEnviar1
-            // 
-            this.botaoEnviar1.AccessibleName = "botaoEnviar1";
-            this.botaoEnviar1.BackColor = System.Drawing.Color.Transparent;
-            this.botaoEnviar1.BackgroundImage = global::FindTec.Properties.Resources.botaoEnviar1;
-            this.botaoEnviar1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.botaoEnviar1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.botaoEnviar1.FlatAppearance.BorderSize = 0;
-            this.botaoEnviar1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.botaoEnviar1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.botaoEnviar1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botaoEnviar1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botaoEnviar1.ForeColor = System.Drawing.Color.Transparent;
-            this.botaoEnviar1.Location = new System.Drawing.Point(270, 482);
-            this.botaoEnviar1.Name = "botaoEnviar1";
-            this.botaoEnviar1.Size = new System.Drawing.Size(113, 49);
-            this.botaoEnviar1.TabIndex = 23;
-            this.botaoEnviar1.UseVisualStyleBackColor = false;
-            this.botaoEnviar1.Click += new System.EventHandler(this.botaoEnviar1_Click_1);
-            this.botaoEnviar1.MouseEnter += new System.EventHandler(this.BotaoEnviar1_MouseEnter);
-            this.botaoEnviar1.MouseLeave += new System.EventHandler(this.BotaoEnviar1_MouseLeave);
-            // 
             // RecuperarSenha
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(660, 660);
+            this.Controls.Add(this.panelNewSenha);
             this.Controls.Add(this.panelEmail);
             this.Controls.Add(this.panelCodigo);
-            this.Controls.Add(this.panelNewSenha);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "RecuperarSenha";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -359,7 +359,6 @@ namespace FindTec
         private System.Windows.Forms.TextBox textCodigo;
         private System.Windows.Forms.Panel panelEmail;
         private System.Windows.Forms.TextBox EmailRE;
-        private System.Windows.Forms.Panel panelNewSenha;
         private System.Windows.Forms.Label txtCodigoEnviado;
         private System.Windows.Forms.Button botaoFechar1;
         private System.Windows.Forms.Button botaoFechar2;
@@ -373,5 +372,6 @@ namespace FindTec
         private System.Windows.Forms.TextBox textNewSenha;
         private System.Windows.Forms.Label txtCodigoErrado;
         private System.Windows.Forms.Button botaoEnviar1;
+        public System.Windows.Forms.Panel panelNewSenha;
     }
 }
