@@ -891,5 +891,11 @@ namespace FindTec
             botaoDesativarConta.BackgroundImage = Properties.Resources.botaoDesativarConta_1;
         }
 
+        private void botaoAlterarSenha_Click(object sender, EventArgs e)
+        {
+            RecuperarSenha senha = new RecuperarSenha();           
+            this.Hide();
+            senha.Show();
+        }
     }
 }

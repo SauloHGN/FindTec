@@ -30,6 +30,7 @@ namespace FindTec
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.botaoSair = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -44,7 +45,6 @@ namespace FindTec
             this.label2 = new System.Windows.Forms.Label();
             this.txtIndisponivel = new System.Windows.Forms.Label();
             this.cadastroCoordenador = new System.Windows.Forms.Panel();
-            this.botaoSair = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.cadastroCoordenador.SuspendLayout();
             this.SuspendLayout();
@@ -62,6 +62,25 @@ namespace FindTec
             this.panel1.Size = new System.Drawing.Size(215, 550);
             this.panel1.TabIndex = 1;
             // 
+            // botaoSair
+            // 
+            this.botaoSair.BackgroundImage = global::FindTec.Properties.Resources.botaoSair_1;
+            this.botaoSair.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.botaoSair.FlatAppearance.BorderSize = 0;
+            this.botaoSair.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.botaoSair.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.botaoSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botaoSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.botaoSair.ForeColor = System.Drawing.Color.Black;
+            this.botaoSair.Location = new System.Drawing.Point(1, 495);
+            this.botaoSair.Name = "botaoSair";
+            this.botaoSair.Size = new System.Drawing.Size(197, 51);
+            this.botaoSair.TabIndex = 15;
+            this.botaoSair.UseVisualStyleBackColor = true;
+            this.botaoSair.Click += new System.EventHandler(this.botaoSair_Click);
+            this.botaoSair.MouseEnter += new System.EventHandler(this.botaoSair_MouseEnter);
+            this.botaoSair.MouseLeave += new System.EventHandler(this.botaoSair_MouseLeave);
+            // 
             // button2
             // 
             this.button2.FlatAppearance.BorderSize = 0;
@@ -74,6 +93,7 @@ namespace FindTec
             this.button2.TabIndex = 7;
             this.button2.Text = "Opção B";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Visible = false;
             this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // label1
@@ -81,7 +101,7 @@ namespace FindTec
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(3, 143);
+            this.label1.Location = new System.Drawing.Point(41, 196);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(157, 25);
             this.label1.TabIndex = 4;
@@ -91,7 +111,7 @@ namespace FindTec
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(113, 90);
+            this.label11.Location = new System.Drawing.Point(257, 195);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(35, 13);
             this.label11.TabIndex = 7;
@@ -100,7 +120,7 @@ namespace FindTec
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(116, 128);
+            this.label10.Location = new System.Drawing.Point(260, 233);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(32, 13);
             this.label10.TabIndex = 6;
@@ -109,7 +129,7 @@ namespace FindTec
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(105, 166);
+            this.label9.Location = new System.Drawing.Point(249, 271);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(49, 13);
             this.label9.TabIndex = 5;
@@ -118,7 +138,7 @@ namespace FindTec
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(110, 211);
+            this.label8.Location = new System.Drawing.Point(254, 316);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(38, 13);
             this.label8.TabIndex = 4;
@@ -126,28 +146,28 @@ namespace FindTec
             // 
             // textNomeC
             // 
-            this.textNomeC.Location = new System.Drawing.Point(165, 87);
+            this.textNomeC.Location = new System.Drawing.Point(309, 192);
             this.textNomeC.Name = "textNomeC";
             this.textNomeC.Size = new System.Drawing.Size(129, 20);
             this.textNomeC.TabIndex = 12;
             // 
             // textEmailC
             // 
-            this.textEmailC.Location = new System.Drawing.Point(165, 125);
+            this.textEmailC.Location = new System.Drawing.Point(309, 230);
             this.textEmailC.Name = "textEmailC";
             this.textEmailC.Size = new System.Drawing.Size(129, 20);
             this.textEmailC.TabIndex = 11;
             // 
             // textTelC
             // 
-            this.textTelC.Location = new System.Drawing.Point(165, 163);
+            this.textTelC.Location = new System.Drawing.Point(309, 268);
             this.textTelC.Name = "textTelC";
             this.textTelC.Size = new System.Drawing.Size(129, 20);
             this.textTelC.TabIndex = 10;
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(192, 271);
+            this.button5.Location = new System.Drawing.Point(336, 376);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 23);
             this.button5.TabIndex = 9;
@@ -157,7 +177,7 @@ namespace FindTec
             // 
             // textSenhaC
             // 
-            this.textSenhaC.Location = new System.Drawing.Point(165, 204);
+            this.textSenhaC.Location = new System.Drawing.Point(309, 309);
             this.textSenhaC.Name = "textSenhaC";
             this.textSenhaC.PasswordChar = '•';
             this.textSenhaC.Size = new System.Drawing.Size(129, 20);
@@ -167,7 +187,7 @@ namespace FindTec
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(104, 25);
+            this.label2.Location = new System.Drawing.Point(248, 130);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(227, 24);
             this.label2.TabIndex = 13;
@@ -177,7 +197,7 @@ namespace FindTec
             // 
             this.txtIndisponivel.AutoSize = true;
             this.txtIndisponivel.ForeColor = System.Drawing.Color.Red;
-            this.txtIndisponivel.Location = new System.Drawing.Point(110, 241);
+            this.txtIndisponivel.Location = new System.Drawing.Point(254, 346);
             this.txtIndisponivel.Name = "txtIndisponivel";
             this.txtIndisponivel.Size = new System.Drawing.Size(210, 13);
             this.txtIndisponivel.TabIndex = 14;
@@ -201,23 +221,6 @@ namespace FindTec
             this.cadastroCoordenador.Name = "cadastroCoordenador";
             this.cadastroCoordenador.Size = new System.Drawing.Size(755, 525);
             this.cadastroCoordenador.TabIndex = 6;
-            // 
-            // botaoSair
-            // 
-            this.botaoSair.BackgroundImage = global::FindTec.Properties.Resources.botaoSair_1;
-            this.botaoSair.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.botaoSair.FlatAppearance.BorderSize = 0;
-            this.botaoSair.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.botaoSair.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.botaoSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botaoSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.botaoSair.ForeColor = System.Drawing.Color.Black;
-            this.botaoSair.Location = new System.Drawing.Point(1, 495);
-            this.botaoSair.Name = "botaoSair";
-            this.botaoSair.Size = new System.Drawing.Size(197, 51);
-            this.botaoSair.TabIndex = 15;
-            this.botaoSair.UseVisualStyleBackColor = true;
-            this.botaoSair.Click += new System.EventHandler(this.botaoSair_Click);
             // 
             // Form4
             // 

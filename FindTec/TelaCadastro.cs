@@ -290,6 +290,7 @@ namespace FindTec
             }
             else if (!DadosDisponiveis(textEmailE.Text, textTelE.Text))
             {
+                dadosValidos = false;
                 txtIndisponivel.Visible = true;
             }
 
@@ -618,6 +619,7 @@ namespace FindTec
             }
             else if (!DadosDisponiveis(textEmail.Text, textTelefone.Text))
             {
+                dadosValidos = false;
                 txtIndisponivel2.Visible = true;
             }
             else if (opCurso.Text == "CURSO")
@@ -626,7 +628,7 @@ namespace FindTec
                 txtCursoInvalido.Visible = true;
             }
 
-            if (DadosDisponiveis(textEmailE.Text, textTelE.Text) == true && dadosValidos == true)
+            if (DadosDisponiveis(textEmail.Text, textTelefone.Text) == true && dadosValidos == true)
             {
 
 

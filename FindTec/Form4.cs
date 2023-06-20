@@ -98,5 +98,14 @@ namespace FindTec
             this.Hide();
         }
 
+        private void botaoSair_MouseEnter(object sender, EventArgs e)
+        {
+            botaoSair.BackgroundImage = Properties.Resources.botaoSair_2;
+        }
+
+        private void botaoSair_MouseLeave(object sender, EventArgs e)
+        {
+            botaoSair.BackgroundImage = Properties.Resources.botaoSair_1;
+        }
     }
 }

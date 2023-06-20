@@ -892,9 +892,12 @@ namespace FindTec
 
         private void botaoAlterarSenha_Click(object sender, EventArgs e)
         {
-        //    RecuperarSenha recuperarSenha = new RecuperarSenha();
-        //    recuperarSenha.panelNewSenha.Visible = true;
-        //    this.Hide();
+            //    RecuperarSenha recuperarSenha = new RecuperarSenha();
+            //    recuperarSenha.panelNewSenha.Visible = true;
+            //    this.Hide();
+            RecuperarSenha senha = new RecuperarSenha();
+            this.Hide();
+            senha.Show();
         }
 
         private void panelOportunidadesAluno_ParentChanged(object sender, EventArgs e)

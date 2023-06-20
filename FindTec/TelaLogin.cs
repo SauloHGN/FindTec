@@ -187,12 +187,16 @@ namespace FindTec
             {
                 if (tipoUser == "aluno")
                 {
+                    var user = DadosUsuario.listaAlunos.Find(u => u.Item1 == Program.userAtual);
+                    user.Item7 = true;
                     TelaAluno telaAluno = new TelaAluno();
                     telaAluno.Show();
                     this.Hide();
                 }
                 if (tipoUser == "empresa")
                 {
+                    var user = DadosUsuario.listaAlunos.Find(u => u.Item1 == Program.userAtual);
+                    user.Item7 = true;
                     Form2 telaEmpresa = new Form2();
                     telaEmpresa.Show();
                     this.Hide();
@@ -227,16 +231,20 @@ namespace FindTec
             {
                 if (aluno.Item3 == email && aluno.Item6 == senha)
                 {
-                    if(aluno.Item7 == true)
+                    if(aluno.Item9 == true)
                     {
+                        if(aluno.Item7 == false)
+                        {
+                            MessageBox.Show("Bem-vindo de volta. Sua conta foi reativada");
+                        }
                         telaLogin.tipoUser = "aluno";
-                        Program.userAtual = aluno.Item1;// armazena o id para recuperar os dados do usuario
+                        Program.userAtual = aluno.Item1;// armazena o id para recuperar os dados do usuario                    
                         return true;
                     }
                     else
                     {
                         //
-                        MessageBox.Show("Conta Desativada");
+                        MessageBox.Show("Aguardando aprovação. Tente novamente mais tarde");
                     }
 
                 }
@@ -246,8 +254,12 @@ namespace FindTec
             {
                 if (empresa.Item3 == email && empresa.Item5 == senha)
                 {
-                    if(empresa.Item6 == true)
+                    if(empresa.Item8 == true)
                     {
+                        if(empresa.Item6 == false)
+                        {
+                            MessageBox.Show("Bem-vindo de volta. Sua conta foi reativada");
+                        }
                         telaLogin.tipoUser = "empresa";
                         Program.userAtual = empresa.Item1;// armazena o id para recuperar os dados do usuario
                         return true;
@@ -255,7 +267,7 @@ namespace FindTec
                     else
                     {
                         //
-                        MessageBox.Show("Conta Desativada");
+                        MessageBox.Show("Aguardando aprovação. Tente novamente mais tarde");
                     }
 
                 }

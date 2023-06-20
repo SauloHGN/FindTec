@@ -360,6 +360,7 @@ namespace FindTec
 
         private void botaoMensagens_Click(object sender, EventArgs e)
         {
+            LoadConversas();
             panelAnunciarVaga.Visible = false;
             panelMinhasVagas.Visible = false;
             panelAlunoCadastrado.Visible = false;
@@ -381,12 +382,14 @@ namespace FindTec
 
         private void botaoMinhasVagas_Click(object sender, EventArgs e)
         {
+            LoadMinhasVagas();
             panelAnunciarVaga.Visible = false;
             panelMinhasVagas.Visible = true;
             panelAlunoCadastrado.Visible = false;
             panelPerfilE.Visible = false;
             panelMensagens.Visible = false;
             panelConversas.Visible = false;
+
         }
 
         private void btnCriarVaga2_Click(object sender, EventArgs e)
@@ -892,6 +895,9 @@ namespace FindTec
             //    RecuperarSenha recuperarSenha = new RecuperarSenha();
             //    recuperarSenha.panelNewSenha.Visible = true;
             //    this.Hide();
+            RecuperarSenha senha = new RecuperarSenha();
+            this.Hide();
+            senha.Show();
         }
 
         private void botaoVoltar_MouseEnter(object sender, EventArgs e)

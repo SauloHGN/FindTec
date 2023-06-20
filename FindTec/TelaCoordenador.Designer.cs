@@ -35,11 +35,11 @@ namespace FindTec
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaCoordenador));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.picAvatarCoordenador2 = new System.Windows.Forms.PictureBox();
             this.botaoSair = new System.Windows.Forms.Button();
@@ -49,10 +49,22 @@ namespace FindTec
             this.botaoAprovarCadastro = new System.Windows.Forms.Button();
             this.botaoPerfil = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnAprov = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnRecusar = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelCadastroAprov = new System.Windows.Forms.Panel();
             this.buttonListEmpresa = new System.Windows.Forms.Button();
             this.buttonListAluno5 = new System.Windows.Forms.Button();
             this.dataGridViewE = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnAprovE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnRecusarE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelPerfilC = new System.Windows.Forms.Panel();
             this.botaoDesativarConta = new System.Windows.Forms.Button();
             this.botaoAlterarSenha = new System.Windows.Forms.Button();
@@ -64,6 +76,13 @@ namespace FindTec
             this.picAvatarCoordenador1 = new System.Windows.Forms.PictureBox();
             this.panelOportunidades = new System.Windows.Forms.Panel();
             this.gridViewOportunidades = new System.Windows.Forms.DataGridView();
+            this.colFoto = new System.Windows.Forms.DataGridViewImageColumn();
+            this.colNomeEmpresa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NomeVagaGrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cargoGrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cargaHGrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.remuneracaoGrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colExcluir = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panelMensagens = new System.Windows.Forms.Panel();
             this.flowLayoutPanelMensagens = new System.Windows.Forms.FlowLayoutPanel();
             this.btnVoltar = new System.Windows.Forms.Button();
@@ -78,25 +97,6 @@ namespace FindTec
             this.colEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colContato = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.colFoto = new System.Windows.Forms.DataGridViewImageColumn();
-            this.colNomeEmpresa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NomeVagaGrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cargoGrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cargaHGrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.remuneracaoGrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colExcluir = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnAprov = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnRecusar = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnAprovE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnRecusarE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picAvatarCoordenador2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -266,11 +266,7 @@ namespace FindTec
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SunkenHorizontal;
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Empty;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Empty;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Empty;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Empty;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -300,6 +296,50 @@ namespace FindTec
             this.dataGridView1.Size = new System.Drawing.Size(687, 330);
             this.dataGridView1.TabIndex = 6;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // Nome
+            // 
+            this.Nome.Frozen = true;
+            this.Nome.HeaderText = "Nome";
+            this.Nome.Name = "Nome";
+            this.Nome.ReadOnly = true;
+            this.Nome.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Nome.Width = 170;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Tipo";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Email";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Telefone";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // ColumnAprov
+            // 
+            this.ColumnAprov.HeaderText = "Aprovar";
+            this.ColumnAprov.Name = "ColumnAprov";
+            this.ColumnAprov.ReadOnly = true;
+            this.ColumnAprov.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // ColumnRecusar
+            // 
+            this.ColumnRecusar.HeaderText = "Recusar";
+            this.ColumnRecusar.Name = "ColumnRecusar";
+            this.ColumnRecusar.ReadOnly = true;
+            this.ColumnRecusar.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // panelCadastroAprov
             // 
@@ -351,11 +391,7 @@ namespace FindTec
             this.dataGridViewE.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SunkenHorizontal;
             this.dataGridViewE.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Empty;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Empty;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Empty;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Empty;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewE.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewE.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -386,6 +422,50 @@ namespace FindTec
             this.dataGridViewE.TabIndex = 6;
             this.dataGridViewE.Visible = false;
             this.dataGridViewE.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewE_CellContentClick);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.Frozen = true;
+            this.dataGridViewTextBoxColumn1.HeaderText = "Nome";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn1.Width = 170;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.HeaderText = "Tipo";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.HeaderText = "Email";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.HeaderText = "Telefone";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // ColumnAprovE
+            // 
+            this.ColumnAprovE.HeaderText = "Aprovar";
+            this.ColumnAprovE.Name = "ColumnAprovE";
+            this.ColumnAprovE.ReadOnly = true;
+            this.ColumnAprovE.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // ColumnRecusarE
+            // 
+            this.ColumnRecusarE.HeaderText = "Recusar";
+            this.ColumnRecusarE.Name = "ColumnRecusarE";
+            this.ColumnRecusarE.ReadOnly = true;
+            this.ColumnRecusarE.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // panelPerfilC
             // 
@@ -435,6 +515,7 @@ namespace FindTec
             this.botaoAlterarSenha.Size = new System.Drawing.Size(158, 62);
             this.botaoAlterarSenha.TabIndex = 10;
             this.botaoAlterarSenha.UseVisualStyleBackColor = true;
+            this.botaoAlterarSenha.Click += new System.EventHandler(this.botaoAlterarSenha_Click);
             this.botaoAlterarSenha.MouseEnter += new System.EventHandler(this.botaoAlterarSenha_MouseEnter);
             this.botaoAlterarSenha.MouseLeave += new System.EventHandler(this.botaoAlterarSenha_MouseLeave);
             // 
@@ -534,11 +615,7 @@ namespace FindTec
             this.gridViewOportunidades.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SunkenHorizontal;
             this.gridViewOportunidades.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Empty;
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Empty;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Empty;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Empty;
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.gridViewOportunidades.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.gridViewOportunidades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -569,6 +646,65 @@ namespace FindTec
             this.gridViewOportunidades.Size = new System.Drawing.Size(687, 330);
             this.gridViewOportunidades.TabIndex = 20;
             this.gridViewOportunidades.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridViewOportunidades_CellContentClick);
+            // 
+            // colFoto
+            // 
+            dataGridViewCellStyle6.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle6.NullValue")));
+            this.colFoto.DefaultCellStyle = dataGridViewCellStyle6;
+            this.colFoto.Description = "Avatar";
+            this.colFoto.HeaderText = "";
+            this.colFoto.Name = "colFoto";
+            this.colFoto.ReadOnly = true;
+            this.colFoto.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.colFoto.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // colNomeEmpresa
+            // 
+            this.colNomeEmpresa.HeaderText = "Empresa";
+            this.colNomeEmpresa.Name = "colNomeEmpresa";
+            this.colNomeEmpresa.ReadOnly = true;
+            this.colNomeEmpresa.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.colNomeEmpresa.Width = 98;
+            // 
+            // NomeVagaGrid
+            // 
+            this.NomeVagaGrid.HeaderText = "Titulo Vaga";
+            this.NomeVagaGrid.Name = "NomeVagaGrid";
+            this.NomeVagaGrid.ReadOnly = true;
+            this.NomeVagaGrid.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // cargoGrid
+            // 
+            this.cargoGrid.HeaderText = "Cargo";
+            this.cargoGrid.Name = "cargoGrid";
+            this.cargoGrid.ReadOnly = true;
+            this.cargoGrid.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.cargoGrid.Width = 64;
+            // 
+            // cargaHGrid
+            // 
+            this.cargaHGrid.HeaderText = "Carga Horária";
+            this.cargaHGrid.Name = "cargaHGrid";
+            this.cargaHGrid.ReadOnly = true;
+            this.cargaHGrid.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.cargaHGrid.Width = 104;
+            // 
+            // remuneracaoGrid
+            // 
+            this.remuneracaoGrid.HeaderText = "Remuneração";
+            this.remuneracaoGrid.Name = "remuneracaoGrid";
+            this.remuneracaoGrid.ReadOnly = true;
+            this.remuneracaoGrid.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.remuneracaoGrid.Width = 104;
+            // 
+            // colExcluir
+            // 
+            this.colExcluir.DefaultCellStyle = dataGridViewCellStyle7;
+            this.colExcluir.HeaderText = "Excluir";
+            this.colExcluir.Name = "colExcluir";
+            this.colExcluir.ReadOnly = true;
+            this.colExcluir.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.colExcluir.Text = "Excluir";
             // 
             // panelMensagens
             // 
@@ -672,11 +808,7 @@ namespace FindTec
             this.dataGridViewUsuarios.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SunkenHorizontal;
             this.dataGridViewUsuarios.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.Empty;
             dataGridViewCellStyle9.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Empty;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.Empty;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Empty;
             dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewUsuarios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dataGridViewUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -746,153 +878,6 @@ namespace FindTec
             this.colContato.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.colContato.Text = "Contactar";
             this.colContato.Width = 70;
-            // 
-            // colFoto
-            // 
-            dataGridViewCellStyle6.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle6.NullValue")));
-            this.colFoto.DefaultCellStyle = dataGridViewCellStyle6;
-            this.colFoto.Description = "Avatar";
-            this.colFoto.HeaderText = "";
-            this.colFoto.Name = "colFoto";
-            this.colFoto.ReadOnly = true;
-            this.colFoto.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.colFoto.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // colNomeEmpresa
-            // 
-            this.colNomeEmpresa.HeaderText = "Empresa";
-            this.colNomeEmpresa.Name = "colNomeEmpresa";
-            this.colNomeEmpresa.ReadOnly = true;
-            this.colNomeEmpresa.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.colNomeEmpresa.Width = 98;
-            // 
-            // NomeVagaGrid
-            // 
-            this.NomeVagaGrid.HeaderText = "Titulo Vaga";
-            this.NomeVagaGrid.Name = "NomeVagaGrid";
-            this.NomeVagaGrid.ReadOnly = true;
-            this.NomeVagaGrid.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // cargoGrid
-            // 
-            this.cargoGrid.HeaderText = "Cargo";
-            this.cargoGrid.Name = "cargoGrid";
-            this.cargoGrid.ReadOnly = true;
-            this.cargoGrid.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.cargoGrid.Width = 64;
-            // 
-            // cargaHGrid
-            // 
-            this.cargaHGrid.HeaderText = "Carga Horária";
-            this.cargaHGrid.Name = "cargaHGrid";
-            this.cargaHGrid.ReadOnly = true;
-            this.cargaHGrid.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.cargaHGrid.Width = 104;
-            // 
-            // remuneracaoGrid
-            // 
-            this.remuneracaoGrid.HeaderText = "Remuneração";
-            this.remuneracaoGrid.Name = "remuneracaoGrid";
-            this.remuneracaoGrid.ReadOnly = true;
-            this.remuneracaoGrid.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.remuneracaoGrid.Width = 104;
-            // 
-            // colExcluir
-            // 
-            this.colExcluir.DefaultCellStyle = dataGridViewCellStyle7;
-            this.colExcluir.HeaderText = "Excluir";
-            this.colExcluir.Name = "colExcluir";
-            this.colExcluir.ReadOnly = true;
-            this.colExcluir.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.colExcluir.Text = "Excluir";
-            // 
-            // Nome
-            // 
-            this.Nome.Frozen = true;
-            this.Nome.HeaderText = "Nome";
-            this.Nome.Name = "Nome";
-            this.Nome.ReadOnly = true;
-            this.Nome.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Nome.Width = 170;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Tipo";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Email";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Telefone";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // ColumnAprov
-            // 
-            this.ColumnAprov.HeaderText = "Aprovar";
-            this.ColumnAprov.Name = "ColumnAprov";
-            this.ColumnAprov.ReadOnly = true;
-            this.ColumnAprov.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // ColumnRecusar
-            // 
-            this.ColumnRecusar.HeaderText = "Recusar";
-            this.ColumnRecusar.Name = "ColumnRecusar";
-            this.ColumnRecusar.ReadOnly = true;
-            this.ColumnRecusar.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.Frozen = true;
-            this.dataGridViewTextBoxColumn1.HeaderText = "Nome";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTextBoxColumn1.Width = 170;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Tipo";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "Email";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.HeaderText = "Telefone";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            this.dataGridViewTextBoxColumn4.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // ColumnAprovE
-            // 
-            this.ColumnAprovE.HeaderText = "Aprovar";
-            this.ColumnAprovE.Name = "ColumnAprovE";
-            this.ColumnAprovE.ReadOnly = true;
-            this.ColumnAprovE.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // ColumnRecusarE
-            // 
-            this.ColumnRecusarE.HeaderText = "Recusar";
-            this.ColumnRecusarE.Name = "ColumnRecusarE";
-            this.ColumnRecusarE.ReadOnly = true;
-            this.ColumnRecusarE.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // TelaCoordenador
             // 
