@@ -14,7 +14,7 @@ namespace FindTec
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             TelaCadastro cadastro = new TelaCadastro();
-            
+
             cadastro.AcessarAdmin();           
             Application.Run(new TelaLogin());
             

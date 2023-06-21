@@ -52,7 +52,9 @@ namespace FindTec
                 m_aeroEnabled = CheckAeroEnabled();
                 CreateParams cp = base.CreateParams;
                 if (!m_aeroEnabled)
-                    cp.ClassStyle |= CS_DROPSHADOW; return cp;
+                    cp.ClassStyle |= CS_DROPSHADOW;
+                cp.ExStyle |= 0x02000000;
+                return cp;
             }
         }
         private bool CheckAeroEnabled()

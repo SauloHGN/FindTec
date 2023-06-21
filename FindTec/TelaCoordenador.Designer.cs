@@ -927,7 +927,6 @@ namespace FindTec
         private System.Windows.Forms.DataGridView dataGridViewE;
         private System.Windows.Forms.Button buttonListEmpresa;
         private System.Windows.Forms.Button buttonListAluno5;
-        private System.Windows.Forms.Panel panelPerfilC;
         private System.Windows.Forms.Button botaoEditarDados;
         private System.Windows.Forms.TextBox telefoneTxt;
         private System.Windows.Forms.TextBox emailTxt;
@@ -974,5 +973,6 @@ namespace FindTec
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnAprovE;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnRecusarE;
+        public System.Windows.Forms.Panel panelPerfilC;
     }
 }

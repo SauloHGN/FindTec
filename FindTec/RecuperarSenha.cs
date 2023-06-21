@@ -9,6 +9,18 @@ namespace FindTec
 {
     public partial class RecuperarSenha : Form
     {
+
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams handleParms = base.CreateParams;
+                handleParms.ExStyle |= 0x02000000;
+                return handleParms;
+            }
+        }
+
+
         private string codigo;
         private string email;
         private string senha;
@@ -19,26 +31,7 @@ namespace FindTec
             this.FormClosing += new FormClosingEventHandler(RecuperarSenha_FormClosing);// USADO PARA FECHAR APLICAÇÃO
             botaoEnviar1.Select();
             KeyPreview = true;// BOTÃO ENTRAR COM ENTER
-            this.KeyDown += new KeyEventHandler(Enter_KeyDown_Codigo);// BOTÃO ENTRAR COM ENTER
-            foreach (var coordenador in DadosUsuario.listaCoordenador)
-            {
-                Console.WriteLine($"{coordenador.Item1} | {coordenador.Item2} | {coordenador.Item3} | {coordenador.Item4} | {coordenador.Item5} | {coordenador.Item6}");
-            }
-            Console.WriteLine("---------------------------------");
-            foreach (var aluno in DadosUsuario.listaAlunos)
-            {
-                Console.WriteLine($"{aluno.Item1} | {aluno.Item2} | {aluno.Item3} | {aluno.Item4} | {aluno.Item5} | {aluno.Item6}| {aluno.Item7}| {aluno.Item8} |{aluno.Item9} |{aluno.Item10}");
-            }
-            Console.WriteLine("---------------------------------");
-            foreach (var empresa in DadosUsuario.listaEmpresas)
-            {
-                Console.WriteLine($"{empresa.Item1} | {empresa.Item2} | {empresa.Item3} | {empresa.Item4} | {empresa.Item5} | {empresa.Item6}| {empresa.Item7}| {empresa.Item8}");
-            }
-            Console.WriteLine("---------------------------------");
-            foreach (var admin in DadosUsuario.listaAdmin)
-            {
-                Console.WriteLine($"{admin.Item1} | {admin.Item2} | {admin.Item3}");
-            }
+            this.KeyDown += new KeyEventHandler(Enter_KeyDown_Codigo);// BOTÃO ENTRAR COM ENTER          
         }
 
         private void RecuperarSenha_FormClosing(object sender, FormClosingEventArgs e)

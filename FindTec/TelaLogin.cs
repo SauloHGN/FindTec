@@ -52,7 +52,9 @@ namespace FindTec
                 m_aeroEnabled = CheckAeroEnabled();
                 CreateParams cp = base.CreateParams;
                 if (!m_aeroEnabled)
-                    cp.ClassStyle |= CS_DROPSHADOW; return cp;
+                    cp.ClassStyle |= CS_DROPSHADOW;
+                cp.ExStyle |= 0x02000000;
+                return cp;
             }
         }
         private bool CheckAeroEnabled()
@@ -111,7 +113,7 @@ namespace FindTec
 
         public TelaLogin()
         {                    
-            InitializeComponent();
+            InitializeComponent(); 
             botaoFechar.Select();// O PROGRAMA SE INICIA COM O BOTAO FECHAR SELECIONADO
             this.FormClosing += new FormClosingEventHandler(TelaLogin_FormClosing);// USADO PARA FECHAR APLICAÇÃO
             KeyPreview = true;// BOTÃO ENTRAR COM ENTER

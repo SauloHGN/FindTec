@@ -61,8 +61,6 @@ namespace FindTec
 
         private void botaoPerfil_Click(object sender, EventArgs e)
         {
-            
-
             panelCadastroAprov.Visible = false;
             panelOportunidades.Visible = false;
             panelViewUsuarios.Visible = false;
@@ -858,7 +856,7 @@ namespace FindTec
 
         private void botaoAlterarFoto_MouseLeave(object sender, EventArgs e)
         {
-            botaoAlterarFoto.BackgroundImage = Properties.Resources.BotaoAlterarImagem_2;
+            botaoAlterarFoto.BackgroundImage = Properties.Resources.BotaoAlterarImagem_1;
         }
 
         private void botaoAlterarSenha_MouseEnter(object sender, EventArgs e)

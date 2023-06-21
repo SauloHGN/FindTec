@@ -11,7 +11,19 @@ namespace FindTec
 {
     public partial class TelaCadastro : Form
     {
-        
+
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams handleParms = base.CreateParams;
+                handleParms.ExStyle |= 0x02000000;
+                return handleParms;
+            }
+        }
+
+
+
         private void TelaCadastro_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();

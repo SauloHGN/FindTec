@@ -385,6 +385,7 @@ namespace FindTec
             // opCurso
             // 
             this.opCurso.AccessibleName = "opCurso";
+            this.opCurso.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.opCurso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.opCurso.Font = new System.Drawing.Font("Arial Narrow", 10F);
             this.opCurso.ForeColor = System.Drawing.Color.Black;
@@ -457,8 +458,8 @@ namespace FindTec
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(660, 660);
-            this.Controls.Add(this.cadastroEmpresa);
             this.Controls.Add(this.cadastroAluno);
+            this.Controls.Add(this.cadastroEmpresa);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(660, 660);
