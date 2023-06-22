@@ -180,7 +180,7 @@ namespace FindTec
             txtIndisponivel.Visible = false;
         }
 
-        private bool formatandoTelefone = false;
+        
 
         private void textTelE_TextChanged(object sender, EventArgs e)
         {
@@ -191,7 +191,12 @@ namespace FindTec
                 // Remove todos os caracteres não numéricos do telefone
                 string telefone = new string(textTelE.Text.Where(char.IsDigit).ToArray());
 
-                if (telefone.Length >= 2)
+                // Verifica se o texto é igual a "TELEFONE" em maiúsculas
+                if (string.Equals(textTelE.Text, "TELEFONE", StringComparison.OrdinalIgnoreCase))
+                {
+                    telefone = "TELEFONE";
+                }
+                else if (telefone.Length >= 2)
                 {
                     // Garante que a string tenha um comprimento mínimo antes de aplicar a formatação
                     if (telefone.Length <= 2)
@@ -492,6 +497,8 @@ namespace FindTec
             txtCursoInvalido.Visible = false;
         }
 
+        private bool formatandoTelefone = false;
+
         private void textTelefone_TextChanged(object sender, EventArgs e)
         {
             if (!formatandoTelefone)
@@ -501,7 +508,12 @@ namespace FindTec
                 // Remove todos os caracteres não numéricos do telefone
                 string telefone = new string(textTelefone.Text.Where(char.IsDigit).ToArray());
 
-                if (telefone.Length >= 2)
+                // Verifica se o texto é igual a "TELEFONE" em maiúsculas
+                if (string.Equals(textTelefone.Text, "TELEFONE", StringComparison.OrdinalIgnoreCase))
+                {
+                    telefone = "TELEFONE";
+                }
+                else if (telefone.Length >= 2)
                 {
                     // Garante que a string tenha um comprimento mínimo antes de aplicar a formatação
                     if (telefone.Length <= 2)
@@ -540,6 +552,7 @@ namespace FindTec
                 e.Handled = true;
             }
         }
+
 
         private void TelaCadastro_Load(object sender, EventArgs e)
         {
