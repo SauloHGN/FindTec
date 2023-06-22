@@ -4,6 +4,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace FindTec
@@ -229,28 +230,46 @@ namespace FindTec
             prompt.CancelButton = cancel;
             DialogResult result = prompt.ShowDialog();
 
-            if(result == DialogResult.Cancel)
+            if (result == DialogResult.Cancel)
             {
                 Form1_Load_1(this, e);
             }
 
             // Se o usuário confirmou a entrada de dados, exibe o valor inserido
             if (result == DialogResult.OK)
-            {               
+            {
                 var user = DadosUsuario.listaAlunos.Find(u => u.Item1 == Program.userAtual);
 
                 if (user.Item6 == textBox.Text)
                 {
                     user.Item2 = textNome.Text;
-                    user.Item3 = textEmail.Text;
-                    user.Item4 = textTelefone.Text;
+
+                    if (textEmail.Text.Contains("@") && textEmail.Text.Contains(".com"))
+                    {
+                        user.Item3 = textEmail.Text;
+                    }
+                    else
+                    {
+                        MessageBox.Show("E-mail inválido");
+                        return;
+                    }
+
+                    if (IsPhoneNumberValid(textTelefone.Text))
+                    {
+                        user.Item4 = textTelefone.Text;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Telefone inválido");
+                        return;
+                    }
 
                     var index = DadosUsuario.listaAlunos.FindIndex(u => u.Item1 == Program.userAtual);
                     if (index != -1 && VerificaEmailETelefone(textEmail.Text, textTelefone.Text, index))
                     {
                         DadosUsuario.listaAlunos[index] = user;
                         MessageBox.Show("Dados alterados com sucesso");
-                        
+
                         this.Close();
                     }
                     else
@@ -266,6 +285,15 @@ namespace FindTec
                 }
             }
         }
+
+        private bool IsPhoneNumberValid(string phone)
+        {
+            // Verifica se o telefone é válido
+            // Exemplo: "(99) 9999-9999" ou "(99) 99999-9999"
+            return Regex.IsMatch(phone, @"^\(\d{2}\) \d{4,5}-\d{4}$");
+        }
+
+
 
 
         public bool VerificaEmailETelefone(string email, string telefone, int indiceAtual)
@@ -965,5 +993,21 @@ namespace FindTec
             }
         }
 
+        private void textEmail_TextChanged(object sender, EventArgs e)
+        {
+            string texto = textEmail.Text;
+
+            if (texto.ToUpper() == "E-MAIL")
+            {
+                textEmail.Text = "E-MAIL";
+            }
+            else
+            {
+                textEmail.Text = texto.ToLower();
+            }
+
+            // Definir o cursor no final do texto
+            textEmail.SelectionStart = textEmail.Text.Length;
+        }
     }
 }

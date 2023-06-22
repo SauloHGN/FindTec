@@ -2,6 +2,8 @@
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Text;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace FindTec
@@ -464,6 +466,26 @@ namespace FindTec
                     user.Item3 = emailTxt.Text;
                     user.Item4 = telefoneTxt.Text;
 
+                    if (emailTxt.Text.Contains("@") && emailTxt.Text.Contains(".com"))
+                    {
+                        user.Item3 = emailTxt.Text;
+                    }
+                    else
+                    {
+                        MessageBox.Show("E-mail inválido");
+                        return;
+                    }
+
+                    if (IsPhoneNumberValid(telefoneTxt.Text))
+                    {
+                        user.Item4 = telefoneTxt.Text;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Telefone inválido");
+                        return;
+                    }
+
                     var index = DadosUsuario.listaCoordenador.FindIndex(u => u.Item1 == Program.userAtual);
                     if (index != -1 && VerificaEmailETelefone(emailTxt.Text, telefoneTxt.Text, index))
                     {
@@ -485,6 +507,14 @@ namespace FindTec
                 }
             }
         }
+
+        private bool IsPhoneNumberValid(string phone)
+        {
+            // Verifica se o telefone é válido
+            // Exemplo: "(99) 9999-9999" ou "(99) 99999-9999"
+            return Regex.IsMatch(phone, @"^\(\d{2}\) \d{4,5}-\d{4}$");
+        }
+
         public bool VerificaEmailETelefone(string email, string telefone, int indiceAtual)
         {
             foreach (var aluno in DadosUsuario.listaAlunos)
@@ -909,6 +939,109 @@ namespace FindTec
         private void buttonListEmpresa_MouseLeave(object sender, EventArgs e)
         {
             buttonListEmpresa.BackgroundImage = Properties.Resources.botaoEm1;
+        }
+
+        private void nomeTxt_TextChanged(object sender, EventArgs e)
+        {
+            {
+                if (!string.IsNullOrEmpty(nomeTxt.Text))
+                {
+                    string[] nomes = nomeTxt.Text.Split(' ');
+                    StringBuilder resultado = new StringBuilder();
+
+                    foreach (string nome in nomes)
+                    {
+                        if (resultado.Length > 0)
+                            resultado.Append(" ");
+
+                        if (nome.ToLower() == "da" || nome.ToLower() == "do" || nome.ToLower() == "das" ||
+                            nome.ToLower() == "dos" || nome.ToLower() == "de" || nome.ToLower() == "e" ||
+                            nome.ToLower() == "eles")
+                        {
+                            resultado.Append(nome.ToLower());
+                        }
+                        else
+                        {
+                            if (nome.Length > 0)
+                            {
+                                string primeiroCaractere = nome.Substring(0, 1).ToUpper();
+                                string restante = nome.Substring(1).ToLower();
+                                resultado.Append(primeiroCaractere + restante);
+                            }
+                        }
+                    }
+                    nomeTxt.Text = resultado.ToString();
+                    nomeTxt.SelectionStart = nomeTxt.Text.Length;
+                }
+            }
+        }
+
+        private void emailTxt_TextChanged(object sender, EventArgs e)
+        {
+            string texto = emailTxt.Text;
+
+            if (texto.ToUpper() == "E-MAIL")
+            {
+                emailTxt.Text = "E-MAIL";
+            }
+            else
+            {
+                emailTxt.Text = texto.ToLower();
+            }
+
+            // Definir o cursor no final do texto
+            emailTxt.SelectionStart = emailTxt.Text.Length;
+        }
+
+        private bool formatandoTelefone = false;
+
+        private void telefoneTxt_TextChanged(object sender, EventArgs e)
+        {
+            if (!formatandoTelefone)
+            {
+                formatandoTelefone = true;
+
+                // Remove todos os caracteres não numéricos do telefone
+                string telefone = new string(telefoneTxt.Text.Where(char.IsDigit).ToArray());
+
+                if (telefone.Length >= 2)
+                {
+                    // Garante que a string tenha um comprimento mínimo antes de aplicar a formatação
+                    if (telefone.Length <= 2)
+                    {
+                        telefone = string.Format("({0}", telefone);
+                    }
+                    else if (telefone.Length <= 6)
+                    {
+                        telefone = string.Format("({0}) {1}", telefone.Substring(0, 2), telefone.Substring(2));
+                    }
+                    else if (telefone.Length <= 10)
+                    {
+                        telefone = string.Format("({0}) {1}-{2}", telefone.Substring(0, 2), telefone.Substring(2, 4), telefone.Substring(6));
+                    }
+                    else
+                    {
+                        telefone = string.Format("({0}) {1}-{2}", telefone.Substring(0, 2), telefone.Substring(2, 5), telefone.Substring(7));
+                    }
+                }
+
+                telefoneTxt.Text = telefone;
+                telefoneTxt.SelectionStart = telefone.Length;
+
+                formatandoTelefone = false;
+            }
+        }
+
+        private void telefoneTxt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            else if (telefoneTxt.TextLength >= 15 && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }
