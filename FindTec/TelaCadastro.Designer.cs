@@ -81,6 +81,7 @@ namespace FindTec
             this.textEmailE.Size = new System.Drawing.Size(208, 19);
             this.textEmailE.TabIndex = 2;
             this.textEmailE.Text = "E-MAIL";
+            this.textEmailE.TextChanged += new System.EventHandler(this.textEmailE_TextChanged);
             this.textEmailE.Enter += new System.EventHandler(this.textEmailE_Enter);
             this.textEmailE.Leave += new System.EventHandler(this.textEmailE_Leave);
             // 

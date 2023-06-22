@@ -22,8 +22,6 @@ namespace FindTec
             }
         }
 
-
-
         private void TelaCadastro_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
@@ -707,6 +705,23 @@ namespace FindTec
 
             // Definir o cursor no final do texto
             textEmail.SelectionStart = textEmail.Text.Length;
+        }
+
+        private void textEmailE_TextChanged(object sender, EventArgs e)
+        {
+            string texto = textEmailE.Text;
+
+            if (texto.ToUpper() == "E-MAIL")
+            {
+                textEmailE.Text = "E-MAIL";
+            }
+            else
+            {
+                textEmailE.Text = texto.ToLower();
+            }
+
+            // Definir o cursor no final do texto
+            textEmailE.SelectionStart = textEmailE.Text.Length;
         }
 
 
