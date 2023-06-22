@@ -47,6 +47,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Logo.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
@@ -213,6 +216,7 @@
     <None Include="Imagens\botaoEntrar2.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Logo.ico" />
     <None Include="Imagens\telaPerfilCoordenador.png" />
     <None Include="Imagens\telaUsuariosAtivos.png" />
     <None Include="Imagens\telaMinhasVagas.png" />
@@ -227,6 +231,10 @@
     <None Include="Imagens\botaoAlterarSenha 2.png" />
     <None Include="Imagens\BotaoAlterarImagem 1.png" />
     <None Include="Imagens\botaoAlterarSenha 1.png" />
+    <None Include="Imagens\bellOff.png" />
+    <None Include="Imagens\bellOn.png" />
+    <None Include="Imagens\botaoAl1.png" />
+    <None Include="Imagens\botaoAl2.png" />
     <Content Include="Imagens\botaoAluno1.png" />
     <Content Include="Imagens\botaoAluno2.png" />
     <None Include="Imagens\botaoCriesuaconta1.png" />
@@ -245,6 +253,8 @@
     <None Include="Imagens\botaoAnunciar2.png" />
     <None Include="Imagens\botaoAprovarCadastro1.png" />
     <None Include="Imagens\botaoAprovarCadastro2.png" />
+    <None Include="Imagens\botaoEm1.png" />
+    <None Include="Imagens\botaoEm2.png" />
     <Content Include="Imagens\botaoEmpresa1.png" />
     <None Include="Imagens\botaoEmpresa2.png" />
     <None Include="Imagens\botaoEntrar1.png" />
@@ -293,6 +303,9 @@
     <None Include="Imagens\telaAprovacaoCadastro.png" />
     <None Include="Imagens\menuLateralCoordenador.png" />
     <None Include="Imagens\imagemCoordenador.png" />
+    <None Include="Imagens\menuLateralAdministrador.png" />
+    <None Include="Imagens\telaCadastrarCoordenadror.png" />
+    <None Include="Imagens\logo.png" />
     <Content Include="Imagens\TelaEscolha.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

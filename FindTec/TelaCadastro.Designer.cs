@@ -81,6 +81,7 @@ namespace FindTec
             this.textEmailE.Size = new System.Drawing.Size(208, 19);
             this.textEmailE.TabIndex = 2;
             this.textEmailE.Text = "E-MAIL";
+            this.textEmailE.TextChanged += new System.EventHandler(this.textEmailE_TextChanged);
             this.textEmailE.Enter += new System.EventHandler(this.textEmailE_Enter);
             this.textEmailE.Leave += new System.EventHandler(this.textEmailE_Leave);
             // 
@@ -344,7 +345,7 @@ namespace FindTec
             this.botaoCriarcontaa.TabIndex = 6;
             this.botaoCriarcontaa.UseVisualStyleBackColor = false;
             this.botaoCriarcontaa.Click += new System.EventHandler(this.botaoCriarcontaa_Click);
-            this.botaoCriarcontaa.Enter += new System.EventHandler(this.botaoCriarcontaA_MouseEnter);
+            this.botaoCriarcontaa.Enter += new System.EventHandler(this.botaoVoltarA_Click);
             this.botaoCriarcontaa.MouseEnter += new System.EventHandler(this.botaoCriarcontaA_MouseEnter);
             this.botaoCriarcontaa.MouseLeave += new System.EventHandler(this.botaoCriarcontaA_MouseLeave);
             // 
@@ -436,6 +437,7 @@ namespace FindTec
             this.textEmail.Size = new System.Drawing.Size(211, 19);
             this.textEmail.TabIndex = 2;
             this.textEmail.Text = "E-MAIL";
+            this.textEmail.TextChanged += new System.EventHandler(this.textEmail_TextChanged);
             this.textEmail.Enter += new System.EventHandler(this.textEmail_Enter);
             this.textEmail.Leave += new System.EventHandler(this.textEmail_Leave);
             // 
@@ -458,9 +460,10 @@ namespace FindTec
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(660, 660);
-            this.Controls.Add(this.cadastroAluno);
             this.Controls.Add(this.cadastroEmpresa);
+            this.Controls.Add(this.cadastroAluno);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(660, 660);
             this.MinimumSize = new System.Drawing.Size(660, 660);

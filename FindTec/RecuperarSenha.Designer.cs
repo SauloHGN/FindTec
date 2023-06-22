@@ -341,6 +341,7 @@ namespace FindTec
             this.Controls.Add(this.panelEmail);
             this.Controls.Add(this.panelCodigo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "RecuperarSenha";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.RecuperarSenha_Load);

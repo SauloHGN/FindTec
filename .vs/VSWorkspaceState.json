@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\FindTec"
   ],
-  "SelectedNode": "\\FindTec.sln (FindTec.sln)",
+  "SelectedNode": "\\FindTec\\TelaCoordenador.cs",
   "PreviewInSolutionExplorer": false
 }

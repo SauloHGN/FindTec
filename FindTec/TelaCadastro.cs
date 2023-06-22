@@ -22,8 +22,6 @@ namespace FindTec
             }
         }
 
-
-
         private void TelaCadastro_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
@@ -180,7 +178,7 @@ namespace FindTec
             txtIndisponivel.Visible = false;
         }
 
-        private bool formatandoTelefone = false;
+        
 
         private void textTelE_TextChanged(object sender, EventArgs e)
         {
@@ -191,7 +189,12 @@ namespace FindTec
                 // Remove todos os caracteres não numéricos do telefone
                 string telefone = new string(textTelE.Text.Where(char.IsDigit).ToArray());
 
-                if (telefone.Length >= 2)
+                // Verifica se o texto é igual a "TELEFONE" em maiúsculas
+                if (string.Equals(textTelE.Text, "TELEFONE", StringComparison.OrdinalIgnoreCase))
+                {
+                    telefone = "TELEFONE";
+                }
+                else if (telefone.Length >= 2)
                 {
                     // Garante que a string tenha um comprimento mínimo antes de aplicar a formatação
                     if (telefone.Length <= 2)
@@ -398,6 +401,13 @@ namespace FindTec
         {
             if (!string.IsNullOrEmpty(textNome.Text))
             {
+                if (textNome.Text.ToLower() == "nome completo")
+                {
+                    textNome.Text = "NOME COMPLETO";
+                    textNome.SelectionStart = textNome.Text.Length;
+                    return;
+                }
+
                 string[] nomes = textNome.Text.Split(' ');
                 StringBuilder resultado = new StringBuilder();
 
@@ -427,6 +437,7 @@ namespace FindTec
                 textNome.SelectionStart = textNome.Text.Length;
             }
         }
+
 
         private void textEmail_Enter(object sender, EventArgs e)
         {
@@ -484,6 +495,8 @@ namespace FindTec
             txtCursoInvalido.Visible = false;
         }
 
+        private bool formatandoTelefone = false;
+
         private void textTelefone_TextChanged(object sender, EventArgs e)
         {
             if (!formatandoTelefone)
@@ -493,7 +506,12 @@ namespace FindTec
                 // Remove todos os caracteres não numéricos do telefone
                 string telefone = new string(textTelefone.Text.Where(char.IsDigit).ToArray());
 
-                if (telefone.Length >= 2)
+                // Verifica se o texto é igual a "TELEFONE" em maiúsculas
+                if (string.Equals(textTelefone.Text, "TELEFONE", StringComparison.OrdinalIgnoreCase))
+                {
+                    telefone = "TELEFONE";
+                }
+                else if (telefone.Length >= 2)
                 {
                     // Garante que a string tenha um comprimento mínimo antes de aplicar a formatação
                     if (telefone.Length <= 2)
@@ -532,6 +550,7 @@ namespace FindTec
                 e.Handled = true;
             }
         }
+
 
         private void TelaCadastro_Load(object sender, EventArgs e)
         {
@@ -670,6 +689,46 @@ namespace FindTec
             {
             }
         }
+
+        private void textEmail_TextChanged(object sender, EventArgs e)
+        {
+            string texto = textEmail.Text;
+
+            if (texto.ToUpper() == "E-MAIL")
+            {
+                textEmail.Text = "E-MAIL";
+            }
+            else
+            {
+                textEmail.Text = texto.ToLower();
+            }
+
+            // Definir o cursor no final do texto
+            textEmail.SelectionStart = textEmail.Text.Length;
+        }
+
+        private void textEmailE_TextChanged(object sender, EventArgs e)
+        {
+            string texto = textEmailE.Text;
+
+            if (texto.ToUpper() == "E-MAIL")
+            {
+                textEmailE.Text = "E-MAIL";
+            }
+            else
+            {
+                textEmailE.Text = texto.ToLower();
+            }
+
+            // Definir o cursor no final do texto
+            textEmailE.SelectionStart = textEmailE.Text.Length;
+        }
+
+
+
+
+
+
         // FIM DO PAINEL DO ALUNO
     }
 }

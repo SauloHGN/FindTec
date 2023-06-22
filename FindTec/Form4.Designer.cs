@@ -29,38 +29,45 @@ namespace FindTec
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form4));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.botaoSair = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.textNomeC = new System.Windows.Forms.TextBox();
             this.textEmailC = new System.Windows.Forms.TextBox();
             this.textTelC = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
             this.textSenhaC = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.txtIndisponivel = new System.Windows.Forms.Label();
             this.cadastroCoordenador = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.cadastroCoordenador.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.BackgroundImage = global::FindTec.Properties.Resources.menuLateral;
+            this.panel1.BackgroundImage = global::FindTec.Properties.Resources.menuLateralAdministrador;
+            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.botaoSair);
             this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(215, 550);
             this.panel1.TabIndex = 1;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::FindTec.Properties.Resources.Logo;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(60, 56);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(114, 114);
+            this.pictureBox1.TabIndex = 16;
+            this.pictureBox1.TabStop = false;
             // 
             // botaoSair
             // 
@@ -87,117 +94,90 @@ namespace FindTec
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(-3, 365);
+            this.button2.Location = new System.Drawing.Point(-2, 233);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(200, 36);
             this.button2.TabIndex = 7;
-            this.button2.Text = "Opção B";
+            this.button2.Text = "Cadastrar Coordenador";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Visible = false;
             this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(41, 196);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(157, 25);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Administrador";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(257, 195);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(35, 13);
-            this.label11.TabIndex = 7;
-            this.label11.Text = "Nome";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(260, 233);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(32, 13);
-            this.label10.TabIndex = 6;
-            this.label10.Text = "Email";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(249, 271);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(49, 13);
-            this.label9.TabIndex = 5;
-            this.label9.Text = "Telefone";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(254, 316);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(38, 13);
-            this.label8.TabIndex = 4;
-            this.label8.Text = "Senha";
-            // 
             // textNomeC
             // 
-            this.textNomeC.Location = new System.Drawing.Point(309, 192);
+            this.textNomeC.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textNomeC.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textNomeC.Location = new System.Drawing.Point(309, 195);
             this.textNomeC.Name = "textNomeC";
-            this.textNomeC.Size = new System.Drawing.Size(129, 20);
+            this.textNomeC.Size = new System.Drawing.Size(180, 19);
             this.textNomeC.TabIndex = 12;
+            this.textNomeC.Text = "NOME COMPLETO";
+            this.textNomeC.TextChanged += new System.EventHandler(this.textNomeC_TextChanged);
+            this.textNomeC.Enter += new System.EventHandler(this.textNome_Enter);
+            this.textNomeC.Leave += new System.EventHandler(this.textNome_Leave);
             // 
             // textEmailC
             // 
-            this.textEmailC.Location = new System.Drawing.Point(309, 230);
+            this.textEmailC.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textEmailC.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textEmailC.Location = new System.Drawing.Point(309, 246);
             this.textEmailC.Name = "textEmailC";
-            this.textEmailC.Size = new System.Drawing.Size(129, 20);
+            this.textEmailC.Size = new System.Drawing.Size(180, 19);
             this.textEmailC.TabIndex = 11;
+            this.textEmailC.Text = "E-MAIL";
+            this.textEmailC.TextChanged += new System.EventHandler(this.textEmailC_TextChanged);
+            this.textEmailC.Enter += new System.EventHandler(this.textEmail_Enter);
+            this.textEmailC.Leave += new System.EventHandler(this.textEmail_Leave);
             // 
             // textTelC
             // 
-            this.textTelC.Location = new System.Drawing.Point(309, 268);
+            this.textTelC.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textTelC.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textTelC.Location = new System.Drawing.Point(309, 297);
             this.textTelC.Name = "textTelC";
-            this.textTelC.Size = new System.Drawing.Size(129, 20);
+            this.textTelC.Size = new System.Drawing.Size(180, 19);
             this.textTelC.TabIndex = 10;
+            this.textTelC.Text = "TELEFONE";
+            this.textTelC.TextChanged += new System.EventHandler(this.textTelC_TextChanged);
+            this.textTelC.Enter += new System.EventHandler(this.textTelefone_Enter);
+            this.textTelC.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textTelC_KeyPress);
+            this.textTelC.Leave += new System.EventHandler(this.textTelefone_Leave);
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(336, 376);
+            this.button5.BackColor = System.Drawing.Color.Transparent;
+            this.button5.BackgroundImage = global::FindTec.Properties.Resources.botaoCriarconta1;
+            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Location = new System.Drawing.Point(324, 397);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.Size = new System.Drawing.Size(183, 52);
             this.button5.TabIndex = 9;
-            this.button5.Text = "Criar Conta";
-            this.button5.UseVisualStyleBackColor = true;
+            this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.button5.MouseEnter += new System.EventHandler(this.button5_MouseEnter);
+            this.button5.MouseLeave += new System.EventHandler(this.button5_MouseLeave);
             // 
             // textSenhaC
             // 
-            this.textSenhaC.Location = new System.Drawing.Point(309, 309);
+            this.textSenhaC.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textSenhaC.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textSenhaC.Location = new System.Drawing.Point(309, 348);
             this.textSenhaC.Name = "textSenhaC";
-            this.textSenhaC.PasswordChar = '•';
-            this.textSenhaC.Size = new System.Drawing.Size(129, 20);
+            this.textSenhaC.Size = new System.Drawing.Size(180, 19);
             this.textSenhaC.TabIndex = 8;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(248, 130);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(227, 24);
-            this.label2.TabIndex = 13;
-            this.label2.Text = "Cadastrar Coordenador";
+            this.textSenhaC.Text = "SENHA";
+            this.textSenhaC.Enter += new System.EventHandler(this.textSenha_Enter);
+            this.textSenhaC.Leave += new System.EventHandler(this.textSenha_Leave);
             // 
             // txtIndisponivel
             // 
             this.txtIndisponivel.AutoSize = true;
             this.txtIndisponivel.ForeColor = System.Drawing.Color.Red;
-            this.txtIndisponivel.Location = new System.Drawing.Point(254, 346);
+            this.txtIndisponivel.Location = new System.Drawing.Point(306, 381);
             this.txtIndisponivel.Name = "txtIndisponivel";
             this.txtIndisponivel.Size = new System.Drawing.Size(210, 13);
             this.txtIndisponivel.TabIndex = 14;
@@ -206,17 +186,13 @@ namespace FindTec
             // 
             // cadastroCoordenador
             // 
+            this.cadastroCoordenador.BackgroundImage = global::FindTec.Properties.Resources.telaCadastrarCoordenadror;
             this.cadastroCoordenador.Controls.Add(this.txtIndisponivel);
-            this.cadastroCoordenador.Controls.Add(this.label2);
             this.cadastroCoordenador.Controls.Add(this.textSenhaC);
             this.cadastroCoordenador.Controls.Add(this.button5);
             this.cadastroCoordenador.Controls.Add(this.textTelC);
             this.cadastroCoordenador.Controls.Add(this.textEmailC);
             this.cadastroCoordenador.Controls.Add(this.textNomeC);
-            this.cadastroCoordenador.Controls.Add(this.label8);
-            this.cadastroCoordenador.Controls.Add(this.label9);
-            this.cadastroCoordenador.Controls.Add(this.label10);
-            this.cadastroCoordenador.Controls.Add(this.label11);
             this.cadastroCoordenador.Location = new System.Drawing.Point(221, 13);
             this.cadastroCoordenador.Name = "cadastroCoordenador";
             this.cadastroCoordenador.Size = new System.Drawing.Size(755, 525);
@@ -231,11 +207,12 @@ namespace FindTec
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.cadastroCoordenador);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form4";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.Form4_Load);
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.cadastroCoordenador.ResumeLayout(false);
             this.cadastroCoordenador.PerformLayout();
             this.ResumeLayout(false);
@@ -245,20 +222,15 @@ namespace FindTec
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textNomeC;
         private System.Windows.Forms.TextBox textEmailC;
         private System.Windows.Forms.TextBox textTelC;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.TextBox textSenhaC;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label txtIndisponivel;
         private System.Windows.Forms.Panel cadastroCoordenador;
         private System.Windows.Forms.Button botaoSair;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

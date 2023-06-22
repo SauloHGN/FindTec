@@ -4,6 +4,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace FindTec
@@ -160,6 +161,26 @@ namespace FindTec
                     user.Item3 = emailTxt.Text;
                     user.Item4 = telefoneTxt.Text;
 
+                    if (emailTxt.Text.Contains("@") && emailTxt.Text.Contains(".com"))
+                    {
+                        user.Item3 = emailTxt.Text;
+                    }
+                    else
+                    {
+                        MessageBox.Show("E-mail inválido");
+                        return;
+                    }
+
+                    if (IsPhoneNumberValid(telefoneTxt.Text))
+                    {
+                        user.Item4 = telefoneTxt.Text;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Telefone inválido");
+                        return;
+                    }
+
                     var index = DadosUsuario.listaEmpresas.FindIndex(u => u.Item1 == Program.userAtual);
                     if (index != -1 && VerificaEmailETelefone(emailTxt.Text, telefoneTxt.Text, index))
                     {
@@ -180,6 +201,13 @@ namespace FindTec
                     MessageBox.Show("Senha incorreta...");
                 }
             }
+        }
+
+        private bool IsPhoneNumberValid(string phone)
+        {
+            // Verifica se o telefone é válido
+            // Exemplo: "(99) 9999-9999" ou "(99) 99999-9999"
+            return Regex.IsMatch(phone, @"^\(\d{2}\) \d{4,5}-\d{4}$");
         }
 
         public bool VerificaEmailETelefone(string email, string telefone, int indiceAtual)
@@ -467,10 +495,10 @@ namespace FindTec
                 {
                     DataGridViewButtonCell botaoPerfil = new DataGridViewButtonCell();
                     botaoPerfil.Value = "+";
-                    var icone = Properties.Resources.botaoAluno1;
+                    var icone = Properties.Resources.bellOff;
                     if (vagas.alteracao == true)
                     {
-                        icone = Properties.Resources.botaoAluno2;
+                        icone = Properties.Resources.bellOn;
                     }
                     gridViewMinhasVagas.Rows.Add(icone, vagas.NomeVaga, vagas.Cargo, vagas.cargaHoraria, vagas.remuneracao, vagas.Curso, "+");
                 }
@@ -948,8 +976,21 @@ namespace FindTec
             }
         }
 
+        private void emailTxt_TextChanged(object sender, EventArgs e)
+        {
+            string texto = emailTxt.Text;
 
+            if (texto.ToUpper() == "E-MAIL")
+            {
+                emailTxt.Text = "E-MAIL";
+            }
+            else
+            {
+                emailTxt.Text = texto.ToLower();
+            }
 
-
+            // Definir o cursor no final do texto
+            emailTxt.SelectionStart = emailTxt.Text.Length;
+        }
     }
 }
