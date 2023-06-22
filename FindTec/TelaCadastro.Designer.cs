@@ -345,7 +345,6 @@ namespace FindTec
             this.botaoCriarcontaa.TabIndex = 6;
             this.botaoCriarcontaa.UseVisualStyleBackColor = false;
             this.botaoCriarcontaa.Click += new System.EventHandler(this.botaoCriarcontaa_Click);
-            this.botaoCriarcontaa.Enter += new System.EventHandler(this.botaoVoltarA_Click);
             this.botaoCriarcontaa.MouseEnter += new System.EventHandler(this.botaoCriarcontaA_MouseEnter);
             this.botaoCriarcontaa.MouseLeave += new System.EventHandler(this.botaoCriarcontaA_MouseLeave);
             // 
@@ -460,8 +459,8 @@ namespace FindTec
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(660, 660);
-            this.Controls.Add(this.cadastroEmpresa);
             this.Controls.Add(this.cadastroAluno);
+            this.Controls.Add(this.cadastroEmpresa);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;

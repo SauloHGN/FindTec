@@ -137,12 +137,16 @@ C:\Users\lucas\Downloads\FindTec\FindTec\obj\Debug\FindTec.csproj.CoreCompileInp
 C:\Users\lucas\Downloads\FindTec\FindTec\obj\Debug\FindTec.csproj.CopyComplete
 C:\Users\lucas\Downloads\FindTec\FindTec\obj\Debug\FindTec.exe
 C:\Users\lucas\Downloads\FindTec\FindTec\obj\Debug\FindTec.pdb
+C:\Users\lucas\Downloads\FindTec\FindTec\obj\Debug\FindTec.TelaAluno.resources
+C:\Users\lucas\Downloads\FindTec\FindTec\obj\Debug\FindTec.TelaCoordenador.resources
 D:\FindTec\FindTec\bin\Debug\FindTec.exe.config
 D:\FindTec\FindTec\bin\Debug\FindTec.exe
 D:\FindTec\FindTec\bin\Debug\FindTec.pdb
 D:\FindTec\FindTec\bin\Debug\System.ComponentModel.Annotations.dll
 D:\FindTec\FindTec\obj\Debug\FindTec.ConversaItem.resources
+D:\FindTec\FindTec\obj\Debug\FindTec.TelaAluno.resources
 D:\FindTec\FindTec\obj\Debug\FindTec.Form2.resources
+D:\FindTec\FindTec\obj\Debug\FindTec.TelaCoordenador.resources
 D:\FindTec\FindTec\obj\Debug\FindTec.Form4.resources
 D:\FindTec\FindTec\obj\Debug\FindTec.myMessage.resources
 D:\FindTec\FindTec\obj\Debug\FindTec.Properties.Resources.resources
@@ -156,8 +160,3 @@ D:\FindTec\FindTec\obj\Debug\FindTec.csproj.CoreCompileInputs.cache
 D:\FindTec\FindTec\obj\Debug\FindTec.csproj.CopyComplete
 D:\FindTec\FindTec\obj\Debug\FindTec.exe
 D:\FindTec\FindTec\obj\Debug\FindTec.pdb
-D:\FindTec\FindTec\obj\Debug\FindTec.csproj.AssemblyReference.cache
-C:\Users\lucas\Downloads\FindTec\FindTec\obj\Debug\FindTec.TelaAluno.resources
-C:\Users\lucas\Downloads\FindTec\FindTec\obj\Debug\FindTec.TelaCoordenador.resources
-D:\FindTec\FindTec\obj\Debug\FindTec.TelaAluno.resources
-D:\FindTec\FindTec\obj\Debug\FindTec.TelaCoordenador.resources

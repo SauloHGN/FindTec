@@ -859,16 +859,15 @@ namespace FindTec
             // 
             // TelaAluno
             // 
-            this.BackgroundImage = global::FindTec.Properties.Resources.backgroundGeral;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(1000, 550);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panelPerfilAluno);
-            this.Controls.Add(this.panelConversasAluno);
-            this.Controls.Add(this.panelMensagensAluno);
             this.Controls.Add(this.panelOportunidadesAluno);
             this.Controls.Add(this.panelVagaInfoAluno);
             this.Controls.Add(this.panelMeusCadastrosAluno);
+            this.Controls.Add(this.panelPerfilAluno);
+            this.Controls.Add(this.panelConversasAluno);
+            this.Controls.Add(this.panelMensagensAluno);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

@@ -51,8 +51,7 @@ namespace FindTec
             // 
             // pictureBox1
             // 
-            this.pictureBox1.ErrorImage = global::FindTec.Properties.Resources.botaoAluno1;
-            this.pictureBox1.Image = global::FindTec.Properties.Resources.botaoAluno1;
+            this.pictureBox1.ErrorImage = null;
             this.pictureBox1.Location = new System.Drawing.Point(3, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(60, 60);
@@ -98,6 +97,7 @@ namespace FindTec
             this.Controls.Add(this.labelNome);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.labelMensagemNaoLida);
+            this.DoubleBuffered = true;
             this.Name = "ConversaItem";
             this.Size = new System.Drawing.Size(334, 66);
             this.MouseEnter += new System.EventHandler(this.ConversaItem_MouseEnter);

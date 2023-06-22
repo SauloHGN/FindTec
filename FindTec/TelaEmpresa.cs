@@ -15,6 +15,14 @@ namespace FindTec
         public Form2()
         {
             InitializeComponent();
+            this.DoubleBuffered = true;
+            this.SetStyle(ControlStyles.UserPaint |
+                          ControlStyles.AllPaintingInWmPaint |
+                          ControlStyles.ResizeRedraw |
+                          ControlStyles.ContainerControl |
+                          ControlStyles.OptimizedDoubleBuffer |
+                          ControlStyles.SupportsTransparentBackColor
+                          , true);
             botaoAnunciarVaga_Click(this, new EventArgs());//INICIAR COM O BOTÃO VAGA SELECIONADO
             botaoPerfil_Click(this, new EventArgs());// INICIAR COM A "HOMEPAGE" PERFIL
             this.FormClosing += new FormClosingEventHandler(Form2_FormClosing);// FECHAR FRAME PRINCIPAL VOLTAR PARA A TELA DE LOGIN
@@ -451,7 +459,7 @@ namespace FindTec
                     if (vaga.Candidatos.Contains(user.Item1.ToString()) && user.Item7 == true)
                     {
                         DataGridViewButtonCell botaoChat = new DataGridViewButtonCell();
-                        botaoChat.Value = "Chat";
+                        botaoChat.Value = "Contato";
 
                         byte[] imageBytes = user.Item10; // bytes contendo a imagem
                         Image imagem = null;
@@ -472,13 +480,14 @@ namespace FindTec
                             }
                         }
 
-                        dataGridViewCandidatos.Rows.Add(imagem, user.Item2, user.Item3, user.Item4, "Chat");
+                        dataGridViewCandidatos.Rows.Add(imagem, user.Item2, user.Item3, user.Item4, "Contato");
                     }
                 }
                 Load_Cadastrados();
                 panelAlunoCadastrado.Visible = true;
                 panelAlunoCadastrado.BringToFront();
             }
+            gridViewMinhasVagas.ClearSelection();
         }
 
         public void LoadMinhasVagas()
@@ -500,7 +509,7 @@ namespace FindTec
                     {
                         icone = Properties.Resources.bellOn;
                     }
-                    gridViewMinhasVagas.Rows.Add(icone, vagas.NomeVaga, vagas.Cargo, vagas.cargaHoraria, vagas.remuneracao, vagas.Curso, "+");
+                    gridViewMinhasVagas.Rows.Add(icone, vagas.NomeVaga, vagas.Cargo, vagas.cargaHoraria, vagas.remuneracao, vagas.Curso, "Candidatos");
                 }
             }
             gridViewMinhasVagas.ClearSelection();

@@ -53,7 +53,7 @@ namespace FindTec
                 CreateParams cp = base.CreateParams;
                 if (!m_aeroEnabled)
                     cp.ClassStyle |= CS_DROPSHADOW;
-                cp.ExStyle |= 0x02000000;
+                //cp.ExStyle |= 0x02000000;
                 return cp;
             }
         }

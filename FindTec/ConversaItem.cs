@@ -33,6 +33,7 @@ namespace FindTec
             labelUltimaMensagem.Text = ultimaMensagem;
             MensagensNaoLidas = mensagemNaoLida;
             AtualizarMensagensNaoLidas();
+            var FotoNull = Chat.ObterIdUsuarioPeloNome(destinatario);
 
             byte[] imageBytes = foto; // bytes contendo a imagem
             Image imagem = null;
@@ -46,7 +47,24 @@ namespace FindTec
             }
             if(imagem == null)
             {
-                imagem = Properties.Resources.botaoAluno1;
+                //imagem = Properties.Resources.imagemAluno;
+                var userExists = DadosUsuario.listaAlunos.Exists(u => u.Item1 == FotoNull);
+                if (userExists)
+                {
+                    imagem = Properties.Resources.imagemAluno;
+                }
+                else
+                {
+                    userExists = DadosUsuario.listaEmpresas.Exists(u => u.Item1 == FotoNull);
+                    if (userExists)
+                    {
+                        imagem = Properties.Resources.imagemEmpresa;
+                    }
+                    else
+                    {
+                        imagem = Properties.Resources.imagemCoordenador;
+                    }
+                }
             }
             pictureBox1.Image = imagem;
 
@@ -63,6 +81,7 @@ namespace FindTec
             {
                 labelMensagemNaoLida.Visible = false;
             }
+
         }
 
         private void ConversaItem_MouseEnter(object sender, EventArgs e)

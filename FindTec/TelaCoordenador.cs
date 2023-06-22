@@ -4,16 +4,26 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace FindTec
 {
     public partial class TelaCoordenador : Form
     {
+
         public static string motivo;
         public TelaCoordenador()
-        {
+        {         
             InitializeComponent();
+            this.DoubleBuffered = true;
+            this.SetStyle(ControlStyles.UserPaint |
+                          ControlStyles.AllPaintingInWmPaint |
+                          ControlStyles.ResizeRedraw |
+                          ControlStyles.ContainerControl |
+                          ControlStyles.OptimizedDoubleBuffer |
+                          ControlStyles.SupportsTransparentBackColor
+                          , true);
             this.FormClosing += new FormClosingEventHandler(Form3_FormClosing);// FECHAR FRAME PRINCIPAL VOLTAR PARA A TELA
             buttonListAluno_Click_1(this, new EventArgs());//INICIAR COM O BOTÃO ALUNO SELECIONADO
             this.KeyDown += new KeyEventHandler(EnviarMensagem_Enter);// Enviar mensagem com Enter
@@ -21,6 +31,8 @@ namespace FindTec
             LoadConversas();
             LoadGridUsuarios();
         }
+
+
 
         private void EnviarMensagem_Enter(object sender, KeyEventArgs e)
         {           
@@ -64,11 +76,11 @@ namespace FindTec
 
         private void botaoPerfil_Click(object sender, EventArgs e)
         {
-            panelCadastroAprov.Visible = false;
-            panelOportunidades.Visible = false;
-            panelViewUsuarios.Visible = false;
-            panelConversas.Visible = true;
-            panelPerfilC.Visible = true;
+            panelPerfilC.Visible = true;//true
+            panelCadastroAprov.Visible = true;
+            panelOportunidades.Visible = true;
+            panelViewUsuarios.Visible = true;
+            panelConversas.Visible = true;      
             panelPerfilC.BringToFront();
         }
 
@@ -78,11 +90,11 @@ namespace FindTec
             LoadDataGridView();
             
 
-            panelCadastroAprov.Visible = true;
-            panelPerfilC.Visible = false;
-            panelOportunidades.Visible = false;
-            panelConversas.Visible = false;
-            panelViewUsuarios.Visible = false;
+            panelCadastroAprov.Visible = true;//true
+            panelPerfilC.Visible = true;
+            panelOportunidades.Visible = true;
+            panelConversas.Visible = true;
+            panelViewUsuarios.Visible = true;
             dataGridView1.ClearSelection();
             panelCadastroAprov.BringToFront();
         }
@@ -90,30 +102,35 @@ namespace FindTec
         private void botaoVagas_Click(object sender, EventArgs e)
         {
             
-            panelPerfilC.Visible = false;
-            panelCadastroAprov.Visible = false;
-            panelMensagens.Visible = false;
-            panelConversas.Visible = false;
-            panelViewUsuarios.Visible = false;
-            panelOportunidades.Visible = true;
+            panelPerfilC.Visible = true;
+            panelCadastroAprov.Visible = true;
+            panelMensagens.Visible = true;
+            panelConversas.Visible = true;
+            panelViewUsuarios.Visible = true;
+            panelOportunidades.Visible = true;//true
+            panelOportunidades.BringToFront();
             
         }
         private void botaoMensagens_Click(object sender, EventArgs e)
         {
-            
-            panelPerfilC.Visible = false;
-            panelCadastroAprov.Visible = false;
-            panelOportunidades.Visible = false;
-            panelViewUsuarios.Visible = false;
-            panelConversas.Visible = true;
+            panelConversas.Visible = true;// true
+            panelPerfilC.Visible = true;
+            panelCadastroAprov.Visible = true;
+            panelOportunidades.Visible = true;
+            panelViewUsuarios.Visible = true;       
             panelConversas.BringToFront();
         }
 
         private void botaoGenrenciarUsuarios_Click(object sender, EventArgs e)
         {
+            panelViewUsuarios.Visible = true;//true
+            panelConversas.Visible = true;
+            panelPerfilC.Visible = true;
+            panelCadastroAprov.Visible = true;
+            panelOportunidades.Visible = true;
+
             dataGridViewUsuarios.Rows.Clear();
-            LoadGridUsuarios();
-            panelViewUsuarios.Visible = true;        
+            LoadGridUsuarios();             
             panelViewUsuarios.BringToFront();
             dataGridViewUsuarios.ClearSelection();
         }
@@ -402,14 +419,14 @@ namespace FindTec
                         picAvatarCoordenador2.Image = imagemSelecionada;
 
 
-                        var user = DadosUsuario.listaAlunos.Find(u => u.Item1 == Program.userAtual);
+                        var user = DadosUsuario.listaCoordenador.Find(u => u.Item1 == Program.userAtual);
 
-                        user.Item10 = dadosImagem;
+                        user.Item7 = dadosImagem;
 
-                        var index = DadosUsuario.listaAlunos.FindIndex(u => u.Item1 == Program.userAtual);// descobro o indece do usuario
+                        var index = DadosUsuario.listaCoordenador.FindIndex(u => u.Item1 == Program.userAtual);// descobro o indece do usuario
                         if (index != -1)
                         {
-                            DadosUsuario.listaAlunos[index] = user;
+                            DadosUsuario.listaCoordenador[index] = user;
                         }
 
                         Console.WriteLine("" + user);
@@ -797,7 +814,7 @@ namespace FindTec
         private void picAvatarCoordenador2_Paint(object sender, PaintEventArgs e)
         {
             // Obtém a imagem da PictureBox
-            Image image = picAvatarCoordenador2.Image;
+            Image image = picAvatarCoordenador1.Image;
 
             if (image != null)
             {
@@ -1042,6 +1059,11 @@ namespace FindTec
             {
                 e.Handled = true;
             }
+        }
+
+        private void picAvatarCoordenador2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -68,6 +68,7 @@ namespace FindTec
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.labelNome);
             this.Controls.Add(this.labelMensagemYour);
+            this.DoubleBuffered = true;
             this.Name = "yourMessage";
             this.Size = new System.Drawing.Size(525, 70);
             this.ResumeLayout(false);
