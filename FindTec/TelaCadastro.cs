@@ -398,6 +398,13 @@ namespace FindTec
         {
             if (!string.IsNullOrEmpty(textNome.Text))
             {
+                if (textNome.Text.ToLower() == "nome completo")
+                {
+                    textNome.Text = "NOME COMPLETO";
+                    textNome.SelectionStart = textNome.Text.Length;
+                    return;
+                }
+
                 string[] nomes = textNome.Text.Split(' ');
                 StringBuilder resultado = new StringBuilder();
 
@@ -427,6 +434,7 @@ namespace FindTec
                 textNome.SelectionStart = textNome.Text.Length;
             }
         }
+
 
         private void textEmail_Enter(object sender, EventArgs e)
         {
@@ -670,6 +678,29 @@ namespace FindTec
             {
             }
         }
+
+        private void textEmail_TextChanged(object sender, EventArgs e)
+        {
+            string texto = textEmail.Text;
+
+            if (texto.ToUpper() == "E-MAIL")
+            {
+                textEmail.Text = "E-MAIL";
+            }
+            else
+            {
+                textEmail.Text = texto.ToLower();
+            }
+
+            // Definir o cursor no final do texto
+            textEmail.SelectionStart = textEmail.Text.Length;
+        }
+
+
+
+
+
+
         // FIM DO PAINEL DO ALUNO
     }
 }
