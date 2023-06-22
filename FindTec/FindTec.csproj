@@ -227,6 +227,8 @@
     <None Include="Imagens\botaoAlterarSenha 2.png" />
     <None Include="Imagens\BotaoAlterarImagem 1.png" />
     <None Include="Imagens\botaoAlterarSenha 1.png" />
+    <None Include="Imagens\bellOff.png" />
+    <None Include="Imagens\bellOn.png" />
     <Content Include="Imagens\botaoAluno1.png" />
     <Content Include="Imagens\botaoAluno2.png" />
     <None Include="Imagens\botaoCriesuaconta1.png" />

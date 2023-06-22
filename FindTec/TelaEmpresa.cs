@@ -467,10 +467,10 @@ namespace FindTec
                 {
                     DataGridViewButtonCell botaoPerfil = new DataGridViewButtonCell();
                     botaoPerfil.Value = "+";
-                    var icone = Properties.Resources.botaoAluno1;
+                    var icone = Properties.Resources.bellOff;
                     if (vagas.alteracao == true)
                     {
-                        icone = Properties.Resources.botaoAluno2;
+                        icone = Properties.Resources.bellOn;
                     }
                     gridViewMinhasVagas.Rows.Add(icone, vagas.NomeVaga, vagas.Cargo, vagas.cargaHoraria, vagas.remuneracao, vagas.Curso, "+");
                 }
