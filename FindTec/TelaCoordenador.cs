@@ -39,6 +39,7 @@ namespace FindTec
 
         private void Form3_Load(object sender, EventArgs e)
         {
+            panelPerfilC.Visible = true;
             var user = DadosUsuario.listaCoordenador.Find(u => u.Item1 == Program.userAtual);
             nomeTxt.Text = user.Item2;
             emailTxt.Text = user.Item3;

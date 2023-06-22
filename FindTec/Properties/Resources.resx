@@ -148,8 +148,11 @@
   <data name="telaAnunciarVaga" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imagens\telaAnunciarVaga.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="telaMinhasVagas" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Imagens\telaMinhasVagas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="telaCadastrarCoordenadror" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\telaCadastrarCoordenadror.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="botaoOportunidades 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\botaoOportunidades 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="menuLateral" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imagens\menuLateral.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -159,9 +162,6 @@
   </data>
   <data name="botaoEm2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imagens\botaoEm2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="botaoAnunciarVaga1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Imagens\botaoAnunciarVaga1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="botaoAl1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imagens\botaoAl1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -256,6 +256,9 @@
   <data name="botaoMinhasVagas2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imagens\botaoMinhasVagas2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="fundoMensagemRecebida2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\fundoMensagemRecebida2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="imagemCoordenador" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imagens\imagemCoordenador.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -304,6 +307,9 @@
   <data name="botaoAlterarSenha 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imagens\botaoAlterarSenha 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="menuLateralAdministrador" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\menuLateralAdministrador.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="botaoEnviarMensagem1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imagens\botaoEnviarMensagem1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -327,9 +333,6 @@
   </data>
   <data name="botaoAprovarCadastro2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imagens\botaoAprovarCadastro2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="telaCandidatos" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Imagens\telaCandidatos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="imagemAluno" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imagens\imagemAluno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -361,8 +364,8 @@
   <data name="imagemEmpresa" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imagens\imagemEmpresa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="fundoMensagemRecebida2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Imagens\fundoMensagemRecebida2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="telaCandidatos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\telaCandidatos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="telaOportunidades" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imagens\telaOportunidades.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -379,14 +382,17 @@
   <data name="botaoCriesuaconta2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imagens\botaoCriesuaconta2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="botaoSair 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Imagens\botaoSair 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="botaoEm11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\botaoEm1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="telaMinhasVagas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\telaMinhasVagas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="botaoEnviarMensagem2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imagens\botaoEnviarMensagem2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="botaoOportunidades 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Imagens\botaoOportunidades 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="botaoAnunciarVaga1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\botaoAnunciarVaga1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="telaDescricaoDaVaga" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imagens\telaDescricaoDaVaga.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -394,7 +400,10 @@
   <data name="botaoAnunciarVaga2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imagens\botaoAnunciarVaga2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="botaoEm11" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Imagens\botaoEm1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="botaoSair 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\botaoSair 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

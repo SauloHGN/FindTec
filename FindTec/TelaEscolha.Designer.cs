@@ -118,6 +118,7 @@
             this.Controls.Add(this.botaoVoltar);
             this.Controls.Add(this.botaoFechar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(660, 660);
             this.MinimumSize = new System.Drawing.Size(660, 660);

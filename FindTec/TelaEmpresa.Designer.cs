@@ -557,7 +557,7 @@ namespace FindTec
             this.NomeVagaGrid.Name = "NomeVagaGrid";
             this.NomeVagaGrid.ReadOnly = true;
             this.NomeVagaGrid.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.NomeVagaGrid.Width = 106;
+            this.NomeVagaGrid.Width = 116;
             // 
             // cargoGrid
             // 
@@ -573,7 +573,7 @@ namespace FindTec
             this.cargaHGrid.Name = "cargaHGrid";
             this.cargaHGrid.ReadOnly = true;
             this.cargaHGrid.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.cargaHGrid.Width = 103;
+            this.cargaHGrid.Width = 113;
             // 
             // remuneracaoGrid
             // 
@@ -581,7 +581,7 @@ namespace FindTec
             this.remuneracaoGrid.Name = "remuneracaoGrid";
             this.remuneracaoGrid.ReadOnly = true;
             this.remuneracaoGrid.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.remuneracaoGrid.Width = 103;
+            this.remuneracaoGrid.Width = 93;
             // 
             // cursoGrid
             // 
@@ -589,7 +589,7 @@ namespace FindTec
             this.cursoGrid.Name = "cursoGrid";
             this.cursoGrid.ReadOnly = true;
             this.cursoGrid.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.cursoGrid.Width = 77;
+            this.cursoGrid.Width = 67;
             // 
             // colExibir
             // 
@@ -835,14 +835,15 @@ namespace FindTec
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(1000, 550);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelMinhasVagas);
+            this.Controls.Add(this.panelAlunoCadastrado);
             this.Controls.Add(this.panelPerfilE);
             this.Controls.Add(this.panelMensagens);
             this.Controls.Add(this.panelConversas);
             this.Controls.Add(this.panelAnunciarVaga);
-            this.Controls.Add(this.panelMinhasVagas);
-            this.Controls.Add(this.panelAlunoCadastrado);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.Form2_Load);

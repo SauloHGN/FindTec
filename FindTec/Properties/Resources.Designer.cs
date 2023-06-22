@@ -783,9 +783,29 @@ namespace FindTec.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Logo {
+            get {
+                object obj = ResourceManager.GetObject("Logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap menuLateral {
             get {
                 object obj = ResourceManager.GetObject("menuLateral", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap menuLateralAdministrador {
+            get {
+                object obj = ResourceManager.GetObject("menuLateralAdministrador", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -856,6 +876,16 @@ namespace FindTec.Properties {
         internal static System.Drawing.Bitmap telaAprovacaoCadastro {
             get {
                 object obj = ResourceManager.GetObject("telaAprovacaoCadastro", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap telaCadastrarCoordenadror {
+            get {
+                object obj = ResourceManager.GetObject("telaCadastrarCoordenadror", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
