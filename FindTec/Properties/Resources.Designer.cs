@@ -93,6 +93,26 @@ namespace FindTec.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap botaoAl1 {
+            get {
+                object obj = ResourceManager.GetObject("botaoAl1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap botaoAl2 {
+            get {
+                object obj = ResourceManager.GetObject("botaoAl2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap BotaoAlterarImagem_1 {
             get {
                 object obj = ResourceManager.GetObject("BotaoAlterarImagem 1", resourceCulture);
@@ -316,6 +336,36 @@ namespace FindTec.Properties {
         internal static System.Drawing.Bitmap botaoEditarDados_2 {
             get {
                 object obj = ResourceManager.GetObject("botaoEditarDados 2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap botaoEm1 {
+            get {
+                object obj = ResourceManager.GetObject("botaoEm1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap botaoEm11 {
+            get {
+                object obj = ResourceManager.GetObject("botaoEm11", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap botaoEm2 {
+            get {
+                object obj = ResourceManager.GetObject("botaoEm2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

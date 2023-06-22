@@ -503,6 +503,8 @@ namespace FindTec
             // 
             // gridViewMinhasVagas
             // 
+            this.gridViewMinhasVagas.AllowUserToResizeColumns = false;
+            this.gridViewMinhasVagas.AllowUserToResizeRows = false;
             this.gridViewMinhasVagas.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(181)))), ((int)(((byte)(220)))));
             this.gridViewMinhasVagas.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gridViewMinhasVagas.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SunkenHorizontal;
@@ -541,7 +543,7 @@ namespace FindTec
             // 
             // colAlteracao
             // 
-            this.colAlteracao.HeaderText = "Avatar";
+            this.colAlteracao.HeaderText = "Notificação";
             this.colAlteracao.MinimumWidth = 100;
             this.colAlteracao.Name = "colAlteracao";
             this.colAlteracao.ReadOnly = true;
@@ -600,6 +602,8 @@ namespace FindTec
             // 
             // dataGridViewCandidatos
             // 
+            this.dataGridViewCandidatos.AllowUserToResizeColumns = false;
+            this.dataGridViewCandidatos.AllowUserToResizeRows = false;
             this.dataGridViewCandidatos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(181)))), ((int)(((byte)(220)))));
             this.dataGridViewCandidatos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewCandidatos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SunkenHorizontal;
@@ -831,12 +835,12 @@ namespace FindTec
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(1000, 550);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panelAnunciarVaga);
-            this.Controls.Add(this.panelMinhasVagas);
-            this.Controls.Add(this.panelAlunoCadastrado);
             this.Controls.Add(this.panelPerfilE);
             this.Controls.Add(this.panelMensagens);
             this.Controls.Add(this.panelConversas);
+            this.Controls.Add(this.panelAnunciarVaga);
+            this.Controls.Add(this.panelMinhasVagas);
+            this.Controls.Add(this.panelAlunoCadastrado);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form2";

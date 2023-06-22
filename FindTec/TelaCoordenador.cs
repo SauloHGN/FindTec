@@ -359,10 +359,7 @@ namespace FindTec
 
         private void buttonListEmpresa_Click(object sender, EventArgs e)
         {
-            buttonListEmpresa.BackColor = Color.Black;
-            buttonListEmpresa.ForeColor = Color.White;
-            buttonListAluno5.BackColor = SystemColors.Control;
-            buttonListAluno5.ForeColor = Color.Black;
+           
             dataGridViewE.Visible = true;
             dataGridView1.Visible = false;
             dataGridViewE.Rows.Clear();
@@ -371,10 +368,7 @@ namespace FindTec
 
         private void buttonListAluno_Click_1(object sender, EventArgs e)
         {
-            buttonListAluno5.BackColor = Color.Black;
-            buttonListAluno5.ForeColor = Color.White;
-            buttonListEmpresa.BackColor = SystemColors.Control;
-            buttonListEmpresa.ForeColor = Color.Black;
+           
             dataGridView1.Visible = true;
             dataGridViewE.Visible = false;
             dataGridView1.Rows.Clear();
@@ -894,6 +888,26 @@ namespace FindTec
             RecuperarSenha senha = new RecuperarSenha();           
             this.Hide();
             senha.Show();
+        }
+
+        private void buttonListAluno5_MouseEnter(object sender, EventArgs e)
+        {
+            buttonListAluno5.BackgroundImage = Properties.Resources.botaoAl2;
+        }
+
+        private void buttonListAluno5_MouseLeave(object sender, EventArgs e)
+        {
+            buttonListAluno5.BackgroundImage = Properties.Resources.botaoAl1;
+        }
+
+        private void buttonListEmpresa_MouseEnter(object sender, EventArgs e)
+        {
+            buttonListEmpresa.BackgroundImage = Properties.Resources.botaoEm2;
+        }
+
+        private void buttonListEmpresa_MouseLeave(object sender, EventArgs e)
+        {
+            buttonListEmpresa.BackgroundImage = Properties.Resources.botaoEm1;
         }
     }
 }

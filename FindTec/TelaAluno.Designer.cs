@@ -765,6 +765,8 @@ namespace FindTec
             // 
             // gridViewVagasCadastrado
             // 
+            this.gridViewVagasCadastrado.AllowUserToResizeColumns = false;
+            this.gridViewVagasCadastrado.AllowUserToResizeRows = false;
             this.gridViewVagasCadastrado.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(181)))), ((int)(((byte)(220)))));
             this.gridViewVagasCadastrado.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gridViewVagasCadastrado.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SunkenHorizontal;
