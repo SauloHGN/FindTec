@@ -65,13 +65,14 @@ namespace FindTec
             this.nomeVagaTextBox = new System.Windows.Forms.TextBox();
             this.panelMinhasVagas = new System.Windows.Forms.Panel();
             this.gridViewMinhasVagas = new System.Windows.Forms.DataGridView();
+            this.colAlteracao = new System.Windows.Forms.DataGridViewImageColumn();
+            this.NomeVagaGrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cargoGrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cargaHGrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.remuneracaoGrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cursoGrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colExibir = new System.Windows.Forms.DataGridViewButtonColumn();
             this.dataGridViewCandidatos = new System.Windows.Forms.DataGridView();
-            this.colFoto = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colContato = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.colSelecionado = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.panelAlunoCadastrado = new System.Windows.Forms.Panel();
             this.botaoEncerrarVaga = new System.Windows.Forms.Button();
             this.botaoVoltar = new System.Windows.Forms.Button();
@@ -82,13 +83,12 @@ namespace FindTec
             this.txtMensagem = new System.Windows.Forms.TextBox();
             this.panelConversas = new System.Windows.Forms.Panel();
             this.FlowPanelConversas = new System.Windows.Forms.FlowLayoutPanel();
-            this.colExibir = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.cursoGrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.remuneracaoGrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cargaHGrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cargoGrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NomeVagaGrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colAlteracao = new System.Windows.Forms.DataGridViewImageColumn();
+            this.colFoto = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colContato = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.colSelecionado = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panelPerfilE.SuspendLayout();
@@ -543,6 +543,65 @@ namespace FindTec
             this.gridViewMinhasVagas.TabIndex = 18;
             this.gridViewMinhasVagas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridViewMinhasVagas_CellContentClick);
             // 
+            // colAlteracao
+            // 
+            this.colAlteracao.HeaderText = "Notificação";
+            this.colAlteracao.MinimumWidth = 100;
+            this.colAlteracao.Name = "colAlteracao";
+            this.colAlteracao.ReadOnly = true;
+            this.colAlteracao.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.colAlteracao.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.colAlteracao.Width = 103;
+            // 
+            // NomeVagaGrid
+            // 
+            this.NomeVagaGrid.HeaderText = "Titulo da Vaga";
+            this.NomeVagaGrid.Name = "NomeVagaGrid";
+            this.NomeVagaGrid.ReadOnly = true;
+            this.NomeVagaGrid.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.NomeVagaGrid.Width = 116;
+            // 
+            // cargoGrid
+            // 
+            this.cargoGrid.HeaderText = "Cargo";
+            this.cargoGrid.Name = "cargoGrid";
+            this.cargoGrid.ReadOnly = true;
+            this.cargoGrid.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.cargoGrid.Width = 78;
+            // 
+            // cargaHGrid
+            // 
+            this.cargaHGrid.HeaderText = "Carga Horária";
+            this.cargaHGrid.Name = "cargaHGrid";
+            this.cargaHGrid.ReadOnly = true;
+            this.cargaHGrid.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.cargaHGrid.Width = 113;
+            // 
+            // remuneracaoGrid
+            // 
+            this.remuneracaoGrid.HeaderText = "Remuneração";
+            this.remuneracaoGrid.Name = "remuneracaoGrid";
+            this.remuneracaoGrid.ReadOnly = true;
+            this.remuneracaoGrid.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.remuneracaoGrid.Width = 93;
+            // 
+            // cursoGrid
+            // 
+            this.cursoGrid.HeaderText = "Curso";
+            this.cursoGrid.Name = "cursoGrid";
+            this.cursoGrid.ReadOnly = true;
+            this.cursoGrid.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.cursoGrid.Width = 67;
+            // 
+            // colExibir
+            // 
+            this.colExibir.HeaderText = "Candidatos";
+            this.colExibir.MinimumWidth = 100;
+            this.colExibir.Name = "colExibir";
+            this.colExibir.ReadOnly = true;
+            this.colExibir.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.colExibir.Text = "Ver Candidatos";
+            // 
             // dataGridViewCandidatos
             // 
             this.dataGridViewCandidatos.AllowUserToResizeColumns = false;
@@ -582,63 +641,6 @@ namespace FindTec
             this.dataGridViewCandidatos.Size = new System.Drawing.Size(687, 330);
             this.dataGridViewCandidatos.TabIndex = 7;
             this.dataGridViewCandidatos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewE_CellContentClick);
-            // 
-            // colFoto
-            // 
-            dataGridViewCellStyle4.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle4.NullValue")));
-            this.colFoto.DefaultCellStyle = dataGridViewCellStyle4;
-            this.colFoto.HeaderText = "Avatar";
-            this.colFoto.MinimumWidth = 100;
-            this.colFoto.Name = "colFoto";
-            this.colFoto.ReadOnly = true;
-            this.colFoto.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.colFoto.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "Nome";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTextBoxColumn1.Width = 150;
-            // 
-            // colEmail
-            // 
-            this.colEmail.HeaderText = "Email";
-            this.colEmail.Name = "colEmail";
-            this.colEmail.ReadOnly = true;
-            this.colEmail.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.colEmail.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.HeaderText = "Telefone";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            this.dataGridViewTextBoxColumn4.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTextBoxColumn4.Width = 110;
-            // 
-            // colContato
-            // 
-            this.colContato.DefaultCellStyle = dataGridViewCellStyle5;
-            this.colContato.HeaderText = "Contactar";
-            this.colContato.MinimumWidth = 100;
-            this.colContato.Name = "colContato";
-            this.colContato.ReadOnly = true;
-            this.colContato.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.colContato.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.colContato.Text = "Contactar";
-            // 
-            // colSelecionado
-            // 
-            dataGridViewCellStyle6.NullValue = false;
-            this.colSelecionado.DefaultCellStyle = dataGridViewCellStyle6;
-            this.colSelecionado.HeaderText = "Aprovado";
-            this.colSelecionado.Name = "colSelecionado";
-            this.colSelecionado.ReadOnly = true;
-            this.colSelecionado.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.colSelecionado.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.colSelecionado.Width = 60;
             // 
             // panelAlunoCadastrado
             // 
@@ -770,64 +772,61 @@ namespace FindTec
             this.FlowPanelConversas.TabIndex = 3;
             this.FlowPanelConversas.Click += new System.EventHandler(this.FlowPanelConversas_Click);
             // 
-            // colExibir
+            // colFoto
             // 
-            this.colExibir.HeaderText = "Candidatos";
-            this.colExibir.MinimumWidth = 100;
-            this.colExibir.Name = "colExibir";
-            this.colExibir.ReadOnly = true;
-            this.colExibir.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.colExibir.Text = "Ver Candidatos";
+            dataGridViewCellStyle4.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle4.NullValue")));
+            this.colFoto.DefaultCellStyle = dataGridViewCellStyle4;
+            this.colFoto.HeaderText = "Avatar";
+            this.colFoto.MinimumWidth = 100;
+            this.colFoto.Name = "colFoto";
+            this.colFoto.ReadOnly = true;
+            this.colFoto.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.colFoto.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
-            // cursoGrid
+            // dataGridViewTextBoxColumn1
             // 
-            this.cursoGrid.HeaderText = "Curso";
-            this.cursoGrid.Name = "cursoGrid";
-            this.cursoGrid.ReadOnly = true;
-            this.cursoGrid.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.cursoGrid.Width = 67;
+            this.dataGridViewTextBoxColumn1.HeaderText = "Nome";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn1.Width = 150;
             // 
-            // remuneracaoGrid
+            // colEmail
             // 
-            this.remuneracaoGrid.HeaderText = "Remuneração";
-            this.remuneracaoGrid.Name = "remuneracaoGrid";
-            this.remuneracaoGrid.ReadOnly = true;
-            this.remuneracaoGrid.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.remuneracaoGrid.Width = 93;
+            this.colEmail.HeaderText = "Email";
+            this.colEmail.Name = "colEmail";
+            this.colEmail.ReadOnly = true;
+            this.colEmail.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.colEmail.Width = 150;
             // 
-            // cargaHGrid
+            // dataGridViewTextBoxColumn4
             // 
-            this.cargaHGrid.HeaderText = "Carga Horária";
-            this.cargaHGrid.Name = "cargaHGrid";
-            this.cargaHGrid.ReadOnly = true;
-            this.cargaHGrid.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.cargaHGrid.Width = 113;
+            this.dataGridViewTextBoxColumn4.HeaderText = "Telefone";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn4.Width = 110;
             // 
-            // cargoGrid
+            // colContato
             // 
-            this.cargoGrid.HeaderText = "Cargo";
-            this.cargoGrid.Name = "cargoGrid";
-            this.cargoGrid.ReadOnly = true;
-            this.cargoGrid.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.cargoGrid.Width = 78;
+            this.colContato.DefaultCellStyle = dataGridViewCellStyle5;
+            this.colContato.HeaderText = "Contactar";
+            this.colContato.MinimumWidth = 100;
+            this.colContato.Name = "colContato";
+            this.colContato.ReadOnly = true;
+            this.colContato.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.colContato.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.colContato.Text = "Contactar";
             // 
-            // NomeVagaGrid
+            // colSelecionado
             // 
-            this.NomeVagaGrid.HeaderText = "Titulo da Vaga";
-            this.NomeVagaGrid.Name = "NomeVagaGrid";
-            this.NomeVagaGrid.ReadOnly = true;
-            this.NomeVagaGrid.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.NomeVagaGrid.Width = 116;
-            // 
-            // colAlteracao
-            // 
-            this.colAlteracao.HeaderText = "Notificação";
-            this.colAlteracao.MinimumWidth = 100;
-            this.colAlteracao.Name = "colAlteracao";
-            this.colAlteracao.ReadOnly = true;
-            this.colAlteracao.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.colAlteracao.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.colAlteracao.Width = 103;
+            dataGridViewCellStyle6.NullValue = false;
+            this.colSelecionado.DefaultCellStyle = dataGridViewCellStyle6;
+            this.colSelecionado.HeaderText = "Aprovado";
+            this.colSelecionado.Name = "colSelecionado";
+            this.colSelecionado.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.colSelecionado.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.colSelecionado.Width = 60;
             // 
             // Form2
             // 
@@ -836,12 +835,12 @@ namespace FindTec
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(1000, 550);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panelMinhasVagas);
             this.Controls.Add(this.panelAlunoCadastrado);
             this.Controls.Add(this.panelPerfilE);
             this.Controls.Add(this.panelMensagens);
             this.Controls.Add(this.panelConversas);
             this.Controls.Add(this.panelAnunciarVaga);
+            this.Controls.Add(this.panelMinhasVagas);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -907,12 +906,6 @@ namespace FindTec
         private System.Windows.Forms.Button botaoSair;
         private System.Windows.Forms.Button botaoAlterarSenha;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.DataGridViewImageColumn colFoto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colEmail;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewButtonColumn colContato;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn colSelecionado;
         private System.Windows.Forms.DataGridViewImageColumn colAlteracao;
         private System.Windows.Forms.DataGridViewTextBoxColumn NomeVagaGrid;
         private System.Windows.Forms.DataGridViewTextBoxColumn cargoGrid;
@@ -920,5 +913,11 @@ namespace FindTec
         private System.Windows.Forms.DataGridViewTextBoxColumn remuneracaoGrid;
         private System.Windows.Forms.DataGridViewTextBoxColumn cursoGrid;
         private System.Windows.Forms.DataGridViewButtonColumn colExibir;
+        private System.Windows.Forms.DataGridViewImageColumn colFoto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colEmail;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewButtonColumn colContato;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn colSelecionado;
     }
 }

@@ -89,10 +89,11 @@ namespace FindTec
         {
             // ADICIONAR CADASTRO DO COORDENADOR(A)
             DadosUsuario.listaAdmin.Add((0, "admin", "admin"));
-            DadosUsuario.listaAlunos.Add((Program.id++, "Saulo", " ", " ", "Eventos"," ", true, " ", false, null));
-            DadosUsuario.listaAlunos.Add((Program.id++, "Aluno B", "b", "b", "Eventos", "b", true, " ", false, null));
-            DadosUsuario.listaEmpresas.Add((Program.id++, "Empresa A", "a", "a", "a", true, "a", false, null));
-            DadosUsuario.listaCoordenador.Add((Program.id++, "Nome Coordenador", "c", "c", "c", "c", null));
+            //Contas Teste
+            //DadosUsuario.listaAlunos.Add((Program.id++, "Saulo", " ", " ", "Eventos"," ", true, " ", false, null));
+            //DadosUsuario.listaAlunos.Add((Program.id++, "Aluno B", "b", "b", "Eventos", "b", true, " ", false, null));
+            //DadosUsuario.listaEmpresas.Add((Program.id++, "Empresa A", "a", "a", "a", true, "a", false, null));
+            //DadosUsuario.listaCoordenador.Add((Program.id++, "Nome Coordenador", "c", "c", "c", "c", null));
         }
 
         public void AcessarAdmin()

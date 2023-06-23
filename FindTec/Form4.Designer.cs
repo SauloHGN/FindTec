@@ -93,7 +93,7 @@ namespace FindTec
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.ForeColor = System.Drawing.Color.Black;
             this.button2.Location = new System.Drawing.Point(-2, 233);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(200, 36);
@@ -202,7 +202,6 @@ namespace FindTec
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::FindTec.Properties.Resources.backgroundGeral;
             this.ClientSize = new System.Drawing.Size(1000, 550);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.cadastroCoordenador);
