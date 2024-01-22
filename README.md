@@ -8,6 +8,14 @@ O projeto foi desenvolvido para a disciplina de Estrutura de Dados no 3º semest
 Prof. Eduardo Enari. O tema proposto envolve a criação de um software interno que tem como objetivo a divulgação de oportunidades e a conexão entre 
 alunos, empresas e coordenadores, utilizando apenas a memória principal.
 
+### Preview
+
+<div align ="center">
+  <img src="https://github.com/SauloHGN/FindTec/assets/100096259/4e93f519-de14-45f0-9022-8d2dadaaa605" /> 
+</div>
+
+
+
 
 ### 🛠️ Ferramentas Utilizadas
 <div style="display: inline_block" alt="ferramentas"><br>
